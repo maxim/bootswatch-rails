@@ -42,6 +42,7 @@ Here's approximately how your `application.css.scss` file should look like, cons
 
 I'm converting/updating them as time permits. Here's what's included at this point.
 
+* [amelia](http://bootswatch.com/amelia/)
 * [journal](http://bootswatch.com/journal/)
 
 ## Contributing
