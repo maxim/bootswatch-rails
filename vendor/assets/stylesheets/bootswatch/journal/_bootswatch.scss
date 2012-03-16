@@ -44,12 +44,12 @@ h1, h2, h3, h4, h5, h6, .brand {
 .navbar-inner {
 	border-top: 1px solid #E5E5E5;
 	$shadow: 0 2px 4px rgba(0,0,0,.25), inset 0 -1px 0 rgba(0,0,0,.1);
-	.box-shadow($shadow);
+	@include box-shadow($shadow);
 }
 
 .navbar-inner, .navbar .dropdown-menu, div.subnav,
 div.subnav .nav > li:first-child > a, div.subnav .nav > li:first-child > a:hover {
-	.border-radius(0);
+	@include border-radius(0);
 }
 
 .navbar .nav > li > a {
@@ -87,14 +87,14 @@ form.navbar-form, form.navbar-search {
 .navbar-search .search-query:hover {
 	border: 1px solid $grayLighter;
 	color: $textColor;
-	.placeholder($gray);
+	@include placeholder($gray);
 }
 
 div.subnav {
 	background-color: $bodyBackground;
 	background-image: none;
 	$shadow: 0 1px 2px rgba(0,0,0,.25);
-	.box-shadow($shadow);
+	@include box-shadow($shadow);
 }
 
 .navbar .nav-collapse.in .nav li > a,
@@ -110,7 +110,7 @@ div.subnav .nav > .active > a:hover {
 // -----------------------------------------------------
 
 .btn-primary {
-  .buttonBackground(lighten($linkColor, 5%), $linkColor);
+  @include buttonBackground(lighten($linkColor, 5%), $linkColor);
 }
 
 
@@ -122,5 +122,5 @@ code, pre, pre.prettyprint, .well, .form-actions {
 }
 
 .table-bordered, .well, .prettyprint {
-	.border-radius(0);
+	@include border-radius(0);
 }
