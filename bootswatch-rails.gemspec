@@ -8,6 +8,8 @@ Gem::Specification.new do |gem|
   gem.summary       = %q{Bootswatches in your Rails asset pipeline}
   gem.homepage      = "http://github.com/maxim/bootswatch-rails"
 
+  gem.add_dependency 'railties', '>= 3.1'
+
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.name          = "bootswatch-rails"
