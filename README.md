@@ -46,6 +46,7 @@ I'm converting/updating them as time permits. Here's what's included at this poi
 * [Cerulean](http://bootswatch.com/cerulean/)
 * [Cyborg](http://bootswatch.com/cyborg/)
 * [Journal](http://bootswatch.com/journal/)
+* [Readable](http://bootswatch.com/readable/)
 
 ## Contributing
 

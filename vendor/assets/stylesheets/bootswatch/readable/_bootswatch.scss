@@ -1,0 +1,419 @@
+// Swatch: Readable
+// Version: 2.0.2
+// -----------------------------------------------------
+
+// TYPOGRAPHY
+// -----------------------------------------------------
+
+h1, h2, h3, h4, h5, h6 {
+	line-height: 2em;
+	color: $textColor;
+}
+
+h1 {
+	font-size: 2em;
+}
+
+h2 {
+	font-size: 1.5em;
+}
+
+h3, h4, h5, h6 {
+	font-size: 1em;
+	text-transform: none;
+}
+
+small {
+	font-size: 13px;
+}
+
+.muted, .help-block, .uneditable-input, blockquote, small {
+	color: $grayLight;
+}
+
+// SCAFFOLDING
+// -----------------------------------------------------
+
+body {
+	padding-top: 20px !important;
+}
+
+.page-header {
+	padding-bottom: 1em;
+	border-bottom: 2px solid $grayLighter;
+}
+
+footer.footer {
+	padding-top: 2em;
+	padding-bottom: 3em;
+	border-top: 2px solid $grayLighter;
+}
+
+// NAVBAR
+// -----------------------------------------------------
+
+.navbar {
+
+	margin-left: 16px;
+
+	.navbar-inner {
+		@include box-shadow(none);
+	}
+
+	.brand {
+		color: $linkColor;
+		font-size: $baseFontSize;
+		font-weight: bold;
+		line-height: 1em;
+		padding: 10px 10px 11px;
+
+		&:hover {
+			color: $linkColorHover;
+		}
+	}
+
+	.nav > li > a {
+		text-shadow: none;
+		padding: 10px;
+	}
+
+	.nav > li.active > a,
+	.nav > li:active > a,
+	.dropdown.open .dropdown-toggle {
+		color: $linkColor;
+	}
+
+	.search-query {
+		border: 1px solid #D4D4D4;
+		@include border-radius(0);
+		color: $textColor;
+		background-color: $white;
+	}
+
+	.nav .dropdown-toggle .caret,
+	.nav .open.dropdown .caret {
+		border-top-color: $linkColor;
+		opacity: 1;
+	}
+}
+
+@media (max-width: 980px) {
+	form.navbar-form, form.navbar-search {
+		border-top: 1px solid #D4D4D4;
+		border-bottom: 1px solid #D4D4D4;
+	}
+}
+
+.navbar-fixed-top {
+	position: static;
+	margin-bottom: 1.6em;
+}
+
+div.subnav {
+	@include box-shadow(none);
+	@include border-radius(0);
+	background-color: $white;
+	background-image: none;
+
+	.nav {
+		padding: 0;
+	}
+
+	.nav > li.active > a,
+	.nav > li:active > a {
+		color: $linkColor;
+		@include box-shadow(none);
+		background-color: transparent;
+	}
+
+	.nav > li > a:hover,
+	.nav > li.active > a:hover,
+	.nav > li:active > a:hover {
+		color: $linkColorHover;
+		@include box-shadow(none);
+		background-color: transparent;
+	}
+}
+
+div.subnav-fixed {
+	position: static;
+	left: auto;
+	width: 100%;
+	margin: 0;
+	@include box-shadow(none);
+	@include border-radius(4px);
+	border: 1px solid #E5E5E5;
+
+	.nav {
+		width: auto;
+		padding: 0;
+	}
+}
+
+.dropdown-menu {
+	border: 1px solid #D4D4D4;
+	@include border-radius(0);
+	@include box-shadow(1px 1px 1px rgba(0, 0, 0, 0.2));
+
+	.divider {
+		margin: 5px 1px;
+	}
+}
+
+.navbar .nav-collapse.in {
+
+	.nav li:first-child > a {
+		margin-bottom: 10px;
+	}
+
+	.nav li > a {
+		color: $linkColor;
+		@include border-radius(0);
+		font-weight: normal;
+
+		&:hover {
+			color: $linkColorHover;
+		}
+	}
+
+	.nav li > a:hover {
+		background: transparent;
+	}
+}
+
+// NAV
+// -----------------------------------------------------
+
+.nav .dropdown .caret {
+	opacity: 1;
+}
+
+.nav-tabs {
+
+	li > a {
+		@include border-radius(0);
+	}
+
+	li > a:hover {
+		background-color: $bodyBackground;
+	}
+
+	li.active > a,
+	li.active > a:hover {
+		color: $textColor;
+		background-color: $bodyBackground;
+	}
+}
+
+.nav-tabs.nav-stacked {
+
+	li > a {
+		background-color: $white;
+	}
+
+	li.active > a,
+	li.active > a:hover,
+	li > a:hover {
+		background-color: #F5F5F5;
+	}
+
+	li:first-child > a,
+	li:last-child > a {
+		@include border-radius(0);
+	}
+}
+
+.nav-pills {
+
+	li > a {
+		@include border-radius(0);
+	}
+
+	li > a:hover {
+		background-color: $bodyBackground;
+	}
+
+	li.active > a,
+	li.active > a:hover {
+		color: $textColor;
+		background-color: $bodyBackground;
+	}
+}
+
+.nav-list {
+
+	li > a:hover,
+	li.active > a,
+	li.active > a:hover {
+		background-color: transparent;
+		text-shadow: none;
+	}
+
+	li.active > a,
+	li.active > a:hover {
+		color: $textColor;
+	}
+
+	[class^="icon-"] {
+		margin-top: 3px;
+		opacity: 0.8;
+	}
+}
+
+.breadcrumb {
+	@include border-radius(0);
+	background-color: $white;
+	background-image: none;
+}
+
+.pagination {
+
+	ul {
+		@include box-shadow(none);
+	}
+
+	li > a {
+		padding: 10px 14px;
+	}
+
+
+	li.active > a,
+	li.active > a:hover {
+		color: $textColor;
+		background-color: #F5F5F5;
+	}
+
+	li > a,
+	li.disabled > a,
+	li.disabled > a:hover {
+		background-color: $white;
+	}
+
+	li:first-child > a,
+	li:last-child > a {
+		@include border-radius(0);
+	}
+}
+
+.pager {
+
+	a {
+		@include border-radius(0);
+	}
+}
+
+// BUTTONS
+// -----------------------------------------------------
+
+.btn-primary {
+  @include buttonBackground(lighten($btnPrimaryBackground, 10%), $btnPrimaryBackground);
+}
+
+.btn [class^="icon-"],
+.btn [class*=" icon-"] {
+	margin-top: 4px;
+}
+
+.btn-large [class^="icon-"],
+.btn-large [class*=" icon-"] {
+	margin-top: 6px;
+	margin-right: 2px;
+}
+
+.btn-small [class^="icon-"],
+.btn-small [class*=" icon-"] {
+	margin-top: 3px;
+}
+
+.btn .caret {
+	margin-top: 13px;
+}
+
+// FORMS
+// -----------------------------------------------------
+
+input, button, select, textarea {
+	font-family: $baseFontFamily;
+}
+
+input, textarea, select {
+	color: $textColor;
+}
+
+.form-actions {
+	background-color: transparent;
+	border-top: 1px solid #D4D4D4;
+	padding-top: 2em;
+}
+
+// TABLES
+// -----------------------------------------------------
+
+.table-bordered {
+	@include border-radius(0);
+}
+
+// MISCELLANEOUS
+// -----------------------------------------------------
+
+.alert,
+.label, .label:hover {
+	@include border-radius(0);
+	border: 1px solid #D4D4D4;
+	color: $textColor;
+	text-shadow: none;
+}
+
+.alert-heading {
+	color: $textColor;
+	text-shadow: none;
+}
+
+.label, .label:hover {
+	background-color: $white;
+	font-weight: normal;
+	font-size: $baseFontSize;
+	padding: 4px;
+}
+
+.label-important, .label-important:hover { background-color: $errorBackground; }
+
+.label-warning, .label-warning:hover { background-color: $warningBackground; }
+
+.label-success, .label-success:hover { background-color: $successBackground; }
+
+.label-info, .label-info:hover { background-color: $infoBackground; }
+
+.well {
+	@include box-shadow(none);
+	border: 1px solid #D4D4D4;
+	@include border-radius(0);
+	background-color: $white;
+}
+
+blockquote {
+	border-left: 6px solid $grayLighter;
+
+	&.pull-right {
+		border-right: 6px solid $grayLighter;
+	}
+
+	p {
+		font-size: 1em;
+		line-height: 1.2em;
+	}
+}
+
+.thumbnail {
+	background-color: $white;
+}
+
+.thumbnail, .thumbnail > img {
+	@include border-radius(0);
+	@include box-shadow(none);
+}
+
+code, pre {
+	@include border-radius(0);
+	background-color: $white;
+}
