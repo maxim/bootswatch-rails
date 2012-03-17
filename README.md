@@ -47,6 +47,7 @@ I'm converting/updating them as time permits. Here's what's included at this poi
 * [Cyborg](http://bootswatch.com/cyborg/)
 * [Journal](http://bootswatch.com/journal/)
 * [Readable](http://bootswatch.com/readable/)
+* [United](http://bootswatch.com/united/)
 
 ## Contributing
 
