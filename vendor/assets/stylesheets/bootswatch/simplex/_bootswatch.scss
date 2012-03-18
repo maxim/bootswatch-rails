@@ -1,0 +1,90 @@
+// Swatch: Simplex
+// Version: 2.0.2
+// -----------------------------------------------------
+
+// TYPOGRAPHY
+// -----------------------------------------------------
+
+h6 {
+	color: $black;
+}
+
+// NAVBAR
+// -----------------------------------------------------
+
+.navbar .brand, .subnav a {
+	color: $navbarText;
+}
+
+.navbar .nav .active > a,
+.navbar .nav .active > a:hover {
+	background-color: $grayDarker;
+	color: $white;
+}
+
+.navbar .nav > li > a {
+	text-shadow: none;
+	&:hover {
+		color: $white;
+		background-color: rgba(255, 255, 255, 0.2);
+	}
+}
+
+.subnav .nav > li > a {
+	border-left: 0px solid white !important;
+	border-right: 0px solid white !important;
+	color: $grayDark;
+}
+
+.btn-navbar:hover {
+    background-color: darken($white, 20%);
+    background-position: 0 0;
+}
+
+// FORMS
+// -----------------------------------------------------
+
+.search-query {
+	border: 1px solid #CCC;
+	@include border-radius(2px);
+}
+
+// BUTTONS
+// -----------------------------------------------------
+
+.btn {
+  @include border-radius(2px);
+  @include gradient-vertical-three-colors($white, $white, 25%, darken($white, 10%));
+}
+
+.btn-primary {
+  @include buttonBackground(lighten($btnPrimaryBackground, 5%), $btnPrimaryBackground);
+}
+
+.btn-warning {
+  @include buttonBackground(lighten($orange, 5%), $orange);
+}
+
+.btn-danger {
+  @include buttonBackground(lighten($red, 5%), $red);
+}
+
+.btn-success {
+  @include buttonBackground(lighten($green, 5%), $green);
+}
+
+.btn-info {
+  @include buttonBackground(lighten(#5bc0de, 5%), #5bc0de);
+}
+
+.btn-inverse {
+  @include buttonBackground(lighten($purple, 5%), $purple);
+}
+
+// MISCELLANEOUS
+// -----------------------------------------------------
+
+// Make icons gray
+i[class^="icon-"]{
+	opacity: 0.6;
+}
