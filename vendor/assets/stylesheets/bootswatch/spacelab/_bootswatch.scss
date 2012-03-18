@@ -1,0 +1,169 @@
+// Swatch: Spacelab
+// Version: 2.0.2
+// -----------------------------------------------------
+
+// NAVBAR
+// -----------------------------------------------------
+
+// navbar style
+.navbar {
+	border-bottom: 1px solid #CACACA;
+
+	.brand {
+		font-size: 20px;
+		font-weight: bold;
+		color: $textColor;
+
+		&:hover {
+			color: $linkColor;
+		}
+	}
+}
+
+// navbar dropshadow
+.navbar .navbar-inner {
+	@include box-shadow(0 1px 0 rgba(255,255,255,0.4));
+	@include box-shadow(0 0 10px rgba(0,0,0,0.1));
+}
+
+// nav item typography
+.navbar .nav > li > a {
+	font-weight: bold;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.navbar .nav .active > a {
+	background-color: transparent;
+	color: $textColor;
+
+	&:hover {
+		background-color: transparent;
+		color: $linkColor;
+	}
+}
+
+.navbar .nav > li > a:hover,
+.navbar .nav .open.dropdown .dropdown-toggle {
+	color: $linkColor !important;
+}
+
+.navbar .nav .dropdown-toggle .caret {
+	border-top-color: $textColor;
+	opacity: 1;
+}
+
+.nav .open.dropdown .caret,
+.nav .dropdown-toggle:hover .caret {
+	border-top-color: $linkColor !important;
+}
+
+div.subnav .nav > li > a {
+	font-weight: bold;
+	color: #777;
+
+	&:hover {
+		color: $linkColor;
+	}
+}
+
+div.subnav .nav > li.active > a {
+	color: $textColor;
+
+	&:hover {
+		color: $grayDark;
+	}
+}
+
+div.subnav .nav > li > .dropdown-toggle {
+	background-color: transparent;
+	color: $linkColor;
+}
+
+.navbar-search .search-query,
+.navbar-search .search-query:hover {
+	border: none;
+	color: $grayLight;
+	@include placeholder($grayLight);
+	@include box-shadow(inset 0 1px 2px rgba(0, 0, 0, 0.5));
+
+    &:focus,
+    &.focused {
+		@include box-shadow(inset 0 1px 2px rgba(0, 0, 0, 0.5));
+		color: $textColor;
+	}
+}
+
+.navbar .nav-collapse.in > .nav li > a {
+
+	color: $textColor;
+
+	.caret {
+		border-top-color: $grayLight;
+	}
+}
+
+
+.navbar .nav-collapse.in > .nav li > a:hover {
+	text-shadow: none;
+	color: $linkColor;
+	background-color: transparent;
+
+	.caret {
+		border-top-color: $white;
+	}
+}
+
+// BUTTON
+// -----------------------------------------------------
+
+.btn {
+	@include buttonBackground(#F4F4F4, #ECECEC);
+}
+
+.btn-primary {
+	@include buttonBackground(#909090, #3F3F3F);
+}
+
+.btn-warning {
+  @include buttonBackground(lighten($yellow, 15%), $yellow);
+}
+
+.btn-danger {
+  @include buttonBackground(lighten(#DA2D2D, 15%), #DA2D2D);
+}
+
+.btn-success {
+  @include buttonBackground(#8ADD6D, #60B044);
+}
+
+.btn-info {
+  @include buttonBackground(lighten(#4488BB, 15%), #4488BB);
+}
+
+.btn-inverse {
+  @include buttonBackground(lighten($purple, 5%), $purple);
+}
+
+// FORMS
+// -----------------------------------------------------
+
+.control-group.warning {
+  @include formFieldState(#E29235, #E29235, $warningBackground);
+}
+
+.control-group.error {
+  @include formFieldState(#C00, #C00, $errorBackground);
+}
+
+.control-group.success {
+  @include formFieldState(#2BA949, #2BA949, $successBackground);
+}
+
+
+// LABELS
+// -----------------------------------------------------
+
+.label-important { background-color: #BD2C00; }
+.label-warning   { background-color: #E3E84D; }
+.label-success   { background-color: #6CC644; }
+.label-info      { background-color: #4183C4; }

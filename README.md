@@ -49,6 +49,7 @@ I'm converting/updating them as time permits. Here's what's included at this poi
 * [Readable](http://bootswatch.com/readable/)
 * [Simplex](http://bootswatch.com/simplex/)
 * [Slate](http://bootswatch.com/slate/)
+* [Spacelab](http://bootswatch.com/spacelab/)
 * [United](http://bootswatch.com/united/)
 
 ## Contributing
