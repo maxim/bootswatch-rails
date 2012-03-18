@@ -50,6 +50,7 @@ I'm converting/updating them as time permits. Here's what's included at this poi
 * [Simplex](http://bootswatch.com/simplex/)
 * [Slate](http://bootswatch.com/slate/)
 * [Spacelab](http://bootswatch.com/spacelab/)
+* [Spruce](http://bootswatch.com/spruce/)
 * [United](http://bootswatch.com/united/)
 
 ## Contributing
