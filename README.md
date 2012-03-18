@@ -48,6 +48,7 @@ I'm converting/updating them as time permits. Here's what's included at this poi
 * [Journal](http://bootswatch.com/journal/)
 * [Readable](http://bootswatch.com/readable/)
 * [Simplex](http://bootswatch.com/simplex/)
+* [Slate](http://bootswatch.com/slate/)
 * [United](http://bootswatch.com/united/)
 
 ## Contributing
