@@ -51,6 +51,7 @@ I'm converting/updating them as time permits. Here's what's included at this poi
 * [Slate](http://bootswatch.com/slate/)
 * [Spacelab](http://bootswatch.com/spacelab/)
 * [Spruce](http://bootswatch.com/spruce/)
+* [Superhero](http://bootswatch.com/superhero/)
 * [United](http://bootswatch.com/united/)
 
 ## Contributing
