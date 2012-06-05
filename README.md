@@ -18,10 +18,10 @@ When using bootstrap-sass, it's recommended to avoid sprockets in your styleshee
 
 Here's approximately how your `application.css.scss` file should look like, considering that you're using [bootstrap-sass](https://github.com/thomas-mcdonald/bootstrap-sass).
 
-    // Example using journal bootswatch
+    // Example using 'Cerulean' bootswatch
     //
     // First import journal variables
-    @import "bootswatch/journal/variables";
+    @import "bootswatch/cerulean/variables";
 
     // Then bootstrap itself
     @import "bootstrap";
