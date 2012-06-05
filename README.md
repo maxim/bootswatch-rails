@@ -33,7 +33,7 @@ Here's approximately how your `application.css.scss` file should look like, cons
     @import "bootstrap-responsive";
 
     // And finally bootswatch style itself
-    @import "bootswatch/journal/bootswatch";
+    @import "bootswatch/cerulean/bootswatch";
 
     // Whatever application styles you have go last
     @import "base";
