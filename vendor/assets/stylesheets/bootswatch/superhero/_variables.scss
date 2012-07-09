@@ -1,9 +1,7 @@
 // Variables to customize the look and feel of Bootstrap
 // Swatch: Superhero
-// Version: 2.0.2
+// Version: 2.0.4
 // -----------------------------------------------------
-
-
 
 // GLOBAL VALUES
 // --------------------------------------------------
@@ -46,10 +44,14 @@ $linkColorHover:        $linkColor;
 
 // Typography
 // -------------------------
+$sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;
+$serifFontFamily:       Georgia, Utopia, Palatino, 'Palatino Linotype', serif;
+$monoFontFamily:        Menlo, Monaco, Consolas, "Courier New", monospace;
+
 $baseFontSize:          15px;
-$baseFontFamily:        Georgia, Utopia, Palatino, 'Palatino Linotype', serif;
+$baseFontFamily:        $serifFontFamily;
 $baseLineHeight:        20px;
-$altFontFamily:         Georgia, "Times New Roman", Times, serif;
+$altFontFamily:         $serifFontFamily;
 
 $headingsFontFamily:    'Oswald', sans-serif; // empty to use BS default, $baseFontFamily
 $headingsFontWeight:    bold;    // instead of browser default, bold
@@ -71,7 +73,7 @@ $btnBackgroundHighlight:            darken($white, 10%);
 $btnBorder:                         darken($white, 20%);
 
 $btnPrimaryBackground:              $linkColor;
-$btnPrimaryBackgroundHighlight:     adjust-hue($btnPrimaryBackground, 15%);
+$btnPrimaryBackgroundHighlight:     spin($btnPrimaryBackground, 15%);
 
 $btnInfoBackground:                 #5bc0de;
 $btnInfoBackgroundHighlight:        #2f96b4;
@@ -93,8 +95,9 @@ $btnInverseBackgroundHighlight:     $grayDarker;
 // -------------------------
 $inputBackground:               $white;
 $inputBorder:                   #ccc;
+$inputBorderRadius:             3px;
 $inputDisabledBackground:       $grayLighter;
-
+$formActionsBackground:         transparent;
 
 // Dropdowns
 // -------------------------
@@ -103,7 +106,8 @@ $dropdownBorder:                rgba(0,0,0,0);
 $dropdownLinkColor:             $textColor;
 $dropdownLinkColorHover:        $white;
 $dropdownLinkBackgroundHover:   $linkColor;
-
+$dropdownDividerTop:            transparent;
+$dropdownDividerBottom:         $blue;
 
 
 
@@ -120,6 +124,12 @@ $zindexTooltip:           1020;
 $zindexFixedNavbar:       1030;
 $zindexModalBackdrop:     1040;
 $zindexModal:             1050;
+
+
+// Sprite icons path
+// -------------------------
+$iconSpritePath:          "../img/glyphicons-halflings.png";
+$iconWhiteSpritePath:     "../img/glyphicons-halflings-white.png";
 
 
 // Input placeholder text color
@@ -139,8 +149,8 @@ $navbarBackground:                $blueDark;
 $navbarBackgroundHighlight:       $navbarBackground;
 
 $navbarText:                      $grayLight;
-$navbarLinkColor:                 $grayLight;
-$navbarLinkColorHover:            $white;
+$navbarLinkColor:                 $orange;
+$navbarLinkColorHover:            $orange;
 $navbarLinkColorActive:           $navbarLinkColorHover;
 $navbarLinkBackgroundHover:       transparent;
 $navbarLinkBackgroundActive:      $navbarBackground;
@@ -149,11 +159,12 @@ $navbarSearchBackground:          lighten($navbarBackground, 25%);
 $navbarSearchBackgroundFocus:     $white;
 $navbarSearchBorder:              darken($navbarSearchBackground, 30%);
 $navbarSearchPlaceholderColor:    #ccc;
+$navbarBrandColor:                $navbarLinkColor;
 
 
 // Hero unit
 // -------------------------
-$heroUnitBackground:              $grayLighter;
+$heroUnitBackground:              $blue;
 $heroUnitHeadingColor:            inherit;
 $heroUnitLeadColor:               inherit;
 
@@ -162,20 +173,19 @@ $heroUnitLeadColor:               inherit;
 // -------------------------
 $warningText:             #c09853;
 $warningBackground:       #fcf8e3;
-$warningBorder:           darken(adjust-hue($warningBackground, -10), 3%);
+$warningBorder:           darken(spin($warningBackground, -10), 3%);
 
 $errorText:               #b94a48;
 $errorBackground:         #f2dede;
-$errorBorder:             darken(adjust-hue($errorBackground, -10), 3%);
+$errorBorder:             darken(spin($errorBackground, -10), 3%);
 
 $successText:             #468847;
 $successBackground:       #dff0d8;
-$successBorder:           darken(adjust-hue($successBackground, -10), 5%);
+$successBorder:           darken(spin($successBackground, -10), 5%);
 
 $infoText:                #3a87ad;
 $infoBackground:          #d9edf7;
-$infoBorder:              darken(adjust-hue($infoBackground, -10), 7%);
-
+$infoBorder:              darken(spin($infoBackground, -10), 7%);
 
 
 
@@ -188,7 +198,6 @@ $gridColumns:             12;
 $gridColumnWidth:         60px;
 $gridGutterWidth:         20px;
 $gridRowWidth:            ($gridColumns * $gridColumnWidth) + ($gridGutterWidth * ($gridColumns - 1));
-
 
 // Fluid grid
 // -------------------------
