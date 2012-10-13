@@ -306,7 +306,7 @@ div.subnav-fixed {
 // -----------------------------------------------------
 
 .btn-primary {
-  @include buttonBackground(lighten($btnPrimaryBackground, 10%), $btnPrimaryBackground);
+  @include buttonBackground(lighten($btnPrimaryBackground, 0.10), $btnPrimaryBackground);
 }
 
 .btn [class^="icon-"],

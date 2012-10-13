@@ -125,11 +125,11 @@ div.subnav .nav > li > .dropdown-toggle {
 }
 
 .btn-warning {
-  @include buttonBackground(lighten($yellow, 15%), $yellow);
+  @include buttonBackground(lighten($yellow, 0.15), $yellow);
 }
 
 .btn-danger {
-  @include buttonBackground(lighten(#DA2D2D, 15%), #DA2D2D);
+  @include buttonBackground(lighten(#DA2D2D, 0.15), #DA2D2D);
 }
 
 .btn-success {
@@ -137,11 +137,11 @@ div.subnav .nav > li > .dropdown-toggle {
 }
 
 .btn-info {
-  @include buttonBackground(lighten(#4488BB, 15%), #4488BB);
+  @include buttonBackground(lighten(#4488BB, 0.15), #4488BB);
 }
 
 .btn-inverse {
-  @include buttonBackground(lighten($purple, 5%), $purple);
+  @include buttonBackground(lighten($purple, 0.5), $purple);
 }
 
 // FORMS

@@ -41,7 +41,7 @@ $textColor:             $gray;
 // Links
 // -------------------------
 $linkColor:             #369BD7;
-$linkColorHover:        darken($linkColor, 15%);
+$linkColorHover:        darken($linkColor, 0.15);
 
 
 // Typography
@@ -67,11 +67,11 @@ $tableBorder:                       #ddd; // table and cell border
 // Buttons
 // -------------------------
 $btnBackground:                     $white;
-$btnBackgroundHighlight:            darken($white, 10%);
-$btnBorder:                         darken($white, 20%);
+$btnBackgroundHighlight:            darken($white, 0.10);
+$btnBorder:                         darken($white, 0.20);
 
 $btnPrimaryBackground:              $linkColor;
-$btnPrimaryBackgroundHighlight:     adjust-hue($btnPrimaryBackground, 15%);
+$btnPrimaryBackgroundHighlight:     adjust-hue($btnPrimaryBackground, 0.15);
 
 $btnInfoBackground:                 $purple;
 $btnInfoBackgroundHighlight:        #2f96b4;
@@ -136,7 +136,7 @@ $hrBorder:                $grayLighter;
 // -------------------------
 $navbarHeight:                    40px;
 $navbarBackground:                $linkColor;
-$navbarBackgroundHighlight:       lighten($linkColor, 10%);
+$navbarBackgroundHighlight:       lighten($linkColor, 0.10);
 
 $navbarText:                      $grayLighter;
 $navbarLinkColor:                 $grayLighter;
@@ -145,9 +145,9 @@ $navbarLinkColorActive:           $navbarLinkColorHover;
 $navbarLinkBackgroundHover:       transparent;
 $navbarLinkBackgroundActive:      $navbarBackground;
 
-$navbarSearchBackground:          lighten($navbarBackground, 25%);
+$navbarSearchBackground:          lighten($navbarBackground, 0.25);
 $navbarSearchBackgroundFocus:     $white;
-$navbarSearchBorder:              darken($navbarSearchBackground, 30%);
+$navbarSearchBorder:              darken($navbarSearchBackground, 0.30);
 $navbarSearchPlaceholderColor:    $white;
 
 
@@ -160,21 +160,21 @@ $heroUnitLeadColor:               inherit;
 
 // Form states and alerts
 // -------------------------
-$warningText:             darken($linkColor, 20%);
-$warningBackground:       lighten($linkColor, 20%);
-$warningBorder:           darken(adjust-hue($warningBackground, -10), 3%);
+$warningText:             darken($linkColor, 0.20);
+$warningBackground:       lighten($linkColor, 0.20);
+$warningBorder:           darken(adjust-hue($warningBackground, -10), 0.3);
 
-$errorText:               darken(#C45559, 5%);
+$errorText:               darken(#C45559, 0.5);
 $errorBackground:         #EDDBE3;
-$errorBorder:             darken(adjust-hue($errorBackground, -10), 3%);
+$errorBorder:             darken(adjust-hue($errorBackground, -10), 0.3);
 
-$successText:             darken($green, 5%);
+$successText:             darken($green, 0.5);
 $successBackground:       #CDB;
-$successBorder:           darken(adjust-hue($successBackground, -10), 5%);
+$successBorder:           darken(adjust-hue($successBackground, -10), 0.5);
 
-$infoText:                darken(#908A62, 5%);
+$infoText:                darken(#908A62, 0.5);
 $infoBackground:          #EDEBE1;
-$infoBorder:              darken(adjust-hue($infoBackground, -10), 7%);
+$infoBorder:              darken(adjust-hue($infoBackground, -10), 0.7);
 
 
 
@@ -192,5 +192,5 @@ $gridRowWidth:            ($gridColumns * $gridColumnWidth) + ($gridGutterWidth 
 
 // Fluid grid
 // -------------------------
-$fluidGridColumnWidth:    6.382978723%;
-$fluidGridGutterWidth:    2.127659574%;
+$fluidGridColumnWidth:    6.0.382978723;
+$fluidGridGutterWidth:    2.0.127659574;
