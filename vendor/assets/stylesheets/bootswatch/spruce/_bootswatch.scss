@@ -35,7 +35,7 @@ h1 > small, h2 > small, h3 > small, h4 > small, h5 > small, h6 > small, .muted {
 // --------------------------------------------------
 
 body {
-	@include gradient-vertical-three-colors (#90A38F, #AEAD8E, 60%, #90A38F);
+	@include gradient-vertical-three-colors (#90A38F, #AEAD8E, .60, #90A38F);
 	background-size: 100% 1400px;
 	background-repeat: repeat-y !important;
 }
@@ -53,7 +53,7 @@ blockquote {
 }
 
 code, pre {
-	color: lighten($blueDark, 10%);
+	color: lighten($blueDark, .10);
 	background-color: $linkColor;
 }
 
@@ -107,7 +107,7 @@ code, pre {
 }
 
 .navbar .nav > .dropdown.open > .dropdown-menu a:hover {
-	background-color: darken(#90A38F, 10%);
+	background-color: darken(#90A38F, .10);
 	color: $linkColor;
 }
 
@@ -150,7 +150,7 @@ div.subnav .dropdown.open > .dropdown-menu {
 }
 
 div.subnav .dropdown.open > .dropdown-menu a:hover {
-	background-color: darken(#90A38F, 10%);
+	background-color: darken(#90A38F, .10);
 	color: $linkColor;
 }
 
@@ -211,7 +211,7 @@ div.subnav-fixed {
 
 .table th,
 .table-striped tbody tr:nth-child(odd) th {
-	background-color: darken(#90A38F, 10%);
+	background-color: darken(#90A38F, .10);
 	color: $linkColor;
 }
 
@@ -219,7 +219,7 @@ div.subnav-fixed {
 // --------------------------------------------------
 
 .btn {
-  @include buttonBackground(lighten($blueDark, 5%), $blueDark);
+  @include buttonBackground(lighten($blueDark, .5), $blueDark);
     text-shadow: none;
     color: $white;
 	border-color: transparent;
@@ -235,15 +235,15 @@ div.subnav-fixed {
 }
 
 .btn-primary {
-	@include buttonBackground(lighten($blue, 10%), lighten($blue, 5%));
+	@include buttonBackground(lighten($blue, .10), lighten($blue, .5));
 }
 
 .btn-warning {
-  @include buttonBackground($orange, darken($orange, 5%));
+  @include buttonBackground($orange, darken($orange, .5));
 }
 
 .btn-danger {
-  @include buttonBackground(lighten($red, 5%), $red);
+  @include buttonBackground(lighten($red, .5), $red);
 }
 
 .btn-success {
@@ -255,7 +255,7 @@ div.subnav-fixed {
 }
 
 .btn-inverse {
-  @include buttonBackground($yellow, darken($yellow, 5%));
+  @include buttonBackground($yellow, darken($yellow, .5));
 }
 
 .btn-group .dropdown-toggle {
@@ -266,7 +266,7 @@ div.subnav-fixed {
 // --------------------------------------------------
 
 .breadcrumb, .pagination > ul {
-	background-color: darken(#90A38F, 10%);
+	background-color: darken(#90A38F, .10);
 	background-image: none;
 	border-color: transparent;
 	@include box-shadow(none);
@@ -443,7 +443,7 @@ legend {
 }
 
 .progress {
-	background-color: darken(#90A38F, 10%);
+	background-color: darken(#90A38F, .10);
 	background-image: none;
 	@include box-shadow(none);
 
@@ -454,7 +454,7 @@ legend {
 }
 
 .well {
-	background-color: darken(#90A38F, 10%);
+	background-color: darken(#90A38F, .10);
 	border: none;
 	@include box-shadow(none);
 }
