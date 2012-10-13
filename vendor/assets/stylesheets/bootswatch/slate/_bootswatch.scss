@@ -18,7 +18,7 @@ h1, h2, h3, h4, h5, h6, body, legend, label {
 
 .navbar .navbar-inner,
 div.subnav {
-	@include gradient-vertical-three-colors($gray, $grayDark, 0.70, $grayDark);
+	@include gradient-vertical-three-colors($gray, $grayDark, 70%, $grayDark);
 }
 
 .navbar .divider-vertical {
@@ -31,7 +31,7 @@ div.subnav {
 div.subnav .nav > li > a {
 	color: $grayLighter;
 	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
-	border-right: 1px solid darken($gray, 0.15);
+	border-right: 1px solid darken($gray, 15%);
 }
 
 .navbar .nav > li > a,
@@ -53,8 +53,8 @@ div.subnav .nav > li.active > a,
 div.subnav .nav > li.active > a:hover {
 	color: $grayLighter;
 	background-color: $grayDark;
-	@include gradient-directional(lighten($grayDarker, 0.4), lighten($grayDark, 0.4), 280deg);
-	border-right: 1px solid darken($gray, 0.15);
+	@include gradient-directional(lighten($grayDarker, 4%), lighten($grayDark, 4%), 280deg);
+	border-right: 1px solid darken($gray, 15%);
 }
 
 div.subnav .nav > li:first-child > a,
@@ -64,12 +64,12 @@ div.subnav .nav > li:first-child > a:hover {
 
 div.subnav.subnav-fixed .nav > li.active:first-child > a,
 div.subnav.subnav-fixed .nav > li:first-child > a:hover {
-	border-left: 1px solid darken($gray, 0.15);
+	border-left: 1px solid darken($gray, 15%);
 }
 
 div.subnav .nav > li.active:last-child > a,
 div.subnav .nav > li:last-child > a:hover {
-	border-right: 1px solid darken($gray, 0.15);
+	border-right: 1px solid darken($gray, 15%);
 }
 
 div.subnav {
@@ -82,7 +82,7 @@ div.subnav-fixed {
 }
 
 .navbar-search .search-query {
-	border: 1px solid darken($gray, 0.15);
+	border: 1px solid darken($gray, 15%);
 }
 
 .nav .nav-header {
@@ -120,7 +120,7 @@ div.subnav-fixed {
 // -----------------------------------------------------
 
 .btn {
-  @include buttonBackground($gray, darken($gray, 0.10));
+  @include buttonBackground($gray, darken($gray, 10%));
 	@include border-radius(3px);
 	border: 1px solid $grayDarker;
 }
@@ -135,7 +135,7 @@ div.subnav-fixed {
   @include buttonBackground($btnPrimaryBackground, adjust-hue($btnPrimaryBackground, 20));
 }
 .btn-warning {
-  @include buttonBackground(lighten($orange, 0.15), $orange);
+  @include buttonBackground(lighten($orange, 15%), $orange);
 }
 
 .btn-danger {
@@ -162,16 +162,16 @@ div.subnav-fixed {
 // -----------------------------------------------------
 
 .table th, .table td, .table tbody + tbody {
-	border-top: 1px solid darken($grayDarker, 0.5);
+	border-top: 1px solid darken($grayDarker, 5%);
 }
 
 .table-bordered {
-  border: 1px solid darken($grayDarker, 0.5);
+  border: 1px solid darken($grayDarker, 5%);
   th + th,
   td + td,
   th + td,
   td + th {
-    border-left: 1px solid darken($grayDarker, 0.5);
+    border-left: 1px solid darken($grayDarker, 5%);
   }
   // Prevent a double border
   thead:first-child tr:first-child th,
@@ -185,7 +185,7 @@ div.subnav-fixed {
   tbody {
     tr:nth-child(odd) td,
     tr:nth-child(odd) th {
-      background-color: darken($grayDark, 0.5);
+      background-color: darken($grayDark, 5%);
     }
   }
 }
@@ -211,7 +211,7 @@ div.subnav-fixed {
 .breadcrumb, .pagination > ul a, .pager a {
 	border: 1px solid transparent;
 	@include box-shadow('0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1)');
-	@include gradient-vertical-three-colors($gray, $grayDark, 0.70, $grayDark);
+	@include gradient-vertical-three-colors($gray, $grayDark, 70%, $grayDark);
 }
 
 .breadcrumb li, .breadcrumb a, .pagination > ul a {
@@ -227,13 +227,13 @@ div.subnav-fixed {
 .pagination li > a,
 .pagination li.disabled > a {
 	border-left: 1px solid $gray;
-	border-right: 1px solid darken($gray, 0.15);
+	border-right: 1px solid darken($gray, 15%);
 	border-top: none;
 	border-bottom: none;
 }
 
 .pagination li.disabled > a {
-	@include gradient-vertical-three-colors($grayLight, $gray, 0.70, $gray);
+	@include gradient-vertical-three-colors($grayLight, $gray, 70%, $gray);
 }
 
 .pagination > ul > li:not(.disabled) a:hover,
@@ -246,7 +246,7 @@ div.subnav-fixed {
 .pagination > ul > li.active > a:hover {
 	color: $grayLighter;
 	background-color: $grayDark;
-	@include gradient-directional(lighten($grayDarker, 0.4), lighten($grayDark, 0.4), 280deg);
+	@include gradient-directional(lighten($grayDarker, 4%), lighten($grayDark, 4%), 280deg);
 	border-left: 1px solid transparent;
 }
 
@@ -298,7 +298,7 @@ div.subnav-fixed {
 .nav > li > a {
 	border: none;
 	@include box-shadow('0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1)');
-	@include gradient-vertical-three-colors($gray, $grayDark, 0.70, $grayDark);
+	@include gradient-vertical-three-colors($gray, $grayDark, 70%, $grayDark);
 
 }
 
@@ -308,7 +308,7 @@ div.subnav-fixed {
 }
 
 .nav.nav-list .divider {
-	border-bottom: 1px solid darken($grayDarker, 0.5);
+	border-bottom: 1px solid darken($grayDarker, 5%);
 	background-color: transparent;
 }
 
@@ -336,7 +336,7 @@ label, input, button, select, textarea, legend {
 }
 
 .form-actions {
-	background-color: darken($grayDarker, 0.3);
+	background-color: darken($grayDarker, 3%);
 	border-top: none;
 }
 
@@ -396,18 +396,18 @@ label, input, button, select, textarea, legend {
 
 code, pre {
 	background-color: #F7F7F7;
-	border: 1px solid darken($grayDarker, 0.5);
+	border: 1px solid darken($grayDarker, 5%);
 	text-shadow: none;
 }
 
 hr, legend, .page-header, .dropdown-menu .divider {
 	border-top: none;
-	border-bottom: 1px solid darken($grayDarker, 0.5);
+	border-bottom: 1px solid darken($grayDarker, 5%);
 	background-color: transparent;
 }
 
 footer.footer {
-	border-top: 1px solid darken($grayDarker, 0.5);
+	border-top: 1px solid darken($grayDarker, 5%);
 
 	p {
 		color: $textColor;
@@ -415,14 +415,14 @@ footer.footer {
 }
 
 .well, .progress {
-	background-color: darken($grayDarker, 0.3);
+	background-color: darken($grayDarker, 3%);
 	@include box-shadow(inset 1px 1px 1px rgba(0, 0, 0, 0.5));
 }
 
 .progress {
-	@include gradient-vertical(darken($grayDarker, 0.3), darken($grayDarker, 0.3));
+	@include gradient-vertical(darken($grayDarker, 3%), darken($grayDarker, 3%));
 }
 
 .thumbnail, a.thumbnail:hover {
-  border: 1px solid darken($grayDarker, 0.5);
+  border: 1px solid darken($grayDarker, 5%);
 }
