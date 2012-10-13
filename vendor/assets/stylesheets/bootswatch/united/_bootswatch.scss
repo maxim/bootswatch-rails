@@ -41,7 +41,7 @@
 }
 
 .navbar-search .search-query {
-	border: 1px solid darken($navbarBackground, 15%);
+	border: 1px solid darken($navbarBackground, .15);
 }
 
 .navbar .nav-collapse.in > .nav li > a {
@@ -65,11 +65,11 @@
 // -----------------------------------------------------
 
 .btn-primary {
-  @include buttonBackground(lighten($btnPrimaryBackground, 15%), $btnPrimaryBackground);
+  @include buttonBackground(lighten($btnPrimaryBackground, .15), $btnPrimaryBackground);
 }
 
 .btn-warning {
-  @include buttonBackground(lighten($yellow, 15%), $yellow);
+  @include buttonBackground(lighten($yellow, .15), $yellow);
 }
 
 // ALERTS

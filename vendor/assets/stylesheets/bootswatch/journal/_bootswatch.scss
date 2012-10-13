@@ -109,7 +109,7 @@ div.subnav .nav > .active > a:hover {
 // -----------------------------------------------------
 
 .btn-primary {
-  @include buttonBackground(lighten($linkColor, 5%), $linkColor);
+  @include buttonBackground(lighten($linkColor, .5), $linkColor);
 }
 
 

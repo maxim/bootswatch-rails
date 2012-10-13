@@ -67,11 +67,11 @@ $tableBorder:                       #222; // table and cell border
 // Buttons
 // -------------------------
 $btnBackground:                     $white;
-$btnBackgroundHighlight:            darken($white, 10%);
+$btnBackgroundHighlight:            darken($white, .10);
 $btnBorder:                         rgba(0, 0, 0, 0);
 
 $btnPrimaryBackground:              $blueDark;
-$btnPrimaryBackgroundHighlight:     darken($blueDark, 10%);
+$btnPrimaryBackgroundHighlight:     darken($blueDark, .10);
 
 $btnInfoBackground:                 #5bc0de;
 $btnInfoBackgroundHighlight:        #2f96b4;
@@ -79,7 +79,7 @@ $btnInfoBackgroundHighlight:        #2f96b4;
 $btnSuccessBackground:              #62c462;
 $btnSuccessBackgroundHighlight:     #51a351;
 
-$btnWarningBackground:              lighten($orange, 15%);
+$btnWarningBackground:              lighten($orange, .15);
 $btnWarningBackgroundHighlight:     $orange;
 
 $btnDangerBackground:               #ee5f5b;
@@ -145,9 +145,9 @@ $navbarLinkColorActive:           $navbarLinkColorHover;
 $navbarLinkBackgroundHover:       transparent;
 $navbarLinkBackgroundActive:      $navbarBackground;
 
-$navbarSearchBackground:          lighten($navbarBackground, 25%);
+$navbarSearchBackground:          lighten($navbarBackground, .25);
 $navbarSearchBackgroundFocus:     $white;
-$navbarSearchBorder:              darken($navbarSearchBackground, 30%);
+$navbarSearchBorder:              darken($navbarSearchBackground, .30);
 $navbarSearchPlaceholderColor:    #ccc;
 
 
@@ -160,21 +160,21 @@ $heroUnitLeadColor:               inherit;
 
 // Form states and alerts
 // -------------------------
-$warningText:             darken(#c09853, 10%);
+$warningText:             darken(#c09853, .10);
 $warningBackground:       $grayLighter;
 $warningBorder:           transparent;
 
 $errorText:               #b94a48;
 $errorBackground:         $grayLighter;
-$errorBorder:             darken(adjust-hue($errorBackground, -10), 3%);
+$errorBorder:             darken(adjust-hue($errorBackground, -10), .3);
 
 $successText:             #468847;
 $successBackground:       $grayLighter;
-$successBorder:           darken(adjust-hue($successBackground, -10), 5%);
+$successBorder:           darken(adjust-hue($successBackground, -10), .5);
 
 $infoText:                $blueDark;
 $infoBackground:          $grayLighter;
-$infoBorder:              darken(adjust-hue($infoBackground, -10), 7%);
+$infoBorder:              darken(adjust-hue($infoBackground, -10), .7);
 
 
 
@@ -192,5 +192,5 @@ $gridRowWidth:            ($gridColumns * $gridColumnWidth) + ($gridGutterWidth 
 
 // Fluid grid
 // -------------------------
-$fluidGridColumnWidth:    6.382978723%;
-$fluidGridGutterWidth:    2.127659574%;
+$fluidGridColumnWidth:    6..382978723;
+$fluidGridGutterWidth:    2..127659574;
