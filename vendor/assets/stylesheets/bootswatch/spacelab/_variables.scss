@@ -1,33 +1,31 @@
-// Variables to customize the look and feel of Bootstrap
+// Variables
 // Swatch: Spacelab
-// Version: 2.0.2
-// -----------------------------------------------------
+// Version: 2.1.1
+// --------------------------------------------------
 
-
-
-// GLOBAL VALUES
+// Global values
 // --------------------------------------------------
 
 
 // Grays
 // -------------------------
 $black:                 #000;
-$grayDarker:            #222;
+$grayDarker:            #2D2D2D;
 $grayDark:              #333;
-$gray:                  #555;
-$grayLight:             #999;
+$gray:                  #777;
+$grayLight:             #bbb;
 $grayLighter:           #eee;
 $white:                 #fff;
 
 
 // Accent colors
 // -------------------------
-$blue:                  #4183C4;
+$blue:                  #3399F3;
 $blueDark:              #405A6A;
-$green:                 #84DE81;
-$red:                   #E5322C;
+$green:                 #819E37;
+$red:                   #CD0200;
 $yellow:                #F4CA00;
-$orange:                #FF7D00;
+$orange:                #D47500;
 $pink:                  #F44B8C;
 $purple:                #405A6A;
 
@@ -35,24 +33,28 @@ $purple:                #405A6A;
 // Scaffolding
 // -------------------------
 $bodyBackground:        $white;
-$textColor:             $grayDark;
+$textColor:             $grayDarker;
 
 
 // Links
 // -------------------------
-$linkColor:             #4183C4;
+$linkColor:             #558BC4;
 $linkColorHover:        $linkColor;
 
 
 // Typography
 // -------------------------
-$baseFontSize:          13px;
-$baseFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;
-$baseLineHeight:        18px;
-$altFontFamily:         Georgia, "Times New Roman", Times, serif;
+$sansFontFamily:        "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$serifFontFamily:       Georgia, "Times New Roman", Times, serif;
+$monoFontFamily:        Menlo, Monaco, Consolas, "Courier New", monospace;
+
+$baseFontSize:          14px;
+$baseFontFamily:        $sansFontFamily;
+$baseLineHeight:        21px;
+$altFontFamily:         $serifFontFamily;
 
 $headingsFontFamily:    inherit; // empty to use BS default, $baseFontFamily
-$headingsFontWeight:    bold;    // instead of browser default, bold
+$headingsFontWeight:    normal;    // instead of browser default, bold
 $headingsColor:         inherit; // empty to use BS default, $textColor
 
 
@@ -67,42 +69,52 @@ $tableBorder:                       #ddd; // table and cell border
 // Buttons
 // -------------------------
 $btnBackground:                     $white;
-$btnBackgroundHighlight:            darken($white, 10%);
-$btnBorder:                         darken($white, 20%);
+$btnBackgroundHighlight:            $grayLighter;
+$btnBorder:                         darken($btnBackground, 20%);
 
-$btnPrimaryBackground:              $linkColor;
-$btnPrimaryBackgroundHighlight:     adjust-hue($btnPrimaryBackground, 15%);
+$btnPrimaryBackground:              lighten($linkColor, 15%);
+$btnPrimaryBackgroundHighlight:     $linkColor;
 
-$btnInfoBackground:                 #5bc0de;
-$btnInfoBackgroundHighlight:        #2f96b4;
+$btnInfoBackground:                 lighten($grayLight, 15%);
+$btnInfoBackgroundHighlight:        $grayLight;
 
-$btnSuccessBackground:              #62c462;
-$btnSuccessBackgroundHighlight:     #51a351;
+$btnSuccessBackground:              lighten($green, 15%);
+$btnSuccessBackgroundHighlight:     $green;
 
 $btnWarningBackground:              lighten($orange, 15%);
 $btnWarningBackgroundHighlight:     $orange;
 
-$btnDangerBackground:               #ee5f5b;
-$btnDangerBackgroundHighlight:      #bd362f;
+$btnDangerBackground:               lighten($red, 15%);
+$btnDangerBackgroundHighlight:      $red;
 
-$btnInverseBackground:              $gray;
-$btnInverseBackgroundHighlight:     $grayDarker;
+// To avoid use variable not defined yet
+$navbarInverseBackground:           #6C737E;
+
+$btnInverseBackground:              lighten($navbarInverseBackground, 15%);
+$btnInverseBackgroundHighlight:     $navbarInverseBackground;
 
 
 // Forms
 // -------------------------
 $inputBackground:               $white;
 $inputBorder:                   #ccc;
+$inputBorderRadius:             3px;
 $inputDisabledBackground:       $grayLighter;
-
+$formActionsBackground:         #f5f5f5;
 
 // Dropdowns
 // -------------------------
 $dropdownBackground:            $white;
 $dropdownBorder:                rgba(0,0,0,.2);
-$dropdownLinkColor:             $grayDark;
+$dropdownDividerTop:            #e5e5e5;
+$dropdownDividerBottom:         $white;
+
+$dropdownLinkColor:             $textColor;
 $dropdownLinkColorHover:        $white;
-$dropdownLinkBackgroundHover:   $linkColor;
+$dropdownLinkColorActive:       $dropdownLinkColor;
+
+$dropdownLinkBackgroundActive:  $linkColor;
+$dropdownLinkBackgroundHover:   $dropdownLinkBackgroundActive;
 
 
 
@@ -116,7 +128,7 @@ $dropdownLinkBackgroundHover:   $linkColor;
 // Try to avoid customizing these :)
 $zindexDropdown:          1000;
 $zindexPopover:           1010;
-$zindexTooltip:           1020;
+$zindexTooltip:           1030;
 $zindexFixedNavbar:       1030;
 $zindexModalBackdrop:     1040;
 $zindexModal:             1050;
@@ -132,23 +144,59 @@ $placeholderText:         $grayLight;
 $hrBorder:                $grayLighter;
 
 
+// Horizontal forms & lists
+// -------------------------
+$horizontalComponentOffset:       180px;
+
+
+// Wells
+// -------------------------
+$wellBackground:                  #f5f5f5;
+
+
 // Navbar
 // -------------------------
+$navbarCollapseWidth:             979px;
+
 $navbarHeight:                    40px;
-$navbarBackground:                #EAEAEA;
-$navbarBackgroundHighlight:       lighten($navbarBackground, 15%);
+$navbarBackgroundHighlight:       #eee;
+$navbarBackground:                $grayLight;
+$navbarBorder:                    darken($navbarBackground, 5%);
 
-$navbarText:                      $grayDarker;
-$navbarLinkColor:                 $grayDarker;
+$navbarText:                      $textColor;
+$navbarLinkColor:                 $textColor;
 $navbarLinkColorHover:            $linkColor;
-$navbarLinkColorActive:           $navbarLinkColorHover;
+$navbarLinkColorActive:           $textColor;
 $navbarLinkBackgroundHover:       transparent;
-$navbarLinkBackgroundActive:      $navbarBackground;
+$navbarLinkBackgroundActive:      transparent;
 
-$navbarSearchBackground:          lighten($navbarBackground, 25%);
-$navbarSearchBackgroundFocus:     $white;
-$navbarSearchBorder:              darken($navbarSearchBackground, 30%);
-$navbarSearchPlaceholderColor:    #ccc;
+$navbarBrandColor:                $grayDark;
+
+// Inverted navbar
+$navbarInverseBackground:                #6C737E;
+$navbarInverseBackgroundHighlight:       lighten($navbarInverseBackground, 25%);
+$navbarInverseBorder:                    darken($navbarInverseBackground, 5%);
+
+$navbarInverseText:                      $grayLighter;
+$navbarInverseLinkColor:                 $grayLighter;
+$navbarInverseLinkColorHover:            $white;
+$navbarInverseLinkColorActive:           $white;
+$navbarInverseLinkBackgroundHover:       transparent;
+$navbarInverseLinkBackgroundActive:      $navbarInverseBackground;
+
+$navbarInverseSearchBackground:          lighten($navbarInverseBackground, 25%);
+$navbarInverseSearchBackgroundFocus:     $white;
+$navbarInverseSearchBorder:              $navbarInverseBackground;
+$navbarInverseSearchPlaceholderColor:    $grayLighter;
+
+$navbarInverseBrandColor:                $navbarInverseLinkColor;
+
+
+// Pagination
+// -------------------------
+$paginationBackground:                #fff;
+$paginationBorder:                    #ddd;
+$paginationActiveBackground:          #f5f5f5;
 
 
 // Hero unit
@@ -160,27 +208,43 @@ $heroUnitLeadColor:               inherit;
 
 // Form states and alerts
 // -------------------------
-$warningText:             #393939;
-$warningBackground:       #F5F3B4;
+$warningText:             $white;
+$warningBackground:       $orange;
 $warningBorder:           darken(adjust-hue($warningBackground, -10), 3%);
 
-$errorText:               $warningText;
-$errorBackground:         #FFE9E9;
+$errorText:               $white;
+$errorBackground:         $red;
 $errorBorder:             darken(adjust-hue($errorBackground, -10), 3%);
 
-$successText:             #333;
-$successBackground:       #BEDEBE;
+$successText:             $white;
+$successBackground:       $green;
 $successBorder:           darken(adjust-hue($successBackground, -10), 5%);
 
-$infoText:                #1B3650;
-$infoBackground:          #E4F0FF;
+$infoText:                $white;
+$infoBackground:          $blue;
 $infoBorder:              darken(adjust-hue($infoBackground, -10), 7%);
 
+// Tooltips and popovers
+// -------------------------
+$tooltipColor:            #fff;
+$tooltipBackground:       #000;
+$tooltipArrowWidth:       5px;
+$tooltipArrowColor:       $tooltipBackground;
+
+$popoverBackground:       #fff;
+$popoverArrowWidth:       10px;
+$popoverArrowColor:       #fff;
+$popoverTitleBackground:  darken($popoverBackground, 3%);
+
+// Special enhancement for popovers
+$popoverArrowOuterWidth:  $popoverArrowWidth + 1;
+$popoverArrowOuterColor:  rgba(0,0,0,.25);
 
 
 
 // GRID
 // --------------------------------------------------
+
 
 // Default 940px grid
 // -------------------------
@@ -189,8 +253,26 @@ $gridColumnWidth:         60px;
 $gridGutterWidth:         20px;
 $gridRowWidth:            ($gridColumns * $gridColumnWidth) + ($gridGutterWidth * ($gridColumns - 1));
 
+// 1200px min
+$gridColumnWidth1200:     70px;
+$gridGutterWidth1200:     30px;
+$gridRowWidth1200:        ($gridColumns * $gridColumnWidth1200) + ($gridGutterWidth1200 * ($gridColumns - 1));
+
+// 768px-979px
+$gridColumnWidth768:      42px;
+$gridGutterWidth768:      20px;
+$gridRowWidth768:         ($gridColumns * $gridColumnWidth768) + ($gridGutterWidth768 * ($gridColumns - 1));
+
 
 // Fluid grid
 // -------------------------
-$fluidGridColumnWidth:    6.382978723%;
-$fluidGridGutterWidth:    2.127659574%;
+$fluidGridColumnWidth:    percentage($gridColumnWidth/$gridRowWidth);
+$fluidGridGutterWidth:    percentage($gridGutterWidth/$gridRowWidth);
+
+// 1200px min
+$fluidGridColumnWidth1200:     percentage($gridColumnWidth1200/$gridRowWidth1200);
+$fluidGridGutterWidth1200:     percentage($gridGutterWidth1200/$gridRowWidth1200);
+
+// 768px-979px
+$fluidGridColumnWidth768:      percentage($gridColumnWidth768/$gridRowWidth768);
+$fluidGridGutterWidth768:      percentage($gridGutterWidth768/$gridRowWidth768);
