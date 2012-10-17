@@ -1,17 +1,150 @@
+// Bootswatch.less
 // Swatch: Spacelab
-// Version: 2.0.2
+// Version: 2.1.1
+// -----------------------------------------------------
+
+// TYPOGRAPHY
+// -----------------------------------------------------
+
+@import url('http://fonts.googleapis.com/css?family=Muli');
+
+// SCAFFOLDING
 // -----------------------------------------------------
 
 // NAVBAR
 // -----------------------------------------------------
 
-// navbar style
 .navbar {
-	border-bottom: 1px solid #CACACA;
+
+	.navbar-inner {
+		border-bottom: 1px solid #CACACA;
+		@include box-shadow(0 1px 0 rgba(255,255,255,0.4));
+	}
 
 	.brand {
-		font-size: 20px;
-		font-weight: bold;
+
+		text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+
+		&:hover {
+			color: $linkColor;
+		}
+	}
+
+	.nav > li > a {
+		padding: 11px 10px 9px;
+		text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+	}
+
+	.navbar-text {
+		margin-top: 2px;
+		padding: 0 10px;
+		line-height: 38px;
+	}
+
+	.navbar-search .search-query,
+	.navbar-search .search-query:hover {
+		margin-bottom: 0;
+		line-height: normal;
+		color: $grayLight;
+		@include placeholder($grayLight);
+		@include box-shadow(inset 0 1px 2px rgba(0, 0, 0, 0.5));
+
+	    &:focus,
+	    &.focused {
+			@include box-shadow(inset 0 1px 2px rgba(0, 0, 0, 0.5));
+			color: $textColor;
+		}
+	}
+}
+
+.navbar-inverse {
+	.brand {
+		text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
+
+		&:hover {
+			color: $white;
+		}
+	}
+
+	.nav > li > a {
+		text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
+	}
+
+	.nav li.dropdown.open > .dropdown-toggle .caret,
+	.nav li.dropdown:hover > .dropdown-toggle .caret,
+	.nav li.dropdown.open:hover > .dropdown-toggle .caret {
+		border-top-color: $white;
+	}
+
+	.navbar-search .search-query,
+	.navbar-search .search-query:hover {
+
+		color: $white;
+
+		@include placeholder($grayLighter);
+	}
+}
+
+@media (max-width: $navbarCollapseWidth) {
+
+	.navbar .nav-collapse {
+
+		.nav li > a:hover {
+			background-color: $linkColor;
+			color: $white;
+			text-shadow: none;
+		}
+
+		.navbar-search {
+			border-top: none;
+			border-bottom: none;
+		}
+	}
+
+	.navbar-inverse .nav-collapse {
+
+		.nav li > a {
+			color: $grayLighter;
+
+			&:hover {
+				background-color: $linkColor !important;
+			}
+		}
+
+		.nav-header {
+			color: $grayLighter;
+		}
+	}
+}
+
+div.subnav {
+
+	.nav > li > a {
+
+		color: $textColor;
+
+		&:hover {
+			color: $linkColor;
+		}
+	}
+
+	.nav > li.active > a {
+
+		color: $textColor;
+
+		&:hover {
+			color: $textColor;
+		}
+	}
+
+	.nav > li.dropdown > .dropdown-toggle {
+		background-color: transparent;
+	}
+
+	.nav > li.dropdown.open > .dropdown-toggle {
+
+		border-left: 1px solid whiteSmoke;
+		border-right: 1px solid #E5E5E5;
 		color: $textColor;
 
 		&:hover {
@@ -20,150 +153,142 @@
 	}
 }
 
-// navbar dropshadow
-.navbar .navbar-inner {
-	@include box-shadow(0 1px 0 rgba(255,255,255,0.4));
-	@include box-shadow(0 0 10px rgba(0,0,0,0.1));
-}
+// NAV
+// -----------------------------------------------------
 
-// nav item typography
-.navbar .nav > li > a {
-	font-weight: bold;
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-}
+.nav > li.dropdown > .dropdown-toggle,
+.nav > li.dropdown.active > .dropdown-toggle,
+.nav > li.dropdown.open > .dropdown-toggle,
+.nav > li.dropdown.open.active > .dropdown-toggle  {
 
-.navbar .nav .active > a {
-	background-color: transparent;
-	color: $textColor;
+	.caret {
+		border-top: 4px solid $textColor;
+		border-top-color: $textColor;
+		opacity: 1;
+	}
 
-	&:hover {
-		background-color: transparent;
-		color: $linkColor;
+	&:hover .caret {
+		border-top: 4px solid $linkColorHover;
+		border-top-color: $linkColorHover;
 	}
 }
 
-.navbar .nav > li > a:hover,
-.navbar .nav .open.dropdown .dropdown-toggle {
-	color: $linkColor !important;
-}
+// BUTTONS
+// -----------------------------------------------------
 
-.navbar .nav .dropdown-toggle .caret {
-	border-top-color: $textColor;
-	opacity: 1;
-}
+.btn-info {
+	&:hover,
+	&.disabled {
+		
+		color: $textColor;
+		text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
 
-.nav .open.dropdown .caret,
-.nav .dropdown-toggle:hover .caret {
-	border-top-color: $linkColor !important;
-}
-
-div.subnav .nav > li > a {
-	font-weight: bold;
-	color: #777;
-
-	&:hover {
-		color: $linkColor;
+		.caret {
+			border-top-color: $textColor;
+			border-bottom-color: $textColor;
+		}
 	}
 }
 
-div.subnav .nav > li.active > a {
+/*.btn {
+	.buttonBackground(#F4F4F4, #ECECEC);
 	color: $textColor;
+	text-shadow: none;
 
-	&:hover {
+
+	&:hover,
+	&:active,
+	&.active,
+	&.disabled,
+	&[disabled] {
 		color: $grayDark;
 	}
 }
 
-div.subnav .nav > li > .dropdown-toggle {
-	background-color: transparent;
-	color: $linkColor;
-}
-
-.navbar-search .search-query,
-.navbar-search .search-query:hover {
-	border: none;
-	color: $grayLight;
-	@include placeholder($grayLight);
-	@include box-shadow(inset 0 1px 2px rgba(0, 0, 0, 0.5));
-
-    &:focus,
-    &.focused {
-		@include box-shadow(inset 0 1px 2px rgba(0, 0, 0, 0.5));
-		color: $textColor;
-	}
-}
-
-.navbar .nav-collapse.in > .nav li > a {
-
-	color: $textColor;
-
-	.caret {
-		border-top-color: $grayLight;
-	}
-}
-
-
-.navbar .nav-collapse.in > .nav li > a:hover {
-	text-shadow: none;
-	color: $linkColor;
-	background-color: transparent;
-
-	.caret {
-		border-top-color: $white;
-	}
-}
-
-// BUTTON
-// -----------------------------------------------------
-
-.btn {
-	@include buttonBackground(#F4F4F4, #ECECEC);
-}
-
 .btn-primary {
-	@include buttonBackground(#909090, #3F3F3F);
+	.buttonBackground(#909090, #3F3F3F);
 }
 
 .btn-warning {
-  @include buttonBackground(lighten($yellow, 15%), $yellow);
+  .buttonBackground(adjust-hue($yellow, 15%), $yellow);
 }
 
 .btn-danger {
-  @include buttonBackground(lighten(#DA2D2D, 15%), #DA2D2D);
+  .buttonBackground(adjust-hue(#DA2D2D, 15%), #DA2D2D);
 }
 
 .btn-success {
-  @include buttonBackground(#8ADD6D, #60B044);
+  .buttonBackground(#8ADD6D, #60B044);
 }
 
 .btn-info {
-  @include buttonBackground(lighten(#4488BB, 15%), #4488BB);
+  .buttonBackground(adjust-hue(#4488BB, 15%), #4488BB);
 }
 
 .btn-inverse {
-  @include buttonBackground(lighten($purple, 5%), $purple);
-}
+  .buttonBackground(adjust-hue($purple, 5%), $purple);
+}*/
+
+// TABLES
+// -----------------------------------------------------
 
 // FORMS
 // -----------------------------------------------------
 
 .control-group.warning {
-  @include formFieldState(#E29235, #E29235, $warningBackground);
+	@include formFieldState(#E29235, #E29235, $warningBackground);
 }
 
 .control-group.error {
-  @include formFieldState(#C00, #C00, $errorBackground);
+	@include formFieldState(#C00, #C00, $errorBackground);
 }
 
 .control-group.success {
-  @include formFieldState(#2BA949, #2BA949, $successBackground);
+	@include formFieldState(#2BA949, #2BA949, $successBackground);
 }
 
-
-// LABELS
+// DROPDOWNS
 // -----------------------------------------------------
 
-.label-important { background-color: #BD2C00; }
-.label-warning   { background-color: #E3E84D; }
-.label-success   { background-color: #6CC644; }
-.label-info      { background-color: #4183C4; }
+// ALERTS, LABELS, BADGES
+// -----------------------------------------------------
+
+.alert {
+	color: $white;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+.label, .badge {
+	padding-top: 4px;
+
+}
+.label-important, .badge-important{
+	background-color: $red;
+}
+
+.label-warning, .badge-warning {
+	background-color: $orange;
+}
+
+.label-success, .badge-success {
+	background-color: $green;
+}
+
+.label-info, .badge-info {
+	background-color: $blue;
+}
+
+// MISC
+// -----------------------------------------------------
+
+.well {
+	background-color: $grayLighter;
+}
+
+.hero-unit {
+    @include box-shadow(inset 0 1px 1px rgba(0,0,0,.05));
+    border: 1px solid rgba(0,0,0,.05);
+}
+
+// MEDIA QUERIES
+// -----------------------------------------------------
