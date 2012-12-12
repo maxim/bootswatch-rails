@@ -210,11 +210,11 @@ div.subnav {
 }
 
 .btn-warning {
-  .buttonBackground(adjust-hue($yellow, 15%), $yellow);
+  .buttonBackground(adjust-hue($yellow, .15), $yellow);
 }
 
 .btn-danger {
-  .buttonBackground(adjust-hue(#DA2D2D, 15%), #DA2D2D);
+  .buttonBackground(adjust-hue(#DA2D2D, .15), #DA2D2D);
 }
 
 .btn-success {
@@ -222,11 +222,11 @@ div.subnav {
 }
 
 .btn-info {
-  .buttonBackground(adjust-hue(#4488BB, 15%), #4488BB);
+  .buttonBackground(adjust-hue(#4488BB, .15), #4488BB);
 }
 
 .btn-inverse {
-  .buttonBackground(adjust-hue($purple, 5%), $purple);
+  .buttonBackground(adjust-hue($purple, .05), $purple);
 }*/
 
 // TABLES

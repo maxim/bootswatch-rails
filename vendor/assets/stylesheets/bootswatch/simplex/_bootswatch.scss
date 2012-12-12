@@ -176,7 +176,7 @@ div.subnav {
 .nav-tabs {
 
 	& > li > a {
-		background-color: darken($bodyBackground, 3%);
+		background-color: darken($bodyBackground, .03);
 		border: 1px solid #ccc;
 		color: $textColor;
 

@@ -59,19 +59,19 @@ $headingsColor:         inherit; // empty to use BS default, $textColor
 // Tables
 // -------------------------
 $tableBackground:                   #C3C7AE; // overall background-color
-$tableBackgroundAccent:             darken(#C3C7AE, 5%); // for striping
-$tableBackgroundHover:              darken(#C3C7AE, 10%); // for hover
+$tableBackgroundAccent:             darken(#C3C7AE, .05); // for striping
+$tableBackgroundHover:              darken(#C3C7AE, .1); // for hover
 $tableBorder:                       $linkColor; // table and cell border
 
 
 // Buttons
 // -------------------------
 $btnBackground:                     $white;
-$btnBackgroundHighlight:            darken($white, 10%);
-$btnBorder:                         darken($white, 20%);
+$btnBackgroundHighlight:            darken($white, .1);
+$btnBorder:                         darken($white, .2);
 
 $btnPrimaryBackground:              $linkColor;
-$btnPrimaryBackgroundHighlight:     adjust-hue($btnPrimaryBackground, 15%);
+$btnPrimaryBackgroundHighlight:     adjust-hue($btnPrimaryBackground, .15);
 
 $btnInfoBackground:                 #5bc0de;
 $btnInfoBackgroundHighlight:        #2f96b4;
@@ -79,7 +79,7 @@ $btnInfoBackgroundHighlight:        #2f96b4;
 $btnSuccessBackground:              #62c462;
 $btnSuccessBackgroundHighlight:     #51a351;
 
-$btnWarningBackground:              lighten($orange, 15%);
+$btnWarningBackground:              lighten($orange, .15);
 $btnWarningBackgroundHighlight:     $orange;
 
 $btnDangerBackground:               #ee5f5b;
@@ -145,9 +145,9 @@ $navbarLinkColorActive:           $navbarLinkColorHover;
 $navbarLinkBackgroundHover:       transparent;
 $navbarLinkBackgroundActive:      $navbarBackground;
 
-$navbarSearchBackground:          lighten($navbarBackground, 25%);
+$navbarSearchBackground:          lighten($navbarBackground, .25);
 $navbarSearchBackgroundFocus:     $white;
-$navbarSearchBorder:              darken($navbarSearchBackground, 30%);
+$navbarSearchBorder:              darken($navbarSearchBackground, .3);
 $navbarSearchPlaceholderColor:    #ccc;
 
 
@@ -161,20 +161,20 @@ $heroUnitLeadColor:               inherit;
 // Form states and alerts
 // -------------------------
 $warningText:             $orange;
-$warningBackground:       darken(#90A38F, 10%);
-$warningBorder:           darken(adjust-hue($warningBackground, -10), 3%);
+$warningBackground:       darken(#90A38F, .1);
+$warningBorder:           darken(adjust-hue($warningBackground, -10), .03);
 
-$errorText:               lighten($red, 25%);
-$errorBackground:         darken(#90A38F, 10%);
-$errorBorder:             darken(adjust-hue($errorBackground, -10), 3%);
+$errorText:               lighten($red, .25);
+$errorBackground:         darken(#90A38F, .1);
+$errorBorder:             darken(adjust-hue($errorBackground, -10), .03);
 
 $successText:             #9ED99C;
-$successBackground:       darken(#90A38F, 10%);
-$successBorder:           darken(adjust-hue($successBackground, -10), 5%);
+$successBackground:       darken(#90A38F, .1);
+$successBorder:           darken(adjust-hue($successBackground, -10), .05);
 
 $infoText:                #9BCACD;
-$infoBackground:          darken(#90A38F, 10%);
-$infoBorder:              darken(adjust-hue($infoBackground, -10), 7%);
+$infoBackground:          darken(#90A38F, .1);
+$infoBorder:              darken(adjust-hue($infoBackground, -10), .07);
 
 
 

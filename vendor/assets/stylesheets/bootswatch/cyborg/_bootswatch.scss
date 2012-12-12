@@ -272,7 +272,7 @@ div.subnav .nav .dropdown.open {
 .btn {
 	@include border-radius(3px);
 	@include box-shadow(1px 1px 2px #111);
-	@include buttonBackground(darken($gray, 20%), darken($gray, 30%));
+	@include buttonBackground(darken($gray, .2), darken($gray, .3));
 	color: $white;
 	text-shadow: none;
 
@@ -283,27 +283,27 @@ div.subnav .nav .dropdown.open {
 }
 
 .btn-primary {
-  @include buttonBackground($blueDark, darken($blueDark, 10%));
+  @include buttonBackground($blueDark, darken($blueDark, .1));
 }
 
 .btn-warning {
-  @include buttonBackground(lighten($orange, 10%), $orange);
+  @include buttonBackground(lighten($orange, .1), $orange);
 }
 
 .btn-danger {
-  @include buttonBackground(lighten($red, 10%), $red);
+  @include buttonBackground(lighten($red, .1), $red);
 }
 
 .btn-success {
-  @include buttonBackground(lighten($green, 10%), $green);
+  @include buttonBackground(lighten($green, .1), $green);
 }
 
 .btn-info {
-  @include buttonBackground(darken($gray, 40%), darken($gray, 50%));
+  @include buttonBackground(darken($gray, .4), darken($gray, .5));
 }
 
 .btn-inverse {
-  @include buttonBackground(lighten($purple, 5%), $purple);
+  @include buttonBackground(lighten($purple, .05), $purple);
 }
 
 .btn-group .btn:first-child {
@@ -415,27 +415,27 @@ code, pre, pre.prettyprint {
 	color: $grayLighter;
 }
 
-.label, .alert { background-color: darken($gray, 20%); }
+.label, .alert { background-color: darken($gray, .2); }
 
-.label:hover { background-color: darken($gray, 30%); }
+.label:hover { background-color: darken($gray, .3); }
 
 
 .label-important, .alert-danger,
 .alert-error { background-color: $red; }
 
-.label-important:hover { background-color: darken($red, 10%); }
+.label-important:hover { background-color: darken($red, .1); }
 
-.label-warning   { background-color: darken($orange, 10%); }
+.label-warning   { background-color: darken($orange, .1); }
 
-.label-warning:hover { background-color: darken($orange, 20%); }
+.label-warning:hover { background-color: darken($orange, .2); }
 
-.label-success, .alert-success { background-color: darken($green, 3%); }
+.label-success, .alert-success { background-color: darken($green, .03); }
 
-.label-success:hover { background-color: darken($green, 13%); }
+.label-success:hover { background-color: darken($green, .13); }
 
-.label-info, .alert-info { background-color: darken($blueDark, 10%); }
+.label-info, .alert-info { background-color: darken($blueDark, .1); }
 
-.label-info:hover { background-color: darken($blueDark, 20%); }
+.label-info:hover { background-color: darken($blueDark, .2); }
 
 .alert,
 .alert .alert-heading,

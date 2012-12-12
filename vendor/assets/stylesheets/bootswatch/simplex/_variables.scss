@@ -67,22 +67,22 @@ $tableBorder:                       #ddd; // table and cell border
 // Buttons
 // -------------------------
 $btnBackground:                     $white;
-$btnBackgroundHighlight:            darken($white, 10%);
-$btnBorder:                         darken($white, 20%);
+$btnBackgroundHighlight:            darken($white, .1);
+$btnBorder:                         darken($white, .2);
 
-$btnPrimaryBackground:              lighten($linkColor, 5%);
+$btnPrimaryBackground:              lighten($linkColor, .05);
 $btnPrimaryBackgroundHighlight:     $linkColor;
 
-$btnInfoBackground:                 lighten(#5bc0de, 5%);
+$btnInfoBackground:                 lighten(#5bc0de, .05);
 $btnInfoBackgroundHighlight:        #5bc0de;
 
-$btnSuccessBackground:              lighten($green, 5%);
+$btnSuccessBackground:              lighten($green, .05);
 $btnSuccessBackgroundHighlight:     $green;
 
-$btnWarningBackground:              lighten($yellow, 5%);
+$btnWarningBackground:              lighten($yellow, .05);
 $btnWarningBackgroundHighlight:     $yellow;
 
-$btnDangerBackground:               lighten($red, 5%);
+$btnDangerBackground:               lighten($red, .05);
 $btnDangerBackgroundHighlight:      $red;
 
 $btnInverseBackground:              $gray;
@@ -161,7 +161,7 @@ $navbarCollapseWidth:             979px;
 $navbarHeight:                    40px;
 $navbarBackground:                #fefefe;
 $navbarBackgroundHighlight:       $navbarBackground;
-$navbarBorder:                    darken($navbarBackground, 12%);
+$navbarBorder:                    darken($navbarBackground, .12);
 
 $navbarText:                      $gray;
 $navbarLinkColor:                 $gray;
@@ -174,8 +174,8 @@ $navbarBrandColor:                $headingsColor;
 
 // Inverted navbar
 $navbarInverseBackground:                $red;
-$navbarInverseBackgroundHighlight:       lighten($red, 6%);
-$navbarInverseBorder:                    lighten($navbarInverseBackground, 8%);
+$navbarInverseBackgroundHighlight:       lighten($red, .06);
+$navbarInverseBorder:                    lighten($navbarInverseBackground, .08);
 
 $navbarInverseText:                      $white;
 $navbarInverseLinkColor:                 $white;
@@ -184,7 +184,7 @@ $navbarInverseLinkColorActive:           $navbarInverseLinkColorHover;
 $navbarInverseLinkBackgroundHover:       transparent;
 $navbarInverseLinkBackgroundActive:      $navbarInverseBackground;
 
-$navbarInverseSearchBackground:          lighten($navbarInverseBackground, 25%);
+$navbarInverseSearchBackground:          lighten($navbarInverseBackground, .25);
 $navbarInverseSearchBackgroundFocus:     $white;
 $navbarInverseSearchBorder:              $navbarInverseBackground;
 $navbarInverseSearchPlaceholderColor:    $white;
@@ -210,19 +210,19 @@ $heroUnitLeadColor:               inherit;
 // -------------------------
 $warningText:             $orange;
 $warningBackground:       #fcf8e3;
-$warningBorder:           darken(adjust-hue($warningBackground, -10), 3%);
+$warningBorder:           darken(adjust-hue($warningBackground, -10), .03);
 
 $errorText:               $red;
 $errorBackground:         #f2dede;
-$errorBorder:             darken(adjust-hue($errorBackground, -10), 3%);
+$errorBorder:             darken(adjust-hue($errorBackground, -10), .03);
 
 $successText:             $green;
 $successBackground:       #dff0d8;
-$successBorder:           darken(adjust-hue($successBackground, -10), 5%);
+$successBorder:           darken(adjust-hue($successBackground, -10), .05);
 
 $infoText:                $blue;
 $infoBackground:          #d9edf7;
-$infoBorder:              darken(adjust-hue($infoBackground, -10), 7%);
+$infoBorder:              darken(adjust-hue($infoBackground, -10), .07);
 
 
 // Tooltips and popovers
@@ -235,7 +235,7 @@ $tooltipArrowColor:       $tooltipBackground;
 $popoverBackground:       #fff;
 $popoverArrowWidth:       10px;
 $popoverArrowColor:       #fff;
-$popoverTitleBackground:  darken($popoverBackground, 3%);
+$popoverTitleBackground:  darken($popoverBackground, .03);
 
 // Special enhancement for popovers
 $popoverArrowOuterWidth:  $popoverArrowWidth + 1;
