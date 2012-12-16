@@ -44,6 +44,7 @@ I'm converting/updating them as time permits. Here's what's included at this poi
 
 * [Amelia](http://bootswatch.com/amelia/)
 * [Cerulean](http://bootswatch.com/cerulean/)
+* [Cosmo](http://bootswatch.com/cosmo/)
 * [Cyborg](http://bootswatch.com/cyborg/)
 * [Journal](http://bootswatch.com/journal/)
 * [Readable](http://bootswatch.com/readable/)
