@@ -40,7 +40,7 @@ $textColor:             #555;
 // Links
 // -------------------------
 $linkColor:             $blue;
-$linkColorHover:        darken($linkColor, 10%);
+$linkColorHover:        darken($linkColor, 0.1);
 
 
 // Typography
@@ -86,26 +86,26 @@ $tableBorder:                       #ddd; // table and cell border
 // Buttons
 // -------------------------
 $btnBackground:                     $grayLighter;
-$btnBackgroundHighlight:            darken($grayLighter, 15%);
+$btnBackgroundHighlight:            darken($grayLighter, 0.15);
 $btnBorder:                         #bbb;
 
-$btnPrimaryBackground:              lighten($blue, 5%);
-$btnPrimaryBackgroundHighlight:     darken($blue, 5%);
+$btnPrimaryBackground:              lighten($blue, 0.05);
+$btnPrimaryBackgroundHighlight:     darken($blue, 0.05);
 
-$btnInfoBackground:                 lighten($purple, 5%);
-$btnInfoBackgroundHighlight:        darken($purple, 5%);
+$btnInfoBackground:                 lighten($purple, 0.05);
+$btnInfoBackgroundHighlight:        darken($purple, 0.05);
 
-$btnSuccessBackground:              lighten($green, 5%);
-$btnSuccessBackgroundHighlight:     darken($green, 5%);
+$btnSuccessBackground:              lighten($green, 0.05);
+$btnSuccessBackgroundHighlight:     darken($green, 0.05);
 
-$btnWarningBackground:              lighten($orange, 5%);
-$btnWarningBackgroundHighlight:     darken($orange, 5%);
+$btnWarningBackground:              lighten($orange, 0.05);
+$btnWarningBackgroundHighlight:     darken($orange, 0.05);
 
-$btnDangerBackground:               lighten($red, 5%);
-$btnDangerBackgroundHighlight:      darken($red, 5%);
+$btnDangerBackground:               lighten($red, 0.05);
+$btnDangerBackgroundHighlight:      darken($red, 0.05);
 
-$btnInverseBackground:              lighten($black, 5%);
-$btnInverseBackgroundHighlight:     darken($black, 5%);
+$btnInverseBackground:              lighten($black, 0.05);
+$btnInverseBackgroundHighlight:     darken($black, 0.05);
 
 
 // Forms
@@ -207,7 +207,7 @@ $navbarInverseLinkColorActive:           $navbarInverseLinkColorHover;
 $navbarInverseLinkBackgroundHover:       rgba(0, 0, 0, 0.05);
 $navbarInverseLinkBackgroundActive:      $navbarInverseBackground;
 
-$navbarInverseSearchBackground:          lighten($navbarInverseBackground, 25%);
+$navbarInverseSearchBackground:          lighten($navbarInverseBackground, 0.25);
 $navbarInverseSearchBackgroundFocus:     $white;
 $navbarInverseSearchBorder:              $navbarInverseBackground;
 $navbarInverseSearchPlaceholderColor:    $grayDark;
