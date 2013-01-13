@@ -1,0 +1,72 @@
+#!/usr/bin/env ruby
+
+src_file_path, dst_file_path = *ARGV
+
+swap_variable_prefix = lambda do |line|
+  line.gsub(/\@[[:alnum:]]+/) do |var|
+    if %w(@media @import).include?(var)
+      var
+    else
+      var.sub('@', '$')
+    end
+  end
+end
+
+turn_percentages_into_percentiles = lambda do |line|
+  line.gsub(/([\d\.]+)%/) do |percent|
+    ($1.to_f / 100.0).to_s.sub(/^0/, '')
+  end
+end
+
+convert_mixin_declarations = lambda do |line|
+  line.sub(/^\.([^\(\s]+)\(/) do |mixin|
+    "@mixin #{$1}("
+  end
+end
+
+convert_namespace_include_syntax = lambda do |line|
+  line.sub(/#(\S+)\s+>\s+\.([[:alnum:]]+)/) do |namespace|
+    "@include #{$1}-#{$2}"
+  end
+end
+
+convert_include_syntax = lambda do |line|
+  line.sub(/^(\s+)\.([^\(\s]+)\(/) do |module_name|
+    "#{$1}@include #{$2}("
+  end
+end
+
+swap_spin_adjust_hue = lambda do |line|
+  line.gsub(/(\W)spin\(/) do |spin|
+    "#{$1}adjust-hue("
+  end
+end
+
+line_processors = [
+  swap_variable_prefix,
+  turn_percentages_into_percentiles,
+  convert_mixin_declarations,
+  convert_namespace_include_syntax,
+  convert_include_syntax,
+  swap_spin_adjust_hue
+]
+
+comment_line = /^\s*\/\//
+processed_lines = []
+
+File.open(src_file_path, 'r') do |file|
+  file.each_line do |line|
+    if line =~ comment_line
+      processed_lines << line
+    else
+      line_processors.each do |processor|
+        line = processor.call(line)
+      end
+      processed_lines << line
+    end
+  end
+end
+
+File.open(dst_file_path, 'w') do |file|
+  file.write(processed_lines.join)
+end
