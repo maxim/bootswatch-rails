@@ -1,6 +1,10 @@
 # bootswatch-rails
 
-This gem is meant to be used with [bootstrap-sass](https://github.com/thomas-mcdonald/bootstrap-sass). It gives you complete scss versions of [bootswatches](http://bootswatch.com) for use in your Rails 3 asset pipeline, just like bootstrap-sass gives you scss version of bootstrap itself.
+This gem is meant to be used with
+[bootstrap-sass](https://github.com/thomas-mcdonald/bootstrap-sass). It gives
+you complete scss versions of [bootswatches](http://bootswatch.com) for use in
+your Rails 3 asset pipeline, just like bootstrap-sass gives you scss version of
+bootstrap itself.
 
 ## Installation
 
@@ -14,9 +18,15 @@ And then execute:
 
 ## Usage
 
-When using bootstrap-sass, it's recommended to avoid sprockets in your stylesheets. In order to do that you simply rename your `application.css` file to `application.css.scss`, remove all sprockets comments, and instead use sass `@import` commands. These commands are smart enough to fully support asset pipeline load paths, thanks to `sass-rails` gem.
+When using bootstrap-sass, it's recommended to avoid sprockets in your
+stylesheets. In order to do that you simply rename your `application.css` file
+to `application.css.scss`, remove all sprockets comments, and instead use sass
+`@import` commands. These commands are smart enough to fully support asset
+pipeline load paths, thanks to `sass-rails` gem.
 
-Here's approximately how your `application.css.scss` file should look like, considering that you're using [bootstrap-sass](https://github.com/thomas-mcdonald/bootstrap-sass).
+Here's approximately how your `application.css.scss` file should look like,
+considering that you're using
+[bootstrap-sass](https://github.com/thomas-mcdonald/bootstrap-sass).
 
     // Example using 'Cerulean' bootswatch
     //
@@ -40,7 +50,7 @@ Here's approximately how your `application.css.scss` file should look like, cons
 
 ## Bootswatches
 
-I'm converting/updating them as time permits. Here's what's included at this point.
+Included bootswatches
 
 * [Amelia](http://bootswatch.com/amelia/)
 * [Cerulean](http://bootswatch.com/cerulean/)
@@ -67,6 +77,5 @@ I'm converting/updating them as time permits. Here's what's included at this poi
 
 Big thanks to these guys.
 
-[Thomas Park](http://github.com/thomaspark) for [bootswatch](http://bootswatch.com/)
-
-[Thomas McDonald](http://github.com/thomas-mcdonald) for [bootstrap-sass](https://github.com/thomas-mcdonald/bootstrap-sass)
+* [Thomas Park](http://github.com/thomaspark) for [bootswatch](http://bootswatch.com/)
+* [Thomas McDonald](http://github.com/thomas-mcdonald) for [bootstrap-sass](https://github.com/thomas-mcdonald/bootstrap-sass)
