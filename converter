@@ -78,14 +78,19 @@ resolve_ampersand_dash = lambda do |line, index|
   end
 end
 
+clear_out_escapes = lambda do |line, index|
+  line.gsub(/~"([^"]+)"/) { $1 }
+end
+
 line_processors = [
   swap_variable_prefix,
-  turn_percentages_into_percentiles,
+  # turn_percentages_into_percentiles,
   convert_mixin_declarations,
   convert_namespace_include_syntax,
   convert_include_syntax,
   swap_spin_adjust_hue,
-  resolve_ampersand_dash
+  resolve_ampersand_dash,
+  clear_out_escapes
 ]
 
 comment_line = /^\s*\/\//
