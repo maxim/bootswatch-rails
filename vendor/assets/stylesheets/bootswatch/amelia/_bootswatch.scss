@@ -24,10 +24,10 @@ code, pre {
 
 blockquote {
 
-	border-left-color: lighten(#147E88, .12);
+	border-left-color: lighten(#147E88, 12%);
 
 	&.pull-right {
-		border-right-color: lighten(#147E88, .12);
+		border-right-color: lighten(#147E88, 12%);
 	}
 
 	small {
@@ -43,7 +43,7 @@ blockquote {
 // -----------------------------------------------------
 
 body {
-	@include gradient-radial(lighten(#0F8790, .07), #0F8790);
+	@include gradient-radial(lighten(#0F8790, 7%), #0F8790);
 }
 
 hr {
@@ -124,7 +124,7 @@ hr {
 			@include border-radius(0);
 
 			&:hover {
-				background-color: lighten($navbarBackground, .1);
+				background-color: lighten($navbarBackground, 10%);
 			}
 		}
 
@@ -153,7 +153,7 @@ hr {
 
 		.nav li > a:hover,
 		.dropdown-menu a:hover {
-			background-color: lighten($navbarInverseBackground, .1) !important;
+			background-color: lighten($navbarInverseBackground, 10%) !important;
 		}
 	}
 }
@@ -371,19 +371,19 @@ div.subnav {
   border-color: transparent;
 
   &:hover, &:active, &.active, &.disabled, &[disabled] {
-    background-color: darken($color, .05);
+    background-color: darken($color, 5%);
 	text-shadow: none;
   }
 
   &:active, &.active {
-    background-color: darken($color, .15);
+    background-color: darken($color, 15%);
 	@include box-shadow(none);
   }
 
   // IE 7 + 8 can't handle box-shadow to show active, so we darken a bit ourselves
   &:active,
   &.active {
-    background-color: darken($color, .15) e("\9");
+    background-color: darken($color, 15%) e("\9");
   }
 }
 
@@ -522,17 +522,17 @@ input, textarea, .search-query, .uneditable-input,
 
 .control-group.warning > label,
 .control-group.warning .help-inline {
-	color: lighten($orange, .3);
+	color: lighten($orange, 30%);
 }
 
 .control-group.error > label,
 .control-group.error .help-inline {
-	color: lighten($linkColor, .1);
+	color: lighten($linkColor, 10%);
 }
 
 .control-group.success > label,
 .control-group.success .help-inline {
-	color: lighten($green, .2);
+	color: lighten($green, 20%);
 }
 
 .input-prepend .add-on,
@@ -584,7 +584,7 @@ input, textarea, .search-query, .uneditable-input,
 }
 
 .label-important, .label-important:hover, .alert-error {
-	background-color: darken($yellow, .03);
+	background-color: darken($yellow, 3%);
 	color: $textColor;
 }
 

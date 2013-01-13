@@ -39,7 +39,7 @@ $textColor:             $gray;
 // Links
 // -------------------------
 $linkColor:             $blue;
-$linkColorHover:        darken($linkColor, .15);
+$linkColorHover:        darken($linkColor, 15%);
 
 
 // Typography
@@ -85,11 +85,11 @@ $tableBorder:                       #ddd; // table and cell border
 // Buttons
 // -------------------------
 $btnBackground:                     $white;
-$btnBackgroundHighlight:            darken($white, .1);
-$btnBorder:                         darken($white, .2);
+$btnBackgroundHighlight:            darken($white, 10%);
+$btnBorder:                         darken($white, 20%);
 
 $btnPrimaryBackground:              $linkColor;
-$btnPrimaryBackgroundHighlight:     adjust-hue($btnPrimaryBackground, .15);
+$btnPrimaryBackgroundHighlight:     adjust-hue($btnPrimaryBackground, 15%);
 
 $btnInfoBackground:                 $purple;
 $btnInfoBackgroundHighlight:        #2f96b4;
@@ -182,29 +182,29 @@ $navbarCollapseDesktopWidth:      $navbarCollapseWidth + 1;
 
 $navbarHeight:                    50px;
 $navbarBackground:                $blue;
-$navbarBackgroundHighlight:       lighten($navbarBackground, .08);
-$navbarBorder:                    darken($navbarBackground, .08);
+$navbarBackgroundHighlight:       lighten($navbarBackground, 8%);
+$navbarBorder:                    darken($navbarBackground, 8%);
 
 $navbarText:                      $grayLighter;
 $navbarLinkColor:                 $white;
 $navbarLinkColorHover:            $white;
 $navbarLinkColorActive:           $navbarLinkColorHover;
-$navbarLinkBackgroundHover:       darken($navbarBackground, .12);
-$navbarLinkBackgroundActive:      darken($navbarBackground, .12);
+$navbarLinkBackgroundHover:       darken($navbarBackground, 12%);
+$navbarLinkBackgroundActive:      darken($navbarBackground, 12%);
 
 $navbarBrandColor:                $navbarLinkColor;
 
 // Inverted navbar
 $navbarInverseBackground:                $blueDark;
-$navbarInverseBackgroundHighlight:       lighten($navbarInverseBackground, .05);
-$navbarInverseBorder:                    darken($navbarInverseBackground, .03);
+$navbarInverseBackgroundHighlight:       lighten($navbarInverseBackground, 5%);
+$navbarInverseBorder:                    darken($navbarInverseBackground, 3%);
 
 $navbarInverseText:                      $white;
 $navbarInverseLinkColor:                 $white;
 $navbarInverseLinkColorHover:            $white;
 $navbarInverseLinkColorActive:           $white;
-$navbarInverseLinkBackgroundHover:       darken($navbarInverseBackground, .06);
-$navbarInverseLinkBackgroundActive:      darken($navbarInverseBackground, .06);
+$navbarInverseLinkBackgroundHover:       darken($navbarInverseBackground, 6%);
+$navbarInverseLinkBackgroundActive:      darken($navbarInverseBackground, 6%);
 
 $navbarInverseSearchBackground:          $white;
 $navbarInverseSearchBackgroundFocus:     $white;
@@ -232,19 +232,19 @@ $heroUnitLeadColor:               inherit;
 // -------------------------
 $warningText:             $orange;
 $warningBackground:       #F1CEAB;
-$warningBorder:           darken(adjust-hue($warningBackground, -10), .03);
+$warningBorder:           darken(adjust-hue($warningBackground, -10), 3%);
 
-$errorText:               darken(#C45559, .05);
+$errorText:               darken(#C45559, 5%);
 $errorBackground:         #F2BDB1;
-$errorBorder:             darken(adjust-hue($errorBackground, -10), .03);
+$errorBorder:             darken(adjust-hue($errorBackground, -10), 3%);
 
-$successText:             darken($green, .05);
+$successText:             darken($green, 5%);
 $successBackground:       #D5ECBF;
-$successBorder:           darken(adjust-hue($successBackground, -10), .05);
+$successBorder:           darken(adjust-hue($successBackground, -10), 5%);
 
-$infoText:                darken(#908A62, .05);
+$infoText:                darken(#908A62, 5%);
 $infoBackground:          #A7DFF1;
-$infoBorder:              darken(adjust-hue($infoBackground, -10), .07);
+$infoBorder:              darken(adjust-hue($infoBackground, -10), 7%);
 
 
 // Tooltips and popovers
@@ -257,7 +257,7 @@ $tooltipArrowColor:       $tooltipBackground;
 $popoverBackground:       #fff;
 $popoverArrowWidth:       10px;
 $popoverArrowColor:       #fff;
-$popoverTitleBackground:  darken($popoverBackground, .03);
+$popoverTitleBackground:  darken($popoverBackground, 3%);
 
 // Special enhancement for popovers
 $popoverArrowOuterWidth:  $popoverArrowWidth + 1;

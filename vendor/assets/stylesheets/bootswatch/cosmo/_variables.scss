@@ -1,7 +1,6 @@
-// Variables to customize the look and feel of Bootstrap
-// Swatch: Cosmo
-// Version: 2.0.2
-// -----------------------------------------------------
+// Cosmo 2.2.2
+// Variables
+// --------------------------------------------------
 
 
 // Global values
@@ -40,7 +39,7 @@ $textColor:             #555;
 // Links
 // -------------------------
 $linkColor:             $blue;
-$linkColorHover:        darken($linkColor, 0.1);
+$linkColorHover:        darken($linkColor, 10%);
 
 
 // Typography
@@ -67,9 +66,9 @@ $fontSizeLarge:         $baseFontSize * 1.25; // ~18px
 $fontSizeSmall:         $baseFontSize * 0.85; // ~12px
 $fontSizeMini:          $baseFontSize * 0.75; // ~11px
 
-$paddingLarge:          11px 19px; // 44px
+$paddingLarge:          22px 30px; // 66px
 $paddingSmall:          2px 10px;  // 26px
-$paddingMini:           1px 6px;   // 24px
+$paddingMini:           2px 6px;   // 24px
 
 $baseBorderRadius:      0px;
 $borderRadiusLarge:     0px;
@@ -86,26 +85,26 @@ $tableBorder:                       #ddd; // table and cell border
 // Buttons
 // -------------------------
 $btnBackground:                     $grayLighter;
-$btnBackgroundHighlight:            darken($grayLighter, 0.15);
+$btnBackgroundHighlight:            darken($grayLighter, 15%);
 $btnBorder:                         #bbb;
 
-$btnPrimaryBackground:              lighten($blue, 0.05);
-$btnPrimaryBackgroundHighlight:     darken($blue, 0.05);
+$btnPrimaryBackground:              lighten($blue, 5%);
+$btnPrimaryBackgroundHighlight:     darken($blue, 5%);
 
-$btnInfoBackground:                 lighten($purple, 0.05);
-$btnInfoBackgroundHighlight:        darken($purple, 0.05);
+$btnInfoBackground:                 lighten($purple, 5%);
+$btnInfoBackgroundHighlight:        darken($purple, 5%);
 
-$btnSuccessBackground:              lighten($green, 0.05);
-$btnSuccessBackgroundHighlight:     darken($green, 0.05);
+$btnSuccessBackground:              lighten($green, 5%);
+$btnSuccessBackgroundHighlight:     darken($green, 5%);
 
-$btnWarningBackground:              lighten($orange, 0.05);
-$btnWarningBackgroundHighlight:     darken($orange, 0.05);
+$btnWarningBackground:              lighten($orange, 5%);
+$btnWarningBackgroundHighlight:     darken($orange, 5%);
 
-$btnDangerBackground:               lighten($red, 0.05);
-$btnDangerBackgroundHighlight:      darken($red, 0.05);
+$btnDangerBackground:               lighten($red, 5%);
+$btnDangerBackgroundHighlight:      darken($red, 5%);
 
-$btnInverseBackground:              lighten($black, 0.05);
-$btnInverseBackgroundHighlight:     darken($black, 0.05);
+$btnInverseBackground:              lighten($black, 5%);
+$btnInverseBackgroundHighlight:     darken($black, 5%);
 
 
 // Forms
@@ -127,7 +126,7 @@ $dropdownDividerBottom:         $white;
 
 $dropdownLinkColor:             $grayDark;
 $dropdownLinkColorHover:        $white;
-$dropdownLinkColorActive:       $dropdownLinkColor;
+$dropdownLinkColorActive:       $white;
 
 $dropdownLinkBackgroundActive:  $blue;
 $dropdownLinkBackgroundHover:   $dropdownLinkBackgroundActive;
@@ -182,7 +181,7 @@ $navbarCollapseWidth:             979px;
 $navbarCollapseDesktopWidth:      $navbarCollapseWidth + 1;
 
 $navbarHeight:                    50px;
-$navbarBackground:                #0062ff;
+$navbarBackground:                $grayDarker;
 $navbarBackgroundHighlight:       $navbarBackground;
 $navbarBorder:                    transparent;
 
@@ -207,7 +206,7 @@ $navbarInverseLinkColorActive:           $navbarInverseLinkColorHover;
 $navbarInverseLinkBackgroundHover:       rgba(0, 0, 0, 0.05);
 $navbarInverseLinkBackgroundActive:      $navbarInverseBackground;
 
-$navbarInverseSearchBackground:          lighten($navbarInverseBackground, 0.25);
+$navbarInverseSearchBackground:          lighten($navbarInverseBackground, 25%);
 $navbarInverseSearchBackgroundFocus:     $white;
 $navbarInverseSearchBorder:              $navbarInverseBackground;
 $navbarInverseSearchPlaceholderColor:    $grayDark;

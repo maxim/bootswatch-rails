@@ -1,125 +1,330 @@
-// Swatch: Journal
-// Version: 2.0.2
+// Journal 2.2.2
+// Bootswatch
 // -----------------------------------------------------
 
-// SCAFFOLDING
-// -----------------------------------------------------
-
-a {
-	text-decoration: underline;
-}
-
-.nav a, .navbar .brand, .subnav a, a.btn {
-	text-decoration: none;
-}
 
 // TYPOGRAPHY
 // -----------------------------------------------------
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import url('//fonts.googleapis.com/css?family=News+Cycle:400,700');
 
-h1, h2, h3, h4, h5, h6, .brand, .navbar, .subnav a, blockquote > p {
-	font-family: 'Open Sans', sans-serif;
-	color: $textColor;
+h1, h2, h3, h4, h5, h6 {
+
+	margin: 0 0 10px;
+	line-height: 1.2;
+
+	a {
+		color: $headingsColor;
+	}
 }
 
-h1, h2, h3, h4, h5, h6, .brand {
-	font-weight: 700;
+h1 { font-size: 48px; }
+
+h2 { font-size: 36px; }
+
+h3 { font-size: 28px; }
+
+h4 { font-size: 20px; }
+
+h5 { font-size: 13px; }
+
+p > a,
+address > a,
+.breadcrumb a,
+abbr[title] {
+	text-decoration: none;
+	border-bottom: 1px dotted;
+
+	&:hover {
+		text-decoration: none;
+		border-bottom: 1px solid;
+	}
+}
+
+code, pre {
+	@include border-radius(0);
+	background-color: $grayLighter;
+	@include box-shadow(none);
+}
+
+// SCAFFOLDING
+// -----------------------------------------------------
+
+.page-header {
+	border-bottom: 2px solid $grayLighter;
+}
+
+hr {
+	border-bottom: 1px solid $grayLighter;
 }
 
 // NAVBAR
 // -----------------------------------------------------
 
-.navbar .brand {
-	color: $navbarLinkColor;
-	text-shadow: none;
+.navbar {
+
+	font-family: $sansFontFamily;
 	font-weight: bold;
 
-	&:hover {
-		background-color: #EEEEEE;
+	.navbar-inner {
+		border-bottom: 2px solid $grayLighter;
+		@include border-radius(0);
+		@include box-shadow(none);
+	}
+
+	.brand {
+		padding: 19px 20px 21px;
+		font-size: 24px;
+		font-weight: bold;
+		text-shadow: none;
+		text-transform: uppercase;
+	}
+
+	.nav > li > a {
+		padding: 20px 10px 20px;
+		font-size: 18px;
+		text-shadow: none;
+		text-transform: uppercase;
+	}
+
+	.nav > .active > a {
+		background-color: transparent;
+	}
+
+	.navbar-text {
+		margin-top: 20px;
+		padding-left: 10px;
+		padding-right: 10px;
+		font-size: 18px;
+		line-height: 20px;
+	}
+
+	.nav > .active > a,
+	.nav > .active > a:hover,
+	.nav > .active > a:focus {
+		@include box-shadow(none);
+	}
+
+	.divider-vertical {
+		border-left-color: $grayLighter;
+		border-right-color: $grayLighter;
+	}
+
+	.dropdown-menu {
+
+		top: 85%;
+		@include border-radius(0);
+
+		a {
+			font-size: 15px;
+			font-weight: bold;
+		}
+	}
+
+	.navbar-search .search-query,
+	.navbar-search .search-query:hover {
+		border: 2px solid $grayLighter;
+		color: $textColor;
+		@include placeholder($gray);
 	}
 }
 
-.navbar-inner {
-	border-top: 1px solid #E5E5E5;
-	$shadow: 0 2px 4px rgba(0,0,0,.25), inset 0 -1px 0 rgba(0,0,0,.1);
-	@include box-shadow($shadow);
-}
+@media (max-width: $navbarCollapseWidth) {
 
-.navbar-inner, .navbar .dropdown-menu, div.subnav,
-div.subnav .nav > li:first-child > a, div.subnav .nav > li:first-child > a:hover {
-	@include border-radius(0);
-}
+	.nav-collapse .navbar-form,
+	.nav-collapse .navbar-search {
+		margin-bottom: 0;
+		border-top: 2px solid $grayLighter;
+		border-bottom: 2px solid $grayLighter;
+	} 
 
-.navbar .nav > li > a {
-	text-shadow: none;
-}
 
-.navbar .nav .active > a,
-.navbar .nav .active > a:hover {
-	color: $navbarLinkColor;
-	background-color: rgba(0, 0, 0, 0);
-}
 
-.navbar .nav .active > a:hover,
-.navbar .nav > li > a:hover,
-.navbar .nav-collapse.in .nav li > a:hover {
-	background-color: #EEEEEE;
-}
+	.navbar .nav-collapse {
 
-.dropdown.open .dropdown-toggle {
-	color: $textColor;
-}
+		.nav li > a {
+			color: $navbarLinkColor;
 
-.navbar .nav .dropdown-toggle .caret,
-.navbar .nav .open.dropdown .caret {
-	border-top-color: $navbarLinkColor;
-	opacity: 1;
-}
+			&:hover {
+				background-color: $dropdownLinkBackgroundHover;
+			}
+		}
 
-form.navbar-form, form.navbar-search {
-	border-top: 0px solid #eee;
-	border-bottom: 0px solid #eee;
-}
+		.navbar-text {
+			margin-top: 0;
+		}
+	}
 
-.navbar-search .search-query,
-.navbar-search .search-query:hover {
-	border: 1px solid $grayLighter;
-	color: $textColor;
-	@include placeholder($gray);
+	.navbar-inverse .nav-collapse {
+
+		.nav li > a {
+			color: $navbarInverseLinkColor;
+
+			&:hover {
+				background-color: #111;
+				background-image: none;
+			}
+		}
+
+	}
 }
 
 div.subnav {
+
+	height: 54px;
 	background-color: $bodyBackground;
 	background-image: none;
-	$shadow: 0 1px 2px rgba(0,0,0,.25);
-	@include box-shadow($shadow);
+	@include box-shadow(none);
+	border: 2px solid $grayLighter;
+	border-left: none;
+	border-right: none;
+	@include border-radius(0);
+
+	&.subnav-fixed {
+		top: $navbarHeight;
+	}
+
+	.nav > li > a,
+	.nav > li:first-child > a,
+	.nav > li.active > a {
+		padding: 20px 15px;
+		border-left: none;
+		border-right: none;
+		background-color: transparent;
+		@include box-shadow(none);
+		font-family: $sansFontFamily;
+		color: $headingsColor;
+		font-size: 15px;
+		font-weight: bold;
+
+		&:hover {
+			padding: 20px 15px;
+			background-color: transparent;
+			@include box-shadow(none);
+			color: $headingsColor;
+		}
+	}
+
+	li.dropdown > .dropdown-toggle .caret ,
+	li.dropdown > .dropdown-toggle:hover .caret,
+	li.dropdown.open > .dropdown-toggle .caret {
+		border-top-color: $headingsColor;
+		border-bottom-color: $headingsColor;
+		opacity: 1;
+	}
+
+	li.dropdown.open .dropdown-toggle,
+	li.dropdown.open .dropdown-toggle:hover {
+		background-color: $bodyBackground;
+		color: $headingsColor;
+	}
 }
 
-.navbar .nav-collapse.in .nav li > a,
-div.subnav .nav > li > a:hover,
-div.subnav .nav > .active > a,
-div.subnav .nav > .active > a:hover {
-	color: $textColor;
-	text-decoration: none;
-	font-weight: normal;
-}
+// NAV
+// -----------------------------------------------------
 
 // BUTTONS
 // -----------------------------------------------------
 
-.btn-primary {
-  @include buttonBackground(lighten($linkColor, .05), $linkColor);
+[class^="icon-"], [class*=" icon-"] {
+	vertical-align: baseline;
 }
 
+.btn-inverse {
+	@include buttonBackground($grayDarker, $black);
+}
+
+// TABLES
+// -----------------------------------------------------
+
+.table-bordered {
+	@include border-radius(0);
+	@include box-shadow(none);
+}
+
+// FORMS
+// -----------------------------------------------------
+
+legend {
+	border-bottom: 2px solid $grayLighter;
+	font-family: $headingsFontFamily;
+	font-weight: $headingsFontWeight;
+	color: $headingsColor;
+}
+
+// DROPDOWNS
+// -----------------------------------------------------
 
 // MISC
 // -----------------------------------------------------
 
-code, pre, pre.prettyprint, .well, .form-actions {
-	background-color: $grayLighter;
+.well {
+	@include border-radius(0);
+	@include box-shadow(none);
 }
 
-.table-bordered, .well, .prettyprint {
+.hero-unit {
+	padding: 30px 60px;
+	border: 1px solid rgba(0,0,0,.05);
 	@include border-radius(0);
+	@include box-shadow(none);
+
+	h1 {
+		margin: 0 0 10px;
+		line-height: 1.2;
+	}
+}
+
+// a.thumbnail:hover {
+// 	.box-shadow(0 1px 3px 1px rgba(0, 0, 0, 0.3));
+// 	border-color: #ddd;
+// }
+
+.modal {
+ 	@include border-radius(0px);
+	background: $bodyBackground;
+}
+
+.modal-header {
+	border-bottom: none;
+}
+
+.modal-footer {
+	border-top: none;
+	background: transparent;
+	@include box-shadow(none);
+}
+
+.close,
+.close:hover {
+	border-bottom: none;
+}
+
+// MEDIA QUERIES
+// -----------------------------------------------------
+
+@media (max-width: 768px) {
+
+	div.subnav {
+
+		height: auto;
+
+		.nav > li.active > a {
+			border-top: none;
+		}
+
+		.nav > li:hover > a,
+		.nav > li:first-child:hover > a,
+		.nav > li.active:hover > a,
+		.nav > li.dropdown.open .dropdown-toggle, 
+		.nav > li.dropdown.open .dropdown-toggle:hover {
+			background-color: $dropdownLinkBackgroundHover;
+		}
+	}
+
+	.nav-tabs .open .dropdown-toggle,
+	.nav-pills .open .dropdown-toggle,
+	.nav > li.dropdown.open.active > a:hover {
+		border-color: #e5e5e5;
+	}
 }

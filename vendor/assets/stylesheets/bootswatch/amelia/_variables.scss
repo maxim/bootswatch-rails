@@ -38,7 +38,7 @@ $textColor:             rgba(255, 255, 255, 0.9);
 
 // Links
 // -------------------------
-$linkColor:             lighten($yellow, .15);
+$linkColor:             lighten($yellow, 15%);
 $linkColorHover:        $linkColor;
 
 
@@ -77,10 +77,10 @@ $borderRadiusSmall:     3px;
 
 // Tables
 // -------------------------
-$tableBackground:                   lighten(#147E88, .1); // overall background-color
-$tableBackgroundAccent:             lighten(#147E88, .15); // for striping
+$tableBackground:                   lighten(#147E88, 10%); // overall background-color
+$tableBackgroundAccent:             lighten(#147E88, 15%); // for striping
 $tableBackgroundHover:              rgba(255, 255, 255, 0.4); // for hover
-$tableBorder:                       lighten(#147E88, .12); // table and cell border
+$tableBorder:                       lighten(#147E88, 12%); // table and cell border
 
 
 // Navbar
@@ -91,16 +91,35 @@ $navbarCollapseDesktopWidth:      $navbarCollapseWidth + 1;
 $navbarHeight:                    50px;
 $navbarBackgroundHighlight:       $red;
 $navbarBackground:                $red;
-$navbarBorder:                    darken($navbarBackground, .12);
+$navbarBorder:                    darken($navbarBackground, 12%);
 
 $navbarText:                      $white;
 $navbarLinkColor:                 $white;
 $navbarLinkColorHover:            $white;
 $navbarLinkColorActive:           $navbarLinkColorHover;
-$navbarLinkBackgroundHover:       lighten($navbarBackground, .1);
-$navbarLinkBackgroundActive:      lighten($navbarBackground, .1);
+$navbarLinkBackgroundHover:       lighten($navbarBackground, 10%);
+$navbarLinkBackgroundActive:      lighten($navbarBackground, 10%);
 
 $navbarBrandColor:                $navbarLinkColor;
+
+// Inverted navbar
+$navbarInverseBackground:                $yellow;
+$navbarInverseBackgroundHighlight:       $yellow;
+$navbarInverseBorder:                    rgba(0, 0, 0, 0.1);
+
+$navbarInverseText:                      $white;
+$navbarInverseLinkColor:                 $white;
+$navbarInverseLinkColorHover:            $white;
+$navbarInverseLinkColorActive:           $white;
+$navbarInverseLinkBackgroundHover:       rgba(255, 255, 255, 0.2);
+$navbarInverseLinkBackgroundActive:      rgba(255, 255, 255, 0.2);
+
+$navbarInverseSearchBackground:          lighten($navbarInverseBackground, 25%);
+$navbarInverseSearchBackgroundFocus:     $white;
+$navbarInverseSearchBorder:              $navbarInverseBackground;
+$navbarInverseSearchPlaceholderColor:    $white;
+
+$navbarInverseBrandColor:                $navbarInverseLinkColor;
 
 
 // Buttons
@@ -196,26 +215,6 @@ $horizontalComponentOffset:       180px;
 $wellBackground:                  #3CB9C6;
 
 
-// Inverted navbar
-$navbarInverseBackground:                $yellow;
-$navbarInverseBackgroundHighlight:       $yellow;
-$navbarInverseBorder:                    rgba(0, 0, 0, 0.1);
-
-$navbarInverseText:                      $white;
-$navbarInverseLinkColor:                 $white;
-$navbarInverseLinkColorHover:            $white;
-$navbarInverseLinkColorActive:           $white;
-$navbarInverseLinkBackgroundHover:       rgba(255, 255, 255, 0.2);
-$navbarInverseLinkBackgroundActive:      rgba(255, 255, 255, 0.2);
-
-$navbarInverseSearchBackground:          lighten($navbarInverseBackground, .25);
-$navbarInverseSearchBackgroundFocus:     $white;
-$navbarInverseSearchBorder:              $navbarInverseBackground;
-$navbarInverseSearchPlaceholderColor:    $white;
-
-$navbarInverseBrandColor:                $navbarInverseLinkColor;
-
-
 // Pagination
 // -------------------------
 $paginationBackground:                #3CB9C6;
@@ -234,19 +233,19 @@ $heroUnitLeadColor:               inherit;
 // -------------------------
 $warningText:             #c09853;
 $warningBackground:       #fcf8e3;
-$warningBorder:           darken(adjust-hue($warningBackground, -10), .03);
+$warningBorder:           darken(adjust-hue($warningBackground, -10), 3%);
 
 $errorText:               #b94a48;
 $errorBackground:         #f2dede;
-$errorBorder:             darken(adjust-hue($errorBackground, -10), .03);
+$errorBorder:             darken(adjust-hue($errorBackground, -10), 3%);
 
 $successText:             #468847;
 $successBackground:       #dff0d8;
-$successBorder:           darken(adjust-hue($successBackground, -10), .05);
+$successBorder:           darken(adjust-hue($successBackground, -10), 5%);
 
 $infoText:                #3a87ad;
 $infoBackground:          #d9edf7;
-$infoBorder:              darken(adjust-hue($infoBackground, -10), .07);
+$infoBorder:              darken(adjust-hue($infoBackground, -10), 7%);
 
 
 // Tooltips and popovers
