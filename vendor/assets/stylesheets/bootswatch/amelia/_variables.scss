@@ -1,11 +1,9 @@
-// Variables to customize the look and feel of Bootstrap
-// Swatch: Amelia
-// Version: 2.0.2
-// -----------------------------------------------------
+// Amelia 2.2.2
+// Variables
+// --------------------------------------------------
 
 
-
-// GLOBAL VALUES
+// Global values
 // --------------------------------------------------
 
 
@@ -13,7 +11,7 @@
 // -------------------------
 $black:                 #000;
 $grayDarker:            #111;
-$grayDark:              #333;
+$grayDark:              #444;
 $gray:                  #555;
 $grayLight:             #aaa;
 $grayLighter:           #ddd;
@@ -24,9 +22,9 @@ $white:                 #fff;
 // -------------------------
 $blue:                  #00BCE1;
 $blueDark:              #1269B0;
-$green:                 #7FC518;
-$red:                   #E51925;
-$yellow:                #EAC504;
+$green:                 #48CA3B;
+$red:                   #AD1D28;
+$yellow:                #DEBB27;
 $orange:                #DF6E1E;
 $pink:                  #FFBCB9;
 $purple:                #4D3A7D;
@@ -46,14 +44,35 @@ $linkColorHover:        $linkColor;
 
 // Typography
 // -------------------------
+$sansFontFamily:        'Cabin', Verdana, sans-serif;
+$serifFontFamily:       Georgia, "Times New Roman", Times, serif;
+$monoFontFamily:        Menlo, Monaco, Consolas, "Courier New", monospace;
+
 $baseFontSize:          14px;
-$baseFontFamily:        'Cabin', Verdana, sans-serif;
+$baseFontFamily:        $sansFontFamily;
 $baseLineHeight:        20px;
-$altFontFamily:         Georgia, "Times New Roman", Times, serif;
+$altFontFamily:         $serifFontFamily;
 
 $headingsFontFamily:    'Lobster', cursive; // empty to use BS default, $baseFontFamily
 $headingsFontWeight:    normal;    // instead of browser default, bold
 $headingsColor:         inherit; // empty to use BS default, $textColor
+
+
+// Component sizing
+// -------------------------
+// Based on 14px font-size and 20px line-height
+
+$fontSizeLarge:         $baseFontSize * 1.25; // ~18px
+$fontSizeSmall:         $baseFontSize * 0.85; // ~12px
+$fontSizeMini:          $baseFontSize * 0.75; // ~11px
+
+$paddingLarge:          20px 24px; // 58px
+$paddingSmall:          8px 12px;  // 34px
+$paddingMini:           4px 8px;   // 28px
+
+$baseBorderRadius:      0;
+$borderRadiusLarge:     6px;
+$borderRadiusSmall:     3px;
 
 
 // Tables
@@ -64,26 +83,80 @@ $tableBackgroundHover:              rgba(255, 255, 255, 0.4); // for hover
 $tableBorder:                       lighten(#147E88, .12); // table and cell border
 
 
+// Navbar
+// -------------------------
+$navbarCollapseWidth:             979px;
+$navbarCollapseDesktopWidth:      $navbarCollapseWidth + 1;
+
+$navbarHeight:                    50px;
+$navbarBackgroundHighlight:       $red;
+$navbarBackground:                $red;
+$navbarBorder:                    darken($navbarBackground, .12);
+
+$navbarText:                      $white;
+$navbarLinkColor:                 $white;
+$navbarLinkColorHover:            $white;
+$navbarLinkColorActive:           $navbarLinkColorHover;
+$navbarLinkBackgroundHover:       lighten($navbarBackground, .1);
+$navbarLinkBackgroundActive:      lighten($navbarBackground, .1);
+
+$navbarBrandColor:                $navbarLinkColor;
+
+
+// Buttons
+// -------------------------
+$btnBackground:                     $grayLighter;
+$btnBackgroundHighlight:            $grayLighter;
+$btnBorder:                         rgba(0, 0, 0, 0);
+
+$btnPrimaryBackground:              $navbarBackground;
+$btnPrimaryBackgroundHighlight:     $navbarBackground;
+
+$btnInfoBackground:                 $purple;
+$btnInfoBackgroundHighlight:        $purple;
+
+$btnSuccessBackground:              $green;
+$btnSuccessBackgroundHighlight:     $green;
+
+$btnWarningBackground:              $orange;
+$btnWarningBackgroundHighlight:     $orange;
+
+$btnDangerBackground:               $yellow;
+$btnDangerBackgroundHighlight:      $yellow;
+
+$btnInverseBackground:              #27666D;
+$btnInverseBackgroundHighlight:     #27666D;
+
+
 // Forms
 // -------------------------
 $inputBackground:               $white;
 $inputBorder:                   transparent;
+$inputBorderRadius:             $baseBorderRadius;
 $inputDisabledBackground:       $grayLighter;
+$formActionsBackground:         transparent;
+$inputHeight:                   $baseLineHeight + 10px; // base line-height + 8px vertical padding + 2px top/bottom border
 
 
 // Dropdowns
 // -------------------------
 $dropdownBackground:            $white;
 $dropdownBorder:                rgba(0,0,0,.2);
-$dropdownLinkColor:             $bodyBackground;
-$dropdownLinkColorHover:        $white;
-$dropdownLinkBackgroundHover:   rgba(0, 57, 59, 0.9);
+$dropdownDividerTop:            #e5e5e5;
+$dropdownDividerBottom:         $white;
 
+$dropdownLinkColor:             $grayDark;
+$dropdownLinkColorHover:        $white;
+$dropdownLinkColorActive:       $white;
+
+$dropdownLinkBackgroundActive:  $red;
+$dropdownLinkBackgroundHover:   $red;
 
 
 
 // COMPONENT VARIABLES
 // --------------------------------------------------
+
 
 // Z-index master list
 // -------------------------
@@ -97,6 +170,12 @@ $zindexModalBackdrop:     1040;
 $zindexModal:             1050;
 
 
+// Sprite icons path
+// -------------------------
+$iconSpritePath:          "../img/glyphicons-halflings.png";
+$iconWhiteSpritePath:     "../img/glyphicons-halflings-white.png";
+
+
 // Input placeholder text color
 // -------------------------
 $placeholderText:         $grayLight;
@@ -107,48 +186,41 @@ $placeholderText:         $grayLight;
 $hrBorder:                transparent;
 
 
-// Navbar
+// Horizontal forms & lists
 // -------------------------
-$navbarHeight:                    50px;
-$navbarBackground:                #AD1D28;
-$navbarBackgroundHighlight:       #AD1D28;
-
-$navbarText:                      $white;
-$navbarLinkColor:                 $white;
-$navbarLinkColorHover:            $white;
-$navbarLinkColorActive:           $navbarLinkColorHover;
-$navbarLinkBackgroundHover:       lighten($navbarBackground, .1);
-$navbarLinkBackgroundActive:      lighten($navbarBackground, .1);
-
-$navbarSearchBackground:          rgba(0, 0, 0, 0);
-$navbarSearchBackgroundFocus:     lighten($navbarBackground, .25);
-$navbarSearchBorder:              darken($navbarSearchBackground, .3);
-$navbarSearchPlaceholderColor:    $textColor;
+$horizontalComponentOffset:       180px;
 
 
-// Buttons
+// Wells
 // -------------------------
-$btnBackground:                     $grayLighter;
-$btnBackgroundHighlight:            $grayLighter;
-$btnBorder:                         rgba(0, 0, 0, 0);
+$wellBackground:                  #3CB9C6;
 
-$btnPrimaryBackground:              $navbarBackground;
-$btnPrimaryBackgroundHighlight:     adjust-hue($btnPrimaryBackground, .15);
 
-$btnInfoBackground:                 $purple;
-$btnInfoBackgroundHighlight:        $purple;
+// Inverted navbar
+$navbarInverseBackground:                $yellow;
+$navbarInverseBackgroundHighlight:       $yellow;
+$navbarInverseBorder:                    rgba(0, 0, 0, 0.1);
 
-$btnSuccessBackground:              $green;
-$btnSuccessBackgroundHighlight:     $green;
+$navbarInverseText:                      $white;
+$navbarInverseLinkColor:                 $white;
+$navbarInverseLinkColorHover:            $white;
+$navbarInverseLinkColorActive:           $white;
+$navbarInverseLinkBackgroundHover:       rgba(255, 255, 255, 0.2);
+$navbarInverseLinkBackgroundActive:      rgba(255, 255, 255, 0.2);
 
-$btnWarningBackground:              $orange;
-$btnWarningBackgroundHighlight:     $orange;
+$navbarInverseSearchBackground:          lighten($navbarInverseBackground, .25);
+$navbarInverseSearchBackgroundFocus:     $white;
+$navbarInverseSearchBorder:              $navbarInverseBackground;
+$navbarInverseSearchPlaceholderColor:    $white;
 
-$btnDangerBackground:               darken($yellow, .03);
-$btnDangerBackgroundHighlight:      darken($yellow, .03);
+$navbarInverseBrandColor:                $navbarInverseLinkColor;
 
-$btnInverseBackground:              #27666D;
-$btnInverseBackgroundHighlight:     #27666D;
+
+// Pagination
+// -------------------------
+$paginationBackground:                #3CB9C6;
+$paginationBorder:                    transparent;
+$paginationActiveBackground:          rgba(255, 255, 255, 0.4);
 
 
 // Hero unit
@@ -177,10 +249,27 @@ $infoBackground:          #d9edf7;
 $infoBorder:              darken(adjust-hue($infoBackground, -10), .07);
 
 
+// Tooltips and popovers
+// -------------------------
+$tooltipColor:            #fff;
+$tooltipBackground:       #000;
+$tooltipArrowWidth:       5px;
+$tooltipArrowColor:       $tooltipBackground;
+
+$popoverBackground:       #fff;
+$popoverArrowWidth:       10px;
+$popoverArrowColor:       #fff;
+$popoverTitleBackground:  $navbarBackground;
+
+// Special enhancement for popovers
+$popoverArrowOuterWidth:  $popoverArrowWidth + 1;
+$popoverArrowOuterColor:  rgba(0,0,0,.25);
+
 
 
 // GRID
 // --------------------------------------------------
+
 
 // Default 940px grid
 // -------------------------
@@ -189,8 +278,26 @@ $gridColumnWidth:         60px;
 $gridGutterWidth:         20px;
 $gridRowWidth:            ($gridColumns * $gridColumnWidth) + ($gridGutterWidth * ($gridColumns - 1));
 
+// 1200px min
+$gridColumnWidth1200:     70px;
+$gridGutterWidth1200:     30px;
+$gridRowWidth1200:        ($gridColumns * $gridColumnWidth1200) + ($gridGutterWidth1200 * ($gridColumns - 1));
+
+// 768px-979px
+$gridColumnWidth768:      42px;
+$gridGutterWidth768:      20px;
+$gridRowWidth768:         ($gridColumns * $gridColumnWidth768) + ($gridGutterWidth768 * ($gridColumns - 1));
+
 
 // Fluid grid
 // -------------------------
-$fluidGridColumnWidth:    6.382978723%;
-$fluidGridGutterWidth:    2.127659574%;
+$fluidGridColumnWidth:    percentage($gridColumnWidth/$gridRowWidth);
+$fluidGridGutterWidth:    percentage($gridGutterWidth/$gridRowWidth);
+
+// 1200px min
+$fluidGridColumnWidth1200:     percentage($gridColumnWidth1200/$gridRowWidth1200);
+$fluidGridGutterWidth1200:     percentage($gridGutterWidth1200/$gridRowWidth1200);
+
+// 768px-979px
+$fluidGridColumnWidth768:      percentage($gridColumnWidth768/$gridRowWidth768);
+$fluidGridGutterWidth768:      percentage($gridGutterWidth768/$gridRowWidth768);
