@@ -1,8 +1,19 @@
 #!/usr/bin/env ruby
 
 src_file_path, dst_file_path = *ARGV
+lines = File.readlines(src_file_path)
 
-swap_variable_prefix = lambda do |line|
+indent_size_calc = lambda do |line|
+  size = 0
+
+  line.each_char do |char|
+    char =~ /\s/ ? size += 1 : break
+  end
+
+  size
+end
+
+swap_variable_prefix = lambda do |line, _|
   line.gsub(/\@[[:alnum:]]+/) do |var|
     if %w(@media @import).include?(var)
       var
@@ -12,33 +23,58 @@ swap_variable_prefix = lambda do |line|
   end
 end
 
-turn_percentages_into_percentiles = lambda do |line|
-  line.gsub(/([\d\.]+)%/) do |percent|
+turn_percentages_into_percentiles = lambda do |line, _|
+  line.gsub(/([\d\.]+)%/) do
     ($1.to_f / 100.0).to_s.sub(/^0/, '')
   end
 end
 
-convert_mixin_declarations = lambda do |line|
-  line.sub(/^\.([^\(\s]+)\(/) do |mixin|
+convert_mixin_declarations = lambda do |line, _|
+  line.sub(/^\.([^\(\s]+)\(/) do
     "@mixin #{$1}("
   end
 end
 
-convert_namespace_include_syntax = lambda do |line|
-  line.sub(/#(\S+)\s+>\s+\.([[:alnum:]]+)/) do |namespace|
+convert_namespace_include_syntax = lambda do |line, _|
+  line.sub(/#(\S+)\s+>\s+\.([[:alnum:]]+)/) do
     "@include #{$1}-#{$2}"
   end
 end
 
-convert_include_syntax = lambda do |line|
-  line.sub(/^(\s+)\.([^\(\s]+)\(/) do |module_name|
+convert_include_syntax = lambda do |line, _|
+  line.sub(/^(\s+)\.([^\(\s]+)\(/) do
     "#{$1}@include #{$2}("
   end
 end
 
-swap_spin_adjust_hue = lambda do |line|
-  line.gsub(/(\W)spin\(/) do |spin|
+swap_spin_adjust_hue = lambda do |line, _|
+  line.gsub(/(\W)spin\(/) do
     "#{$1}adjust-hue("
+  end
+end
+
+resolve_ampersand_dash = lambda do |line, index|
+  line.sub(/^(\s*)&-(\S+)/) do
+    indent, suffix, prefix = $1, $2, ''
+
+    while index > 0
+      index -= 1
+      parent = lines[index]
+      next if parent.strip == ''
+
+      parent_indent_size = indent_size_calc.call(parent)
+      if parent_indent_size < indent.size
+        prefix = parent[/^\s*(\S+)/, 1].to_s.strip
+        break
+      end
+    end
+
+    if prefix == ''
+      raise "Could not find parent for &- substitution on line #{index}\n" +
+        line
+    else
+      "#{indent}#{prefix}-#{suffix}"
+    end
   end
 end
 
@@ -48,22 +84,21 @@ line_processors = [
   convert_mixin_declarations,
   convert_namespace_include_syntax,
   convert_include_syntax,
-  swap_spin_adjust_hue
+  swap_spin_adjust_hue,
+  resolve_ampersand_dash
 ]
 
 comment_line = /^\s*\/\//
-processed_lines = []
 
-File.open(src_file_path, 'r') do |file|
-  file.each_line do |line|
-    if line =~ comment_line
-      processed_lines << line
-    else
-      line_processors.each do |processor|
-        line = processor.call(line)
-      end
-      processed_lines << line
+processed_lines = lines.map.with_index do |line, index|
+  if line =~ comment_line
+    line
+  else
+    line_processors.each do |processor|
+      line = processor.call(line, index)
     end
+
+    line
   end
 end
 
