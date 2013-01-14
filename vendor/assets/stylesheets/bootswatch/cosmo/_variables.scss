@@ -9,127 +9,127 @@
 
 // Grays
 // -------------------------
-$black:                 #000;
-$grayDarker:            #080808;
-$grayDark:              #999;
-$gray:                  #bbb;
-$grayLight:             #dfdfdf;
-$grayLighter:           #eee;
-$white:                 #fff;
+$black:                 #000 !default;
+$grayDarker:            #080808 !default;
+$grayDark:              #999 !default;
+$gray:                  #bbb !default;
+$grayLight:             #dfdfdf !default;
+$grayLighter:           #eee !default;
+$white:                 #fff !default;
 
 
 // Accent colors
 // -------------------------
-$blue:                  #007FFF;
-$blueDark:              #1F26B6;
-$green:                 #3FB618;
-$red:                   #FF0039;
-$yellow:                #FFA500;
-$orange:                #FF7518;
-$pink:                  #E671B8;
-$purple:                #9954BB;
+$blue:                  #007FFF !default;
+$blueDark:              #1F26B6 !default;
+$green:                 #3FB618 !default;
+$red:                   #FF0039 !default;
+$yellow:                #FFA500 !default;
+$orange:                #FF7518 !default;
+$pink:                  #E671B8 !default;
+$purple:                #9954BB !default;
 
 
 // Scaffolding
 // -------------------------
-$bodyBackground:        $white;
-$textColor:             #555;
+$bodyBackground:        $white !default;
+$textColor:             #555 !default;
 
 
 // Links
 // -------------------------
-$linkColor:             $blue;
-$linkColorHover:        darken($linkColor, 10%);
+$linkColor:             $blue !default;
+$linkColorHover:        darken($linkColor, 10%) !default;
 
 
 // Typography
 // -------------------------
-$sansFontFamily:        "Open Sans", Calibri, Candara, Arial, sans-serif;
-$serifFontFamily:       Georgia, "Times New Roman", Times, serif;
-$monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace;
+$sansFontFamily:        "Open Sans", Calibri, Candara, Arial, sans-serif !default;
+$serifFontFamily:       Georgia, "Times New Roman", Times, serif !default;
+$monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace !default;
 
-$baseFontSize:          14px;
-$baseFontFamily:        $sansFontFamily;
-$baseLineHeight:        20px;
-$altFontFamily:         $serifFontFamily;
+$baseFontSize:          14px !default;
+$baseFontFamily:        $sansFontFamily !default;
+$baseLineHeight:        20px !default;
+$altFontFamily:         $serifFontFamily !default;
 
-$headingsFontFamily:    inherit; // empty to use BS default, $baseFontFamily
-$headingsFontWeight:    300;    // instead of browser default, bold
-$headingsColor:         $grayDarker; // empty to use BS default, $textColor
+$headingsFontFamily:    inherit !default; // empty to use BS default, $baseFontFamily
+$headingsFontWeight:    300 !default;    // instead of browser default, bold
+$headingsColor:         $grayDarker !default; // empty to use BS default, $textColor
 
 
 // Component sizing
 // -------------------------
 // Based on 14px font-size and 20px line-height
 
-$fontSizeLarge:         $baseFontSize * 1.25; // ~18px
-$fontSizeSmall:         $baseFontSize * 0.85; // ~12px
-$fontSizeMini:          $baseFontSize * 0.75; // ~11px
+$fontSizeLarge:         $baseFontSize * 1.25 !default; // ~18px
+$fontSizeSmall:         $baseFontSize * 0.85 !default; // ~12px
+$fontSizeMini:          $baseFontSize * 0.75 !default; // ~11px
 
-$paddingLarge:          22px 30px; // 66px
-$paddingSmall:          2px 10px;  // 26px
-$paddingMini:           2px 6px;   // 24px
+$paddingLarge:          22px 30px !default; // 66px
+$paddingSmall:          2px 10px !default;  // 26px
+$paddingMini:           2px 6px !default;   // 24px
 
-$baseBorderRadius:      0px;
-$borderRadiusLarge:     0px;
-$borderRadiusSmall:     0px;
+$baseBorderRadius:      0px !default;
+$borderRadiusLarge:     0px !default;
+$borderRadiusSmall:     0px !default;
 
 
 // Tables
 // -------------------------
-$tableBackground:                   transparent; // overall background-color
-$tableBackgroundAccent:             #f9f9f9; // for striping
-$tableBackgroundHover:              #E8F8FD; // for hover
-$tableBorder:                       #ddd; // table and cell border
+$tableBackground:                   transparent !default; // overall background-color
+$tableBackgroundAccent:             #f9f9f9 !default; // for striping
+$tableBackgroundHover:              #E8F8FD !default; // for hover
+$tableBorder:                       #ddd !default; // table and cell border
 
 // Buttons
 // -------------------------
-$btnBackground:                     $grayLighter;
-$btnBackgroundHighlight:            darken($grayLighter, 15%);
-$btnBorder:                         #bbb;
+$btnBackground:                     $grayLighter !default;
+$btnBackgroundHighlight:            darken($grayLighter, 15%) !default;
+$btnBorder:                         #bbb !default;
 
-$btnPrimaryBackground:              lighten($blue, 5%);
-$btnPrimaryBackgroundHighlight:     darken($blue, 5%);
+$btnPrimaryBackground:              lighten($blue, 5%) !default;
+$btnPrimaryBackgroundHighlight:     darken($blue, 5%) !default;
 
-$btnInfoBackground:                 lighten($purple, 5%);
-$btnInfoBackgroundHighlight:        darken($purple, 5%);
+$btnInfoBackground:                 lighten($purple, 5%) !default;
+$btnInfoBackgroundHighlight:        darken($purple, 5%) !default;
 
-$btnSuccessBackground:              lighten($green, 5%);
-$btnSuccessBackgroundHighlight:     darken($green, 5%);
+$btnSuccessBackground:              lighten($green, 5%) !default;
+$btnSuccessBackgroundHighlight:     darken($green, 5%) !default;
 
-$btnWarningBackground:              lighten($orange, 5%);
-$btnWarningBackgroundHighlight:     darken($orange, 5%);
+$btnWarningBackground:              lighten($orange, 5%) !default;
+$btnWarningBackgroundHighlight:     darken($orange, 5%) !default;
 
-$btnDangerBackground:               lighten($red, 5%);
-$btnDangerBackgroundHighlight:      darken($red, 5%);
+$btnDangerBackground:               lighten($red, 5%) !default;
+$btnDangerBackgroundHighlight:      darken($red, 5%) !default;
 
-$btnInverseBackground:              lighten($black, 5%);
-$btnInverseBackgroundHighlight:     darken($black, 5%);
+$btnInverseBackground:              lighten($black, 5%) !default;
+$btnInverseBackgroundHighlight:     darken($black, 5%) !default;
 
 
 // Forms
 // -------------------------
-$inputBackground:               $white;
-$inputBorder:                   $gray;
-$inputBorderRadius:             $baseBorderRadius;
-$inputDisabledBackground:       $grayLighter;
-$formActionsBackground:         #f5f5f5;
-$inputHeight:                   $baseLineHeight + 10px; // base line-height + 8px vertical padding + 2px top/bottom border
+$inputBackground:               $white !default;
+$inputBorder:                   $gray !default;
+$inputBorderRadius:             $baseBorderRadius !default;
+$inputDisabledBackground:       $grayLighter !default;
+$formActionsBackground:         #f5f5f5 !default;
+$inputHeight:                   $baseLineHeight + 10px !default; // base line-height + 8px vertical padding + 2px top/bottom border
 
 
 // Dropdowns
 // -------------------------
-$dropdownBackground:            $white;
-$dropdownBorder:                rgba(0,0,0,.2);
-$dropdownDividerTop:            #e5e5e5;
-$dropdownDividerBottom:         $white;
+$dropdownBackground:            $white !default;
+$dropdownBorder:                rgba(0,0,0,.2) !default;
+$dropdownDividerTop:            #e5e5e5 !default;
+$dropdownDividerBottom:         $white !default;
 
-$dropdownLinkColor:             $grayDark;
-$dropdownLinkColorHover:        $white;
-$dropdownLinkColorActive:       $white;
+$dropdownLinkColor:             $grayDark !default;
+$dropdownLinkColorHover:        $white !default;
+$dropdownLinkColorActive:       $white !default;
 
-$dropdownLinkBackgroundActive:  $blue;
-$dropdownLinkBackgroundHover:   $dropdownLinkBackgroundActive;
+$dropdownLinkBackgroundActive:  $blue !default;
+$dropdownLinkBackgroundHover:   $dropdownLinkBackgroundActive !default;
 
 
 
@@ -141,127 +141,127 @@ $dropdownLinkBackgroundHover:   $dropdownLinkBackgroundActive;
 // -------------------------
 // Used for a bird's eye view of components dependent on the z-axis
 // Try to avoid customizing these :)
-$zindexDropdown:          1000;
-$zindexPopover:           1010;
-$zindexTooltip:           1030;
-$zindexFixedNavbar:       1030;
-$zindexModalBackdrop:     1040;
-$zindexModal:             1050;
+$zindexDropdown:          1000 !default;
+$zindexPopover:           1010 !default;
+$zindexTooltip:           1030 !default;
+$zindexFixedNavbar:       1030 !default;
+$zindexModalBackdrop:     1040 !default;
+$zindexModal:             1050 !default;
 
 
 // Sprite icons path
 // -------------------------
-$iconSpritePath:          "../img/glyphicons-halflings.png";
-$iconWhiteSpritePath:     "../img/glyphicons-halflings-white.png";
+$iconSpritePath:          "../img/glyphicons-halflings.png" !default;
+$iconWhiteSpritePath:     "../img/glyphicons-halflings-white.png" !default;
 
 
 // Input placeholder text color
 // -------------------------
-$placeholderText:         $gray;
+$placeholderText:         $gray !default;
 
 
 // Hr border color
 // -------------------------
-$hrBorder:                $grayLighter;
+$hrBorder:                $grayLighter !default;
 
 
 // Horizontal forms & lists
 // -------------------------
-$horizontalComponentOffset:       180px;
+$horizontalComponentOffset:       180px !default;
 
 
 // Wells
 // -------------------------
-$wellBackground:                  $grayLighter;
+$wellBackground:                  $grayLighter !default;
 
 
 // Navbar
 // -------------------------
-$navbarCollapseWidth:             979px;
-$navbarCollapseDesktopWidth:      $navbarCollapseWidth + 1;
+$navbarCollapseWidth:             979px !default;
+$navbarCollapseDesktopWidth:      $navbarCollapseWidth + 1 !default;
 
-$navbarHeight:                    50px;
-$navbarBackground:                $grayDarker;
-$navbarBackgroundHighlight:       $navbarBackground;
-$navbarBorder:                    transparent;
+$navbarHeight:                    50px !default;
+$navbarBackground:                $grayDarker !default;
+$navbarBackgroundHighlight:       $navbarBackground !default;
+$navbarBorder:                    transparent !default;
 
-$navbarText:                      $white;
-$navbarLinkColor:                 $white;
-$navbarLinkColorHover:            $gray;
-$navbarLinkColorActive:           $white;
-$navbarLinkBackgroundHover:       rgba(0, 0, 0, 0.05);
-$navbarLinkBackgroundActive:      transparent;
+$navbarText:                      $white !default;
+$navbarLinkColor:                 $white !default;
+$navbarLinkColorHover:            $gray !default;
+$navbarLinkColorActive:           $white !default;
+$navbarLinkBackgroundHover:       rgba(0, 0, 0, 0.05) !default;
+$navbarLinkBackgroundActive:      transparent !default;
 
-$navbarBrandColor:                $navbarLinkColor;
+$navbarBrandColor:                $navbarLinkColor !default;
 
 // Inverted navbar
-$navbarInverseBackground:                $blue;
-$navbarInverseBackgroundHighlight:       $navbarInverseBackground;
-$navbarInverseBorder:                    transparent;
+$navbarInverseBackground:                $blue !default;
+$navbarInverseBackgroundHighlight:       $navbarInverseBackground !default;
+$navbarInverseBorder:                    transparent !default;
 
-$navbarInverseText:                      $white;
-$navbarInverseLinkColor:                 $white;
-$navbarInverseLinkColorHover:            $white;
-$navbarInverseLinkColorActive:           $navbarInverseLinkColorHover;
-$navbarInverseLinkBackgroundHover:       rgba(0, 0, 0, 0.05);
-$navbarInverseLinkBackgroundActive:      $navbarInverseBackground;
+$navbarInverseText:                      $white !default;
+$navbarInverseLinkColor:                 $white !default;
+$navbarInverseLinkColorHover:            $white !default;
+$navbarInverseLinkColorActive:           $navbarInverseLinkColorHover !default;
+$navbarInverseLinkBackgroundHover:       rgba(0, 0, 0, 0.05) !default;
+$navbarInverseLinkBackgroundActive:      $navbarInverseBackground !default;
 
-$navbarInverseSearchBackground:          lighten($navbarInverseBackground, 25%);
-$navbarInverseSearchBackgroundFocus:     $white;
-$navbarInverseSearchBorder:              $navbarInverseBackground;
-$navbarInverseSearchPlaceholderColor:    $grayDark;
+$navbarInverseSearchBackground:          lighten($navbarInverseBackground, 25%) !default;
+$navbarInverseSearchBackgroundFocus:     $white !default;
+$navbarInverseSearchBorder:              $navbarInverseBackground !default;
+$navbarInverseSearchPlaceholderColor:    $grayDark !default;
 
-$navbarInverseBrandColor:                $navbarInverseLinkColor;
+$navbarInverseBrandColor:                $navbarInverseLinkColor !default;
 
 
 // Pagination
 // -------------------------
-$paginationBackground:                $grayLight;
-$paginationBorder:                    transparent;
-$paginationActiveBackground:          $blue;
+$paginationBackground:                $grayLight !default;
+$paginationBorder:                    transparent !default;
+$paginationActiveBackground:          $blue !default;
 
 
 // Hero unit
 // -------------------------
-$heroUnitBackground:              $grayLighter;
-$heroUnitHeadingColor:            inherit;
-$heroUnitLeadColor:               inherit;
+$heroUnitBackground:              $grayLighter !default;
+$heroUnitHeadingColor:            inherit !default;
+$heroUnitLeadColor:               inherit !default;
 
 
 // Form states and alerts
 // -------------------------
-$warningText:             $white;
-$warningBackground:       $orange;
-$warningBorder:           transparent;
+$warningText:             $white !default;
+$warningBackground:       $orange !default;
+$warningBorder:           transparent !default;
 
-$errorText:               $white;
-$errorBackground:         $red;
-$errorBorder:             transparent;
+$errorText:               $white !default;
+$errorBackground:         $red !default;
+$errorBorder:             transparent !default;
 
-$successText:             $white;
-$successBackground:       $green;
-$successBorder:           transparent;
+$successText:             $white !default;
+$successBackground:       $green !default;
+$successBorder:           transparent !default;
 
-$infoText:                $white;
-$infoBackground:          $purple;
-$infoBorder:              transparent;
+$infoText:                $white !default;
+$infoBackground:          $purple !default;
+$infoBorder:              transparent !default;
 
 
 // Tooltips and popovers
 // -------------------------
-$tooltipColor:            #fff;
-$tooltipBackground:       #000;
-$tooltipArrowWidth:       5px;
-$tooltipArrowColor:       $tooltipBackground;
+$tooltipColor:            #fff !default;
+$tooltipBackground:       #000 !default;
+$tooltipArrowWidth:       5px !default;
+$tooltipArrowColor:       $tooltipBackground !default;
 
-$popoverBackground:       $orange;
-$popoverArrowWidth:       15px;
-$popoverArrowColor:       $orange;
-$popoverTitleBackground:  $orange;
+$popoverBackground:       $orange !default;
+$popoverArrowWidth:       15px !default;
+$popoverArrowColor:       $orange !default;
+$popoverTitleBackground:  $orange !default;
 
 // Special enhancement for popovers
-$popoverArrowOuterWidth:  $popoverArrowWidth + 1;
-$popoverArrowOuterColor:  transparent;
+$popoverArrowOuterWidth:  $popoverArrowWidth + 1 !default;
+$popoverArrowOuterColor:  transparent !default;
 
 
 
@@ -271,31 +271,31 @@ $popoverArrowOuterColor:  transparent;
 
 // Default 940px grid
 // -------------------------
-$gridColumns:             12;
-$gridColumnWidth:         60px;
-$gridGutterWidth:         20px;
-$gridRowWidth:            ($gridColumns * $gridColumnWidth) + ($gridGutterWidth * ($gridColumns - 1));
+$gridColumns:             12 !default;
+$gridColumnWidth:         60px !default;
+$gridGutterWidth:         20px !default;
+$gridRowWidth:            ($gridColumns * $gridColumnWidth) + ($gridGutterWidth * ($gridColumns - 1)) !default;
 
 // 1200px min
-$gridColumnWidth1200:     70px;
-$gridGutterWidth1200:     30px;
-$gridRowWidth1200:        ($gridColumns * $gridColumnWidth1200) + ($gridGutterWidth1200 * ($gridColumns - 1));
+$gridColumnWidth1200:     70px !default;
+$gridGutterWidth1200:     30px !default;
+$gridRowWidth1200:        ($gridColumns * $gridColumnWidth1200) + ($gridGutterWidth1200 * ($gridColumns - 1)) !default;
 
 // 768px-979px
-$gridColumnWidth768:      42px;
-$gridGutterWidth768:      20px;
-$gridRowWidth768:         ($gridColumns * $gridColumnWidth768) + ($gridGutterWidth768 * ($gridColumns - 1));
+$gridColumnWidth768:      42px !default;
+$gridGutterWidth768:      20px !default;
+$gridRowWidth768:         ($gridColumns * $gridColumnWidth768) + ($gridGutterWidth768 * ($gridColumns - 1)) !default;
 
 
 // Fluid grid
 // -------------------------
-$fluidGridColumnWidth:    percentage($gridColumnWidth/$gridRowWidth);
-$fluidGridGutterWidth:    percentage($gridGutterWidth/$gridRowWidth);
+$fluidGridColumnWidth:    percentage($gridColumnWidth/$gridRowWidth) !default;
+$fluidGridGutterWidth:    percentage($gridGutterWidth/$gridRowWidth) !default;
 
 // 1200px min
-$fluidGridColumnWidth1200:     percentage($gridColumnWidth1200/$gridRowWidth1200);
-$fluidGridGutterWidth1200:     percentage($gridGutterWidth1200/$gridRowWidth1200);
+$fluidGridColumnWidth1200:     percentage($gridColumnWidth1200/$gridRowWidth1200) !default;
+$fluidGridGutterWidth1200:     percentage($gridGutterWidth1200/$gridRowWidth1200) !default;
 
 // 768px-979px
-$fluidGridColumnWidth768:      percentage($gridColumnWidth768/$gridRowWidth768);
-$fluidGridGutterWidth768:      percentage($gridGutterWidth768/$gridRowWidth768);
+$fluidGridColumnWidth768:      percentage($gridColumnWidth768/$gridRowWidth768) !default;
+$fluidGridGutterWidth768:      percentage($gridGutterWidth768/$gridRowWidth768) !default;
