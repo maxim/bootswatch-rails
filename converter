@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
 src_file_path, dst_file_path = *ARGV
+dst_file_path ||= src_file_path
 lines = File.readlines(src_file_path)
 
 indent_size_calc = lambda do |line|
@@ -78,8 +79,16 @@ resolve_ampersand_dash = lambda do |line, index|
   end
 end
 
-clear_out_escapes = lambda do |line, index|
+clear_out_escapes = lambda do |line, _|
   line.gsub(/~"([^"]+)"/) { $1 }
+end
+
+mark_variables_default = lambda do |line, _|
+  if line =~ /^\s*\$/ && line.include?(':')
+    line.sub(';', ' !default;')
+  else
+    line
+  end
 end
 
 line_processors = [
@@ -92,6 +101,10 @@ line_processors = [
   resolve_ampersand_dash,
   clear_out_escapes
 ]
+
+if File.basename(src_file_path) =~ /variables/
+  line_processors << mark_variables_default
+end
 
 comment_line = /^\s*\/\//
 
