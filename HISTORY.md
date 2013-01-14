@@ -1,3 +1,8 @@
+## 0.3.1 (2013-01-14)
+
+* Add !default to all bootswatch variables, making them overridable
+
+
 ## 0.3.0 (2013-01-13)
 
 * Add a converter script for most of the repetitive less/sass conversion work

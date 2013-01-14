@@ -48,6 +48,18 @@ considering that you're using
     // Whatever application styles you have go last
     @import "base";
 
+### Overriding bootswatch variables
+
+Since version 3.1 it's possible to override variables.
+
+    // First set or import your overrides
+    $textColor: #000;
+
+    // Then load variables
+    @import "bootswatch/journal/variables";
+
+    // Then the rest as shown above...
+
 ## Bootswatches
 
 Included bootswatches
