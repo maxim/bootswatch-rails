@@ -48,6 +48,21 @@ convert_include_syntax = lambda do |line, _|
   end
 end
 
+escape_box_shadow_arguments = lambda do |line, _|
+  box_shadow     = /@include\s+box-shadow/
+  without_comma  = /@include\s+box-shadow\([^,]+$/
+  without_dollar = /@include\s+box-shadow\([^\$]+$/
+
+  with_dollar_and_comma =
+    (line !~ without_comma) && (line !~ without_dollar)
+
+  if line =~ box_shadow && with_dollar_and_comma
+    line.sub(/\((.+)\);/) { "(\#{#{$1}});" }
+  else
+    line
+  end
+end
+
 swap_spin_adjust_hue = lambda do |line, _|
   line.gsub(/(\W)spin\(/) do
     "#{$1}adjust-hue("
@@ -102,20 +117,21 @@ mark_variables_default = lambda do |line, _|
 end
 
 line_processors = [
-  # swap_variable_prefix,
-  # turn_percentages_into_percentiles,
-  # convert_mixin_declarations,
-  # convert_namespace_include_syntax,
-  # convert_include_syntax,
-  # swap_spin_adjust_hue,
-  # resolve_ampersand_dash,
-  # clear_out_escapes
+  swap_variable_prefix,
+  turn_percentages_into_percentiles,
+  convert_mixin_declarations,
+  convert_namespace_include_syntax,
+  convert_include_syntax,
+  escape_box_shadow_arguments,
+  swap_spin_adjust_hue,
+  resolve_ampersand_dash,
+  clear_out_escapes
 ]
 
 if File.basename(src_file_path) =~ /variables/
   line_processors += [
     rewrite_image_paths,
-    #mark_variables_default
+    mark_variables_default
   ]
 end
 
