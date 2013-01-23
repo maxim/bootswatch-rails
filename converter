@@ -83,6 +83,16 @@ clear_out_escapes = lambda do |line, _|
   line.gsub(/~"([^"]+)"/) { $1 }
 end
 
+rewrite_image_paths = lambda do |line, _|
+  if line =~ /^\s*\$/ && line.include?(':') && line.include?('.png"')
+    line.sub(/"([^"]+)"/) do
+      "image-path(\"#{File.basename($1)}\")"
+    end
+  else
+    line
+  end
+end
+
 mark_variables_default = lambda do |line, _|
   if line =~ /^\s*\$/ && line.include?(':')
     line.sub(';', ' !default;')
@@ -92,18 +102,21 @@ mark_variables_default = lambda do |line, _|
 end
 
 line_processors = [
-  swap_variable_prefix,
+  # swap_variable_prefix,
   # turn_percentages_into_percentiles,
-  convert_mixin_declarations,
-  convert_namespace_include_syntax,
-  convert_include_syntax,
-  swap_spin_adjust_hue,
-  resolve_ampersand_dash,
-  clear_out_escapes
+  # convert_mixin_declarations,
+  # convert_namespace_include_syntax,
+  # convert_include_syntax,
+  # swap_spin_adjust_hue,
+  # resolve_ampersand_dash,
+  # clear_out_escapes
 ]
 
 if File.basename(src_file_path) =~ /variables/
-  line_processors << mark_variables_default
+  line_processors += [
+    rewrite_image_paths,
+    #mark_variables_default
+  ]
 end
 
 comment_line = /^\s*\/\//
