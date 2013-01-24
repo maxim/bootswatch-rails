@@ -118,7 +118,10 @@ end
 
 line_processors = [
   swap_variable_prefix,
-  turn_percentages_into_percentiles,
+
+  # This converter doesn't seem to be actually needed
+  # turn_percentages_into_percentiles,
+
   convert_mixin_declarations,
   convert_namespace_include_syntax,
   convert_include_syntax,
