@@ -1,3 +1,8 @@
+## 0.3.2 (2013-01-23)
+
+* Escape complex arguments to box-shadow in Simplex (reported @murtra)
+* Make glyphicon links rails-friendly by default (reported @nysalor)
+
 ## 0.3.1 (2013-01-14)
 
 * Add !default to all bootswatch variables, making them overridable
