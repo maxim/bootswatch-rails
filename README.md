@@ -85,6 +85,12 @@ Included bootswatches
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
 
+#### Note about converter
+I am trying to automate this project as much as possible, so I wrote a script
+that does most of the work converting less to scss. If you want to contribute a
+fix that's easily automatable and you know ruby, please add a processor to the
+converter.
+
 ## Credits
 
 Big thanks to these guys.
