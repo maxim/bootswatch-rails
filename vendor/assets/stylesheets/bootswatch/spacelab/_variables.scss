@@ -1,4 +1,4 @@
-// Spacelab 2.2.2
+// Spacelab 2.3.0
 // Variables
 // --------------------------------------------------
 
@@ -13,7 +13,7 @@ $black:                 #000 !default;
 $grayDarker:            #2D2D2D !default;
 $grayDark:              #434848 !default;
 $gray:                  #666 !default;
-$grayLight:             #bbb !default;
+$grayLight:             #ccc !default;
 $grayLighter:           #eee !default;
 $white:                 #fff !default;
 
@@ -83,70 +83,6 @@ $tableBackgroundHover:              #f5f5f5 !default; // for hover
 $tableBorder:                       #ddd !default; // table and cell border
 
 
-// Navbar
-// -------------------------
-$navbarCollapseWidth:             979px !default;
-$navbarCollapseDesktopWidth:      $navbarCollapseWidth + 1 !default;
-
-$navbarHeight:                    40px !default;
-$navbarBackgroundHighlight:       $grayLighter !default;
-$navbarBackground:                lighten($grayLight, 5%) !default;
-$navbarBorder:                    $grayLight !default;
-
-$navbarText:                      $textColor !default;
-$navbarLinkColor:                 $textColor !default;
-$navbarLinkColorHover:            $black !default;
-$navbarLinkColorActive:           $black !default;
-$navbarLinkBackgroundHover:       transparent !default;
-$navbarLinkBackgroundActive:      transparent !default;
-
-$navbarBrandColor:                $navbarLinkColor !default;
-
-// Inverted navbar
-$navbarInverseBackground:                #6C737E !default;
-$navbarInverseBackgroundHighlight:       lighten($navbarInverseBackground, 25%) !default;
-$navbarInverseBorder:                    darken($navbarInverseBackground, 5%) !default;
-
-$navbarInverseText:                      $grayLighter !default;
-$navbarInverseLinkColor:                 $grayLighter !default;
-$navbarInverseLinkColorHover:            $white !default;
-$navbarInverseLinkColorActive:           $white !default;
-$navbarInverseLinkBackgroundHover:       transparent !default;
-$navbarInverseLinkBackgroundActive:      $navbarInverseBackground !default;
-
-$navbarInverseSearchBackground:          lighten($navbarInverseBackground, 25%) !default;
-$navbarInverseSearchBackgroundFocus:     $white !default;
-$navbarInverseSearchBorder:              $navbarInverseBackground !default;
-$navbarInverseSearchPlaceholderColor:    $grayLighter !default;
-
-$navbarInverseBrandColor:                $navbarInverseLinkColor !default;
-
-
-// Buttons
-// -------------------------
-$btnBackground:                     $white !default;
-$btnBackgroundHighlight:            $grayLighter !default;
-$btnBorder:                         darken($btnBackground, 20%) !default;
-
-$btnPrimaryBackground:              lighten($linkColor, 10%) !default;
-$btnPrimaryBackgroundHighlight:     $linkColor !default;
-
-$btnInfoBackground:                 lighten(#3A5D83, 10%) !default;
-$btnInfoBackgroundHighlight:        #3A5D83 !default;
-
-$btnSuccessBackground:              lighten($green, 10%) !default;
-$btnSuccessBackgroundHighlight:     $green !default;
-
-$btnWarningBackground:              lighten($orange, 10%) !default;
-$btnWarningBackgroundHighlight:     $orange !default;
-
-$btnDangerBackground:               lighten($red, 10%) !default;
-$btnDangerBackgroundHighlight:      $red !default;
-
-$btnInverseBackground:              lighten($navbarInverseBackground, 15%) !default;
-$btnInverseBackgroundHighlight:     $navbarInverseBackground !default;
-
-
 // Forms
 // -------------------------
 $inputBackground:               $white !default;
@@ -161,8 +97,8 @@ $inputHeight:                   $baseLineHeight + 10px !default; // base line-he
 // -------------------------
 $dropdownBackground:            $white !default;
 $dropdownBorder:                rgba(0,0,0,.2) !default;
-$dropdownDividerTop:            #e5e5e5 !default;
-$dropdownDividerBottom:         $white !default;
+$dropdownDividerTop:            rgba(0, 0, 0, 0.1) !default;
+$dropdownDividerBottom:         rgba(255, 255, 255, 0.5) !default;
 
 $dropdownLinkColor:             $textColor !default;
 $dropdownLinkColorHover:        $white !default;
@@ -213,6 +149,70 @@ $horizontalComponentOffset:       180px !default;
 // Wells
 // -------------------------
 $wellBackground:                  $grayLighter !default;
+
+
+// Navbar
+// -------------------------
+$navbarCollapseWidth:             979px !default;
+$navbarCollapseDesktopWidth:      $navbarCollapseWidth + 1 !default;
+
+$navbarHeight:                    40px !default;
+$navbarBackgroundHighlight:       $grayLighter !default;
+$navbarBackground:                darken($grayLighter, 5%) !default;
+$navbarBorder:                    $grayLight !default;
+
+$navbarText:                      $textColor !default;
+$navbarLinkColor:                 $textColor !default;
+$navbarLinkColorHover:            $linkColor !default;
+$navbarLinkColorActive:           $linkColor !default;
+$navbarLinkBackgroundHover:       transparent !default;
+$navbarLinkBackgroundActive:      transparent !default;
+
+$navbarBrandColor:                $navbarLinkColor !default;
+
+// Inverted navbar
+$navbarInverseBackground:                #6C737E !default;
+$navbarInverseBackgroundHighlight:       lighten($navbarInverseBackground, 10%) !default;
+$navbarInverseBorder:                    darken($navbarInverseBackground, 3%) !default;
+
+$navbarInverseText:                      $grayLight !default;
+$navbarInverseLinkColor:                 $grayLight !default;
+$navbarInverseLinkColorHover:            $white !default;
+$navbarInverseLinkColorActive:           $white !default;
+$navbarInverseLinkBackgroundHover:       transparent !default;
+$navbarInverseLinkBackgroundActive:      $navbarInverseBackground !default;
+
+$navbarInverseSearchBackground:          lighten($navbarInverseBackground, 25%) !default;
+$navbarInverseSearchBackgroundFocus:     $white !default;
+$navbarInverseSearchBorder:              $navbarInverseBackground !default;
+$navbarInverseSearchPlaceholderColor:    $grayLighter !default;
+
+$navbarInverseBrandColor:                $navbarInverseLinkColor !default;
+
+
+// Buttons
+// -------------------------
+$btnBackground:                     $white !default;
+$btnBackgroundHighlight:            $grayLighter !default;
+$btnBorder:                         darken($btnBackground, 20%) !default;
+
+$btnPrimaryBackground:              lighten($linkColor, 10%) !default;
+$btnPrimaryBackgroundHighlight:     $linkColor !default;
+
+$btnInfoBackground:                 lighten(#3A5D83, 10%) !default;
+$btnInfoBackgroundHighlight:        #3A5D83 !default;
+
+$btnSuccessBackground:              lighten($green, 10%) !default;
+$btnSuccessBackgroundHighlight:     $green !default;
+
+$btnWarningBackground:              lighten($orange, 10%) !default;
+$btnWarningBackgroundHighlight:     $orange !default;
+
+$btnDangerBackground:               lighten($red, 10%) !default;
+$btnDangerBackgroundHighlight:      $red !default;
+
+$btnInverseBackground:              lighten($navbarInverseBackground, 15%) !default;
+$btnInverseBackgroundHighlight:     $navbarInverseBackground !default;
 
 
 // Pagination

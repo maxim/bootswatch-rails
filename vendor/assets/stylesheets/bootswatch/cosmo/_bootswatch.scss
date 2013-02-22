@@ -1,4 +1,4 @@
-// Cosmo 2.2.2
+// Cosmo 2.3.0
 // Bootswatch
 // -----------------------------------------------------
 
@@ -47,6 +47,18 @@ blockquote {
 .muted {
 	color: $gray;
 }
+
+.text-warning        { color: $orange; }
+a.text-warning:hover { color: darken($orange, 10%); }
+
+.text-error          { color: $red; }
+a.text-error:hover   { color: darken($red, 10%); }
+
+.text-info           { color: $purple; }
+a.text-info:hover    { color: darken($purple, 10%); }
+
+.text-success        { color: $green; }
+a.text-success:hover { color: darken($green, 10%); }
 
 // SCAFFOLDING
 // -----------------------------------------------------
@@ -114,8 +126,8 @@ blockquote {
 
 div.subnav {
 
-	background-color: $grayLight;
-	background-image: none;
+	margin: 0 1px;
+	background: $grayLight none;
 	@include box-shadow(none);
 	border: none;
 	@include border-radius(0);
@@ -133,12 +145,12 @@ div.subnav {
 		border-color: transparent;
 		background-color: $black;
 		color: $white;
-		// border-left-width: 2px;
 		@include box-shadow(none);
 	}
 
 	div.subnav-fixed {
-		top: $navbarHeight;
+		top: $navbarHeight + 1;
+		margin: 0;
 	}
 }
 
@@ -151,7 +163,6 @@ div.subnav {
 	& > li.dropdown.open.active > a:hover {
 		color: $blue;
 	}
-
 }
 
 .nav-tabs {
@@ -177,6 +188,15 @@ div.subnav {
 		& > li:last-child > a {
 			@include border-radius(0);
 		}
+	}
+}
+
+.tabs-below,
+.tabs-left,
+.tabs-right {
+
+	& > .nav-tabs > li > a{
+		@include border-radius(0);
 	}
 }
 

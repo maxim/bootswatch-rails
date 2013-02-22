@@ -1,4 +1,4 @@
-// Cerulean 2.2.2
+// Cerulean 2.3.0
 // Variables
 // --------------------------------------------------
 
@@ -242,7 +242,7 @@ $successText:             darken($green, 5%) !default;
 $successBackground:       #D5ECBF !default;
 $successBorder:           darken(adjust-hue($successBackground, -10), 5%) !default;
 
-$infoText:                darken(#908A62, 5%) !default;
+$infoText:                darken($blue, 10%) !default;
 $infoBackground:          #A7DFF1 !default;
 $infoBorder:              darken(adjust-hue($infoBackground, -10), 7%) !default;
 

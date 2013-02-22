@@ -1,4 +1,4 @@
-// Amelia 2.2.2
+// Amelia 2.3.0
 // Variables
 // --------------------------------------------------
 
@@ -83,70 +83,6 @@ $tableBackgroundHover:              rgba(255, 255, 255, 0.4) !default; // for ho
 $tableBorder:                       lighten(#147E88, 12%) !default; // table and cell border
 
 
-// Navbar
-// -------------------------
-$navbarCollapseWidth:             979px !default;
-$navbarCollapseDesktopWidth:      $navbarCollapseWidth + 1 !default;
-
-$navbarHeight:                    50px !default;
-$navbarBackgroundHighlight:       $red !default;
-$navbarBackground:                $red !default;
-$navbarBorder:                    darken($navbarBackground, 12%) !default;
-
-$navbarText:                      $white !default;
-$navbarLinkColor:                 $white !default;
-$navbarLinkColorHover:            $white !default;
-$navbarLinkColorActive:           $navbarLinkColorHover !default;
-$navbarLinkBackgroundHover:       lighten($navbarBackground, 10%) !default;
-$navbarLinkBackgroundActive:      lighten($navbarBackground, 10%) !default;
-
-$navbarBrandColor:                $navbarLinkColor !default;
-
-// Inverted navbar
-$navbarInverseBackground:                $yellow !default;
-$navbarInverseBackgroundHighlight:       $yellow !default;
-$navbarInverseBorder:                    rgba(0, 0, 0, 0.1) !default;
-
-$navbarInverseText:                      $white !default;
-$navbarInverseLinkColor:                 $white !default;
-$navbarInverseLinkColorHover:            $white !default;
-$navbarInverseLinkColorActive:           $white !default;
-$navbarInverseLinkBackgroundHover:       rgba(255, 255, 255, 0.2) !default;
-$navbarInverseLinkBackgroundActive:      rgba(255, 255, 255, 0.2) !default;
-
-$navbarInverseSearchBackground:          lighten($navbarInverseBackground, 25%) !default;
-$navbarInverseSearchBackgroundFocus:     $white !default;
-$navbarInverseSearchBorder:              $navbarInverseBackground !default;
-$navbarInverseSearchPlaceholderColor:    $white !default;
-
-$navbarInverseBrandColor:                $navbarInverseLinkColor !default;
-
-
-// Buttons
-// -------------------------
-$btnBackground:                     $grayLighter !default;
-$btnBackgroundHighlight:            $grayLighter !default;
-$btnBorder:                         rgba(0, 0, 0, 0) !default;
-
-$btnPrimaryBackground:              $navbarBackground !default;
-$btnPrimaryBackgroundHighlight:     $navbarBackground !default;
-
-$btnInfoBackground:                 $purple !default;
-$btnInfoBackgroundHighlight:        $purple !default;
-
-$btnSuccessBackground:              $green !default;
-$btnSuccessBackgroundHighlight:     $green !default;
-
-$btnWarningBackground:              $orange !default;
-$btnWarningBackgroundHighlight:     $orange !default;
-
-$btnDangerBackground:               $yellow !default;
-$btnDangerBackgroundHighlight:      $yellow !default;
-
-$btnInverseBackground:              #27666D !default;
-$btnInverseBackgroundHighlight:     #27666D !default;
-
-
 // Forms
 // -------------------------
 $inputBackground:               $white !default;
@@ -215,6 +151,70 @@ $horizontalComponentOffset:       180px !default;
 $wellBackground:                  #3CB9C6 !default;
 
 
+// Navbar
+// -------------------------
+$navbarCollapseWidth:             979px !default;
+$navbarCollapseDesktopWidth:      $navbarCollapseWidth + 1 !default;
+
+$navbarHeight:                    50px !default;
+$navbarBackgroundHighlight:       $red !default;
+$navbarBackground:                $red !default;
+$navbarBorder:                    darken($navbarBackground, 12%) !default;
+
+$navbarText:                      $white !default;
+$navbarLinkColor:                 $white !default;
+$navbarLinkColorHover:            $white !default;
+$navbarLinkColorActive:           $navbarLinkColorHover !default;
+$navbarLinkBackgroundHover:       lighten($navbarBackground, 10%) !default;
+$navbarLinkBackgroundActive:      lighten($navbarBackground, 10%) !default;
+
+$navbarBrandColor:                $navbarLinkColor !default;
+
+// Inverted navbar
+$navbarInverseBackground:                $yellow !default;
+$navbarInverseBackgroundHighlight:       $yellow !default;
+$navbarInverseBorder:                    rgba(0, 0, 0, 0.1) !default;
+
+$navbarInverseText:                      $white !default;
+$navbarInverseLinkColor:                 $white !default;
+$navbarInverseLinkColorHover:            $white !default;
+$navbarInverseLinkColorActive:           $white !default;
+$navbarInverseLinkBackgroundHover:       rgba(255, 255, 255, 0.2) !default;
+$navbarInverseLinkBackgroundActive:      rgba(255, 255, 255, 0.2) !default;
+
+$navbarInverseSearchBackground:          lighten($navbarInverseBackground, 25%) !default;
+$navbarInverseSearchBackgroundFocus:     $white !default;
+$navbarInverseSearchBorder:              $navbarInverseBackground !default;
+$navbarInverseSearchPlaceholderColor:    $white !default;
+
+$navbarInverseBrandColor:                $navbarInverseLinkColor !default;
+
+
+// Buttons
+// -------------------------
+$btnBackground:                     $grayLighter !default;
+$btnBackgroundHighlight:            $grayLighter !default;
+$btnBorder:                         rgba(0, 0, 0, 0) !default;
+
+$btnPrimaryBackground:              $navbarBackground !default;
+$btnPrimaryBackgroundHighlight:     $navbarBackground !default;
+
+$btnInfoBackground:                 $purple !default;
+$btnInfoBackgroundHighlight:        $purple !default;
+
+$btnSuccessBackground:              $green !default;
+$btnSuccessBackgroundHighlight:     $green !default;
+
+$btnWarningBackground:              $orange !default;
+$btnWarningBackgroundHighlight:     $orange !default;
+
+$btnDangerBackground:               $yellow !default;
+$btnDangerBackgroundHighlight:      $yellow !default;
+
+$btnInverseBackground:              #27666D !default;
+$btnInverseBackgroundHighlight:     #27666D !default;
+
+
 // Pagination
 // -------------------------
 $paginationBackground:                #3CB9C6 !default;
@@ -231,20 +231,20 @@ $heroUnitLeadColor:               inherit !default;
 
 // Form states and alerts
 // -------------------------
-$warningText:             #c09853 !default;
-$warningBackground:       #fcf8e3 !default;
+$warningText:             $textColor !default;
+$warningBackground:       $orange !default;
 $warningBorder:           darken(adjust-hue($warningBackground, -10), 3%) !default;
 
-$errorText:               #b94a48 !default;
-$errorBackground:         #f2dede !default;
+$errorText:               $textColor !default;
+$errorBackground:         $red !default;
 $errorBorder:             darken(adjust-hue($errorBackground, -10), 3%) !default;
 
-$successText:             #468847 !default;
-$successBackground:       #dff0d8 !default;
+$successText:             $textColor !default;
+$successBackground:       $green !default;
 $successBorder:           darken(adjust-hue($successBackground, -10), 5%) !default;
 
-$infoText:                #3a87ad !default;
-$infoBackground:          #d9edf7 !default;
+$infoText:                $textColor !default;
+$infoBackground:          $purple !default;
 $infoBorder:              darken(adjust-hue($infoBackground, -10), 7%) !default;
 
 

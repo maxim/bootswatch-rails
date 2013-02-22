@@ -1,4 +1,4 @@
-// Cerulean 2.2.2
+// Cerulean 2.3.0
 // Bootswatch
 // -----------------------------------------------------
 
@@ -15,7 +15,6 @@
 // -----------------------------------------------------
 
 .navbar {
-
 
 	.brand {
 		padding: 14px 20px 16px;
@@ -114,7 +113,7 @@ div.subnav {
 	text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.2);
 
 	div.subnav-fixed {
-		top: $navbarHeight;
+		top: $navbarHeight + 1;
 	}
 }
 

@@ -1,4 +1,4 @@
-// Spruce 2.2.2
+// Spruce 2.3.0
 // Variables
 // --------------------------------------------------
 
@@ -80,7 +80,7 @@ $borderRadiusSmall:     3px !default;
 $tableBackground:                   lighten(#ddd, 10%) !default; // overall background-color
 $tableBackgroundAccent:             lighten(#ddd, 5%) !default; // for striping
 $tableBackgroundHover:              #ddd !default; // for hover
-$tableBorder:                       $headingsColor !default; // table and cell border
+$tableBorder:                       $grayLight !default; // table and cell border
 
 // Buttons
 // -------------------------
@@ -122,7 +122,7 @@ $inputHeight:                   $baseLineHeight + 10px !default; // base line-he
 $dropdownBackground:            #002425 !default;
 $dropdownBorder:                transparent !default;
 $dropdownDividerTop:            transparent !default;
-$dropdownDividerBottom:         $black !default;
+$dropdownDividerBottom:         $grayLight !default;
 
 $dropdownLinkColor:             $white !default;
 $dropdownLinkColorHover:        $white !default;
@@ -209,7 +209,7 @@ $navbarInverseLinkBackgroundActive:      $navbarInverseLinkBackgroundHover !defa
 $navbarInverseSearchBackground:          lighten($navbarInverseBackground, 25%) !default;
 $navbarInverseSearchBackgroundFocus:     $white !default;
 $navbarInverseSearchBorder:              $navbarInverseBackground !default;
-$navbarInverseSearchPlaceholderColor:    $white !default;
+$navbarInverseSearchPlaceholderColor:    $gray !default;
 
 $navbarInverseBrandColor:                $navbarInverseLinkColor !default;
 

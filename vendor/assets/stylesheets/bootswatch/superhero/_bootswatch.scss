@@ -1,4 +1,4 @@
-// Superhero 2.2.2
+// Superhero 2.3.0
 // Bootswatch
 // -----------------------------------------------------
 
@@ -169,52 +169,39 @@ blockquote.pull-right {
 }
 
 div.subnav {
-	background-color: $blue;
-	background-image: none;
+	margin: 0 1px;
+	background: $blue none;
 	border: none;
 
 	.nav > li > a,
 	.nav > li.active > a {
-		border-left: none;
-		border-right: none;
+		border-color: transparent;
 		color: $textColor;
 	}
 
 	.nav > li > a:hover,
 	.nav > li.active > a:hover {
 		background-color: lighten($blue, 10%);
-	}
-
-	.nav > li + li > a {
-		border-top: 0px solid transparent;
-	}
-
-	.nav > li:first-child > a,
-	.nav > li:first-child > a:hover,
-	.nav > li.active:first-child > a,
-	.nav > li.active:first-child > a:hover {
-		@include border-radius(4px 0 0 4px);
+		border-color: transparent;
 	}
 
 	.nav > li.active > a,
 	.nav > li.active > a:hover {
-		color: $white;
-		background-color: $orange;
-		background-image: none;
+		background: $orange none;
 		@include box-shadow(none);
+		color: $white;
 	}
 
 	&.subnav-fixed {
-		top: 70px;
+		top: $navbarHeight + 1;
+		margin: 0;
 		@include box-shadow(none);
 
 		.nav > li > a,
-		.nav > li.active > a,
 		.nav > li > a:hover,
+		.nav > li.active > a,
 		.nav > li.active > a:hover {
 			border-color: transparent;
-			padding-left: 12px;
-			padding-right: 12px;
 			@include border-radius(0);
 		}
 
@@ -398,11 +385,11 @@ div.subnav {
 }
 
 .btn-primary, .btn-primary:hover {
-	@include box-shadow(-2px 2px 0 darken($btnPrimaryBackground, 30%));
+	@include box-shadow(#{-2px 2px 0 darken($btnPrimaryBackground, 30%)});
 }
 
 .btn-warning, .btn-warning:hover {
-	@include box-shadow(-2px 2px 0 darken($yellow, 30%));
+	@include box-shadow(#{-2px 2px 0 darken($yellow, 30%)});
 }
 
 .btn-danger, .btn-danger:hover {
@@ -422,15 +409,15 @@ div.subnav {
 }
 
 .btn.dropdown-toggle, .btn.dropdown-toggle:hover {
-	@include box-shadow(0 2px 0 darken($white, 80%));
+	@include box-shadow(#{0 2px 0 darken($white, 80%)});
 }
 
 .btn-primary.dropdown-toggle, .btn-primary.dropdown-toggle:hover {
-	@include box-shadow(0 2px 0 darken($btnPrimaryBackground, 30%));
+	@include box-shadow(#{0 2px 0 darken($btnPrimaryBackground, 30%)});
 }
 
 .btn-warning.dropdown-toggle, .btn-warning.dropdown-toggle:hover {
-	@include box-shadow(0 2px 0 darken($yellow, 30%));
+	@include box-shadow(#{0 2px 0 darken($yellow, 30%)});
 }
 
 .btn-danger.dropdown-toggle, .btn-danger.dropdown-toggle:hover {

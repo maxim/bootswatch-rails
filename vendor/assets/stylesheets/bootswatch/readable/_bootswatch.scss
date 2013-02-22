@@ -1,4 +1,4 @@
-// Readable 2.2.2
+// Readable 2.3.0
 // Bootswatch
 // -----------------------------------------------------
 
@@ -23,7 +23,7 @@ div.subnav {
 	}
 
 	div.subnav-fixed {
-		top: $navbarHeight;
+		top: $navbarHeight + 1;
 	}
 }
 

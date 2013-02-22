@@ -1,4 +1,4 @@
-// Cosmo 2.2.2
+// Cosmo 2.3.0
 // Variables
 // --------------------------------------------------
 
@@ -181,8 +181,8 @@ $navbarCollapseWidth:             979px !default;
 $navbarCollapseDesktopWidth:      $navbarCollapseWidth + 1 !default;
 
 $navbarHeight:                    50px !default;
+$navbarBackgroundHighlight:       $grayDarker !default;
 $navbarBackground:                $grayDarker !default;
-$navbarBackgroundHighlight:       $navbarBackground !default;
 $navbarBorder:                    transparent !default;
 
 $navbarText:                      $white !default;

@@ -1,4 +1,4 @@
-// Readable 2.2.2
+// Readable 2.3.0
 // Variables
 // --------------------------------------------------
 
@@ -24,8 +24,8 @@ $blue:                  #0063AC !default;
 $blueDark:              #0064cd !default;
 $green:                 #1C9B47 !default;
 $red:                   #9c0001 !default;
-$yellow:                #ffc40d !default;
-$orange:                #f89406 !default;
+$yellow:                #F8D60D !default;
+$orange:                #E78B24 !default;
 $pink:                  #c3325f !default;
 $purple:                #7a43b6 !default;
 
@@ -38,7 +38,7 @@ $textColor:             $grayDark !default;
 
 // Links
 // -------------------------
-$linkColor:             $red !default;
+$linkColor:             $orange !default;
 $linkColorHover:        darken($linkColor, 5%) !default;
 
 
@@ -84,9 +84,9 @@ $tableBorder:                       #ddd !default; // table and cell border
 
 // Buttons
 // -------------------------
-$btnBackground:                     $white !default;
-$btnBackgroundHighlight:            darken($white, 10%) !default;
-$btnBorder:                         #bbb !default;
+$btnBackground:                     $grayLighter !default;
+$btnBackgroundHighlight:            darken($grayLighter, 5%) !default;
+$btnBorder:                         #ccc !default;
 
 $btnPrimaryBackground:              lighten($linkColor, 5%) !default;
 $btnPrimaryBackgroundHighlight:     $linkColor !default;
@@ -97,8 +97,8 @@ $btnInfoBackgroundHighlight:        $blue !default;
 $btnSuccessBackground:              lighten($green, 5%) !default;
 $btnSuccessBackgroundHighlight:     $green !default;
 
-$btnWarningBackground:              lighten($orange, 5%) !default;
-$btnWarningBackgroundHighlight:     $orange !default;
+$btnWarningBackground:              lighten($yellow, 5%) !default;
+$btnWarningBackgroundHighlight:     $yellow !default;
 
 $btnDangerBackground:               lighten($red, 5%) !default;
 $btnDangerBackgroundHighlight:      $red !default;
@@ -172,7 +172,7 @@ $horizontalComponentOffset:       180px !default;
 
 // Wells
 // -------------------------
-$wellBackground:                  #f5f5f5 !default;
+$wellBackground:                  #fefefe !default;
 
 
 // Navbar
@@ -223,26 +223,26 @@ $paginationActiveBackground:          #f5f5f5 !default;
 
 // Hero unit
 // -------------------------
-$heroUnitBackground:              $grayLighter !default;
+$heroUnitBackground:              #fefefe !default;
 $heroUnitHeadingColor:            inherit !default;
 $heroUnitLeadColor:               inherit !default;
 
 
 // Form states and alerts
 // -------------------------
-$warningText:             #c09853 !default;
+$warningText:             $orange !default;
 $warningBackground:       #fcf8e3 !default;
 $warningBorder:           darken(adjust-hue($warningBackground, -10), 3%) !default;
 
-$errorText:               #b94a48 !default;
+$errorText:               $red !default;
 $errorBackground:         #f2dede !default;
 $errorBorder:             darken(adjust-hue($errorBackground, -10), 3%) !default;
 
-$successText:             #468847 !default;
+$successText:             $green !default;
 $successBackground:       #dff0d8 !default;
 $successBorder:           darken(adjust-hue($successBackground, -10), 5%) !default;
 
-$infoText:                #3a87ad !default;
+$infoText:                $blue !default;
 $infoBackground:          #d9edf7 !default;
 $infoBorder:              darken(adjust-hue($infoBackground, -10), 7%) !default;
 
