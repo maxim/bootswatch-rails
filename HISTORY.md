@@ -1,3 +1,7 @@
+## 0.4.0 (2013-02-22)
+
+* Update all themes to current bootswatch versions (2.3.0)
+
 ## 0.3.2 (2013-01-23)
 
 * Escape complex arguments to box-shadow in Simplex (reported @murtra)
