@@ -70,6 +70,7 @@ Included bootswatches
 * [Cyborg](http://bootswatch.com/cyborg/)
 * [Journal](http://bootswatch.com/journal/)
 * [Readable](http://bootswatch.com/readable/)
+* [Shamrock](http://bootswatch.com/shamrock/)
 * [Simplex](http://bootswatch.com/simplex/)
 * [Slate](http://bootswatch.com/slate/)
 * [Spacelab](http://bootswatch.com/spacelab/)
