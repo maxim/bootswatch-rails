@@ -1,0 +1,131 @@
+#!/usr/bin/env ruby
+
+# Run this script to see if any variables need to be rearranged
+
+body = if ARGV[0]
+  File.read(ARGV[0])
+else
+  Dir['vendor/assets/stylesheets/bootswatch/*/_variables.scss'].each do |path|
+    puts "#{path.split('/')[-2]}:"
+    puts `./#{__FILE__} #{path}`
+    puts "\n"
+  end
+  exit(0)
+end
+
+
+class Variable
+  class << self
+    attr_accessor :sections
+  end
+
+  def self.from_token(token, section_index)
+    if token.strip =~ /\:$/
+      new token.strip.chop.strip, section_index: section_index,
+        assignment: true
+    else
+      new token.strip, section_index: section_index
+    end
+  end
+
+  def initialize(name, options = {})
+    @name = name
+    @assignment = true if options[:assignment]
+    @section_index = options[:section_index]
+  end
+
+  attr_reader :section_index
+
+  def assignment?
+    @assignment
+  end
+
+  def section
+    self.class.sections[@section_index]
+  end
+
+  def section_header
+    self.class.sections[@section_index - 1]
+  end
+
+  def section_name
+    section_header.split("\n").first.sub('// ', '')
+  end
+
+  def to_s
+    @name
+  end
+
+  def ==(other)
+    to_s == other.to_s
+  end
+end
+
+Variable.sections = body.split(/(\/\/\s+\w[^\/]+\/\/\s+-+)/m)
+
+tokens = []
+in_section = false
+
+Variable.sections.each.with_index do |section, index|
+  if in_section
+    tokens[index] = section.scan(/\$\w+\s*\:?/)
+    in_section = false
+  elsif section =~ /(\/\/\s+\w[^\/]+\/\/\s+-+)/m
+    tokens[index] = []
+    in_section = true
+  else
+    tokens[index] = []
+  end
+end
+
+unassigned = []
+assigned = []
+
+tokens.each.with_index do |group, index|
+  group.each do |token|
+    variable = Variable.from_token(token, index)
+
+    if !variable.assignment? && !assigned.include?(variable)
+      unassigned << variable
+    end
+
+    if variable.assignment?
+      assigned << variable
+    end
+  end
+end
+
+moves = []
+unassigned.each do |variable|
+  assignment = assigned.find{|v| v == variable}
+  moves << [
+    [ variable.section_name,
+      variable.section_header,
+      variable.section,
+      variable ],
+    [ assignment.section_name,
+      assignment.section_header,
+      assignment.section,
+      assignment ]
+  ]
+end
+
+moves.uniq!
+
+moves.each do |move|
+  src_sec_name = move.first.first
+  dst_sec_name = move.last.first
+
+  src_var = move.first.last
+  dst_var = move.last.last
+
+  if src_sec_name == dst_sec_name
+    puts "  Swap lines under #{src_sec_name} section due to #{src_var}"
+  else
+    puts "  Move #{src_sec_name} section under #{dst_sec_name} due to #{src_var}"
+  end
+end
+
+if moves.empty?
+  puts "  All good!"
+end
