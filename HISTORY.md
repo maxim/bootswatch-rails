@@ -1,4 +1,4 @@
-## 0.5.0 (2013-02-22)
+## 0.5.0 (2013-05-21)
 
 * Update all themes to current bootswatch versions (2.3.2)
 * Add Flatly theme
