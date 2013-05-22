@@ -1,4 +1,4 @@
-// Slate 2.3.0
+// Slate 2.3.2
 // Bootswatch
 // -----------------------------------------------------
 
@@ -19,10 +19,12 @@ code, pre {
 // SCAFFOLDING
 // -----------------------------------------------------
 
-hr, legend, .page-header {
-	border-top: none;
-	border-bottom: 1px solid darken($grayDarker, 5%);
-	background-color: transparent;
+legend, .page-header {
+	border-bottom: 1px solid $hrBorder;
+}
+
+hr {
+	border-bottom: none;
 }
 
 // NAVBAR
@@ -224,6 +226,11 @@ div.subnav {
 		color: $white;
 	}
 
+	& > li.disabled > a,
+	& > li.disabled > a:hover {
+		color: $gray;
+	}
+
 	li > a:hover {
 		background-color: transparent;
 		color: $grayLighter;
@@ -350,6 +357,7 @@ div.subnav {
 
 	li > a,
 	li > span {
+		
 		border: 1px solid transparent;
 		@include box-shadow('0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1)');
 		@include gradient-vertical-three-colors($gray, $grayDark, 70%, $grayDark);
@@ -363,6 +371,7 @@ div.subnav {
 	.disabled a,
 	.disabled a:hover {
 		background-color: transparent;
+		@include gradient-vertical-three-colors($gray, $grayDark, 70%, $grayDark);
 	}
 }
 

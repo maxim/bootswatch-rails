@@ -1,4 +1,4 @@
-// Amelia 2.3.0
+// Amelia 2.3.2
 // Variables
 // --------------------------------------------------
 
@@ -33,7 +33,7 @@ $purple:                #4D3A7D !default;
 // Scaffolding
 // -------------------------
 $bodyBackground:        #003F4D !default;
-$textColor:             rgba(255, 255, 255, 0.9) !default;
+$textColor:             #E1F0F0 !default;
 
 
 // Links
@@ -81,7 +81,6 @@ $tableBackground:                   lighten(#147E88, 10%) !default; // overall b
 $tableBackgroundAccent:             lighten(#147E88, 15%) !default; // for striping
 $tableBackgroundHover:              rgba(255, 255, 255, 0.4) !default; // for hover
 $tableBorder:                       lighten(#147E88, 12%) !default; // table and cell border
-
 
 // Forms
 // -------------------------
@@ -138,7 +137,7 @@ $placeholderText:         $grayLight !default;
 
 // Hr border color
 // -------------------------
-$hrBorder:                transparent !default;
+$hrBorder:                rgba(255, 255, 255, 0.3) !default;
 
 
 // Horizontal forms & lists
@@ -170,26 +169,6 @@ $navbarLinkBackgroundActive:      lighten($navbarBackground, 10%) !default;
 
 $navbarBrandColor:                $navbarLinkColor !default;
 
-// Inverted navbar
-$navbarInverseBackground:                $yellow !default;
-$navbarInverseBackgroundHighlight:       $yellow !default;
-$navbarInverseBorder:                    rgba(0, 0, 0, 0.1) !default;
-
-$navbarInverseText:                      $white !default;
-$navbarInverseLinkColor:                 $white !default;
-$navbarInverseLinkColorHover:            $white !default;
-$navbarInverseLinkColorActive:           $white !default;
-$navbarInverseLinkBackgroundHover:       rgba(255, 255, 255, 0.2) !default;
-$navbarInverseLinkBackgroundActive:      rgba(255, 255, 255, 0.2) !default;
-
-$navbarInverseSearchBackground:          lighten($navbarInverseBackground, 25%) !default;
-$navbarInverseSearchBackgroundFocus:     $white !default;
-$navbarInverseSearchBorder:              $navbarInverseBackground !default;
-$navbarInverseSearchPlaceholderColor:    $white !default;
-
-$navbarInverseBrandColor:                $navbarInverseLinkColor !default;
-
-
 // Buttons
 // -------------------------
 $btnBackground:                     $grayLighter !default;
@@ -213,6 +192,25 @@ $btnDangerBackgroundHighlight:      $yellow !default;
 
 $btnInverseBackground:              #27666D !default;
 $btnInverseBackgroundHighlight:     #27666D !default;
+
+// Inverted navbar
+$navbarInverseBackground:                $yellow !default;
+$navbarInverseBackgroundHighlight:       $yellow !default;
+$navbarInverseBorder:                    rgba(0, 0, 0, 0.1) !default;
+
+$navbarInverseText:                      $white !default;
+$navbarInverseLinkColor:                 $white !default;
+$navbarInverseLinkColorHover:            $white !default;
+$navbarInverseLinkColorActive:           $white !default;
+$navbarInverseLinkBackgroundHover:       rgba(255, 255, 255, 0.2) !default;
+$navbarInverseLinkBackgroundActive:      rgba(255, 255, 255, 0.2) !default;
+
+$navbarInverseSearchBackground:          lighten($navbarInverseBackground, 25%) !default;
+$navbarInverseSearchBackgroundFocus:     $white !default;
+$navbarInverseSearchBorder:              $navbarInverseBackground !default;
+$navbarInverseSearchPlaceholderColor:    $white !default;
+
+$navbarInverseBrandColor:                $navbarInverseLinkColor !default;
 
 
 // Pagination

@@ -1,4 +1,4 @@
-// Spacelab 2.3.0
+// Spacelab 2.3.2
 // Bootswatch
 // -----------------------------------------------------
 
@@ -106,7 +106,7 @@
 	.navbar-inverse .nav-collapse {
 
 		.nav li > a {
-			color: $grayLighter;
+			color: $grayLight !important;
 
 			&:hover {
 				background-color: $linkColor !important;
@@ -221,6 +221,10 @@ div.subnav {
 
 .control-group.success {
 	@include formFieldState(#2BA949, #2BA949, $successBackground);
+}
+
+.control-group.info {
+	@include formFieldState($blue, $blue, $infoBackground);
 }
 
 // DROPDOWNS

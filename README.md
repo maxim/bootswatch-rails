@@ -68,6 +68,7 @@ Included bootswatches
 * [Cerulean](http://bootswatch.com/cerulean/)
 * [Cosmo](http://bootswatch.com/cosmo/)
 * [Cyborg](http://bootswatch.com/cyborg/)
+* [Flatly](http://bootswatch.com/flatly/)
 * [Journal](http://bootswatch.com/journal/)
 * [Readable](http://bootswatch.com/readable/)
 * [Simplex](http://bootswatch.com/simplex/)

@@ -1,4 +1,4 @@
-// Slate 2.3.0
+// Slate 2.3.2
 // Variables
 // --------------------------------------------------
 
@@ -162,7 +162,7 @@ $placeholderText:         $grayLight !default;
 
 // Hr border color
 // -------------------------
-$hrBorder:                $grayLighter !default;
+$hrBorder:                darken($grayDarker, 5%) !default;
 
 
 // Horizontal forms & lists

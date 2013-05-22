@@ -1,4 +1,4 @@
-// Superhero 2.3.0
+// Superhero 2.3.2
 // Variables
 // --------------------------------------------------
 
@@ -254,9 +254,9 @@ $tooltipBackground:       #000 !default;
 $tooltipArrowWidth:       5px !default;
 $tooltipArrowColor:       $tooltipBackground !default;
 
-$popoverBackground:       #fff !default;
+$popoverBackground:       $wellBackground !default;
 $popoverArrowWidth:       10px !default;
-$popoverArrowColor:       #fff !default;
+$popoverArrowColor:       $wellBackground !default;
 $popoverTitleBackground:  darken($popoverBackground, 3%) !default;
 
 // Special enhancement for popovers

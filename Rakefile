@@ -6,6 +6,7 @@ THEMES = %w(
   cerulean
   cosmo
   cyborg
+  flatly
   journal
   readable
   simplex
