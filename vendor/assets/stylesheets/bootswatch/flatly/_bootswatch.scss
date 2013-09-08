@@ -380,15 +380,15 @@ legend {
 		color: $white;
 	}
 
-	.alert-error {
+	&.alert-error {
 		background-color: $red;
 	}
 
-	.alert-success {
+	&.alert-success {
 		background-color: $green;
 	}
 
-	.alert-info {
+	&.alert-info {
 		background-color: $blue;
 	}
 }
