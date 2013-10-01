@@ -253,15 +253,15 @@ div.subnav {
 		color: white;
 	}
 
-	.btn-large {
+	&.btn-large {
 		padding: $paddingLarge;
 	}
 
-	.btn-small {
+	&.btn-small {
 		padding: $paddingSmall;
 	}
 
-	.btn-mini {
+	&.btn-mini {
 		padding: $paddingMini;
 	}
 }
