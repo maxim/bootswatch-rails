@@ -64,19 +64,19 @@ Since version 3.1 it's possible to override variables.
 
 Included bootswatches
 
-* [Amelia](http://bootswatch.com/amelia/)
-* [Cerulean](http://bootswatch.com/cerulean/)
-* [Cosmo](http://bootswatch.com/cosmo/)
-* [Cyborg](http://bootswatch.com/cyborg/)
-* [Flatly](http://bootswatch.com/flatly/)
-* [Journal](http://bootswatch.com/journal/)
-* [Readable](http://bootswatch.com/readable/)
-* [Simplex](http://bootswatch.com/simplex/)
-* [Slate](http://bootswatch.com/slate/)
-* [Spacelab](http://bootswatch.com/spacelab/)
-* [Spruce](http://bootswatch.com/spruce/)
-* [Superhero](http://bootswatch.com/superhero/)
-* [United](http://bootswatch.com/united/)
+* [Amelia](http://bootswatch.com/2/amelia/)
+* [Cerulean](http://bootswatch.com/2/cerulean/)
+* [Cosmo](http://bootswatch.com/2/cosmo/)
+* [Cyborg](http://bootswatch.com/2/cyborg/)
+* [Flatly](http://bootswatch.com/2/flatly/)
+* [Journal](http://bootswatch.com/2/journal/)
+* [Readable](http://bootswatch.com/2/readable/)
+* [Simplex](http://bootswatch.com/2/simplex/)
+* [Slate](http://bootswatch.com/2/slate/)
+* [Spacelab](http://bootswatch.com/2/spacelab/)
+* [Spruce](http://bootswatch.com/2/spruce/)
+* [Superhero](http://bootswatch.com/2/superhero/)
+* [United](http://bootswatch.com/2/united/)
 
 ## Contributing
 
