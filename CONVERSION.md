@@ -1,10 +1,8 @@
-## Notes on conversion
+## Manual conversion steps
 
-TODO: Automate these
+Do this after you ran `rake convert` and rearranged variables according to
+`./rearranges` script.
 
-1. Update bootswatch submodule
-2. Run rake convert
-3. Run ./rearranges and fix variable declaration orders
-4. Search *.scss for this regexp: \We\( and remove occurrences of e function
-5. Search *.scss for this regexp: @include.+!important and move !important into parentheses
-6. Search *.scss for this regexp: &- and prepend parent selector instead
+1. Search *.scss for this regexp: \We\( and remove occurrences of e function
+2. Search *.scss for this regexp: @include.+!important and move !important into parentheses
+3. Search *.scss for this regexp: &- and prepend parent selector instead
