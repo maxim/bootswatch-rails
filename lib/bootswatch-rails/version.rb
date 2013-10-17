@@ -1,5 +1,5 @@
 module Bootswatch
   module Rails
-    VERSION = "0.5.0"
+    VERSION = "3.0.0"
   end
 end

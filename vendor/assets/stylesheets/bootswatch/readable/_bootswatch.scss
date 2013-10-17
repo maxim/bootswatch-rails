@@ -1,59 +1,83 @@
-// Readable 2.3.2
+// Readable 3.0.0
 // Bootswatch
 // -----------------------------------------------------
 
+@import url("//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic");
 
-// TYPOGRAPHY
-// -----------------------------------------------------
+@mixin btn-shadow($color) {
 
-@import url('//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic');
+	@include gradient-vertical-three-colors(lighten($color, 10%), $color, 6%, darken($color, 4%));
+	border: 1px solid darken($color, 10%);
+}
 
-// SCAFFOLDING
-// -----------------------------------------------------
+// Navbar =====================================================================
 
-// NAVBAR
-// -----------------------------------------------------
+.navbar {
+	@include box-shadow(0 1px 4px rgba(0, 0, 0, 0.2));
+}
 
-div.subnav {
+.navbar-nav > li > a {
+        padding-top: $navbar-padding-vertical + 6px;
+}
 
-	.nav > li > a,
-	.nav > .active > a,
-	.nav > .active > a:hover {
-		color: $textColor;
-	}
+.navbar-brand {
+        padding-top: $navbar-padding-vertical + 5px;
+}
 
-	div.subnav-fixed {
-		top: $navbarHeight + 1;
+// Buttons ====================================================================
+
+.btn-default,
+.btn-default:hover {
+	@include btn-shadow($btn-default-bg);
+}
+
+.btn-primary,
+.btn-primary:hover {
+	@include btn-shadow($btn-primary-bg);
+}
+
+.btn-success,
+.btn-success:hover {
+	@include btn-shadow($btn-success-bg);
+}
+
+.btn-info,
+.btn-info:hover {
+	@include btn-shadow($btn-info-bg);
+}
+
+.btn-warning,
+.btn-warning:hover {
+	@include btn-shadow($btn-warning-bg);
+}
+
+.btn-danger,
+.btn-danger:hover {
+	@include btn-shadow($btn-danger-bg);
+}
+
+// Typography =================================================================
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: bold;
+}
+
+// Tables =====================================================================
+
+// Forms ======================================================================
+
+// Navs =======================================================================
+
+.pagination {
+
+	.active > a,
+	.active > a:hover {
+		border-color: #ddd;
 	}
 }
 
-// NAV
-// -----------------------------------------------------
+// Indicators =================================================================
 
-// BUTTONS
-// -----------------------------------------------------
+// Progress bars ==============================================================
 
-// TABLES
-// -----------------------------------------------------
-
-// FORMS
-// -----------------------------------------------------
-
-// DROPDOWNS
-// -----------------------------------------------------
-
-// ALERTS, LABELS, BADGES
-// -----------------------------------------------------
-
-// MISC
-// -----------------------------------------------------
-
-.hero-unit {
-
-	h1, h2, h3, h4, h5, h6 {
-		margin: 13px 0;
-	}
-}
-
-// MEDIA QUERIES
-// -----------------------------------------------------
+// Containers =================================================================

@@ -74,8 +74,6 @@ Included bootswatches
 * [Simplex](http://bootswatch.com/2/simplex/)
 * [Slate](http://bootswatch.com/2/slate/)
 * [Spacelab](http://bootswatch.com/2/spacelab/)
-* [Spruce](http://bootswatch.com/2/spruce/)
-* [Superhero](http://bootswatch.com/2/superhero/)
 * [United](http://bootswatch.com/2/united/)
 
 ## Contributing
@@ -91,6 +89,8 @@ I am trying to automate this project as much as possible, so I wrote a script
 that does most of the work converting less to scss. If you want to contribute a
 fix that's easily automatable and you know ruby, please add a processor to the
 converter.
+
+Note on 3.0.0 conversion: This was converted using a simple grunt task in the [bootswatch-scss](https://github.com/log0ymxm/bootswatch-scss) repo.
 
 ## Credits
 

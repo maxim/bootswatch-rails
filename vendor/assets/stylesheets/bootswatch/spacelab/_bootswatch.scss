@@ -1,279 +1,115 @@
-// Spacelab 2.3.2
+// Spacelab 3.0.0
 // Bootswatch
 // -----------------------------------------------------
 
+@import url("//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700");
 
-// TYPOGRAPHY
-// -----------------------------------------------------
+@mixin btn-shadow($color) {
 
-@import url('//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700');
+	@include gradient-vertical-three-colors(lighten($color, 15%), $color, 50%, darken($color, 4%));
+	border: 1px solid darken($color, 10%);
+}
 
-// SCAFFOLDING
-// -----------------------------------------------------
-
-// NAVBAR
-// -----------------------------------------------------
+// Navbar =====================================================================
 
 .navbar {
 
-	.brand {
+	@include btn-shadow($navbar-default-bg);
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+	filter: none;
 
-		text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
-		@include transition(color ease-in-out .2s);
-
-		&:hover {
-			color: $navbarLinkColorHover;
-			@include transition(color ease-in-out .2s);
-		}
+	.caret,
+	.caret:hover {
+		@include transition(border-color ease-in-out .2s);
 	}
 
-	.nav > li > a {
-		padding: 11px 10px 8px;
-		text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
-		@include transition(color ease-in-out .2s);
-
-		&:hover {
-			@include transition(color ease-in-out .2s);
-		}
-	}
-
-	.navbar-text {
-		padding: 11px 10px 8px;
-		line-height: inherit;
-	}
-
-	.navbar-search .search-query,
-	.navbar-search .search-query:hover {
-		margin-bottom: 0;
-		line-height: normal;
-		color: $grayLight;
-		@include placeholder($grayLight);
-		@include box-shadow(inset 0 1px 2px rgba(0, 0, 0, 0.5));
-
-	    &:focus,
-	    &.focused {
-			@include box-shadow(inset 0 1px 2px rgba(0, 0, 0, 0.5));
-			color: $textColor;
-		}
-	}
-
-	.navbar-inverse {
-
-		.brand {
-			text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
-
-			&:hover {
-				color: $white;
-			}
-		}
-
-		.nav > li > a {
-			text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
-		}
-
-		.nav li.dropdown.open > .dropdown-toggle .caret,
-		.nav li.dropdown:hover > .dropdown-toggle .caret,
-		.nav li.dropdown.open:hover > .dropdown-toggle .caret {
-			border-top-color: $white;
-		}
-
-		.navbar-search .search-query,
-		.navbar-search .search-query:hover {
-
-			color: $white;
-
-			@include placeholder($grayLighter);
-		}
+	.dropdown-menu {
+		text-shadow: none;
 	}
 }
 
-@media (max-width: $navbarCollapseWidth) {
+.navbar-inverse {
+        @include btn-shadow($navbar-inverse-bg);
+        filter: none;
+        text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+}
 
-	.navbar .nav-collapse {
+.navbar-nav > li > a,
+.navbar-nav > li > a:hover {
+        padding-top: $navbar-padding-vertical + 2px;
+        padding-bottom: $navbar-padding-vertical - 2px;
+        @include transition(color ease-in-out .2s);
+}
 
-		.nav li > a:hover {
-			background-color: $linkColor;
-			color: $white;
-			text-shadow: none;
-		}
+.navbar-brand,
+.navbar-brand:hover {
+        @include transition(color ease-in-out .2s);
+}
 
-		.navbar-search {
-			border-top: none;
-			border-bottom: none;
-		}
-	}
+// Buttons ====================================================================
 
-	.navbar-inverse .nav-collapse {
+.btn {
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+}
 
-		.nav li > a {
-			color: $grayLight !important;
+.btn-default,
+.btn-default:hover {
+	@include btn-shadow($btn-default-bg);
+}
 
-			&:hover {
-				background-color: $linkColor !important;
-			}
-		}
+.btn-primary,
+.btn-primary:hover {
+	@include btn-shadow($btn-primary-bg);
+}
 
-		.nav-header {
-			color: $grayLighter;
-		}
+.btn-success,
+.btn-success:hover {
+	@include btn-shadow($btn-success-bg);
+}
+
+.btn-info,
+.btn-info:hover {
+	@include btn-shadow($btn-info-bg);
+}
+
+.btn-warning,
+.btn-warning:hover {
+	@include btn-shadow($btn-warning-bg);
+}
+
+.btn-danger,
+.btn-danger:hover {
+	@include btn-shadow($btn-danger-bg);
+}
+
+// Typography =================================================================
+
+h1, h2, h3, h4, h5, h6 {
+	color: $gray-darker;
+}
+
+// Tables =====================================================================
+
+// Forms ======================================================================
+
+// Navs =======================================================================
+
+.pagination {
+
+	.active > a,
+	.active > a:hover {
+		border-color: #ddd;
 	}
 }
 
-div.subnav {
+// Indicators =================================================================
 
-	.nav > li > a {
+// Progress bars ==============================================================
 
-		color: $navbarLinkColor;
-		@include transition(color ease-in-out .2s);
+// Containers =================================================================
 
-		&:hover {
-			border-left-color: $grayLight;
-			color: $navbarLinkColorHover;
-			@include transition(color ease-in-out .2s);
-		}
-	}
-
-	.nav > li.active > a {
-
-		color: $textColor;
-
-		&:hover {
-			color: $textColor;
-		}
-	}
-
-	.nav > li.dropdown > .dropdown-toggle {
-		background-color: transparent;
-	}
-
-	.nav > li.dropdown.open > .dropdown-toggle {
-
-		border-left: 1px solid whiteSmoke;
-		border-right: 1px solid #E5E5E5;
-		color: $textColor;
-
-		&:hover {
-			color: $linkColor;
-		}
-	}
-
-	div.subnav-fixed {
-		top: $navbarHeight + 1;
-	}
+.panel-primary {
+        .panel-title {
+                color: #fff;
+        }
 }
-
-// NAV
-// -----------------------------------------------------
-
-.nav > li > a:hover,
-.nav > li > a:focus {
-	background-color: rgba(0, 0, 0, 0.05);
-}
-
-.nav > li.dropdown > .dropdown-toggle,
-.nav > li.dropdown.active > .dropdown-toggle,
-.nav > li.dropdown.open > .dropdown-toggle,
-.nav > li.dropdown.open.active > .dropdown-toggle  {
-
-	.caret {
-		border-top: 4px solid $textColor;
-		border-top-color: $textColor;
-		opacity: 1;
-	}
-
-	&:hover .caret {
-		border-top: 4px solid $linkColorHover;
-		border-top-color: $linkColorHover;
-	}
-}
-
-.nav-list .divider {
-	background-color: $dropdownDividerTop;
-	border-bottom-color: $dropdownDividerBottom;
-}
-
-// BUTTONS
-// -----------------------------------------------------
-
-// TABLES
-// -----------------------------------------------------
-
-.table {
-
-	tbody tr.success > td,
-	tbody tr.error > td,
-	tbody tr.info > td {
-		color: $white;
-	}
-
-}
-
-// FORMS
-// -----------------------------------------------------
-
-.control-group.warning {
-	@include formFieldState(#E29235, #E29235, $warningBackground);
-}
-
-.control-group.error {
-	@include formFieldState(#C00, #C00, $errorBackground);
-}
-
-.control-group.success {
-	@include formFieldState(#2BA949, #2BA949, $successBackground);
-}
-
-.control-group.info {
-	@include formFieldState($blue, $blue, $infoBackground);
-}
-
-// DROPDOWNS
-// -----------------------------------------------------
-
-// ALERTS, LABELS, BADGES
-// -----------------------------------------------------
-
-.alert {
-	
-	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-
-	h1, h2, h3, h4, h5, h6 {
-		color: $white;
-		font-weight: bold;
-		text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-	}
-}
-
-.label, .badge {
-
-	.label,-important {
-		background-color: $red;
-	}
-
-	.label,-warning {
-		background-color: $orange;
-	}
-
-	.label,-success {
-		background-color: $green;
-	}
-
-	.label,-info {
-		background-color: $blue;
-	}
-}
-
-// MISC
-// -----------------------------------------------------
-
-.well {
-	// .box-shadow(inset 1px 1px 0 rgba(0,0,0,.1));
-}
-
-.hero-unit {
-	// .box-shadow(inset 1px 1px 0 rgba(0,0,0,.1));
-	border: 1px solid rgba(0,0,0,.1);
-}
-
-// MEDIA QUERIES
-// -----------------------------------------------------
