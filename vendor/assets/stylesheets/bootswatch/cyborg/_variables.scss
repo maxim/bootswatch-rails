@@ -157,6 +157,16 @@ $input-group-addon-bg:           $gray-lighter;
 $input-group-addon-border-color: $input-border;
 
 
+// Type
+// ------------------------
+$text-muted:                  $gray-light;
+$abbr-border-color:           $gray-light;
+$headings-small-color:        $gray-light;
+$blockquote-small-color:      $gray;
+$blockquote-border-color:     $gray-dark;
+$page-header-border-color:    $gray-dark;
+
+
 // Dropdowns
 // -------------------------
 
@@ -488,6 +498,8 @@ $list-group-link-heading-color:  #fff;
 
 // Panels
 // -------------------------
+$panel-default-heading-bg:    lighten($gray-darker, 10%);
+
 $panel-bg:                    $gray-darker;
 $panel-inner-border:          $gray-dark;
 $panel-border-radius:         $border-radius-base;
@@ -495,7 +507,6 @@ $panel-footer-bg:             $panel-default-heading-bg;
 
 $panel-default-text:          $gray-dark;
 $panel-default-border:        $panel-inner-border;
-$panel-default-heading-bg:    lighten($gray-darker, 10%);
 
 $panel-primary-text:          #fff;
 $panel-primary-border:        $brand-primary;
@@ -587,15 +598,6 @@ $pre-bg:                      #f5f5f5;
 $pre-color:                   $gray-dark;
 $pre-border-color:            #ccc;
 $pre-scrollable-max-height:   340px;
-
-// Type
-// ------------------------
-$text-muted:                  $gray-light;
-$abbr-border-color:           $gray-light;
-$headings-small-color:        $gray-light;
-$blockquote-small-color:      $gray;
-$blockquote-border-color:     $gray-dark;
-$page-header-border-color:    $gray-dark;
 
 // Miscellaneous
 // -------------------------

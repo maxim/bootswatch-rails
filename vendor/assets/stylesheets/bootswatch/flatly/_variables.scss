@@ -157,6 +157,16 @@ $input-group-addon-bg:           $gray-lighter;
 $input-group-addon-border-color: $input-border;
 
 
+// Type
+// ------------------------
+$text-muted:                  $gray-light;
+$abbr-border-color:           $gray-light;
+$headings-small-color:        $gray-light;
+$blockquote-small-color:      $gray-light;
+$blockquote-border-color:     $gray-lighter;
+$page-header-border-color:    $gray-lighter;
+
+
 // Dropdowns
 // -------------------------
 
@@ -587,15 +597,6 @@ $pre-bg:                      $gray-lighter;
 $pre-color:                   $gray-dark;
 $pre-border-color:            #ccc;
 $pre-scrollable-max-height:   340px;
-
-// Type
-// ------------------------
-$text-muted:                  $gray-light;
-$abbr-border-color:           $gray-light;
-$headings-small-color:        $gray-light;
-$blockquote-small-color:      $gray-light;
-$blockquote-border-color:     $gray-lighter;
-$page-header-border-color:    $gray-lighter;
 
 // Miscellaneous
 // -------------------------
