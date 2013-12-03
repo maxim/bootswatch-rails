@@ -35,6 +35,7 @@ considering that you're using
 
     // Then bootstrap itself
     @import "bootstrap";
+    @import "bootstrap/mixins";
 
     // Bootstrap body padding for fixed navbar
     body { padding-top: 60px; }
