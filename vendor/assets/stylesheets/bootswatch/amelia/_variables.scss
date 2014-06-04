@@ -2,7 +2,6 @@
 // Variables
 // --------------------------------------------------
 
-
 //== Colors
 //
 //## Gray and brand colors for use across Bootstrap.
@@ -34,6 +33,15 @@ $link-color:            lighten($brand-warning, 15%) !default;
 //** Link hover color set via `darken()` function.
 $link-hover-color:      $link-color !default;
 
+//== Miscellaneous
+//
+//##
+
+//** Horizontal line color.
+$hr-border:                   darken($body-bg, 5%) !default;
+
+//** Horizontal offset for forms and lists.
+$component-offset-horizontal: 180px !default;
 
 //== Typography
 //
@@ -214,17 +222,17 @@ $dropdown-fallback-border:       #ccc !default;
 //** Divider color for between dropdown items.
 $dropdown-divider-bg:            #e5e5e5 !default;
 
+//** Active dropdown menu item text color.
+$dropdown-link-active-color:     #fff !default;
+//** Active dropdown menu item background color.
+$dropdown-link-active-bg:        $component-active-bg !default;
+
 //** Dropdown link text color.
 $dropdown-link-color:            $gray-dark !default;
 //** Hover color for dropdown links.
 $dropdown-link-hover-color:      #fff !default;
 //** Hover background for dropdown links.
 $dropdown-link-hover-bg:         $dropdown-link-active-bg !default;
-
-//** Active dropdown menu item text color.
-$dropdown-link-active-color:     #fff !default;
-//** Active dropdown menu item background color.
-$dropdown-link-active-bg:        $component-active-bg !default;
 
 //** Disabled dropdown menu item background color.
 $dropdown-link-disabled-color:   $gray-lighter !default;
@@ -665,13 +673,13 @@ $panel-bg:                    lighten($body-bg, 5%) !default;
 $panel-body-padding:          15px !default;
 $panel-border-radius:         $border-radius-base !default;
 
-//** Border color for elements within panels
-$panel-inner-border:          darken($body-bg, 5%) !default;
-$panel-footer-bg:             $panel-default-heading-bg !default;
-
 $panel-default-text:          #fff !default;
 $panel-default-border:        darken($body-bg, 5%) !default;
 $panel-default-heading-bg:    lighten($body-bg, 15%) !default;
+
+//** Border color for elements within panels
+$panel-inner-border:          darken($body-bg, 5%) !default;
+$panel-footer-bg:             $panel-default-heading-bg !default;
 
 $panel-primary-text:          #fff !default;
 $panel-primary-border:        $brand-primary !default;
@@ -816,14 +824,3 @@ $blockquote-font-size:        ($font-size-base * 1.25) !default;
 $blockquote-border-color:     rgba(255, 255, 255, 0.6) !default;
 //** Page header border color
 $page-header-border-color:    darken($body-bg, 5%) !default;
-
-
-//== Miscellaneous
-//
-//##
-
-//** Horizontal line color.
-$hr-border:                   darken($body-bg, 5%) !default;
-
-//** Horizontal offset for forms and lists.
-$component-offset-horizontal: 180px !default;
