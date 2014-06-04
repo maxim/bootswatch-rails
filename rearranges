@@ -98,16 +98,18 @@ end
 moves = []
 unassigned.each do |variable|
   assignment = assigned.find{|v| v == variable}
-  moves << [
-    [ variable.section_name,
-      variable.section_header,
-      variable.section,
-      variable ],
-    [ assignment.section_name,
-      assignment.section_header,
-      assignment.section,
-      assignment ]
-  ]
+  if assignment
+    moves << [
+      [ variable.section_name,
+        variable.section_header,
+        variable.section,
+        variable ],
+      [ assignment.section_name,
+        assignment.section_header,
+        assignment.section,
+        assignment ]
+    ]
+  end
 end
 
 moves.uniq!
