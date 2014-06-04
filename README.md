@@ -79,7 +79,7 @@ Included bootswatches
 * [Spacelab](http://bootswatch.com/spacelab/)
 * [Superhero](http://bootswatch.com/superhero/)
 * [United](http://bootswatch.com/united/)
-* [United](http://bootswatch.com/yeti/)
+* [Yeti](http://bootswatch.com/yeti/)
 
 ## Contributing
 
