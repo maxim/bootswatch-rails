@@ -68,6 +68,37 @@ $headings-line-height:    1.1 !default;
 $headings-color:          inherit !default;
 
 
+//== Type
+//
+//##
+
+//** Text muted color
+$text-muted:                  $gray-light !default;
+//** Abbreviations and acronyms border color
+$abbr-border-color:           $gray-light !default;
+//** Headings small color
+$headings-small-color:        $gray-light !default;
+//** Blockquote small color
+$blockquote-small-color:      $gray-light !default;
+//** Blockquote font size
+$blockquote-font-size:        ($font-size-base * 1.25) !default;
+//** Blockquote border color
+$blockquote-border-color:     $gray !default;
+//** Page header border color
+$page-header-border-color:    transparent !default;
+
+
+//== Miscellaneous
+//
+//##
+
+//** Horizontal line color.
+$hr-border:                   $gray !default;
+
+//** Horizontal offset for forms and lists.
+$component-offset-horizontal: 180px !default;
+
+
 //-- Iconography
 //
 //## Specify custom locations of the include Glyphicons icon font. Useful for those including Bootstrap via Bower.
@@ -214,17 +245,17 @@ $dropdown-fallback-border:       #ccc !default;
 //** Divider color for between dropdown items.
 $dropdown-divider-bg:            #e5e5e5 !default;
 
+//** Active dropdown menu item text color.
+$dropdown-link-active-color:     #fff !default;
+//** Active dropdown menu item background color.
+$dropdown-link-active-bg:        $component-active-bg !default;
+
 //** Dropdown link text color.
 $dropdown-link-color:            $brand-primary !default;
 //** Hover color for dropdown links.
 $dropdown-link-hover-color:      #fff !default;
 //** Hover background for dropdown links.
 $dropdown-link-hover-bg:         $dropdown-link-active-bg !default;
-
-//** Active dropdown menu item text color.
-$dropdown-link-active-color:     #fff !default;
-//** Active dropdown menu item background color.
-$dropdown-link-active-bg:        $component-active-bg !default;
 
 //** Disabled dropdown menu item background color.
 $dropdown-link-disabled-color:   $text-muted !default;
@@ -796,34 +827,3 @@ $pre-bg:                      $gray-lighter !default;
 $pre-color:                   $gray-dark !default;
 $pre-border-color:            #ccc !default;
 $pre-scrollable-max-height:   340px !default;
-
-
-//== Type
-//
-//##
-
-//** Text muted color
-$text-muted:                  $gray-light !default;
-//** Abbreviations and acronyms border color
-$abbr-border-color:           $gray-light !default;
-//** Headings small color
-$headings-small-color:        $gray-light !default;
-//** Blockquote small color
-$blockquote-small-color:      $gray-light !default;
-//** Blockquote font size
-$blockquote-font-size:        ($font-size-base * 1.25) !default;
-//** Blockquote border color
-$blockquote-border-color:     $gray !default;
-//** Page header border color
-$page-header-border-color:    transparent !default;
-
-
-//== Miscellaneous
-//
-//##
-
-//** Horizontal line color.
-$hr-border:                   $gray !default;
-
-//** Horizontal offset for forms and lists.
-$component-offset-horizontal: 180px !default;
