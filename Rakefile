@@ -6,8 +6,10 @@ THEMES = %w(
   cerulean
   cosmo
   cyborg
+  darkly
   flatly
   journal
+  lumen
   readable
   simplex
   slate
@@ -15,6 +17,7 @@ THEMES = %w(
   spruce
   superhero
   united
+  yeti
 ).freeze
 
 

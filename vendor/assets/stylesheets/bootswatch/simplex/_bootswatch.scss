@@ -1,123 +1,132 @@
-// Simplex 3.0.0
+// Simplex 3.1.1
 // Bootswatch
 // -----------------------------------------------------
 
-$font-family-alt: "Josefin Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-
-@import url("//fonts.googleapis.com/css?family=Josefin+Sans:300,400,700");
-
 @mixin btn-shadow($color) {
-
-	@include gradient-vertical-three-colors(lighten($color, 15%), $color, 6%, darken($color, 4%));
-	border: 1px solid darken($color, 10%);
+  @include gradient-vertical-three-colors(lighten($color, 3%), $color, 6%, darken($color, 3%));
+  filter: none;
+  border: 1px solid darken($color, 10%);
 }
 
 // Navbar =====================================================================
 
 .navbar {
-	border-bottom: 1px solid #dfdfdf;
-	font-family: $font-family-alt;
-}
 
-.navbar-nav > li > a {
-        padding-top: $navbar-padding-vertical + 2px;
-        padding-bottom: $navbar-padding-vertical - 2px;
-}
+  .navbar-inverse {
 
-.navbar-brand {
-        padding: 14px 15px 8px;
+    .badge {
+      background-color: #fff;
+      color: $brand-primary;
+    }
+  }
 }
 
 // Buttons ====================================================================
 
 .btn {
-	font-family: $font-family-alt;
+  font-family: $headings-font-family;
 }
 
 .btn-default,
 .btn-default:hover {
-	@include btn-shadow($btn-default-bg);
+  @include btn-shadow($btn-default-bg);
 }
 
 .btn-primary,
 .btn-primary:hover {
-	@include btn-shadow($btn-primary-bg);
+  @include btn-shadow($btn-primary-bg);
 }
 
 .btn-success,
 .btn-success:hover {
-	@include btn-shadow($btn-success-bg);
+  @include btn-shadow($btn-success-bg);
 }
 
 .btn-info,
 .btn-info:hover {
-	@include btn-shadow($btn-info-bg);
+  @include btn-shadow($btn-info-bg);
 }
 
 .btn-warning,
 .btn-warning:hover {
-	@include btn-shadow($btn-warning-bg);
+  @include btn-shadow($btn-warning-bg);
 }
 
 .btn-danger,
 .btn-danger:hover {
-	@include btn-shadow($btn-danger-bg);
+  @include btn-shadow($btn-danger-bg);
 }
 
 // Typography =================================================================
 
-h1, h2, h3, h4, h5, h6 {
-	font-family: $font-family-alt;
+body {
+  font-weight: 200;
 }
 
 // Tables =====================================================================
 
+th {
+  color: $headings-color;
+}
+
 // Forms ======================================================================
 
-.has-warning {
-	.help-block,
-	.control-label {
-		color: $brand-danger;
-	}
+legend {
+  color: $headings-color;
+}
 
-	.form-control,
-	.form-control:focus {
-		border-color: $brand-danger;
-	}
+.has-warning {
+  .help-block,
+  .control-label {
+    color: $brand-danger;
+  }
+
+  .form-control,
+  .form-control:focus {
+    border-color: $brand-danger;
+  }
 }
 
 .has-error {
-	.help-block,
-	.control-label {
-		color: $brand-primary;
-	}
+  .help-block,
+  .control-label {
+    color: $brand-primary;
+  }
 
-	.form-control,
-	.form-control:focus {
-		border-color: $brand-primary;
-	}
+  .form-control,
+  .form-control:focus {
+    border-color: $brand-primary;
+  }
 }
 
 .has-success {
-	.help-block,
-	.control-label {
-		color: $brand-success;
-	}
+  .help-block,
+  .control-label {
+    color: $brand-success;
+  }
 
-	.form-control,
-	.form-control:focus {
-		border-color: $brand-success;
-	}
+  .form-control,
+  .form-control:focus {
+    border-color: $brand-success;
+  }
 }
 
 // Navs =======================================================================
 
-.pagination {
+.pager {
+  a {
+    color: $headings-color;
+  }
 
-	.active > a,
-	.active > a:hover {
-		border-color: #ddd;
-	}
+  a:hover,
+  .active > a, {
+    border-color: $brand-primary;
+    color: #fff;
+  }
+
+  .disabled > a {
+    border-color: $pager-border;
+  }
 }
 
 // Indicators =================================================================

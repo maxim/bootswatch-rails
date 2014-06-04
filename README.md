@@ -35,6 +35,7 @@ considering that you're using
 
     // Then bootstrap itself
     @import "bootstrap";
+    @import "bootstrap/mixins";
 
     // Bootstrap body padding for fixed navbar
     body { padding-top: 60px; }
@@ -64,17 +65,21 @@ Since version 3.1 it's possible to override variables.
 
 Included bootswatches
 
-* [Amelia](http://bootswatch.com/2/amelia/)
-* [Cerulean](http://bootswatch.com/2/cerulean/)
-* [Cosmo](http://bootswatch.com/2/cosmo/)
-* [Cyborg](http://bootswatch.com/2/cyborg/)
-* [Flatly](http://bootswatch.com/2/flatly/)
-* [Journal](http://bootswatch.com/2/journal/)
-* [Readable](http://bootswatch.com/2/readable/)
-* [Simplex](http://bootswatch.com/2/simplex/)
-* [Slate](http://bootswatch.com/2/slate/)
-* [Spacelab](http://bootswatch.com/2/spacelab/)
-* [United](http://bootswatch.com/2/united/)
+* [Amelia](http://bootswatch.com/amelia/)
+* [Cerulean](http://bootswatch.com/cerulean/)
+* [Cosmo](http://bootswatch.com/cosmo/)
+* [Cyborg](http://bootswatch.com/cyborg/)
+* [Darkly](http://bootswatch.com/darkly/)
+* [Flatly](http://bootswatch.com/flatly/)
+* [Journal](http://bootswatch.com/journal/)
+* [Lumen](http://bootswatch.com/lumen/)
+* [Readable](http://bootswatch.com/readable/)
+* [Simplex](http://bootswatch.com/simplex/)
+* [Slate](http://bootswatch.com/slate/)
+* [Spacelab](http://bootswatch.com/spacelab/)
+* [Superhero](http://bootswatch.com/superhero/)
+* [United](http://bootswatch.com/united/)
+* [Yeti](http://bootswatch.com/yeti/)
 
 ## Contributing
 
