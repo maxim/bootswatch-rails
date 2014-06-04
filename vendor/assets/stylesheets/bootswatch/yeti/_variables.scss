@@ -797,6 +797,15 @@ $pre-color:                   $gray-dark !default;
 $pre-border-color:            #ccc !default;
 $pre-scrollable-max-height:   340px !default;
 
+//== Miscellaneous
+//
+//##
+
+//** Horizontal line color.
+$hr-border:                   #ddd !default;
+
+//** Horizontal offset for forms and lists.
+$component-offset-horizontal: 180px !default;
 
 //== Type
 //
@@ -816,14 +825,3 @@ $blockquote-font-size:        ($font-size-base * 1.25) !default;
 $blockquote-border-color:     $hr-border !default;
 //** Page header border color
 $page-header-border-color:    $hr-border !default;
-
-
-//== Miscellaneous
-//
-//##
-
-//** Horizontal line color.
-$hr-border:                   #ddd !default;
-
-//** Horizontal offset for forms and lists.
-$component-offset-horizontal: 180px !default;
