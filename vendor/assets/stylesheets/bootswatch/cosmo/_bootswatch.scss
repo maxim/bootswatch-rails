@@ -1,4 +1,4 @@
-// Cosmo 3.0.0
+// Cosmo 3.1.1
 // Bootswatch
 // -----------------------------------------------------
 
@@ -6,133 +6,174 @@
 
 // Navbar =====================================================================
 
+.navbar {
+
+  .navbar-inverse {
+
+    .badge {
+      background-color: #fff;
+      color: $brand-primary;
+    }
+  }
+}
+
 // Buttons ====================================================================
 
-.btn {
-	border: none;
+.btn-lg {
+  padding-top: 19px;
 }
 
 // Typography =================================================================
 
-.text-primary {
-	color: $brand-primary;
+.text-primary,
+.text-primary:hover {
+  color: $brand-primary;
 }
 
-.text-success {
-	color: $brand-success;
+.text-success,
+.text-success:hover {
+  color: $brand-success;
 }
 
-.text-danger {
-	color: $brand-danger;
+.text-danger,
+.text-danger:hover {
+  color: $brand-danger;
 }
 
-.text-warning {
-	color: $brand-warning;
+.text-warning,
+.text-warning:hover {
+  color: $brand-warning;
 }
 
-.text-info {
-	color: $brand-info;
+.text-info,
+.text-info:hover {
+  color: $brand-info;
 }
 
 // Tables =====================================================================
 
+table,
 .table {
 
-	tr.success,
-	tr.warning,
-	tr.danger {
-		color: #fff;
-	}
+  a {
+    text-decoration: underline;
+  }
+
+  .success,
+  .warning,
+  .danger,
+  .info {
+    color: #fff;
+
+    a {
+      color: #fff;
+    }
+  }
 }
 
 // Forms ======================================================================
 
 
 .has-warning {
-	.help-block,
-	.control-label {
-		color: $brand-warning;
-	}
+  .help-block,
+  .control-label,
+  .form-control-feedback {
+    color: $brand-warning;
+  }
 
-	.form-control,
-	.form-control:focus {
-		border: 1px solid $brand-warning;
-	}
+  .form-control,
+  .form-control:focus {
+    border: 1px solid $brand-warning;
+  }
 }
 
 .has-error {
-	.help-block,
-	.control-label {
-		color: $brand-danger;
-	}
+  .help-block,
+  .control-label,
+  .form-control-feedback {
+    color: $brand-danger;
+  }
 
-	.form-control,
-	.form-control:focus {
-		border: 1px solid $brand-danger;
-	}
+  .form-control,
+  .form-control:focus {
+    border: 1px solid $brand-danger;
+  }
 }
 
 .has-success {
-	.help-block,
-	.control-label {
-		color: $brand-success;
-	}
+  .help-block,
+  .control-label,
+  .form-control-feedback {
+    color: $brand-success;
+  }
 
-	.form-control,
-	.form-control:focus {
-		border: 1px solid $brand-success;
-	}
+  .form-control,
+  .form-control:focus {
+    border: 1px solid $brand-success;
+  }
 }
 
 // Navs =======================================================================
 
 .nav-pills {
 
-	& > li > a {
-		border-radius: 0;
-	}
+  & > li > a {
+    border-radius: 0;
+  }
 }
 
 .dropdown-menu {
 
-	& > li > a:hover,
-	& > li > a:focus {
-		background-image: none;
-	}
-}
-
-.pagination {
-
-	.active > a,
-	.active > a:hover {
-		border-color: #ddd;
-	}
+  & > li > a:hover,
+  & > li > a:focus {
+    background-image: none;
+  }
 }
 
 // Indicators =================================================================
 
 .alert {
-	border: none;
+  border: none;
 
-	.alert-link {
-		text-decoration: underline;
-		color: #fff;
-	}
+  .alert-link {
+    text-decoration: underline;
+    color: #fff;
+  }
+
+  .close {
+    color: #fff;
+    text-decoration: none;
+    opacity: 0.4;
+
+    &:hover,
+    &:focus {
+      color: #fff;
+      opacity: 1;
+    }
+  }
 }
 
 .label {
-	border-radius: 0;
-}
-
-.close {
-	opacity: 1;
+  border-radius: 0;
 }
 
 // Progress bars ==============================================================
 
 .progress {
-	height: 8px;
-	@include box-shadow(none);
+  height: 8px;
+  @include box-shadow(none);
+  .progress-bar {
+    font-size: 8px;
+    line-height: 8px;
+  }
 }
 
 // Containers =================================================================
+
+.panel {
+  .panel-heading,
+  .panel-footer {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+}

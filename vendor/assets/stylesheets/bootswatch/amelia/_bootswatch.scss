@@ -1,4 +1,4 @@
-// Amelia 3.0.0
+// Amelia 3.1.1
 // Bootswatch
 // -----------------------------------------------------
 
@@ -6,131 +6,178 @@
 
 // Navbar =====================================================================
 
-.navbar-brand {
-        font-family: 'Lobster', cursive;
+.navbar {
+
+  .navbar-brand {
+    font-family: 'Lobster', cursive;
+  }
+
+  .navbar-default {
+    .badge {
+      background-color: #fff;
+      color: $navbar-default-bg;
+    }
+  }
 }
 
 // Buttons ====================================================================
 
 .btn {
-
-	.caret {
-		border-top-color: #fff;
-	}
+  
+  .caret {
+    border-top-color: #fff;
+  }
 }
 
 .btn-default {
 
-	&:hover {
-		color: $btn-default-color;
-	}
+  &:hover {
+    color: $btn-default-color;
+  }
 
-	.caret {
-		border-top-color: $btn-default-color;
-	}
+  .caret {
+    border-top-color: $btn-default-color;
+  }
 }
 
 // Typography =================================================================
 
-h1, h2, h3, h4, h5, h6 {
-	font-family: 'Lobster', cursive;
+.text-primary,
+.text-primary:hover {
+  color: lighten($brand-primary, 40%);
 }
 
-.text-primary {
-	color: lighten($brand-primary, 40%);
+.text-success,
+.text-success:hover {
+  color: lighten($brand-success, 20%);
 }
 
-.text-success {
-	color: lighten($brand-success, 20%);
+.text-danger,
+.text-danger:hover {
+  color: lighten($brand-danger, 20%);
 }
 
-.text-danger {
-	color: lighten($brand-danger, 20%);
+.text-warning,
+.text-warning:hover {
+  color: lighten($brand-warning, 20%);
 }
 
-.text-warning {
-	color: lighten($brand-warning, 20%);
-}
-
-.text-info {
-	color: lighten($brand-info, 40%);
+.text-info,
+.text-info:hover {
+  color: lighten($brand-info, 40%);
 }
 
 // Tables =====================================================================
 
+.table-responsive > .table {
+  background-color: $table-bg;
+}
+
+table,
+.table {
+
+  a {
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  .text-muted {
+    color: $text-muted;
+  }
+}
+
 // Forms ======================================================================
 
-.has-warning {
-	.help-block,
-	.control-label {
-		color: lighten($brand-warning, 20%);
-	}
-
-	.form-control,
-	.form-control:focus {
-		border-color: lighten($brand-warning, 20%);
-	}
-}
-
-.has-error {
-	.help-block,
-	.control-label {
-		color: lighten($brand-primary, 40%);
-	}
-
-	.form-control,
-	.form-control:focus {
-		border-color: lighten($brand-primary, 40%);
-	}
-}
-
-.has-success {
-	.help-block,
-	.control-label {
-		color: lighten($brand-success, 20%);
-	}
-
-	.form-control,
-	.form-control:focus {
-		border-color: lighten($brand-success, 20%);
-	}
+input,
+textarea {
+  color: $input-color;
 }
 
 legend {
-	font-family: 'Lobster', cursive;
-	color: #fff;
+  font-family: 'Lobster', cursive;
+  color: #fff;
+}
+
+.has-warning {
+  .help-block,
+  .control-label,
+  .form-control-feedback {
+    color: lighten($brand-warning, 20%);
+  }
+
+  .form-control,
+  .form-control:focus {
+    border-color: lighten($brand-warning, 20%);
+  }
+}
+
+.has-error {
+  .help-block,
+  .control-label,
+  .form-control-feedback {
+    color: lighten($brand-primary, 40%);
+  }
+
+  .form-control,
+  .form-control:focus {
+    border-color: lighten($brand-primary, 40%);
+  }
+}
+
+.has-success {
+  .help-block,
+  .control-label,
+  .form-control-feedback {
+    color: lighten($brand-success, 20%);
+  }
+
+  .form-control,
+  .form-control:focus {
+    border-color: lighten($brand-success, 20%);
+  }
 }
 
 .input-group-addon {
-	color: $btn-default-color;
+  color: $btn-default-color;
 }
 
 // Navs =======================================================================
 
 .pagination {
 
-	a:hover {
-		color: #fff;
-	}
+  a:hover {
+    color: #fff;
+  }
 }
 
 .pager {
 
-	a:hover {
-		color: #fff;
-	}
+  a:hover {
+    color: #fff;
+  }
 }
 
 // Indicators =================================================================
+
+.close {
+  opacity: 0.4;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+}
 
 // Progress bars ==============================================================
 
 // Containers =================================================================
 
-.list-group-item {
-	background-color: lighten($body-bg, 5%);
+a.thumbnail:hover,
+a.thumbnail:focus,
+a.thumbnail.active {
+  border-color: $thumbnail-border;
 }
 
 .popover {
-	color: $gray-dark;
+  color: $gray-dark;
 }

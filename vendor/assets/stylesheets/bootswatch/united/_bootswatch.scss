@@ -1,10 +1,29 @@
-// United 3.0.0
+// United 3.1.1
 // Bootswatch
 // -----------------------------------------------------
 
 @import url("//fonts.googleapis.com/css?family=Ubuntu");
 
 // Navbar =====================================================================
+
+.navbar {
+
+  .navbar-default {
+
+    .badge {
+      background-color: #fff;
+      color: $navbar-default-bg;
+    }
+  }
+
+  .navbar-inverse {
+
+    .badge {
+      background-color: #fff;
+      color: $navbar-inverse-bg;
+    }
+  }
+}
 
 // Buttons ====================================================================
 
@@ -15,14 +34,6 @@
 // Forms ======================================================================
 
 // Navs =======================================================================
-
-.pagination {
-
-	.active > a,
-	.active > a:hover {
-		border-color: #ddd;
-	}
-}
 
 // Indicators =================================================================
 

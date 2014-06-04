@@ -1,4 +1,4 @@
-// Cyborg 3.0.0
+// Cyborg 3.1.1
 // Bootswatch
 // -----------------------------------------------------
 
@@ -8,134 +8,155 @@
 
 .navbar {
 
-	border-bottom: 1px solid $gray-dark;
+  border-bottom: 1px solid $gray-dark;
 }
 
 // Buttons ====================================================================
 
 // Typography =================================================================
 
-h1, h2, h3, h4, h5, h6 {
-	color: #fff;
+.text-primary,
+.text-primary:hover {
+  color: $brand-primary;
 }
 
-.text-primary {
-	color: $brand-primary;
+.text-success,
+.text-success:hover {
+  color: $brand-success;
 }
 
-.text-success {
-	color: $brand-success;
+.text-danger,
+.text-danger:hover {
+  color: $brand-danger;
 }
 
-.text-danger {
-	color: $brand-danger;
+.text-warning,
+.text-warning:hover {
+  color: $brand-warning;
 }
 
-.text-warning {
-	color: $brand-warning;
-}
-
-.text-info {
-	color: $brand-info;
+.text-info,
+.text-info:hover {
+  color: $brand-info;
 }
 
 // Tables =====================================================================
 
+table,
 .table {
+  color: #fff;
 
-	tr.success,
-	tr.warning,
-	tr.danger {
-		color: #fff;
-	}
+  a {
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  .text-muted {
+    color: $text-muted;
+  }
+}
+
+.table-responsive > .table {
+  background-color: $table-bg;
 }
 
 // Forms ======================================================================
 
 .has-warning {
-	.help-block,
-	.control-label {
-		color: $brand-warning;
-	}
+  .help-block,
+  .control-label,
+  .form-control-feedback {
+    color: $brand-warning;
+  }
 
-	.form-control,
-	.form-control:focus {
-		border-color: $brand-warning;
-	}
+  .form-control,
+  .form-control:focus {
+    border-color: $brand-warning;
+  }
 }
 
 .has-error {
-	.help-block,
-	.control-label {
-		color: $brand-danger;
-	}
+  .help-block,
+  .control-label,
+  .form-control-feedback {
+    color: $brand-danger;
+  }
 
-	.form-control,
-	.form-control:focus {
-		border-color: $brand-danger;
-	}
+  .form-control,
+  .form-control:focus {
+    border-color: $brand-danger;
+  }
 }
 
 .has-success {
-	.help-block,
-	.control-label {
-		color: $brand-success;
-	}
+  .help-block,
+  .control-label,
+  .form-control-feedback {
+    color: $brand-success;
+  }
 
-	.form-control,
-	.form-control:focus {
-		border-color: $brand-success;
-	}
+  .form-control,
+  .form-control:focus {
+    border-color: $brand-success;
+  }
 }
 
 legend {
-	color: #fff;
+  color: #fff;
 }
 
 .input-group-addon {
-	background-color: $btn-default-bg;
+  background-color: $btn-default-bg;
 }
 
 // Navs =======================================================================
 
-.nav {
-
-	.caret,
-	a:hover .caret {
-		border-top-color: #fff;
-		border-bottom-color: #fff;
-	}
-}
-
 .nav-tabs,
 .nav-pills,
 .breadcrumb,
-.pagination,
 .pager {
 
-	a {
-		color: #fff;
-	}
+  a {
+    color: #fff;
+  }
 }
 
 // Indicators =================================================================
 
 .alert {
 
-	.alert-link,
-	a {
-		color: $alert-warning-text;
-		text-decoration: underline;
-	}
+  .alert-link,
+  a {
+    color: $alert-warning-text;
+    text-decoration: underline;
+  }
+
+  .close {
+    color: #fff;
+    text-decoration: none;
+    opacity: 0.4;
+
+    &:hover,
+    &:focus {
+      color: #fff;
+      opacity: 1;
+    }
+  }
 }
 
 // Progress bars ==============================================================
 
 // Containers =================================================================
 
+a.thumbnail:hover,
+a.thumbnail:focus,
+a.thumbnail.active {
+  border-color: $thumbnail-border;
+}
+
 .jumbotron {
 
-	h1, h2, h3, h4, h5, h6 {
-		color: #fff;
-	}
+  h1, h2, h3, h4, h5, h6 {
+    color: #fff;
+  }
 }
