@@ -1,5 +1,7 @@
 # bootswatch-rails
 
+[![Gem Version](https://badge.fury.io/rb/bootswatch-rails.svg)](http://badge.fury.io/rb/bootswatch-rails)
+
 This gem is meant to be used with
 [bootstrap-sass](https://github.com/thomas-mcdonald/bootstrap-sass). It gives
 you complete scss versions of [bootswatches](http://bootswatch.com) for use in
