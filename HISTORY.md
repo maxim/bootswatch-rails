@@ -1,3 +1,11 @@
+## 3.0.0 (2013-10-17)
+
+* Update all themes to current bootswatch versions (3.0.0)
+* Remove Spruce theme
+* Remove Superhero theme
+* Add Custom base theme for creating your own swatch
+* Change version scheme to match bootstrap versioning
+
 ## 0.5.0 (2013-05-21)
 
 * Update all themes to current bootswatch versions (2.3.2)
