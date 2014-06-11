@@ -32,18 +32,14 @@ considering that you're using
 
     // Example using 'Cerulean' bootswatch
     //
-    // First import journal variables
+    // First import cerulean variables
     @import "bootswatch/cerulean/variables";
 
     // Then bootstrap itself
     @import "bootstrap";
-    @import "bootstrap/mixins";
 
     // Bootstrap body padding for fixed navbar
     body { padding-top: 60px; }
-
-    // Responsive styles go here in case you want them
-    @import "bootstrap-responsive";
 
     // And finally bootswatch style itself
     @import "bootswatch/cerulean/bootswatch";
