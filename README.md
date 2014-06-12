@@ -5,7 +5,7 @@
 This gem is meant to be used with
 [bootstrap-sass](https://github.com/thomas-mcdonald/bootstrap-sass). It gives
 you complete scss versions of [bootswatches](http://bootswatch.com) for use in
-your Rails 3 asset pipeline, just like bootstrap-sass gives you scss version of
+your Rails asset pipeline, just like bootstrap-sass gives you scss version of
 bootstrap itself.
 
 ## Installation
