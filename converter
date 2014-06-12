@@ -108,6 +108,14 @@ rewrite_image_paths = lambda do |line, _|
   end
 end
 
+remove_icon_font_path = lambda do |line, _|
+  if line =~ /^\s*\$icon-font-path/
+    ""
+  else 
+    line
+  end  
+end
+
 mark_variables_default = lambda do |line, _|
   if line =~ /^\s*\$/ && line.include?(':')
     line.sub(';', ' !default;')
@@ -134,6 +142,7 @@ line_processors = [
 if File.basename(src_file_path) =~ /variables/
   line_processors += [
     rewrite_image_paths,
+    remove_icon_font_path,
     mark_variables_default
   ]
 end

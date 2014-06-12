@@ -87,6 +87,9 @@ Included bootswatches
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
 
+Please see [CONTRIBUTING](https://github.com/maxim/bootswatch-rails/blob/master/CONTRIBUTING.md) for more detail. (Dont change the scss files by hand, use the converter and rearranger first, and make your changes in those if possible)
+
+
 #### Note about converter
 I am trying to automate this project as much as possible, so I wrote a script
 that does most of the work converting less to scss. If you want to contribute a
