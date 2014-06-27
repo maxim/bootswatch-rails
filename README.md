@@ -96,8 +96,6 @@ that does most of the work converting less to scss. If you want to contribute a
 fix that's easily automatable and you know ruby, please add a processor to the
 converter.
 
-Note on 3.0.0 conversion: This was converted using a simple grunt task in the [bootswatch-scss](https://github.com/log0ymxm/bootswatch-scss) repo.
-
 ## Credits
 
 Big thanks to these guys.
