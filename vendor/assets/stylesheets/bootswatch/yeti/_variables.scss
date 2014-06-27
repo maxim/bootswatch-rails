@@ -1,4 +1,4 @@
-// Yeti 3.1.1
+// Yeti 3.2.0
 // Variables
 // --------------------------------------------------
 
@@ -19,9 +19,10 @@ $brand-info:            #5bc0de !default;
 $brand-warning:         #E99002 !default;
 $brand-danger:          #F04124 !default;
 
+
 //== Scaffolding
 //
-// ## Settings for some of the most global styles.
+//## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
 $body-bg:               #fff !default;
@@ -67,13 +68,16 @@ $headings-line-height:    1.1 !default;
 $headings-color:          inherit !default;
 
 
-//-- Iconography
+//== Iconography
 //
-//## Specify custom locations of the include Glyphicons icon font. Useful for those including Bootstrap via Bower.
+//## Specify custom location and filename of the included Glyphicons icon font. Useful for those including Bootstrap via Bower.
 
-
+//** Load fonts from this directory.
+//** File name for all font files.
 $icon-font-name:          "glyphicons-halflings-regular" !default;
+//** Element ID within SVG icon file.
 $icon-font-svg-id:        "glyphicons_halflingsregular" !default;
+
 
 //== Components
 //
@@ -231,7 +235,7 @@ $dropdown-link-disabled-color:   $gray-light !default;
 //** Text color for headers within dropdown menus.
 $dropdown-header-color:          $gray-light !default;
 
-// Note: Deprecated @dropdown-caret-color as of v3.1.0
+//** Deprecated `@dropdown-caret-color` as of v3.1.0
 $dropdown-caret-color:           #000 !default;
 
 
@@ -244,8 +248,8 @@ $dropdown-caret-color:           #000 !default;
 
 $zindex-navbar:            1000 !default;
 $zindex-dropdown:          1000 !default;
-$zindex-popover:           1010 !default;
-$zindex-tooltip:           1030 !default;
+$zindex-popover:           1060 !default;
+$zindex-tooltip:           1070 !default;
 $zindex-navbar-fixed:      1030 !default;
 $zindex-modal-background:  1040 !default;
 $zindex-modal:             1050 !default;
@@ -256,27 +260,32 @@ $zindex-modal:             1050 !default;
 //## Define the breakpoints at which your layout will change, adapting to different screen sizes.
 
 // Extra small screen / phone
-// Note: Deprecated @screen-xs and @screen-phone as of v3.0.1
+//** Deprecated `@screen-xs` as of v3.0.1
 $screen-xs:                  480px !default;
+//** Deprecated `@screen-xs-min` as of v3.2.0
 $screen-xs-min:              $screen-xs !default;
+//** Deprecated `@screen-phone` as of v3.0.1
 $screen-phone:               $screen-xs-min !default;
 
 // Small screen / tablet
-// Note: Deprecated @screen-sm and @screen-tablet as of v3.0.1
+//** Deprecated `@screen-sm` as of v3.0.1
 $screen-sm:                  768px !default;
 $screen-sm-min:              $screen-sm !default;
+//** Deprecated `@screen-tablet` as of v3.0.1
 $screen-tablet:              $screen-sm-min !default;
 
 // Medium screen / desktop
-// Note: Deprecated @screen-md and @screen-desktop as of v3.0.1
+//** Deprecated `@screen-md` as of v3.0.1
 $screen-md:                  992px !default;
 $screen-md-min:              $screen-md !default;
+//** Deprecated `@screen-desktop` as of v3.0.1
 $screen-desktop:             $screen-md-min !default;
 
 // Large screen / wide desktop
-// Note: Deprecated @screen-lg and @screen-lg-desktop as of v3.0.1
+//** Deprecated `@screen-lg` as of v3.0.1
 $screen-lg:                  1200px !default;
 $screen-lg-min:              $screen-lg !default;
+//** Deprecated `@screen-lg-desktop` as of v3.0.1
 $screen-lg-desktop:          $screen-lg-min !default;
 
 // So media queries don't overlap when required, provide a maximum
@@ -642,17 +651,26 @@ $list-group-border:             #ddd !default;
 //** List group border radius
 $list-group-border-radius:      $border-radius-base !default;
 
-//** Background color of single list elements on hover
+//** Background color of single list items on hover
 $list-group-hover-bg:           #f5f5f5 !default;
-//** Text color of active list elements
+//** Text color of active list items
 $list-group-active-color:       $component-active-color !default;
-//** Background color of active list elements
+//** Background color of active list items
 $list-group-active-bg:          $component-active-bg !default;
 //** Border color of active list elements
 $list-group-active-border:      $list-group-active-bg !default;
+//** Text color for content within active list items
 $list-group-active-text-color:  lighten($list-group-active-bg, 40%) !default;
 
+//** Text color of disabled list items
+$list-group-disabled-color:      $gray-light !default;
+//** Background color of disabled list items
+$list-group-disabled-bg:         $gray-lighter !default;
+//** Text color for content within disabled list items
+$list-group-disabled-text-color: $list-group-disabled-color !default;
+
 $list-group-link-color:         #555 !default;
+$list-group-link-hover-color:   $list-group-link-color !default;
 $list-group-link-heading-color: #333 !default;
 
 
@@ -662,6 +680,8 @@ $list-group-link-heading-color: #333 !default;
 
 $panel-bg:                    #fff !default;
 $panel-body-padding:          15px !default;
+$panel-heading-padding:       10px 15px !default;
+$panel-footer-padding:        $panel-heading-padding !default;
 $panel-border-radius:         $border-radius-base !default;
 
 //** Border color for elements within panels
@@ -676,21 +696,21 @@ $panel-primary-text:          #fff !default;
 $panel-primary-border:        $brand-primary !default;
 $panel-primary-heading-bg:    $brand-primary !default;
 
-$panel-success-text:          $state-success-text !default;
+$panel-success-text:          #fff !default;
 $panel-success-border:        $state-success-border !default;
-$panel-success-heading-bg:    $state-success-bg !default;
+$panel-success-heading-bg:    $brand-success !default;
 
-$panel-info-text:             $state-info-text !default;
+$panel-info-text:             #fff !default;
 $panel-info-border:           $state-info-border !default;
-$panel-info-heading-bg:       $state-info-bg !default;
+$panel-info-heading-bg:       $brand-info !default;
 
-$panel-warning-text:          $state-warning-text !default;
+$panel-warning-text:          #fff !default;
 $panel-warning-border:        $state-warning-border !default;
-$panel-warning-heading-bg:    $state-warning-bg !default;
+$panel-warning-heading-bg:    $brand-warning !default;
 
-$panel-danger-text:           $state-danger-text !default;
+$panel-danger-text:           #fff !default;
 $panel-danger-border:         $state-danger-border !default;
-$panel-danger-heading-bg:     $state-danger-bg !default;
+$panel-danger-heading-bg:     $brand-danger !default;
 
 
 //== Thumbnails
@@ -777,7 +797,7 @@ $carousel-caption-color:                      #fff !default;
 //##
 
 $close-font-weight:           bold !default;
-$close-color:                 #000 !default;
+$close-color:                 #fff !default;
 $close-text-shadow:           0 1px 0 #fff !default;
 
 
@@ -796,20 +816,13 @@ $pre-color:                   $gray-dark !default;
 $pre-border-color:            #ccc !default;
 $pre-scrollable-max-height:   340px !default;
 
-//== Miscellaneous
-//
-//##
-
-//** Horizontal line color.
-$hr-border:                   #ddd !default;
-
-//** Horizontal offset for forms and lists.
-$component-offset-horizontal: 180px !default;
 
 //== Type
 //
 //##
 
+//** Horizontal offset for forms and lists.
+$component-offset-horizontal: 180px !default;
 //** Text muted color
 $text-muted:                  $gray-light !default;
 //** Abbreviations and acronyms border color
@@ -824,3 +837,9 @@ $blockquote-font-size:        ($font-size-base * 1.25) !default;
 $blockquote-border-color:     $hr-border !default;
 //** Page header border color
 $page-header-border-color:    $hr-border !default;
+//** Width of horizontal description list titles
+$dl-horizontal-offset:        $component-offset-horizontal !default;
+//** Horizontal line color.
+$hr-border:                   #ddd !default;
+
+

@@ -1,4 +1,4 @@
-// Superhero 3.1.1
+// Superhero 3.2.0
 // Bootswatch
 // -----------------------------------------------------
 
@@ -10,39 +10,40 @@
   @include box-shadow(none);
   border: none;
   font-size: 12px;
-}
 
-.navbar-default {
+  .navbar-default {
 
-  .badge {
-    background-color: #fff;
-    color: $navbar-default-bg;
+    .badge {
+      background-color: #fff;
+      color: $navbar-default-bg;
+    }
   }
-}
 
-.navbar-inverse {
+  .navbar-inverse {
 
-  .badge {
-    background-color: #fff;
-    color: $navbar-inverse-bg;
+    .badge {
+      background-color: #fff;
+      color: $navbar-inverse-bg;
+    }
   }
 }
 
 // Buttons ====================================================================
 
 .btn {
+
   font-weight: 300;
-}
 
-.btn-default {
-  &:hover {
-    background-color: darken($btn-default-bg, 3%);
+  .btn-default {
+    &:hover {
+      background-color: darken($btn-default-bg, 3%);
+    }
   }
-}
 
-.btn-sm,
-.btn-xs {
-  font-size: 12px;
+  .btn-sm,
+  .btn-xs {
+    font-size: 12px;
+  }
 }
 
 // Typography =================================================================
@@ -151,6 +152,10 @@ label,
   .form-control-feedback {
     color: $brand-warning;
   }
+
+  .input-group-addon {
+    border: none;
+  }
 }
 
 .has-error {
@@ -159,6 +164,10 @@ label,
   .form-control-feedback {
     color: $brand-danger;
   }
+
+  .input-group-addon {
+    border: none;
+  }
 }
 
 .has-success {
@@ -166,6 +175,10 @@ label,
   .control-label,
   .form-control-feedback {
     color: $brand-success;
+  }
+
+  .input-group-addon {
+    border: none;
   }
 }
 
@@ -211,15 +224,6 @@ label,
 
 // Indicators =================================================================
 
-.close {
-  opacity: 0.4;
-
-  &:hover,
-  &:focus {
-    opacity: 1;
-  }
-}
-
 .label {
   font-weight: 300;
 }
@@ -233,6 +237,15 @@ label,
   }
 }
 
+.close {
+  opacity: 0.4;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+}
+
 // Progress bars ==============================================================
 
 // Containers =================================================================
@@ -243,11 +256,11 @@ label,
 
 .panel {
   border: none;
-}
 
-.panel-default > .panel-heading {
-  background-color: $table-bg-hover;
-  color: $text-color;
+  .panel-default > .panel-heading {
+    background-color: $table-bg-hover;
+    color: $text-color;
+  }
 }
 
 .thumbnail {
@@ -257,15 +270,17 @@ label,
 
 .modal {
   padding: 0;
+
+  .modal-header,
+  .modal-footer {
+    background-color: $table-bg-hover;
+    border: none;
+    border-radius: 0;
+  }
 }
 
-.modal-header,
-.modal-footer {
-  background-color: $table-bg-hover;
-  border: none;
-  border-radius: 0;
-}
-
-.popover-title {
-  border: none;
+.popover {
+  .popover-title {
+    border: none;
+  }
 }

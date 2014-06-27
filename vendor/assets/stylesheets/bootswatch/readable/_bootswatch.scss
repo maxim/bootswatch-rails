@@ -1,4 +1,4 @@
-// Readable 3.1.1
+// Readable 3.2.0
 // Bootswatch
 // -----------------------------------------------------
 
@@ -8,38 +8,38 @@
 
 .navbar {
   font-family: $headings-font-family;
-}
 
-.navbar-nav > li > a {
-  padding: $padding-base-vertical $padding-base-horizontal;
-  margin: 12px 6px;
-  border: 1px solid transparent;
-  border-radius: $border-radius-base;
+  .navbar-nav > li > a {
+    padding: $padding-base-vertical $padding-base-horizontal;
+    margin: 12px 6px;
+    border: 1px solid transparent;
+    border-radius: $border-radius-base;
 
-  &:hover {
+    &:hover {
+      border: 1px solid #ddd;
+    }
+  }
+
+  .navbar-nav > .active > a,
+  .navbar-nav > .active > a:hover {
     border: 1px solid #ddd;
   }
-}
 
-.navbar-nav > .active > a,
-.navbar-nav > .active > a:hover {
-  border: 1px solid #ddd;
-}
+  .navbar-default .navbar-nav > .active > a:hover {
+    color: $navbar-default-link-hover-color;
+  }
 
-.navbar-default .navbar-nav > .active > a:hover {
-  color: $navbar-default-link-hover-color;
-}
+  .navbar-inverse .navbar-nav > .active > a:hover {
+    color: $navbar-inverse-link-hover-color;
+  }
 
-.navbar-inverse .navbar-nav > .active > a:hover {
-  color: $navbar-inverse-link-hover-color;
-}
+  .navbar-brand {
+    margin-top: 6px;
+  }
 
-.navbar-brand {
-  margin-top: 6px;
-}
-
-.navbar-form {
-  margin-top: 12px;
+  .navbar-form {
+    margin-top: 12px;
+  }
 }
 
 // Buttons ====================================================================
@@ -75,11 +75,11 @@ legend {
 .pagination {
 
   font-family: $headings-font-family;
-}
 
-.pagination-lg > li > a,
-.pagination-lg > li > span {
-  padding: 14px 24px;
+  .pagination-lg > li > a,
+  .pagination-lg > li > span {
+    padding: 14px 24px;
+  }
 }
 
 .pager {
@@ -110,26 +110,32 @@ legend {
   }
 
   .close {
-    color: #fff;
     text-decoration: none;
-    opacity: 0.4;
+  }
+}
 
-    &:hover,
-    &:focus {
-      color: #fff;
-      opacity: 1;
-    }
+
+.close {
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.4;
+
+  &:hover,
+  &:focus {
+    color: #fff;
+    opacity: 1;
   }
 }
 
 .label {
   font-family: $headings-font-family;
   font-weight: normal;
-}
 
-.label-default {
-  border: 1px solid #ddd;
-  color: $text-color;
+  .label-default {
+    border: 1px solid #ddd;
+    color: $text-color;
+  }
+
 }
 
 .badge {
@@ -144,28 +150,29 @@ legend {
 // Containers =================================================================
 
 .panel {
+
   @include box-shadow(none);
-}
 
-.panel-default .panel-heading,
-.panel-default .panel-footer {
-  background-color: #fff;
-  font-family: $headings-font-family;
-  font-weight: bold;
-}
-
-.panel-primary,
-.panel-success,
-.panel-warning,
-.panel-danger,
-.panel-info {
-  .panel-heading {
-    color: #fff;
+  .panel-default .panel-heading,
+  .panel-default .panel-footer {
+    background-color: #fff;
+    font-family: $headings-font-family;
+    font-weight: bold;
   }
 
-  .panel-body {
-    border: 1px solid #ddd;
-    border-top-width: 0;
-    border-radius: 0 0 $border-radius-base $border-radius-base;
+  .panel-primary,
+  .panel-success,
+  .panel-warning,
+  .panel-danger,
+  .panel-info {
+    .panel-heading {
+      color: #fff;
+    }
+
+    .panel-body {
+      border: 1px solid #ddd;
+      border-top-width: 0;
+      border-radius: 0 0 $border-radius-base $border-radius-base;
+    }
   }
 }

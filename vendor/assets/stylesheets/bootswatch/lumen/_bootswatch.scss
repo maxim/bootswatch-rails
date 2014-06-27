@@ -1,10 +1,10 @@
-// Lumen 3.1.1
+// Lumen 3.2.0
 // Bootswatch
 // -----------------------------------------------------
 
 @import url("//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic");
 
-@mixin shadow($width: 4px) {
+.shadow ($width: 4px) {
   border-width: 0 1px $width 1px;
 }
 
@@ -33,68 +33,68 @@
     border-bottom-width: 2px;
     @include box-shadow(none);
   }
-}
 
-.btn-lg,
-.btn-group-lg > .btn {
-  padding: 14px $padding-large-horizontal 13px;
-  line-height: 15px;
-}
+  .btn-lg,
+  .btn-group-lg > .btn {
+    padding: 14px $padding-large-horizontal 13px;
+    line-height: 15px;
+  }
 
-.btn-sm,
-.btn-group-sm > .btn {
-  padding: 4px $padding-small-horizontal;
-}
+  .btn-sm,
+  .btn-group-sm > .btn {
+    padding: 4px $padding-small-horizontal;
+  }
 
-.btn-xs,
-.btn-group-xs > .btn {
-  padding: $padding-xs-vertical $padding-xs-horizontal;
-}
+  .btn-xs,
+  .btn-group-xs > .btn {
+    padding: $padding-xs-vertical $padding-xs-horizontal;
+  }
 
-.btn-default:hover,
-.btn-default:focus,
-.btn-group.open .dropdown-toggle.btn-default {
-  background-color: $btn-default-bg;
-  border-color: $btn-default-border;
-}
+  .btn-default:hover,
+  .btn-default:focus,
+  .btn-group.open .dropdown-toggle.btn-default {
+    background-color: $btn-default-bg;
+    border-color: $btn-default-border;
+  }
 
-.btn-primary:hover,
-.btn-primary:focus,
-.btn-group.open .dropdown-toggle.btn-primary {
-  background-color: $btn-primary-bg;
-  border-color: $btn-primary-border;
-}
+  .btn-primary:hover,
+  .btn-primary:focus,
+  .btn-group.open .dropdown-toggle.btn-primary {
+    background-color: $btn-primary-bg;
+    border-color: $btn-primary-border;
+  }
 
-.btn-success:hover,
-.btn-success:focus,
-.btn-group.open .dropdown-toggle.btn-success {
-  background-color: $btn-success-bg;
-  border-color: $btn-success-border;
-}
+  .btn-success:hover,
+  .btn-success:focus,
+  .btn-group.open .dropdown-toggle.btn-success {
+    background-color: $btn-success-bg;
+    border-color: $btn-success-border;
+  }
 
-.btn-info:hover,
-.btn-info:focus,
-.btn-group.open .dropdown-toggle.btn-info {
-  background-color: $btn-info-bg;
-  border-color: $btn-info-border;
-}
+  .btn-info:hover,
+  .btn-info:focus,
+  .btn-group.open .dropdown-toggle.btn-info {
+    background-color: $btn-info-bg;
+    border-color: $btn-info-border;
+  }
 
-.btn-warning:hover,
-.btn-warning:focus,
-.btn-group.open .dropdown-toggle.btn-warning {
-  background-color: $btn-warning-bg;
-  border-color: $btn-warning-border;
-}
+  .btn-warning:hover,
+  .btn-warning:focus,
+  .btn-group.open .dropdown-toggle.btn-warning {
+    background-color: $btn-warning-bg;
+    border-color: $btn-warning-border;
+  }
 
-.btn-danger:hover,
-.btn-danger:focus,
-.btn-group.open .dropdown-toggle.btn-danger {
-  background-color: $btn-danger-bg;
-  border-color: $btn-danger-border;
-}
+  .btn-danger:hover,
+  .btn-danger:focus,
+  .btn-group.open .dropdown-toggle.btn-danger {
+    background-color: $btn-danger-bg;
+    border-color: $btn-danger-border;
+  }
 
-.btn-group.open .dropdown-toggle {
-  @include box-shadow(none);
+  .btn-group.open .dropdown-toggle {
+    @include box-shadow(none);
+  }
 }
 
 .navbar-btn {
@@ -206,6 +206,10 @@ label {
     border: 1px solid $brand-warning;
     @include box-shadow(inset 0 2px 0 rgba(0, 0, 0, 0.075));
   }
+
+  .input-group-addon {
+    border: 1px solid $brand-warning;
+  }
 }
 
 .has-error {
@@ -220,6 +224,10 @@ label {
     border: 1px solid $brand-danger;
     @include box-shadow(inset 0 2px 0 rgba(0, 0, 0, 0.075));
   }
+
+  .input-group-addon {
+    border: 1px solid $brand-danger;
+  }
 }
 
 .has-success {
@@ -233,6 +241,10 @@ label {
   .form-control:focus {
     border: 1px solid $brand-success;
     @include box-shadow(inset 0 2px 0 rgba(0, 0, 0, 0.075));
+  }
+
+  .input-group-addon {
+    border: 1px solid $brand-success;
   }
 }
 
@@ -363,15 +375,19 @@ label {
   }
 
   .close {
-    color: #fff;
     text-decoration: none;
-    opacity: 0.4;
+  }
+}
 
-    &:hover,
-    &:focus {
-      color: #fff;
-      opacity: 1;
-    }
+.close {
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.4;
+
+  &:hover,
+  &:focus {
+    color: #fff;
+    opacity: 1;
   }
 }
 
@@ -384,10 +400,10 @@ label {
 .progress {
   border: 1px solid $navbar-default-border;
   @include box-shadow(inset 0 2px 0 rgba(0, 0, 0, 0.1));
-}
 
-.progress-bar {
-  @include box-shadow(inset 0 -4px 0 rgba(0, 0, 0, 0.15));
+  .progress-bar {
+    @include box-shadow(inset 0 -4px 0 rgba(0, 0, 0, 0.15));
+  }
 }
 
 // Containers =================================================================
