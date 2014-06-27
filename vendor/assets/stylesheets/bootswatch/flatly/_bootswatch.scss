@@ -1,4 +1,4 @@
-// Flatly 3.1.1
+// Flatly 3.2.0
 // Bootswatch
 // -----------------------------------------------------
 
@@ -8,25 +8,26 @@
 
 .navbar {
   border-width: 0;
-}
-.navbar-default {
 
-  .badge {
-    background-color: #fff;
-    color: $navbar-default-bg;
+  .navbar-default {
+
+    .badge {
+      background-color: #fff;
+      color: $navbar-default-bg;
+    }
   }
-}
 
-.navbar-inverse {
+  .navbar-inverse {
 
-  .badge {
-    background-color: #fff;
-    color: $navbar-inverse-bg;
+    .badge {
+      background-color: #fff;
+      color: $navbar-inverse-bg;
+    }
   }
-}
 
-.navbar-brand {
-  padding: 18.5px 15px 20.5px;
+  .navbar-brand {
+    padding: 18.5px 15px 20.5px;
+  }
 }
 
 // Buttons ====================================================================
@@ -94,14 +95,15 @@ table,
   > tfoot > tr > td {
     border: none;
   }
-}
-.table-bordered > thead > tr > th,
-.table-bordered > tbody > tr > th,
-.table-bordered > tfoot > tr > th,
-.table-bordered > thead > tr > td,
-.table-bordered > tbody > tr > td,
-.table-bordered > tfoot > tr > td {
-  border: 1px solid $table-border-color;
+
+  .table-bordered > thead > tr > th,
+  .table-bordered > tbody > tr > th,
+  .table-bordered > tfoot > tr > th,
+  .table-bordered > thead > tr > td,
+  .table-bordered > tbody > tr > td,
+  .table-bordered > tfoot > tr > td {
+    border: 1px solid $table-border-color;
+  }
 }
 
 // Forms ======================================================================
@@ -216,15 +218,19 @@ input, {
   }
 
   .close {
-    color: #fff;
     text-decoration: none;
-    opacity: 0.4;
+  }
+}
 
-    &:hover,
-    &:focus {
-      color: #fff;
-      opacity: 1;
-    }
+.close {
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.4;
+
+  &:hover,
+  &:focus {
+    color: #fff;
+    opacity: 1;
   }
 }
 

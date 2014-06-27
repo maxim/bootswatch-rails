@@ -1,4 +1,4 @@
-// Simplex 3.1.1
+// Simplex 3.2.0
 // Bootswatch
 // -----------------------------------------------------
 
@@ -10,11 +10,14 @@
 
 // Navbar =====================================================================
 
-.navbar-inverse {
+.navbar {
 
-  .badge {
-    background-color: #fff;
-    color: $brand-primary;
+  .navbar-inverse {
+
+    .badge {
+      background-color: #fff;
+      color: $brand-primary;
+    }
   }
 }
 

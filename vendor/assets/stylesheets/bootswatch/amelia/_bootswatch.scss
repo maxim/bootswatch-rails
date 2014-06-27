@@ -1,4 +1,4 @@
-// Amelia 3.1.1
+// Amelia 3.2.0
 // Bootswatch
 // -----------------------------------------------------
 
@@ -6,21 +6,24 @@
 
 // Navbar =====================================================================
 
-.navbar-brand {
-  font-family: 'Lobster', cursive;
-}
+.navbar {
 
-.navbar-default {
-  .badge {
-    background-color: #fff;
-    color: $navbar-default-bg;
+  .navbar-brand {
+    font-family: 'Lobster', cursive;
+  }
+
+  .navbar-default {
+    .badge {
+      background-color: #fff;
+      color: $navbar-default-bg;
+    }
   }
 }
 
 // Buttons ====================================================================
 
 .btn {
-
+  
   .caret {
     border-top-color: #fff;
   }
@@ -95,6 +98,10 @@ legend {
   color: #fff;
 }
 
+.input-group-addon {
+  color: $btn-default-color;
+}
+
 .has-warning {
   .help-block,
   .control-label,
@@ -105,6 +112,10 @@ legend {
   .form-control,
   .form-control:focus {
     border-color: lighten($brand-warning, 20%);
+  }
+
+  .input-group-addon {
+    border: none;
   }
 }
 
@@ -119,6 +130,10 @@ legend {
   .form-control:focus {
     border-color: lighten($brand-primary, 40%);
   }
+
+  .input-group-addon {
+    border: none;
+  }
 }
 
 .has-success {
@@ -132,10 +147,10 @@ legend {
   .form-control:focus {
     border-color: lighten($brand-success, 20%);
   }
-}
 
-.input-group-addon {
-  color: $btn-default-color;
+  .input-group-addon {
+    border: none;
+  }
 }
 
 // Navs =======================================================================

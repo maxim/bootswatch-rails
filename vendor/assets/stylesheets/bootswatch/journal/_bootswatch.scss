@@ -1,4 +1,4 @@
-// Journal 3.1.1
+// Journal 3.2.0
 // Bootswatch
 // -----------------------------------------------------
 
@@ -10,22 +10,24 @@
   font-size: 18px;
   font-family: $font-family-sans-serif;
   font-weight: $headings-font-weight;
-}
-.navbar-default {
 
-  .badge {
-    background-color: #000;
-    color: #fff;
+  .navbar-default {
+
+    .badge {
+      background-color: #000;
+      color: #fff;
+    }
+  }
+
+  .navbar-inverse {
+
+    .badge {
+      background-color: #fff;
+      color: $navbar-inverse-bg;
+    }
   }
 }
 
-.navbar-inverse {
-
-  .badge {
-    background-color: #fff;
-    color: $navbar-inverse-bg;
-  }
-}
 .navbar-brand {
   font-size: 18px;
   font-weight: $headings-font-weight;
@@ -102,13 +104,17 @@
   }
 }
 
-.panel-primary,
-.panel-success,
-.panel-warning,
-.panel-danger,
-.panel-info {
-  .panel-title {
-    color: #fff;
-  }
-}
+.panel {
 
+  .panel-primary,
+  .panel-success,
+  .panel-warning,
+  .panel-danger,
+  .panel-info {
+    .panel-title {
+      color: #fff;
+    }
+  }
+
+
+}
