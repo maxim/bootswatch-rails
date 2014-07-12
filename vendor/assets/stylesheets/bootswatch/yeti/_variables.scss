@@ -820,7 +820,8 @@ $pre-scrollable-max-height:   340px !default;
 //== Type
 //
 //##
-
+//** Horizontal line color.
+$hr-border:                   #ddd !default;
 //** Horizontal offset for forms and lists.
 $component-offset-horizontal: 180px !default;
 //** Text muted color
@@ -839,7 +840,4 @@ $blockquote-border-color:     $hr-border !default;
 $page-header-border-color:    $hr-border !default;
 //** Width of horizontal description list titles
 $dl-horizontal-offset:        $component-offset-horizontal !default;
-//** Horizontal line color.
-$hr-border:                   #ddd !default;
-
 
