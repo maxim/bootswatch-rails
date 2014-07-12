@@ -18,7 +18,8 @@ $brand-success:         #28B62C !default;
 $brand-info:            #75CAEB !default;
 $brand-warning:         #FF851B !default;
 $brand-danger:          #FF4136 !default;
-
+$navbar-default-bg:                #f8f8f8 !default;
+$navbar-default-border:            darken($navbar-default-bg, 6.5%) !default;
 
 //== Scaffolding
 //
@@ -77,6 +78,14 @@ $headings-color:          $gray-dark !default;
 $icon-font-name:          "glyphicons-halflings-regular" !default;
 //** Element ID within SVG icon file.
 $icon-font-svg-id:        "glyphicons_halflingsregular" !default;
+
+
+//== Wells
+//
+//##
+
+$well-bg:                     #fafafa !default;
+$well-border:                 darken($well-bg, 7%) !default;
 
 
 //== Components
@@ -342,8 +351,6 @@ $navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2
 $navbar-collapse-max-height:       340px !default;
 
 $navbar-default-color:             $text-color !default;
-$navbar-default-bg:                #f8f8f8 !default;
-$navbar-default-border:            darken($navbar-default-bg, 6.5%) !default;
 
 // Navbar links
 $navbar-default-link-color:                $gray-light !default;
@@ -730,14 +737,6 @@ $thumbnail-border-radius:     $border-radius-base !default;
 $thumbnail-caption-color:     $text-color !default;
 //** Padding around the thumbnail caption
 $thumbnail-caption-padding:   9px !default;
-
-
-//== Wells
-//
-//##
-
-$well-bg:                     #fafafa !default;
-$well-border:                 darken($well-bg, 7%) !default;
 
 
 //== Badges
