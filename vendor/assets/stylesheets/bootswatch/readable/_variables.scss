@@ -123,7 +123,7 @@ $table-cell-padding:            8px !default;
 $table-condensed-cell-padding:  5px !default;
 
 //** Default background color used for all tables.
-$table-bg:                      transparent !default;
+$table-bg:                      hsla(0, 100%, 100%, 0) !default;
 //** Background color used for `.table-striped`.
 $table-bg-accent:               #f9f9f9 !default;
 //** Background color used for `.table-hover`.
@@ -343,21 +343,21 @@ $navbar-collapse-max-height:       340px !default;
 
 $navbar-default-color:             $text-color !default;
 $navbar-default-bg:                $body-bg !default;
-$navbar-default-border:            transparent !default;
+$navbar-default-border:            hsla(0, 100%, 100%, 0) !default;
 
 // Navbar links
 $navbar-default-link-color:                $link-color !default;
 $navbar-default-link-hover-color:          $link-color !default;
-$navbar-default-link-hover-bg:             transparent !default;
+$navbar-default-link-hover-bg:             hsla(0, 100%, 100%, 0) !default;
 $navbar-default-link-active-color:         $navbar-default-link-color !default;
-$navbar-default-link-active-bg:            transparent !default;
+$navbar-default-link-active-bg:            hsla(0, 100%, 100%, 0) !default;
 $navbar-default-link-disabled-color:       #333 !default;
-$navbar-default-link-disabled-bg:          transparent !default;
+$navbar-default-link-disabled-bg:          hsla(0, 100%, 100%, 0) !default;
 
 // Navbar brand label
 $navbar-default-brand-color:               $navbar-default-link-color !default;
 $navbar-default-brand-hover-color:         $navbar-default-link-hover-color !default;
-$navbar-default-brand-hover-bg:            transparent !default;
+$navbar-default-brand-hover-bg:            hsla(0, 100%, 100%, 0) !default;
 
 // Navbar toggle
 $navbar-default-toggle-hover-bg:           #ddd !default;
@@ -369,21 +369,21 @@ $navbar-default-toggle-border-color:       #ddd !default;
 // Reset inverted navbar basics
 $navbar-inverse-color:                      $text-color !default;
 $navbar-inverse-bg:                         $body-bg !default;
-$navbar-inverse-border:                     transparent !default;
+$navbar-inverse-border:                     hsla(0, 100%, 100%, 0) !default;
 
 // Inverted navbar links
 $navbar-inverse-link-color:                 $text-color !default;
 $navbar-inverse-link-hover-color:           $text-color !default;
-$navbar-inverse-link-hover-bg:              transparent !default;
+$navbar-inverse-link-hover-bg:              hsla(0, 100%, 100%, 0) !default;
 $navbar-inverse-link-active-color:          $text-color !default;
-$navbar-inverse-link-active-bg:             transparent !default;
+$navbar-inverse-link-active-bg:             hsla(0, 100%, 100%, 0) !default;
 $navbar-inverse-link-disabled-color:        #ccc !default;
-$navbar-inverse-link-disabled-bg:           transparent !default;
+$navbar-inverse-link-disabled-bg:           hsla(0, 100%, 100%, 0) !default;
 
 // Inverted navbar brand label
 $navbar-inverse-brand-color:                $navbar-inverse-link-color !default;
 $navbar-inverse-brand-hover-color:          $navbar-inverse-link-hover-color !default;
-$navbar-inverse-brand-hover-bg:             transparent !default;
+$navbar-inverse-brand-hover-bg:             hsla(0, 100%, 100%, 0) !default;
 
 // Inverted navbar toggle
 $navbar-inverse-toggle-hover-bg:            #ddd !default;
@@ -693,23 +693,23 @@ $panel-default-border:        #ddd !default;
 $panel-default-heading-bg:    #f5f5f5 !default;
 
 $panel-primary-text:          #fff !default;
-$panel-primary-border:        transparent !default;
+$panel-primary-border:        hsla(0, 100%, 100%, 0) !default;
 $panel-primary-heading-bg:    $brand-primary !default;
 
 $panel-success-text:          $state-success-text !default;
-$panel-success-border:        transparent !default;
+$panel-success-border:        hsla(0, 100%, 100%, 0) !default;
 $panel-success-heading-bg:    $state-success-border !default;
 
 $panel-info-text:             $state-info-text !default;
-$panel-info-border:           transparent !default;
+$panel-info-border:           hsla(0, 100%, 100%, 0) !default;
 $panel-info-heading-bg:       $state-info-border !default;
 
 $panel-warning-text:          $state-warning-text !default;
-$panel-warning-border:        transparent !default;
+$panel-warning-border:        hsla(0, 100%, 100%, 0) !default;
 $panel-warning-heading-bg:    $state-warning-border !default;
 
 $panel-danger-text:           $state-danger-text !default;
-$panel-danger-border:         transparent !default;
+$panel-danger-border:         hsla(0, 100%, 100%, 0) !default;
 $panel-danger-heading-bg:     $state-danger-border !default;
 
 

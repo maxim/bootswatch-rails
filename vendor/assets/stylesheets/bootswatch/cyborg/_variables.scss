@@ -348,16 +348,16 @@ $navbar-default-border:            darken($navbar-default-bg, 6.5%) !default;
 // Navbar links
 $navbar-default-link-color:                $text-color !default;
 $navbar-default-link-hover-color:          #fff !default;
-$navbar-default-link-hover-bg:             transparent !default;
+$navbar-default-link-hover-bg:             hsla(0, 100%, 100%, 0) !default;
 $navbar-default-link-active-color:         #fff !default;
-$navbar-default-link-active-bg:            transparent !default;
+$navbar-default-link-active-bg:            hsla(0, 100%, 100%, 0) !default;
 $navbar-default-link-disabled-color:       $gray-light !default;
-$navbar-default-link-disabled-bg:          transparent !default;
+$navbar-default-link-disabled-bg:          hsla(0, 100%, 100%, 0) !default;
 
 // Navbar brand label
 $navbar-default-brand-color:               #fff !default;
 $navbar-default-brand-hover-color:         #fff !default;
-$navbar-default-brand-hover-bg:            transparent !default;
+$navbar-default-brand-hover-bg:            hsla(0, 100%, 100%, 0) !default;
 
 // Navbar toggle
 $navbar-default-toggle-hover-bg:           $gray-dark !default;
@@ -374,16 +374,16 @@ $navbar-inverse-border:                     darken($navbar-inverse-bg, 10%) !def
 // Inverted navbar links
 $navbar-inverse-link-color:                 $gray-light !default;
 $navbar-inverse-link-hover-color:           #fff !default;
-$navbar-inverse-link-hover-bg:              transparent !default;
+$navbar-inverse-link-hover-bg:              hsla(0, 100%, 100%, 0) !default;
 $navbar-inverse-link-active-color:          $navbar-inverse-link-hover-color !default;
-$navbar-inverse-link-active-bg:             transparent !default;
+$navbar-inverse-link-active-bg:             hsla(0, 100%, 100%, 0) !default;
 $navbar-inverse-link-disabled-color:        #aaa !default;
-$navbar-inverse-link-disabled-bg:           transparent !default;
+$navbar-inverse-link-disabled-bg:           hsla(0, 100%, 100%, 0) !default;
 
 // Inverted navbar brand label
 $navbar-inverse-brand-color:                #fff !default;
 $navbar-inverse-brand-hover-color:          #fff !default;
-$navbar-inverse-brand-hover-bg:             transparent !default;
+$navbar-inverse-brand-hover-bg:             hsla(0, 100%, 100%, 0) !default;
 
 // Inverted navbar toggle
 $navbar-inverse-toggle-hover-bg:            #333 !default;
@@ -407,7 +407,7 @@ $nav-open-link-hover-color:                 $gray-darker !default;
 //== Tabs
 $nav-tabs-border-color:                     $gray-dark !default;
 
-$nav-tabs-link-hover-border-color:          transparent !default;
+$nav-tabs-link-hover-border-color:          hsla(0, 100%, 100%, 0) !default;
 
 $nav-tabs-active-link-hover-bg:             $brand-primary !default;
 $nav-tabs-active-link-hover-color:          #fff !default;
@@ -432,11 +432,11 @@ $pagination-border:                    $gray-dark !default;
 
 $pagination-hover-color:               #fff !default;
 $pagination-hover-bg:                  $component-active-bg !default;
-$pagination-hover-border:              transparent !default;
+$pagination-hover-border:              hsla(0, 100%, 100%, 0) !default;
 
 $pagination-active-color:              #fff !default;
 $pagination-active-bg:                 $brand-primary !default;
-$pagination-active-border:             transparent !default;
+$pagination-active-border:             hsla(0, 100%, 100%, 0) !default;
 
 $pagination-disabled-color:            $gray-light !default;
 $pagination-disabled-bg:               $gray-darker !default;

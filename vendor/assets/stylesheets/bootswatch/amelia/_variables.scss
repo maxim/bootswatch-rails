@@ -123,7 +123,7 @@ $table-cell-padding:            8px !default;
 $table-condensed-cell-padding:  5px !default;
 
 //** Default background color used for all tables.
-$table-bg:                      transparent !default;
+$table-bg:                      hsla(0, 100%, 100%, 0) !default;
 //** Background color used for `.table-striped`.
 $table-bg-accent:               darken($body-bg, 2.5%) !default;
 //** Background color used for `.table-hover`.
@@ -352,7 +352,7 @@ $navbar-default-link-hover-bg:             lighten($navbar-default-bg, 10%) !def
 $navbar-default-link-active-color:         #fff !default;
 $navbar-default-link-active-bg:            $navbar-default-link-hover-bg !default;
 $navbar-default-link-disabled-color:       #ccc !default;
-$navbar-default-link-disabled-bg:          transparent !default;
+$navbar-default-link-disabled-bg:          hsla(0, 100%, 100%, 0) !default;
 
 // Navbar brand label
 $navbar-default-brand-color:               $navbar-default-link-color !default;
@@ -378,7 +378,7 @@ $navbar-inverse-link-hover-bg:              lighten($navbar-inverse-bg, 10%) !de
 $navbar-inverse-link-active-color:          #fff !default;
 $navbar-inverse-link-active-bg:             $navbar-inverse-link-hover-bg !default;
 $navbar-inverse-link-disabled-color:        #444 !default;
-$navbar-inverse-link-disabled-bg:           transparent !default;
+$navbar-inverse-link-disabled-bg:           hsla(0, 100%, 100%, 0) !default;
 
 // Inverted navbar brand label
 $navbar-inverse-brand-color:                $navbar-inverse-link-color !default;
@@ -407,14 +407,14 @@ $nav-open-link-hover-color:                 $nav-link-hover-bg !default;
 //== Tabs
 $nav-tabs-border-color:                     $nav-link-hover-bg !default;
 
-$nav-tabs-link-hover-border-color:          transparent !default;
+$nav-tabs-link-hover-border-color:          hsla(0, 100%, 100%, 0) !default;
 
 $nav-tabs-active-link-hover-bg:             $nav-link-hover-bg !default;
 $nav-tabs-active-link-hover-color:          #fff !default;
-$nav-tabs-active-link-hover-border-color:   transparent !default;
+$nav-tabs-active-link-hover-border-color:   hsla(0, 100%, 100%, 0) !default;
 
-$nav-tabs-justified-link-border-color:            transparent !default;
-$nav-tabs-justified-active-link-border-color:     transparent !default;
+$nav-tabs-justified-link-border-color:            hsla(0, 100%, 100%, 0) !default;
+$nav-tabs-justified-active-link-border-color:     hsla(0, 100%, 100%, 0) !default;
 
 //== Pills
 $nav-pills-border-radius:                   $border-radius-base !default;
@@ -428,19 +428,19 @@ $nav-pills-active-link-hover-color:         #fff !default;
 
 $pagination-color:                     $link-color !default;
 $pagination-bg:                        lighten($body-bg, 5%) !default;
-$pagination-border:                    transparent !default;
+$pagination-border:                    hsla(0, 100%, 100%, 0) !default;
 
 $pagination-hover-color:               $link-hover-color !default;
 $pagination-hover-bg:                  $component-active-bg !default;
-$pagination-hover-border:              transparent !default;
+$pagination-hover-border:              hsla(0, 100%, 100%, 0) !default;
 
 $pagination-active-color:              #fff !default;
 $pagination-active-bg:                 lighten($body-bg, 10%) !default;
-$pagination-active-border:             transparent !default;
+$pagination-active-border:             hsla(0, 100%, 100%, 0) !default;
 
 $pagination-disabled-color:            #fff !default;
 $pagination-disabled-bg:               lighten($body-bg, 5%) !default;
-$pagination-disabled-border:           transparent !default;
+$pagination-disabled-border:           hsla(0, 100%, 100%, 0) !default;
 
 
 //== Pager

@@ -123,7 +123,7 @@ $table-cell-padding:            8px !default;
 $table-condensed-cell-padding:  5px !default;
 
 //** Default background color used for all tables.
-$table-bg:                      transparent !default;
+$table-bg:                      hsla(0, 100%, 100%, 0) !default;
 //** Background color used for `.table-striped`.
 $table-bg-accent:               #f9f9f9 !default;
 //** Background color used for `.table-hover`.
@@ -352,17 +352,17 @@ $navbar-default-link-hover-bg:             #272727 !default;
 $navbar-default-link-active-color:         #fff !default;
 $navbar-default-link-active-bg:            #272727 !default;
 $navbar-default-link-disabled-color:       #ccc !default;
-$navbar-default-link-disabled-bg:          transparent !default;
+$navbar-default-link-disabled-bg:          hsla(0, 100%, 100%, 0) !default;
 
 // Navbar brand label
 $navbar-default-brand-color:               $navbar-default-link-color !default;
 $navbar-default-brand-hover-color:         $navbar-default-brand-color !default;
-$navbar-default-brand-hover-bg:            transparent !default;
+$navbar-default-brand-hover-bg:            hsla(0, 100%, 100%, 0) !default;
 
 // Navbar toggle
-$navbar-default-toggle-hover-bg:           transparent !default;
+$navbar-default-toggle-hover-bg:           hsla(0, 100%, 100%, 0) !default;
 $navbar-default-toggle-icon-bar-bg:        #fff !default;
-$navbar-default-toggle-border-color:       transparent !default;
+$navbar-default-toggle-border-color:       hsla(0, 100%, 100%, 0) !default;
 
 
 // Inverted navbar
@@ -378,17 +378,17 @@ $navbar-inverse-link-hover-bg:              darken($navbar-inverse-bg, 10%) !def
 $navbar-inverse-link-active-color:          #fff !default;
 $navbar-inverse-link-active-bg:             darken($navbar-inverse-bg, 10%) !default;
 $navbar-inverse-link-disabled-color:        #444 !default;
-$navbar-inverse-link-disabled-bg:           transparent !default;
+$navbar-inverse-link-disabled-bg:           hsla(0, 100%, 100%, 0) !default;
 
 // Inverted navbar brand label
 $navbar-inverse-brand-color:                $navbar-inverse-link-color !default;
 $navbar-inverse-brand-hover-color:          #fff !default;
-$navbar-inverse-brand-hover-bg:             transparent !default;
+$navbar-inverse-brand-hover-bg:             hsla(0, 100%, 100%, 0) !default;
 
 // Inverted navbar toggle
-$navbar-inverse-toggle-hover-bg:            transparent !default;
+$navbar-inverse-toggle-hover-bg:            hsla(0, 100%, 100%, 0) !default;
 $navbar-inverse-toggle-icon-bar-bg:         #fff !default;
-$navbar-inverse-toggle-border-color:        transparent !default;
+$navbar-inverse-toggle-border-color:        hsla(0, 100%, 100%, 0) !default;
 
 
 //== Navs
@@ -427,20 +427,20 @@ $nav-pills-active-link-hover-color:         $component-active-color !default;
 //##
 
 $pagination-color:                     $link-color !default;
-$pagination-bg:                        transparent !default;
-$pagination-border:                    transparent !default;
+$pagination-bg:                        hsla(0, 100%, 100%, 0) !default;
+$pagination-border:                    hsla(0, 100%, 100%, 0) !default;
 
 $pagination-hover-color:               $link-hover-color !default;
 $pagination-hover-bg:                  $gray-lighter !default;
-$pagination-hover-border:              transparent !default;
+$pagination-hover-border:              hsla(0, 100%, 100%, 0) !default;
 
 $pagination-active-color:              #fff !default;
 $pagination-active-bg:                 $brand-primary !default;
-$pagination-active-border:             transparent !default;
+$pagination-active-border:             hsla(0, 100%, 100%, 0) !default;
 
 $pagination-disabled-color:            $gray-light !default;
 $pagination-disabled-bg:               #fff !default;
-$pagination-disabled-border:           transparent !default;
+$pagination-disabled-border:           hsla(0, 100%, 100%, 0) !default;
 
 
 //== Pager
@@ -518,7 +518,7 @@ $popover-bg:                          $gray-dark !default;
 //** Popover maximum width
 $popover-max-width:                   276px !default;
 //** Popover border color
-$popover-border-color:                transparent !default;
+$popover-border-color:                hsla(0, 100%, 100%, 0) !default;
 //** Popover fallback border color
 $popover-fallback-border-color:       $gray-dark !default;
 

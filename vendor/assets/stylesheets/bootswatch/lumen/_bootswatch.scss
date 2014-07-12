@@ -180,7 +180,7 @@ table,
   > thead > tr > td,
   > tbody > tr > td,
   > tfoot > tr > td {
-    border-color: transparent;
+    border-color: hsla(0, 100%, 100%, 0);
   }
 }
 
@@ -254,7 +254,7 @@ label {
   .open > a,
   .open > a:hover,
   .open > a:focus {
-    border-color: transparent;
+    border-color: hsla(0, 100%, 100%, 0);
   }
 }
 

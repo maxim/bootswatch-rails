@@ -12,7 +12,7 @@
   .navbar-nav > li > a {
     padding: $padding-base-vertical $padding-base-horizontal;
     margin: 12px 6px;
-    border: 1px solid transparent;
+    border: 1px solid hsla(0, 100%, 100%, 0);
     border-radius: $border-radius-base;
 
     &:hover {
@@ -91,7 +91,7 @@ legend {
   }
 
   a:hover {
-    border-color: transparent;
+    border-color: hsla(0, 100%, 100%, 0);
     color: #fff;
   }
 

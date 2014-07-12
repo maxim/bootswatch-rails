@@ -105,7 +105,7 @@ $border-radius-small:       3px !default;
 //** Global color for active items (e.g., navs or dropdowns).
 $component-active-color:    #fff !default;
 //** Global background color for active items (e.g., navs or dropdowns).
-$component-active-bg:       transparent !default;
+$component-active-bg:       hsla(0, 100%, 100%, 0) !default;
 
 //** Width of the `border` for generating carets that indicator dropdowns.
 $caret-width-base:          4px !default;
@@ -352,7 +352,7 @@ $navbar-default-link-hover-bg:             darken($navbar-default-bg, 8%) !defau
 $navbar-default-link-active-color:         #fff !default;
 $navbar-default-link-active-bg:            darken($navbar-default-bg, 8%) !default;
 $navbar-default-link-disabled-color:       #ccc !default;
-$navbar-default-link-disabled-bg:          transparent !default;
+$navbar-default-link-disabled-bg:          hsla(0, 100%, 100%, 0) !default;
 
 // Navbar brand label
 $navbar-default-brand-color:               $navbar-default-link-color !default;
@@ -378,7 +378,7 @@ $navbar-inverse-link-hover-bg:              darken($navbar-inverse-bg, 12%) !def
 $navbar-inverse-link-active-color:          $navbar-inverse-link-hover-color !default;
 $navbar-inverse-link-active-bg:             darken($navbar-inverse-bg, 12%) !default;
 $navbar-inverse-link-disabled-color:        #ccc !default;
-$navbar-inverse-link-disabled-bg:           transparent !default;
+$navbar-inverse-link-disabled-bg:           hsla(0, 100%, 100%, 0) !default;
 
 // Inverted navbar brand label
 $navbar-inverse-brand-color:                $navbar-inverse-link-color !default;
@@ -431,7 +431,7 @@ $pagination-bg:                        $btn-default-bg !default;
 $pagination-border:                    rgba(0, 0, 0, 0.6) !default;
 
 $pagination-hover-color:               $link-hover-color !default;
-$pagination-hover-bg:                  transparent !default;
+$pagination-hover-bg:                  hsla(0, 100%, 100%, 0) !default;
 $pagination-hover-border:              rgba(0, 0, 0, 0.6) !default;
 
 $pagination-active-color:              #fff !default;
@@ -766,7 +766,7 @@ $badge-border-radius:         10px !default;
 $breadcrumb-padding-vertical:   8px !default;
 $breadcrumb-padding-horizontal: 15px !default;
 //** Breadcrumb background color
-$breadcrumb-bg:                 transparent !default;
+$breadcrumb-bg:                 hsla(0, 100%, 100%, 0) !default;
 //** Breadcrumb text color
 $breadcrumb-color:              #ccc !default;
 //** Text color of current page in the breadcrumb

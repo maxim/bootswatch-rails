@@ -25,7 +25,7 @@
 
     > li > a,
     > li > a:focus {
-      background-color: transparent;
+      background-color: hsla(0, 100%, 100%, 0);
       font-size: 13px;
       font-weight: 300;
     }
@@ -253,7 +253,7 @@ label,
   .open > a,
   .open > a:hover,
   .open > a:focus {
-    border-color: transparent;
+    border-color: hsla(0, 100%, 100%, 0);
   }
 }
 

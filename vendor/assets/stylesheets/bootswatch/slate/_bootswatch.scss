@@ -34,16 +34,16 @@
 
     &:hover {
       @include btn-shadow-inverse($navbar-default-bg);
-      border-left-color: transparent;
+      border-left-color: hsla(0, 100%, 100%, 0);
     }
   }
 
   .nav .open > a {
-    border-color: transparent;
+    border-color: hsla(0, 100%, 100%, 0);
   }
 
   .navbar-nav > li.active > a {
-    border-left-color: transparent;
+    border-left-color: hsla(0, 100%, 100%, 0);
   }
 
   .navbar-form {
@@ -110,7 +110,7 @@
 
 .btn-link,
 .btn-link:hover {
-  border-color: transparent;
+  border-color: hsla(0, 100%, 100%, 0);
 }
 
 // Typography =================================================================
@@ -304,7 +304,7 @@ legend {
 
   & > li.disabled > a,
   & > li.disabled > a:hover {
-    background-color: transparent;
+    background-color: hsla(0, 100%, 100%, 0);
     @include btn-shadow($btn-default-bg);
   }
 }
@@ -322,7 +322,7 @@ legend {
 
   & > li.disabled > a,
   & > li.disabled > a:hover {
-    background-color: transparent;
+    background-color: hsla(0, 100%, 100%, 0);
     @include btn-shadow($btn-default-bg);
   }
 }
