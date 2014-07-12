@@ -1,4 +1,4 @@
-// Cosmo 3.1.1
+// Cosmo 3.2.0
 // Bootswatch
 // -----------------------------------------------------
 
@@ -79,7 +79,8 @@ table,
   }
 
   .form-control,
-  .form-control:focus {
+  .form-control:focus,
+  .input-group-addon {
     border: 1px solid $brand-warning;
   }
 }
@@ -92,7 +93,8 @@ table,
   }
 
   .form-control,
-  .form-control:focus {
+  .form-control:focus,
+  .input-group-addon {
     border: 1px solid $brand-danger;
   }
 }
@@ -105,7 +107,8 @@ table,
   }
 
   .form-control,
-  .form-control:focus {
+  .form-control:focus,
+  .input-group-addon {
     border: 1px solid $brand-success;
   }
 }
@@ -136,17 +139,17 @@ table,
     text-decoration: underline;
     color: #fff;
   }
+}
 
-  .close {
+.close {
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.4;
+
+  &:hover,
+  &:focus {
     color: #fff;
-    text-decoration: none;
-    opacity: 0.4;
-
-    &:hover,
-    &:focus {
-      color: #fff;
-      opacity: 1;
-    }
+    opacity: 1;
   }
 }
 

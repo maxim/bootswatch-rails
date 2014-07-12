@@ -1,4 +1,4 @@
-// Spacelab 3.1.1
+// Spacelab 3.2.0
 // Bootswatch
 // -----------------------------------------------------
 
@@ -52,7 +52,6 @@
 .navbar-brand:hover {
   @include transition(color ease-in-out .2s);
 }
-
 
 // Buttons ====================================================================
 
@@ -113,6 +112,7 @@
     @include btn-shadow(darken($btn-danger-bg, 4%));
   }
 }
+
 
 // Typography =================================================================
 

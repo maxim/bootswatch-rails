@@ -1,4 +1,4 @@
-// Lumen 3.1.1
+// Lumen 3.2.0
 // Bootswatch
 // -----------------------------------------------------
 
@@ -97,6 +97,7 @@
   @include box-shadow(none);
 }
 
+
 .navbar-btn {
   &:hover {
     margin-top: 8px
@@ -180,7 +181,7 @@ table,
   > thead > tr > td,
   > tbody > tr > td,
   > tfoot > tr > td {
-    border-color: transparent;
+    border-color: hsla(0, 100%, 100%, 0);
   }
 }
 
@@ -206,6 +207,10 @@ label {
     border: 1px solid $brand-warning;
     @include box-shadow(inset 0 2px 0 rgba(0, 0, 0, 0.075));
   }
+
+  .input-group-addon {
+    border: 1px solid $brand-warning;
+  }
 }
 
 .has-error {
@@ -219,6 +224,10 @@ label {
   .form-control:focus {
     border: 1px solid $brand-danger;
     @include box-shadow(inset 0 2px 0 rgba(0, 0, 0, 0.075));
+  }
+
+  .input-group-addon {
+    border: 1px solid $brand-danger;
   }
 }
 
@@ -234,6 +243,10 @@ label {
     border: 1px solid $brand-success;
     @include box-shadow(inset 0 2px 0 rgba(0, 0, 0, 0.075));
   }
+
+  .input-group-addon {
+    border: 1px solid $brand-success;
+  }
 }
 
 // Navs =======================================================================
@@ -242,7 +255,7 @@ label {
   .open > a,
   .open > a:hover,
   .open > a:focus {
-    border-color: transparent;
+    border-color: hsla(0, 100%, 100%, 0);
   }
 }
 
@@ -363,15 +376,19 @@ label {
   }
 
   .close {
-    color: #fff;
     text-decoration: none;
-    opacity: 0.4;
+  }
+}
 
-    &:hover,
-    &:focus {
-      color: #fff;
-      opacity: 1;
-    }
+.close {
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.4;
+
+  &:hover,
+  &:focus {
+    color: #fff;
+    opacity: 1;
   }
 }
 

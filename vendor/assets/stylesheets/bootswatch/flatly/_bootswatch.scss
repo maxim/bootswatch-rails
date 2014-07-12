@@ -1,4 +1,4 @@
-// Flatly 3.1.1
+// Flatly 3.2.0
 // Bootswatch
 // -----------------------------------------------------
 
@@ -9,6 +9,7 @@
 .navbar {
   border-width: 0;
 }
+
 .navbar-default {
 
   .badge {
@@ -95,6 +96,7 @@ table,
     border: none;
   }
 }
+
 .table-bordered > thead > tr > th,
 .table-bordered > tbody > tr > th,
 .table-bordered > tfoot > tr > th,
@@ -185,7 +187,7 @@ input, {
   .open > a,
   .open > a:hover,
   .open > a:focus {
-    border-color: transparent;
+    border-color: hsla(0, 100%, 100%, 0);
   }
 }
 
@@ -216,15 +218,19 @@ input, {
   }
 
   .close {
-    color: #fff;
     text-decoration: none;
-    opacity: 0.4;
+  }
+}
 
-    &:hover,
-    &:focus {
-      color: #fff;
-      opacity: 1;
-    }
+.close {
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.4;
+
+  &:hover,
+  &:focus {
+    color: #fff;
+    opacity: 1;
   }
 }
 

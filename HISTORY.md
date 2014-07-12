@@ -1,3 +1,7 @@
+## 3.2.0 (2014-07-12)
+
+* Update all themes to current bootswatch versions (3.2.0)
+
 ## 3.0.0 (2013-10-17)
 
 * Update all themes to current bootswatch versions (3.0.0)

@@ -93,7 +93,7 @@ $caret-width-large:              5px;
 $table-cell-padding:                 8px;
 $table-condensed-cell-padding:       5px;
 
-$table-bg:                           transparent; // overall background-color
+$table-bg:                           hsla(0, 100%, 100%, 0); // overall background-color
 $table-bg-accent:                    #f9f9f9; // for striping
 $table-bg-hover:                     #f5f5f5;
 $table-bg-active:                    $table-bg-hover;
@@ -248,16 +248,16 @@ $navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2
 // Navbar links
 $navbar-default-link-color:                #777;
 $navbar-default-link-hover-color:          #333;
-$navbar-default-link-hover-bg:             transparent;
+$navbar-default-link-hover-bg:             hsla(0, 100%, 100%, 0);
 $navbar-default-link-active-color:         #555;
 $navbar-default-link-active-bg:            darken($navbar-default-bg, 6.5%);
 $navbar-default-link-disabled-color:       #ccc;
-$navbar-default-link-disabled-bg:          transparent;
+$navbar-default-link-disabled-bg:          hsla(0, 100%, 100%, 0);
 
 // Navbar brand label
 $navbar-default-brand-color:               $navbar-default-link-color;
 $navbar-default-brand-hover-color:         darken($navbar-default-link-color, 10%);
-$navbar-default-brand-hover-bg:            transparent;
+$navbar-default-brand-hover-bg:            hsla(0, 100%, 100%, 0);
 
 // Navbar toggle
 $navbar-default-toggle-hover-bg:           #ddd;
@@ -275,16 +275,16 @@ $navbar-inverse-border:                     darken($navbar-inverse-bg, 10%);
 // Inverted navbar links
 $navbar-inverse-link-color:                 $gray-light;
 $navbar-inverse-link-hover-color:           #fff;
-$navbar-inverse-link-hover-bg:              transparent;
+$navbar-inverse-link-hover-bg:              hsla(0, 100%, 100%, 0);
 $navbar-inverse-link-active-color:          $navbar-inverse-link-hover-color;
 $navbar-inverse-link-active-bg:             darken($navbar-inverse-bg, 10%);
 $navbar-inverse-link-disabled-color:        #444;
-$navbar-inverse-link-disabled-bg:           transparent;
+$navbar-inverse-link-disabled-bg:           hsla(0, 100%, 100%, 0);
 
 // Inverted navbar brand label
 $navbar-inverse-brand-color:                $navbar-inverse-link-color;
 $navbar-inverse-brand-hover-color:          #fff;
-$navbar-inverse-brand-hover-bg:             transparent;
+$navbar-inverse-brand-hover-bg:             hsla(0, 100%, 100%, 0);
 
 // Inverted navbar search
 // Normal navbar needs no special styles or vars

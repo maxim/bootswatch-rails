@@ -1,6 +1,7 @@
-// Amelia 3.1.1
+// Amelia 3.2.0
 // Variables
 // --------------------------------------------------
+
 
 //== Colors
 //
@@ -21,7 +22,7 @@ $brand-danger:          #DF6E1E !default;
 
 //== Scaffolding
 //
-// ## Settings for some of the most global styles.
+//## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
 $body-bg:               #108A93 !default;
@@ -33,15 +34,6 @@ $link-color:            lighten($brand-warning, 15%) !default;
 //** Link hover color set via `darken()` function.
 $link-hover-color:      $link-color !default;
 
-//== Miscellaneous
-//
-//##
-
-//** Horizontal line color.
-$hr-border:                   darken($body-bg, 5%) !default;
-
-//** Horizontal offset for forms and lists.
-$component-offset-horizontal: 180px !default;
 
 //== Typography
 //
@@ -76,13 +68,42 @@ $headings-line-height:    1.1 !default;
 $headings-color:          inherit !default;
 
 
-//-- Iconography
+//== Iconography
 //
-//## Specify custom locations of the include Glyphicons icon font. Useful for those including Bootstrap via Bower.
+//## Specify custom location and filename of the included Glyphicons icon font. Useful for those including Bootstrap via Bower.
 
-
+//** Load fonts from this directory.
+//** File name for all font files.
 $icon-font-name:          "glyphicons-halflings-regular" !default;
+//** Element ID within SVG icon file.
 $icon-font-svg-id:        "glyphicons_halflingsregular" !default;
+
+//== Type
+//
+//##
+
+//** Horizontal offset for forms and lists.
+$component-offset-horizontal: 180px !default;
+//** Text muted color
+$text-muted:                  rgba(255, 255, 255, 0.6) !default;
+//** Abbreviations and acronyms border color
+$abbr-border-color:           $gray-light !default;
+//** Headings small color
+$headings-small-color:        $gray-light !default;
+//** Blockquote small color
+$blockquote-small-color:      rgba(255, 255, 255, 0.6) !default;
+//** Blockquote font size
+$blockquote-font-size:        ($font-size-base * 1.25) !default;
+//** Blockquote border color
+$blockquote-border-color:     rgba(255, 255, 255, 0.6) !default;
+//** Page header border color
+$page-header-border-color:    darken($body-bg, 5%) !default;
+//** Width of horizontal description list titles
+$dl-horizontal-offset:        $component-offset-horizontal !default;
+//** Horizontal line color.
+$hr-border:                   darken($body-bg, 5%) !default;
+
+
 
 //== Components
 //
@@ -128,7 +149,7 @@ $table-cell-padding:            8px !default;
 $table-condensed-cell-padding:  5px !default;
 
 //** Default background color used for all tables.
-$table-bg:                      transparent !default;
+$table-bg:                      hsla(0, 100%, 100%, 0) !default;
 //** Background color used for `.table-striped`.
 $table-bg-accent:               darken($body-bg, 2.5%) !default;
 //** Background color used for `.table-hover`.
@@ -222,17 +243,17 @@ $dropdown-fallback-border:       #ccc !default;
 //** Divider color for between dropdown items.
 $dropdown-divider-bg:            #e5e5e5 !default;
 
-//** Active dropdown menu item text color.
-$dropdown-link-active-color:     #fff !default;
-//** Active dropdown menu item background color.
-$dropdown-link-active-bg:        $component-active-bg !default;
-
 //** Dropdown link text color.
 $dropdown-link-color:            $gray-dark !default;
 //** Hover color for dropdown links.
 $dropdown-link-hover-color:      #fff !default;
+//** Active dropdown menu item background color.
+$dropdown-link-active-bg:        $component-active-bg !default;
 //** Hover background for dropdown links.
 $dropdown-link-hover-bg:         $dropdown-link-active-bg !default;
+
+//** Active dropdown menu item text color.
+$dropdown-link-active-color:     #fff !default;
 
 //** Disabled dropdown menu item background color.
 $dropdown-link-disabled-color:   $gray-lighter !default;
@@ -240,7 +261,7 @@ $dropdown-link-disabled-color:   $gray-lighter !default;
 //** Text color for headers within dropdown menus.
 $dropdown-header-color:          $gray-lighter !default;
 
-// Note: Deprecated @dropdown-caret-color as of v3.1.0
+//** Deprecated `@dropdown-caret-color` as of v3.1.0
 $dropdown-caret-color:           #000 !default;
 
 
@@ -253,8 +274,8 @@ $dropdown-caret-color:           #000 !default;
 
 $zindex-navbar:            1000 !default;
 $zindex-dropdown:          1000 !default;
-$zindex-popover:           1010 !default;
-$zindex-tooltip:           1030 !default;
+$zindex-popover:           1060 !default;
+$zindex-tooltip:           1070 !default;
 $zindex-navbar-fixed:      1030 !default;
 $zindex-modal-background:  1040 !default;
 $zindex-modal:             1050 !default;
@@ -265,27 +286,32 @@ $zindex-modal:             1050 !default;
 //## Define the breakpoints at which your layout will change, adapting to different screen sizes.
 
 // Extra small screen / phone
-// Note: Deprecated @screen-xs and @screen-phone as of v3.0.1
+//** Deprecated `@screen-xs` as of v3.0.1
 $screen-xs:                  480px !default;
+//** Deprecated `@screen-xs-min` as of v3.2.0
 $screen-xs-min:              $screen-xs !default;
+//** Deprecated `@screen-phone` as of v3.0.1
 $screen-phone:               $screen-xs-min !default;
 
 // Small screen / tablet
-// Note: Deprecated @screen-sm and @screen-tablet as of v3.0.1
+//** Deprecated `@screen-sm` as of v3.0.1
 $screen-sm:                  768px !default;
 $screen-sm-min:              $screen-sm !default;
+//** Deprecated `@screen-tablet` as of v3.0.1
 $screen-tablet:              $screen-sm-min !default;
 
 // Medium screen / desktop
-// Note: Deprecated @screen-md and @screen-desktop as of v3.0.1
+//** Deprecated `@screen-md` as of v3.0.1
 $screen-md:                  992px !default;
 $screen-md-min:              $screen-md !default;
+//** Deprecated `@screen-desktop` as of v3.0.1
 $screen-desktop:             $screen-md-min !default;
 
 // Large screen / wide desktop
-// Note: Deprecated @screen-lg and @screen-lg-desktop as of v3.0.1
+//** Deprecated `@screen-lg` as of v3.0.1
 $screen-lg:                  1200px !default;
 $screen-lg-min:              $screen-lg !default;
+//** Deprecated `@screen-lg-desktop` as of v3.0.1
 $screen-lg-desktop:          $screen-lg-min !default;
 
 // So media queries don't overlap when required, provide a maximum
@@ -352,7 +378,7 @@ $navbar-default-link-hover-bg:             lighten($navbar-default-bg, 10%) !def
 $navbar-default-link-active-color:         #fff !default;
 $navbar-default-link-active-bg:            $navbar-default-link-hover-bg !default;
 $navbar-default-link-disabled-color:       #ccc !default;
-$navbar-default-link-disabled-bg:          transparent !default;
+$navbar-default-link-disabled-bg:          hsla(0, 100%, 100%, 0) !default;
 
 // Navbar brand label
 $navbar-default-brand-color:               $navbar-default-link-color !default;
@@ -378,7 +404,7 @@ $navbar-inverse-link-hover-bg:              lighten($navbar-inverse-bg, 10%) !de
 $navbar-inverse-link-active-color:          #fff !default;
 $navbar-inverse-link-active-bg:             $navbar-inverse-link-hover-bg !default;
 $navbar-inverse-link-disabled-color:        #444 !default;
-$navbar-inverse-link-disabled-bg:           transparent !default;
+$navbar-inverse-link-disabled-bg:           hsla(0, 100%, 100%, 0) !default;
 
 // Inverted navbar brand label
 $navbar-inverse-brand-color:                $navbar-inverse-link-color !default;
@@ -407,14 +433,14 @@ $nav-open-link-hover-color:                 $nav-link-hover-bg !default;
 //== Tabs
 $nav-tabs-border-color:                     $nav-link-hover-bg !default;
 
-$nav-tabs-link-hover-border-color:          transparent !default;
+$nav-tabs-link-hover-border-color:          hsla(0, 100%, 100%, 0) !default;
 
 $nav-tabs-active-link-hover-bg:             $nav-link-hover-bg !default;
 $nav-tabs-active-link-hover-color:          #fff !default;
-$nav-tabs-active-link-hover-border-color:   transparent !default;
+$nav-tabs-active-link-hover-border-color:   hsla(0, 100%, 100%, 0) !default;
 
-$nav-tabs-justified-link-border-color:            transparent !default;
-$nav-tabs-justified-active-link-border-color:     transparent !default;
+$nav-tabs-justified-link-border-color:            hsla(0, 100%, 100%, 0) !default;
+$nav-tabs-justified-active-link-border-color:     hsla(0, 100%, 100%, 0) !default;
 
 //== Pills
 $nav-pills-border-radius:                   $border-radius-base !default;
@@ -428,19 +454,19 @@ $nav-pills-active-link-hover-color:         #fff !default;
 
 $pagination-color:                     $link-color !default;
 $pagination-bg:                        lighten($body-bg, 5%) !default;
-$pagination-border:                    transparent !default;
+$pagination-border:                    hsla(0, 100%, 100%, 0) !default;
 
 $pagination-hover-color:               $link-hover-color !default;
 $pagination-hover-bg:                  $component-active-bg !default;
-$pagination-hover-border:              transparent !default;
+$pagination-hover-border:              hsla(0, 100%, 100%, 0) !default;
 
 $pagination-active-color:              #fff !default;
 $pagination-active-bg:                 lighten($body-bg, 10%) !default;
-$pagination-active-border:             transparent !default;
+$pagination-active-border:             hsla(0, 100%, 100%, 0) !default;
 
 $pagination-disabled-color:            #fff !default;
 $pagination-disabled-bg:               lighten($body-bg, 5%) !default;
-$pagination-disabled-border:           transparent !default;
+$pagination-disabled-border:           hsla(0, 100%, 100%, 0) !default;
 
 
 //== Pager
@@ -651,17 +677,26 @@ $list-group-border:             darken($body-bg, 5%) !default;
 //** List group border radius
 $list-group-border-radius:      $border-radius-base !default;
 
-//** Background color of single list elements on hover
+//** Background color of single list items on hover
 $list-group-hover-bg:           lighten($body-bg, 10%) !default;
-//** Text color of active list elements
+//** Text color of active list items
 $list-group-active-color:       $component-active-color !default;
-//** Background color of active list elements
+//** Background color of active list items
 $list-group-active-bg:          $component-active-bg !default;
 //** Border color of active list elements
 $list-group-active-border:      $list-group-border !default;
+//** Text color for content within active list items
 $list-group-active-text-color:  lighten($list-group-active-bg, 40%) !default;
 
+//** Text color of disabled list items
+$list-group-disabled-color:      $gray-light !default;
+//** Background color of disabled list items
+$list-group-disabled-bg:         $gray-lighter !default;
+//** Text color for content within disabled list items
+$list-group-disabled-text-color: $list-group-disabled-color !default;
+
 $list-group-link-color:         $link-color !default;
+$list-group-link-hover-color:   $list-group-link-color !default;
 $list-group-link-heading-color: #fff !default;
 
 
@@ -671,15 +706,17 @@ $list-group-link-heading-color: #fff !default;
 
 $panel-bg:                    lighten($body-bg, 5%) !default;
 $panel-body-padding:          15px !default;
+$panel-heading-padding:       10px 15px !default;
+$panel-footer-padding:        $panel-heading-padding !default;
 $panel-border-radius:         $border-radius-base !default;
-
-$panel-default-text:          #fff !default;
-$panel-default-border:        darken($body-bg, 5%) !default;
 $panel-default-heading-bg:    lighten($body-bg, 15%) !default;
 
 //** Border color for elements within panels
 $panel-inner-border:          darken($body-bg, 5%) !default;
 $panel-footer-bg:             $panel-default-heading-bg !default;
+
+$panel-default-text:          #fff !default;
+$panel-default-border:        darken($body-bg, 5%) !default;
 
 $panel-primary-text:          #fff !default;
 $panel-primary-border:        $brand-primary !default;
@@ -804,23 +841,3 @@ $pre-bg:                      #f5f5f5 !default;
 $pre-color:                   $gray-dark !default;
 $pre-border-color:            #ccc !default;
 $pre-scrollable-max-height:   340px !default;
-
-
-//== Type
-//
-//##
-
-//** Text muted color
-$text-muted:                  rgba(255, 255, 255, 0.6) !default;
-//** Abbreviations and acronyms border color
-$abbr-border-color:           $gray-light !default;
-//** Headings small color
-$headings-small-color:        $gray-light !default;
-//** Blockquote small color
-$blockquote-small-color:      rgba(255, 255, 255, 0.6) !default;
-//** Blockquote font size
-$blockquote-font-size:        ($font-size-base * 1.25) !default;
-//** Blockquote border color
-$blockquote-border-color:     rgba(255, 255, 255, 0.6) !default;
-//** Page header border color
-$page-header-border-color:    darken($body-bg, 5%) !default;

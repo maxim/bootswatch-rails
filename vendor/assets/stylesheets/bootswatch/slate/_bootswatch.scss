@@ -1,4 +1,4 @@
-// Slate 3.1.1
+// Slate 3.2.0
 // Bootswatch
 // -----------------------------------------------------
 
@@ -21,7 +21,7 @@
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 
   .nav .open > a {
-    border-color: transparent;
+    border-color: hsla(0, 100%, 100%, 0);
   }
 
 }
@@ -40,19 +40,18 @@
 
   &:hover {
     @include btn-shadow-inverse($navbar-default-bg);
-    border-left-color: transparent;
+    border-left-color: hsla(0, 100%, 100%, 0);
   }
 }
 
 .navbar-nav > li.active > a {
-  border-left-color: transparent;
+  border-left-color: hsla(0, 100%, 100%, 0);
 }
 
 .navbar-form {
   margin-left: 5px;
   margin-right: 5px;
 }
-
 
 // Buttons ====================================================================
 
@@ -112,7 +111,7 @@
 
 .btn-link,
 .btn-link:hover {
-  border-color: transparent;
+  border-color: hsla(0, 100%, 100%, 0);
 }
 
 // Typography =================================================================
@@ -160,7 +159,6 @@ h1, h2, h3, h4, h5, h6 {
   .info {
     color: #fff;
   }
-
 }
 
 .table-bordered tbody {
@@ -198,6 +196,11 @@ textarea {
   .form-control:focus {
     border-color: $brand-warning;
   }
+
+  .input-group-addon {
+    background-color: $body-bg;
+    border: none;
+  }
 }
 
 .has-error {
@@ -211,6 +214,11 @@ textarea {
   .form-control:focus {
     border-color: $brand-danger;
   }
+
+  .input-group-addon {
+    background-color: $body-bg;
+    border: none;
+  }
 }
 
 .has-success {
@@ -223,6 +231,11 @@ textarea {
   .form-control,
   .form-control:focus {
     border-color: $brand-success;
+  }
+
+  .input-group-addon {
+    background-color: $body-bg;
+    border: none;
   }
 }
 
@@ -292,7 +305,7 @@ legend {
 
   & > li.disabled > a,
   & > li.disabled > a:hover {
-    background-color: transparent;
+    background-color: hsla(0, 100%, 100%, 0);
     @include btn-shadow($btn-default-bg);
   }
 }
@@ -310,7 +323,7 @@ legend {
 
   & > li.disabled > a,
   & > li.disabled > a:hover {
-    background-color: transparent;
+    background-color: hsla(0, 100%, 100%, 0);
     @include btn-shadow($btn-default-bg);
   }
 }

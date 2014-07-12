@@ -1,4 +1,4 @@
-// Yeti 3.1.1
+// Yeti 3.2.0
 // Bootswatch
 // -----------------------------------------------------
 
@@ -25,7 +25,7 @@
 
     > li > a,
     > li > a:focus {
-      background-color: transparent;
+      background-color: hsla(0, 100%, 100%, 0);
       font-size: 13px;
       font-weight: 300;
     }
@@ -77,21 +77,24 @@
   @include box-shadow(none);
 }
 
+
 // Buttons ====================================================================
 
 .btn {
   padding: 14px 28px;
 }
+
 .btn-lg {
   padding: 16px 32px;
 }
+
 .btn-sm {
   padding: 8px 16px;
 }
+
 .btn-xs {
   padding: 4px 8px;
 }
-
 
 .btn-group {
 
@@ -250,7 +253,7 @@ label,
   .open > a,
   .open > a:hover,
   .open > a:focus {
-    border-color: transparent;
+    border-color: hsla(0, 100%, 100%, 0);
   }
 }
 
@@ -306,7 +309,9 @@ label,
       border-radius: 3px;
     }
   }
+
 }
+
 .pagination-lg > li > a {
   padding-left: 22px;
   padding-right: 22px;

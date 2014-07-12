@@ -1,4 +1,4 @@
-// Darkly 3.1.1
+// Darkly 3.2.0
 // Bootswatch
 // -----------------------------------------------------
 
@@ -9,6 +9,7 @@
 .navbar {
   border-width: 0;
 }
+
 .navbar-default {
 
   .badge {
@@ -243,6 +244,10 @@ textarea {
   .alert-link {
     color: #fff;
     text-decoration: underline;
+  }
+
+  .close {
+    text-decoration: none;
   }
 }
 
