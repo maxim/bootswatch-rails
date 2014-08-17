@@ -7,11 +7,11 @@
 //
 //## Gray and brand colors for use across Bootstrap.
 
+$gray:                   #777 !default;
 $gray-darker:            lighten(#000, 13.5%) !default; // #222
-$gray-dark:              lighten(#000, 20%) !default;   // #333
-$gray:                   lighten(#000, 33.5%) !default; // #555
-$gray-light:             #808080 !default;   // #999
-$gray-lighter:           #ddd !default; // #eee
+$gray-dark:              #444 !default;
+$gray-light:             #808080 !default;
+$gray-lighter:           #ddd !default;
 
 $brand-primary:         #D9230F !default;
 $brand-success:         #469408 !default;
