@@ -833,13 +833,13 @@ $headings-small-color:        $gray-light !default;
 $blockquote-small-color:      $gray !default;
 //** Blockquote font size
 $blockquote-font-size:        ($font-size-base * 1.25) !default;
+//** Horizontal line color.
+$hr-border:                   #ddd !default;
 //** Blockquote border color
 $blockquote-border-color:     $hr-border !default;
 //** Page header border color
 $page-header-border-color:    $hr-border !default;
 //** Width of horizontal description list titles
 $dl-horizontal-offset:        $component-offset-horizontal !default;
-//** Horizontal line color.
-$hr-border:                   #ddd !default;
 
 
