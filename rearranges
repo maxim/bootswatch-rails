@@ -49,7 +49,7 @@ class Variable
   end
 
   def section_name
-    section_header.split("\n").first.sub('// ', '')
+    section_header.split("\n").first.sub('//== ', '')
   end
 
   def to_s
@@ -61,16 +61,16 @@ class Variable
   end
 end
 
-Variable.sections = body.split(/(\/\/\s+\w[^\/]+\/\/\s+-+)/m)
+Variable.sections = body.split(/(\/\/==\s+\w+[\/\s]+##[\W\w]$)/m)
 
 tokens = []
 in_section = false
 
 Variable.sections.each.with_index do |section, index|
   if in_section
-    tokens[index] = section.scan(/\$\w+\s*\:?/)
+    tokens[index] = section.scan(/\$[\w-]+\s*\:?/)
     in_section = false
-  elsif section =~ /(\/\/\s+\w[^\/]+\/\/\s+-+)/m
+  elsif section =~ /(\/\/==\s+\w+[\/\s]+##[\W\w]$)/m
     tokens[index] = []
     in_section = true
   else

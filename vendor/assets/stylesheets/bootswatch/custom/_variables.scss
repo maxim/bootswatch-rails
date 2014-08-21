@@ -1,22 +1,22 @@
-// Custom 3.0.0
-// Variables
-// --------------------------------------------------
+//== Custom 3.0.0
+//== Variables
+//##
 
 
-// Global values
-// --------------------------------------------------
+//== Global values
+//##
 
-// Grays
-// -------------------------
+//== Grays
+//##
 
+$gray:                   lighten(#000, 33.5%); // #555
 $gray-darker:            lighten(#000, 13.5%); // #222
 $gray-dark:              lighten(#000, 20%);   // #333
-$gray:                   lighten(#000, 33.5%); // #555
 $gray-light:             lighten(#000, 60%);   // #999
 $gray-lighter:           lighten(#000, 93.5%); // #eee
 
-// Brand colors
-// -------------------------
+//== Brand colors
+//##
 
 $brand-primary:         #428bca;
 $brand-success:         #5cb85c;
@@ -24,20 +24,20 @@ $brand-warning:         #f0ad4e;
 $brand-danger:          #d9534f;
 $brand-info:            #5bc0de;
 
-// Scaffolding
-// -------------------------
+//== Scaffolding
+//##
 
 $body-bg:               #fff;
 $text-color:            $gray-dark;
 
-// Links
-// -------------------------
+//== Links
+//##
 
 $link-color:            $brand-primary;
 $link-hover-color:      darken($link-color, 15%);
 
-// Typography
-// -------------------------
+//== Typography
+//##
 
 $font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
 $font-family-serif:       Georgia, "Times New Roman", Times, serif;
@@ -55,16 +55,16 @@ $headings-font-family:    $font-family-base;
 $headings-font-weight:    500;
 $headings-line-height:    1.1;
 
-// Iconography
-// -------------------------
+//== Iconography
+//##
 
 $icon-font-path:          "../fonts/";
 $icon-font-name:          "glyphicons-halflings-regular";
 
 
-// Components
-// -------------------------
-// Based on 14px font-size and 1.428 line-height (~20px to start)
+//== Components
+//##
+//== Based on 14px font-size and 1.428 line-height (~20px to start)
 
 $padding-base-vertical:          6px;
 $padding-base-horizontal:        12px;
@@ -87,22 +87,22 @@ $component-active-bg:            $brand-primary;
 $caret-width-base:               4px;
 $caret-width-large:              5px;
 
-// Tables
-// -------------------------
+//== Tables
+//##
 
 $table-cell-padding:                 8px;
 $table-condensed-cell-padding:       5px;
 
-$table-bg:                           hsla(0, 100%, 100%, 0); // overall background-color
-$table-bg-accent:                    #f9f9f9; // for striping
+$table-bg:                           hsla(0, 100%, 100%, 0); //== overall background-color
+$table-bg-accent:                    #f9f9f9; //== for striping
 $table-bg-hover:                     #f5f5f5;
 $table-bg-active:                    $table-bg-hover;
 
-$table-border-color:                 #ddd; // table and cell border
+$table-border-color:                 #ddd; //== table and cell border
 
 
-// Buttons
-// -------------------------
+//== Buttons
+//##
 
 $btn-font-weight:                normal;
 
@@ -133,8 +133,8 @@ $btn-info-border:                darken($btn-info-bg, 5%);
 $btn-link-disabled-color:        $gray-light;
 
 
-// Forms
-// -------------------------
+//== Forms
+//##
 
 $input-bg:                       #fff;
 $input-bg-disabled:              $gray-lighter;
@@ -157,8 +157,8 @@ $input-group-addon-bg:           $gray-lighter;
 $input-group-addon-border-color: $input-border;
 
 
-// Dropdowns
-// -------------------------
+//== Dropdowns
+//##
 
 $dropdown-bg:                    #fff;
 $dropdown-border:                rgba(0,0,0,.15);
@@ -179,14 +179,14 @@ $dropdown-header-color:          $gray-light;
 $dropdown-caret-color:           #000;
 
 
-// COMPONENT VARIABLES
-// --------------------------------------------------
+//== COMPONENT VARIABLES
+//##
 
 
-// Z-index master list
-// -------------------------
-// Used for a bird's eye view of components dependent on the z-axis
-// Try to avoid customizing these :)
+//== Z-index master list
+//##
+//== Used for a bird's eye view of components dependent on the z-axis
+//== Try to avoid customizing these :)
 
 $zindex-navbar:            1000;
 $zindex-dropdown:          1000;
@@ -196,46 +196,46 @@ $zindex-navbar-fixed:      1030;
 $zindex-modal-background:  1040;
 $zindex-modal:             1050;
 
-// Media queries breakpoints
-// --------------------------------------------------
+//== Media queries breakpoints
+//##
 
-// Extra small screen / phone
+//== Extra small screen / phone
 $screen-xs:                  480px;
 $screen-phone:               $screen-xs;
 
-// Small screen / tablet
+//== Small screen / tablet
 $screen-sm:                  768px;
 $screen-tablet:              $screen-sm;
 
-// Medium screen / desktop
+//== Medium screen / desktop
 $screen-md:                  992px;
 $screen-desktop:             $screen-md;
 
-// Large screen / wide desktop
+//== Large screen / wide desktop
 $screen-lg:                  1200px;
 $screen-lg-desktop:          $screen-lg;
 
-// So media queries don't overlap when required, provide a maximum
+//== So media queries don't overlap when required, provide a maximum
 $screen-xs-max:              ($screen-sm - 1);
 $screen-sm-max:              ($screen-md - 1);
 $screen-md-max:              ($screen-lg - 1);
 
 
-// Grid system
-// --------------------------------------------------
+//== Grid system
+//##
 
-// Number of columns in the grid system
+//== Number of columns in the grid system
 $grid-columns:              12;
-// Padding, to be divided by two and applied to the left and right of all columns
+//== Padding, to be divided by two and applied to the left and right of all columns
 $grid-gutter-width:         30px;
-// Point at which the navbar stops collapsing
+//== Point at which the navbar stops collapsing
 $grid-float-breakpoint:     $screen-tablet;
 
 
-// Navbar
-// -------------------------
+//== Navbar
+//##
 
-// Basics of a navbar
+//== Basics of a navbar
 $navbar-height:                    50px;
 $navbar-margin-bottom:             $line-height-computed;
 $navbar-default-color:             #777;
@@ -245,7 +245,7 @@ $navbar-border-radius:             $border-radius-base;
 $navbar-padding-horizontal:        floor($grid-gutter-width / 2);
 $navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2);
 
-// Navbar links
+//== Navbar links
 $navbar-default-link-color:                #777;
 $navbar-default-link-hover-color:          #333;
 $navbar-default-link-hover-bg:             hsla(0, 100%, 100%, 0);
@@ -254,25 +254,25 @@ $navbar-default-link-active-bg:            darken($navbar-default-bg, 6.5%);
 $navbar-default-link-disabled-color:       #ccc;
 $navbar-default-link-disabled-bg:          hsla(0, 100%, 100%, 0);
 
-// Navbar brand label
+//== Navbar brand label
 $navbar-default-brand-color:               $navbar-default-link-color;
 $navbar-default-brand-hover-color:         darken($navbar-default-link-color, 10%);
 $navbar-default-brand-hover-bg:            hsla(0, 100%, 100%, 0);
 
-// Navbar toggle
+//== Navbar toggle
 $navbar-default-toggle-hover-bg:           #ddd;
 $navbar-default-toggle-icon-bar-bg:        #ccc;
 $navbar-default-toggle-border-color:       #ddd;
 
 
-// Inverted navbar
+//== Inverted navbar
 //
-// Reset inverted navbar basics
+//== Reset inverted navbar basics
 $navbar-inverse-color:                      $gray-light;
 $navbar-inverse-bg:                         #222;
 $navbar-inverse-border:                     darken($navbar-inverse-bg, 10%);
 
-// Inverted navbar links
+//== Inverted navbar links
 $navbar-inverse-link-color:                 $gray-light;
 $navbar-inverse-link-hover-color:           #fff;
 $navbar-inverse-link-hover-bg:              hsla(0, 100%, 100%, 0);
@@ -281,26 +281,26 @@ $navbar-inverse-link-active-bg:             darken($navbar-inverse-bg, 10%);
 $navbar-inverse-link-disabled-color:        #444;
 $navbar-inverse-link-disabled-bg:           hsla(0, 100%, 100%, 0);
 
-// Inverted navbar brand label
+//== Inverted navbar brand label
 $navbar-inverse-brand-color:                $navbar-inverse-link-color;
 $navbar-inverse-brand-hover-color:          #fff;
 $navbar-inverse-brand-hover-bg:             hsla(0, 100%, 100%, 0);
 
-// Inverted navbar search
-// Normal navbar needs no special styles or vars
+//== Inverted navbar search
+//== Normal navbar needs no special styles or vars
 $navbar-inverse-search-bg:                  lighten($navbar-inverse-bg, 25%);
 $navbar-inverse-search-bg-focus:            #fff;
 $navbar-inverse-search-border:              $navbar-inverse-bg;
 $navbar-inverse-search-placeholder-color:   #ccc;
 
-// Inverted navbar toggle
+//== Inverted navbar toggle
 $navbar-inverse-toggle-hover-bg:            #333;
 $navbar-inverse-toggle-icon-bar-bg:         #fff;
 $navbar-inverse-toggle-border-color:        #333;
 
 
-// Navs
-// -------------------------
+//== Navs
+//##
 
 $nav-link-padding:                          10px 15px;
 $nav-link-hover-bg:                         $gray-lighter;
@@ -311,7 +311,7 @@ $nav-disabled-link-hover-color:             $gray-light;
 $nav-open-link-hover-color:                 #fff;
 $nav-open-caret-border-color:               #fff;
 
-// Tabs
+//== Tabs
 $nav-tabs-border-color:                     #ddd;
 
 $nav-tabs-link-hover-border-color:          $gray-lighter;
@@ -323,13 +323,13 @@ $nav-tabs-active-link-hover-border-color:   #ddd;
 $nav-tabs-justified-link-border-color:            #ddd;
 $nav-tabs-justified-active-link-border-color:     $body-bg;
 
-// Pills
+//== Pills
 $nav-pills-active-link-hover-bg:            $component-active-bg;
 $nav-pills-active-link-hover-color:         #fff;
 
 
-// Pagination
-// -------------------------
+//== Pagination
+//##
 
 $pagination-bg:                        #fff;
 $pagination-border:                    #ddd;
@@ -342,15 +342,15 @@ $pagination-active-color:              #fff;
 $pagination-disabled-color:            $gray-light;
 
 
-// Pager
-// -------------------------
+//== Pager
+//##
 
 $pager-border-radius:                  15px;
 $pager-disabled-color:                 $gray-light;
 
 
-// Jumbotron
-// -------------------------
+//== Jumbotron
+//##
 
 $jumbotron-padding:              30px;
 $jumbotron-color:                inherit;
@@ -359,8 +359,8 @@ $jumbotron-bg:                   $gray-lighter;
 $jumbotron-heading-color:        inherit;
 
 
-// Form states and alerts
-// -------------------------
+//== Form states and alerts
+//##
 
 $state-warning-text:             #c09853;
 $state-warning-bg:               #fcf8e3;
@@ -379,8 +379,8 @@ $state-info-bg:                  #d9edf7;
 $state-info-border:              darken(adjust-hue($state-info-bg, -10), 7%);
 
 
-// Tooltips
-// -------------------------
+//== Tooltips
+//##
 $tooltip-max-width:           200px;
 $tooltip-color:               #fff;
 $tooltip-bg:                  #000;
@@ -389,8 +389,8 @@ $tooltip-arrow-width:         5px;
 $tooltip-arrow-color:         $tooltip-bg;
 
 
-// Popovers
-// -------------------------
+//== Popovers
+//##
 $popover-bg:                          #fff;
 $popover-max-width:                   276px;
 $popover-border-color:                rgba(0,0,0,.2);
@@ -406,8 +406,8 @@ $popover-arrow-outer-color:           rgba(0,0,0,.25);
 $popover-arrow-outer-fallback-color:  #999;
 
 
-// Labels
-// -------------------------
+//== Labels
+//##
 
 $label-default-bg:            $gray-light;
 $label-primary-bg:            $brand-primary;
@@ -420,8 +420,8 @@ $label-color:                 #fff;
 $label-link-hover-color:      #fff;
 
 
-// Modals
-// -------------------------
+//== Modals
+//##
 $modal-inner-padding:         20px;
 
 $modal-title-padding:         15px;
@@ -436,8 +436,8 @@ $modal-header-border-color:   #e5e5e5;
 $modal-footer-border-color:   $modal-header-border-color;
 
 
-// Alerts
-// -------------------------
+//== Alerts
+//##
 $alert-padding:               15px;
 $alert-border-radius:         $border-radius-base;
 $alert-link-font-weight:      bold;
@@ -459,8 +459,8 @@ $alert-danger-text:           $state-danger-text;
 $alert-danger-border:         $state-danger-border;
 
 
-// Progress bars
-// -------------------------
+//== Progress bars
+//##
 $progress-bg:                 #f5f5f5;
 $progress-bar-color:          #fff;
 
@@ -471,8 +471,8 @@ $progress-bar-danger-bg:      $brand-danger;
 $progress-bar-info-bg:        $brand-info;
 
 
-// List group
-// -------------------------
+//== List group
+//##
 $list-group-bg:               #fff;
 $list-group-border:           #ddd;
 $list-group-border-radius:    $border-radius-base;
@@ -486,8 +486,8 @@ $list-group-link-color:          #555;
 $list-group-link-heading-color:  #333;
 
 
-// Panels
-// -------------------------
+//== Panels
+//##
 $panel-bg:                    #fff;
 $panel-inner-border:          #ddd;
 $panel-border-radius:         $border-radius-base;
@@ -518,8 +518,8 @@ $panel-info-border:           $state-info-border;
 $panel-info-heading-bg:       $state-info-bg;
 
 
-// Thumbnails
-// -------------------------
+//== Thumbnails
+//##
 $thumbnail-padding:           4px;
 $thumbnail-bg:                $body-bg;
 $thumbnail-border:            #ddd;
@@ -529,13 +529,13 @@ $thumbnail-caption-color:     $text-color;
 $thumbnail-caption-padding:   9px;
 
 
-// Wells
-// -------------------------
+//== Wells
+//##
 $well-bg:                     #f5f5f5;
 
 
-// Badges
-// -------------------------
+//== Badges
+//##
 $badge-color:                 #fff;
 $badge-link-hover-color:      #fff;
 $badge-bg:                    $gray-light;
@@ -548,15 +548,15 @@ $badge-line-height:           1;
 $badge-border-radius:         10px;
 
 
-// Breadcrumbs
-// -------------------------
+//== Breadcrumbs
+//##
 $breadcrumb-bg:               #f5f5f5;
 $breadcrumb-color:            #ccc;
 $breadcrumb-active-color:     $gray-light;
 
 
-// Carousel
-// ------------------------
+//== Carousel
+//##
 
 $carousel-text-shadow:                        0 1px 2px rgba(0,0,0,.6);
 
@@ -571,15 +571,15 @@ $carousel-indicator-border-color:             #fff;
 $carousel-caption-color:                      #fff;
 
 
-// Close
-// ------------------------
+//== Close
+//##
 $close-color:                 #000;
 $close-font-weight:           bold;
 $close-text-shadow:           0 1px 0 #fff;
 
 
-// Code
-// ------------------------
+//== Code
+//##
 $code-color:                  #c7254e;
 $code-bg:                     #f9f2f4;
 
@@ -588,8 +588,8 @@ $pre-color:                   $gray-dark;
 $pre-border-color:            #ccc;
 $pre-scrollable-max-height:   340px;
 
-// Type
-// ------------------------
+//== Type
+//##
 $text-muted:                  $gray-light;
 $abbr-border-color:           $gray-light;
 $headings-small-color:        $gray-light;
@@ -597,24 +597,24 @@ $blockquote-small-color:      $gray-light;
 $blockquote-border-color:     $gray-lighter;
 $page-header-border-color:    $gray-lighter;
 
-// Miscellaneous
-// -------------------------
+//== Miscellaneous
+//##
 
-// Hr border color
+//== Hr border color
 $hr-border:                   $gray-lighter;
 
-// Horizontal forms & lists
+//== Horizontal forms & lists
 $component-offset-horizontal: 180px;
 
 
-// Container sizes
-// --------------------------------------------------
+//== Container sizes
+//##
 
-// Small screen / tablet
+//== Small screen / tablet
 $container-tablet:            ((720px + $grid-gutter-width));
 
-// Medium screen / desktop
+//== Medium screen / desktop
 $container-desktop:           ((940px + $grid-gutter-width));
 
-// Large screen / wide desktop
+//== Large screen / wide desktop
 $container-lg-desktop:        ((1140px + $grid-gutter-width));

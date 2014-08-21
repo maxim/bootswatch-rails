@@ -10,41 +10,41 @@
   @include box-shadow(none);
   border: none;
   font-size: 12px;
-}
 
-.navbar-default {
+  .navbar-default {
 
-  .badge {
-    background-color: #fff;
-    color: $navbar-default-bg;
+    .badge {
+      background-color: #fff;
+      color: $navbar-default-bg;
+    }
   }
-}
 
-.navbar-inverse {
+  .navbar-inverse {
 
-  .badge {
-    background-color: #fff;
-    color: $navbar-inverse-bg;
+    .badge {
+      background-color: #fff;
+      color: $navbar-inverse-bg;
+    }
   }
 }
 
 // Buttons ====================================================================
 
 .btn {
-  font-weight: 300;
-}
 
-.btn-default {
-  &:hover {
-    background-color: darken($btn-default-bg, 3%);
+  font-weight: 300;
+
+  .btn-default {
+    &:hover {
+      background-color: darken($btn-default-bg, 3%);
+    }
+  }
+
+  .btn-sm,
+  .btn-xs {
+    font-size: 12px;
   }
 }
-
-.btn-sm,
-.btn-xs {
-  font-size: 12px;
-}
-
 
 // Typography =================================================================
 
@@ -107,7 +107,7 @@ table,
 .table {
   font-size: 12px;
 
-  a {
+  a:not(.btn) {
     color: #fff;
     text-decoration: underline;
   }
@@ -122,7 +122,7 @@ table,
   > thead > tr > td,
   > tbody > tr > td,
   > tfoot > tr > td {
-    border-color: hsla(0, 100%, 100%, 0);
+    border-color: transparent;
   }
  }
 
@@ -200,7 +200,7 @@ label,
   .open > a,
   .open > a:hover,
   .open > a:focus {
-    border-color: hsla(0, 100%, 100%, 0);
+    border-color: transparent;
   }
 }
 
@@ -256,11 +256,11 @@ label,
 
 .panel {
   border: none;
-}
 
-.panel-default > .panel-heading {
-  background-color: $table-bg-hover;
-  color: $text-color;
+  .panel-default > .panel-heading {
+    background-color: $table-bg-hover;
+    color: $text-color;
+  }
 }
 
 .thumbnail {
@@ -270,15 +270,17 @@ label,
 
 .modal {
   padding: 0;
+
+  .modal-header,
+  .modal-footer {
+    background-color: $table-bg-hover;
+    border: none;
+    border-radius: 0;
+  }
 }
 
-.modal-header,
-.modal-footer {
-  background-color: $table-bg-hover;
-  border: none;
-  border-radius: 0;
-}
-
-.popover-title {
-  border: none;
+.popover {
+  .popover-title {
+    border: none;
+  }
 }

@@ -15,85 +15,88 @@
     background-color: #b3b3b3;
   }
 
+  .navbar-collapse {
+    border-top-color: $dropdown-divider-bg;
+    @include box-shadow(none);
+  }
+
   .btn {
     padding-top: 6px;
     padding-bottom: 6px;
   }
 
-  .dropdown-menu {
-    border: none;
+  .dropdown {
 
-    > li > a,
-    > li > a:focus {
-      background-color: hsla(0, 100%, 100%, 0);
-      font-size: 13px;
-      font-weight: 300;
+    .dropdown-menu {
+      border: none;
+
+      > li > a,
+      > li > a:focus {
+        background-color: transparent;
+        font-size: 13px;
+        font-weight: 300;
+      }
+    }
+
+    .dropdown-header {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+  }
+
+  .navbar-default {
+
+    .dropdown-menu {
+      background-color: $navbar-default-bg;
+
+      > li > a,
+      > li > a:focus {
+        color: $navbar-default-color;
+      }
+
+      > li > a:hover,
+      > .active > a,
+      > .active > a:hover {
+        background-color: $navbar-default-link-hover-bg;
+      }
     }
   }
 
-  .dropdown-header {
-    color: rgba(255, 255, 255, 0.5);
-  }
-}
+  .navbar-inverse {
 
-.navbar-default {
+    .dropdown-menu {
+      background-color: $navbar-inverse-bg;
 
-  .dropdown-menu {
-    background-color: $navbar-default-bg;
+      > li > a,
+      > li > a:focus {
+        color: $navbar-inverse-color;
+      }
 
-    > li > a,
-    > li > a:focus {
-      color: $navbar-default-color;
-    }
-
-    > li > a:hover,
-    > .active > a,
-    > .active > a:hover {
-      background-color: $navbar-default-link-hover-bg;
+      > li > a:hover,
+      > .active > a,
+      > .active > a:hover {
+        background-color: $navbar-inverse-link-hover-bg;
+      }
     }
   }
 }
-
-.navbar-inverse {
-
-  .dropdown-menu {
-    background-color: $navbar-inverse-bg;
-
-    > li > a,
-    > li > a:focus {
-      color: $navbar-inverse-color;
-    }
-
-    > li > a:hover,
-    > .active > a,
-    > .active > a:hover {
-      background-color: $navbar-inverse-link-hover-bg;
-    }
-  }
-}
-
-.navbar-collapse {
-  border-top-color: $dropdown-divider-bg;
-  @include box-shadow(none);
-}
-
 
 // Buttons ====================================================================
 
 .btn {
   padding: 14px 28px;
-}
 
-.btn-lg {
-  padding: 16px 32px;
-}
+  .btn-lg {
+    padding: 16px 32px;
+  }
 
-.btn-sm {
-  padding: 8px 16px;
-}
+  .btn-sm {
+    padding: 8px 16px;
+  }
 
-.btn-xs {
-  padding: 4px 8px;
+  .btn-xs {
+    padding: 4px 8px;
+  }
 }
 
 .btn-group {
@@ -227,8 +230,7 @@ table {
 
 // Forms ======================================================================
 
-input,
-.form-control {
+input {
   padding: 7px;
 }
 
@@ -253,7 +255,7 @@ label,
   .open > a,
   .open > a:hover,
   .open > a:focus {
-    border-color: hsla(0, 100%, 100%, 0);
+    border-color: transparent;
   }
 }
 
@@ -310,15 +312,14 @@ label,
     }
   }
 
-}
+  .pagination-lg > li > a {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
 
-.pagination-lg > li > a {
-  padding-left: 22px;
-  padding-right: 22px;
-}
-
-.pagination-sm > li > a {
-  padding: 0 5px;
+  .pagination-sm > li > a {
+    padding: 0 5px;
+  }
 }
 
 .pager {
@@ -336,6 +337,8 @@ label,
 
 .close {
   opacity: 0.4;
+  text-decoration: none;
+  text-shadow: none;
 
   &:hover,
   &:focus {
@@ -347,21 +350,10 @@ label,
   font-size: $font-size-small;
   font-weight: 300;
 
-  a,
   .alert-link {
     font-weight: normal;
     color: #fff;
     text-decoration: underline;
-  }
-
-  .close {
-    color: #fff;
-    text-decoration: none;
-
-    &:hover,
-    &:focus {
-      color: #fff;
-    }
   }
 }
 
@@ -370,11 +362,11 @@ label,
   padding-right: 1em;
   border-radius: 0;
   font-weight: 300;
-}
 
-.label-default {
-  background-color: $btn-default-bg;
-  color: $btn-default-color;
+  .label-default {
+    background-color: $btn-default-bg;
+    color: $btn-default-color;
+  }
 }
 
 .badge {
@@ -393,21 +385,24 @@ label,
 
 // Containers =================================================================
 
-.dropdown-menu {
-  padding: 0;
-  margin-top: 0;
-  font-size: $font-size-small;
+.dropdown {
 
-  > li > a {
-    padding: 12px 15px;
+  .dropdown-menu {
+    padding: 0;
+    margin-top: 0;
+    font-size: $font-size-small;
+
+    > li > a {
+      padding: 12px 15px;
+    }
   }
-}
 
-.dropdown-header {
-  padding-left: 15px;
-  padding-right: 15px;
-  font-size: 9px;
-  text-transform: uppercase;
+  .dropdown-header {
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 9px;
+    text-transform: uppercase;
+  }
 }
 
 .popover {
@@ -416,8 +411,22 @@ label,
   font-weight: 300;
 }
 
-.panel-heading,
-.panel-footer {
-  border-top-right-radius: 0;
-  border-top-left-radius: 0;
+.panel {
+  .panel-heading,
+  .panel-footer {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+
+  .panel-default {
+    .close {
+      color: $text-color;
+    }
+  }
+}
+
+.modal {
+  .close {
+    color: $text-color;
+  }
 }
