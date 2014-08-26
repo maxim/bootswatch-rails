@@ -6,19 +6,22 @@
 
 // Navbar =====================================================================
 
-.navbar-default {
+.navbar {
 
-  .badge {
-    background-color: #fff;
-    color: $navbar-default-bg;
+  .navbar-default {
+
+    .badge {
+      background-color: #fff;
+      color: $navbar-default-bg;
+    }
   }
-}
 
-.navbar-inverse {
+  .navbar-inverse {
 
-  .badge {
-    background-color: #fff;
-    color: $navbar-inverse-bg;
+    .badge {
+      background-color: #fff;
+      color: $navbar-inverse-bg;
+    }
   }
 }
 

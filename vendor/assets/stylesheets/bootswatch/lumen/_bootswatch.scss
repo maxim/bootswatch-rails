@@ -4,7 +4,7 @@
 
 @import url("//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic");
 
-@mixin shadow($width: 4px) {
+.shadow ($width: 4px) {
   border-width: 0 1px $width 1px;
 }
 
@@ -33,70 +33,69 @@
     border-bottom-width: 2px;
     @include box-shadow(none);
   }
-}
 
-.btn-lg,
-.btn-group-lg > .btn {
-  padding: 14px $padding-large-horizontal 13px;
-  line-height: 15px;
-}
+  .btn-lg,
+  .btn-group-lg > .btn {
+    padding: 14px $padding-large-horizontal 13px;
+    line-height: 15px;
+  }
 
-.btn-sm,
-.btn-group-sm > .btn {
-  padding: 4px $padding-small-horizontal;
-}
+  .btn-sm,
+  .btn-group-sm > .btn {
+    padding: 4px $padding-small-horizontal;
+  }
 
-.btn-xs,
-.btn-group-xs > .btn {
-  padding: $padding-xs-vertical $padding-xs-horizontal;
-}
+  .btn-xs,
+  .btn-group-xs > .btn {
+    padding: $padding-xs-vertical $padding-xs-horizontal;
+  }
 
-.btn-default:hover,
-.btn-default:focus,
-.btn-group.open .dropdown-toggle.btn-default {
-  background-color: $btn-default-bg;
-  border-color: $btn-default-border;
-}
+  .btn-default:hover,
+  .btn-default:focus,
+  .btn-group.open .dropdown-toggle.btn-default {
+    background-color: $btn-default-bg;
+    border-color: $btn-default-border;
+  }
 
-.btn-primary:hover,
-.btn-primary:focus,
-.btn-group.open .dropdown-toggle.btn-primary {
-  background-color: $btn-primary-bg;
-  border-color: $btn-primary-border;
-}
+  .btn-primary:hover,
+  .btn-primary:focus,
+  .btn-group.open .dropdown-toggle.btn-primary {
+    background-color: $btn-primary-bg;
+    border-color: $btn-primary-border;
+  }
 
-.btn-success:hover,
-.btn-success:focus,
-.btn-group.open .dropdown-toggle.btn-success {
-  background-color: $btn-success-bg;
-  border-color: $btn-success-border;
-}
+  .btn-success:hover,
+  .btn-success:focus,
+  .btn-group.open .dropdown-toggle.btn-success {
+    background-color: $btn-success-bg;
+    border-color: $btn-success-border;
+  }
 
-.btn-info:hover,
-.btn-info:focus,
-.btn-group.open .dropdown-toggle.btn-info {
-  background-color: $btn-info-bg;
-  border-color: $btn-info-border;
-}
+  .btn-info:hover,
+  .btn-info:focus,
+  .btn-group.open .dropdown-toggle.btn-info {
+    background-color: $btn-info-bg;
+    border-color: $btn-info-border;
+  }
 
-.btn-warning:hover,
-.btn-warning:focus,
-.btn-group.open .dropdown-toggle.btn-warning {
-  background-color: $btn-warning-bg;
-  border-color: $btn-warning-border;
-}
+  .btn-warning:hover,
+  .btn-warning:focus,
+  .btn-group.open .dropdown-toggle.btn-warning {
+    background-color: $btn-warning-bg;
+    border-color: $btn-warning-border;
+  }
 
-.btn-danger:hover,
-.btn-danger:focus,
-.btn-group.open .dropdown-toggle.btn-danger {
-  background-color: $btn-danger-bg;
-  border-color: $btn-danger-border;
-}
+  .btn-danger:hover,
+  .btn-danger:focus,
+  .btn-group.open .dropdown-toggle.btn-danger {
+    background-color: $btn-danger-bg;
+    border-color: $btn-danger-border;
+  }
 
-.btn-group.open .dropdown-toggle {
-  @include box-shadow(none);
+  .btn-group.open .dropdown-toggle {
+    @include box-shadow(none);
+  }
 }
-
 
 .navbar-btn {
   &:hover {
@@ -160,7 +159,7 @@
 table,
 .table {
 
-  a {
+  a:not(.btn) {
     text-decoration: underline;
   }
 
@@ -170,7 +169,7 @@ table,
   .info {
     color: #fff;
 
-    a {
+    a:not(.btn) {
       color: #fff;
     }
   }
@@ -181,7 +180,7 @@ table,
   > thead > tr > td,
   > tbody > tr > td,
   > tfoot > tr > td {
-    border-color: hsla(0, 100%, 100%, 0);
+    border-color: transparent;
   }
 }
 
@@ -255,7 +254,7 @@ label {
   .open > a,
   .open > a:hover,
   .open > a:focus {
-    border-color: hsla(0, 100%, 100%, 0);
+    border-color: transparent;
   }
 }
 
@@ -365,21 +364,6 @@ label {
 
 // Indicators =================================================================
 
-.alert {
-  @include shadow();
-
-  a,
-  .alert-link {
-    font-weight: normal;
-    color: #fff;
-    text-decoration: underline;
-  }
-
-  .close {
-    text-decoration: none;
-  }
-}
-
 .close {
   color: #fff;
   text-decoration: none;
@@ -392,6 +376,16 @@ label {
   }
 }
 
+.alert {
+  @include shadow();
+
+  .alert-link {
+    font-weight: normal;
+    color: #fff;
+    text-decoration: underline;
+  }
+}
+
 .label {
   font-weight: normal;
 }
@@ -401,10 +395,10 @@ label {
 .progress {
   border: 1px solid $navbar-default-border;
   @include box-shadow(inset 0 2px 0 rgba(0, 0, 0, 0.1));
-}
 
-.progress-bar {
-  @include box-shadow(inset 0 -4px 0 rgba(0, 0, 0, 0.15));
+  .progress-bar {
+    @include box-shadow(inset 0 -4px 0 rgba(0, 0, 0, 0.15));
+  }
 }
 
 // Containers =================================================================
@@ -422,4 +416,20 @@ label {
 .panel {
   border: 1px solid $navbar-default-border;
   @include shadow();
+
+  .panel-default {
+    .close {
+      color: $text-color;
+    }
+  }
+}
+
+.modal {
+  .close {
+    color: $text-color;
+  }
+}
+
+.popover {
+  color: $text-color;
 }
