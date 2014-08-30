@@ -8,26 +8,26 @@
 
 .navbar {
   border-width: 0;
-}
 
-.navbar-default {
+  .navbar-default {
 
-  .badge {
-    background-color: #fff;
-    color: $navbar-default-bg;
+    .badge {
+      background-color: #fff;
+      color: $navbar-default-bg;
+    }
   }
-}
 
-.navbar-inverse {
+  .navbar-inverse {
 
-  .badge {
-    background-color: #fff;
-    color: $navbar-inverse-bg;
+    .badge {
+      background-color: #fff;
+      color: $navbar-inverse-bg;
+    }
   }
-}
 
-.navbar-brand {
-  padding: 18.5px 15px 20.5px;
+  .navbar-brand {
+    padding: 18.5px 15px 20.5px;
+  }
 }
 
 // Buttons ====================================================================
@@ -72,7 +72,7 @@
 table,
 .table {
 
-  a {
+  a:not(.btn) {
     text-decoration: underline;
   }
 
@@ -95,15 +95,15 @@ table,
   > tfoot > tr > td {
     border: none;
   }
-}
 
-.table-bordered > thead > tr > th,
-.table-bordered > tbody > tr > th,
-.table-bordered > tfoot > tr > th,
-.table-bordered > thead > tr > td,
-.table-bordered > tbody > tr > td,
-.table-bordered > tfoot > tr > td {
-  border: 1px solid $table-border-color;
+  .table-bordered > thead > tr > th,
+  .table-bordered > tbody > tr > th,
+  .table-bordered > tfoot > tr > th,
+  .table-bordered > thead > tr > td,
+  .table-bordered > tbody > tr > td,
+  .table-bordered > tfoot > tr > td {
+    border: 1px solid $table-border-color;
+  }
 }
 
 // Forms ======================================================================
@@ -187,7 +187,7 @@ input, {
   .open > a,
   .open > a:hover,
   .open > a:focus {
-    border-color: hsla(0, 100%, 100%, 0);
+    border-color: transparent;
   }
 }
 
@@ -209,19 +209,6 @@ input, {
 
 // Indicators =================================================================
 
-.alert {
-
-  a,
-  .alert-link {
-    color: #fff;
-    text-decoration: underline;
-  }
-
-  .close {
-    text-decoration: none;
-  }
-}
-
 .close {
   color: #fff;
   text-decoration: none;
@@ -231,6 +218,14 @@ input, {
   &:focus {
     color: #fff;
     opacity: 1;
+  }
+}
+
+.alert {
+
+  .alert-link {
+    color: #fff;
+    text-decoration: underline;
   }
 }
 
@@ -249,4 +244,22 @@ input, {
 
 .well {
   @include box-shadow(none);
+}
+
+.panel {
+  .panel-default {
+    .close {
+      color: $text-color;
+    }
+  }
+}
+
+.modal {
+  .close {
+    color: $text-color;
+  }
+}
+
+.popover {
+  color: $text-color;
 }

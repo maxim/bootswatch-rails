@@ -10,11 +10,12 @@ THEMES = %w(
   flatly
   journal
   lumen
+  paper
   readable
+  sandstone
   simplex
   slate
   spacelab
-  spruce
   superhero
   united
   yeti
