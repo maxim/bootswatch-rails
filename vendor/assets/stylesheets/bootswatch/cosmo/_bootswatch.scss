@@ -6,14 +6,11 @@
 
 // Navbar =====================================================================
 
-.navbar {
+.navbar-inverse {
 
-  .navbar-inverse {
-
-    .badge {
-      background-color: #fff;
-      color: $brand-primary;
-    }
+  .badge {
+    background-color: #fff;
+    color: $brand-primary;
   }
 }
 
@@ -176,17 +173,15 @@ table,
 
 // Containers =================================================================
 
-.panel {
-  .panel-heading,
-  .panel-footer {
-    border-top-right-radius: 0;
-    border-top-left-radius: 0;
-  }
+.panel-heading,
+.panel-footer {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
 
-  .panel-default {
-    .close {
-      color: $text-color;
-    }
+.panel-default {
+  .close {
+    color: $text-color;
   }
 }
 
