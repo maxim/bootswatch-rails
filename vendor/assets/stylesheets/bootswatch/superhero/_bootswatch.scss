@@ -31,6 +31,7 @@
 // Buttons ====================================================================
 
 .btn {
+
   font-weight: 300;
 }
 
@@ -44,7 +45,6 @@
 .btn-xs {
   font-size: 12px;
 }
-
 
 // Typography =================================================================
 
@@ -107,7 +107,7 @@ table,
 .table {
   font-size: 12px;
 
-  a {
+  a:not(.btn) {
     color: #fff;
     text-decoration: underline;
   }
@@ -122,7 +122,7 @@ table,
   > thead > tr > td,
   > tbody > tr > td,
   > tfoot > tr > td {
-    border-color: hsla(0, 100%, 100%, 0);
+    border-color: transparent;
   }
  }
 
@@ -200,7 +200,7 @@ label,
   .open > a,
   .open > a:hover,
   .open > a:focus {
-    border-color: hsla(0, 100%, 100%, 0);
+    border-color: transparent;
   }
 }
 

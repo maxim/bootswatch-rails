@@ -1,3 +1,8 @@
+## 3.2.2 (2014-08-30)
+
+* Add Paper theme
+* Add Sandstone theme
+
 ## 3.2.0 (2014-07-12)
 
 * Update all themes to current bootswatch versions (3.2.0)

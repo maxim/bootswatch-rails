@@ -21,9 +21,8 @@
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 
   .nav .open > a {
-    border-color: hsla(0, 100%, 100%, 0);
+    border-color: transparent;
   }
-
 }
 
 .navbar-inverse {
@@ -40,12 +39,12 @@
 
   &:hover {
     @include btn-shadow-inverse($navbar-default-bg);
-    border-left-color: hsla(0, 100%, 100%, 0);
+    border-left-color: transparent;
   }
 }
 
 .navbar-nav > li.active > a {
-  border-left-color: hsla(0, 100%, 100%, 0);
+  border-left-color: transparent;
 }
 
 .navbar-form {
@@ -111,7 +110,7 @@
 
 .btn-link,
 .btn-link:hover {
-  border-color: hsla(0, 100%, 100%, 0);
+  border-color: transparent;
 }
 
 // Typography =================================================================
@@ -148,10 +147,6 @@ h1, h2, h3, h4, h5, h6 {
 // Tables =====================================================================
 
 .table {
-
-  a {
-    text-decoration: underline;
-  }
 
   .success,
   .warning,
@@ -290,7 +285,8 @@ legend {
 
 .pagination {
 
-  & > li > a {
+  & > li > a,
+  & > li > span {
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
     @include btn-shadow($btn-default-bg);
 
@@ -299,13 +295,16 @@ legend {
     }
   }
 
-  & > li.active > a {
+  & > li.active > a,
+  & > li.active > span {
     @include btn-shadow-inverse($btn-default-bg);
   }
 
   & > li.disabled > a,
-  & > li.disabled > a:hover {
-    background-color: hsla(0, 100%, 100%, 0);
+  & > li.disabled > a:hover,
+  & > li.disabled > span,
+  & > li.disabled > span:hover {
+    background-color: transparent;
     @include btn-shadow($btn-default-bg);
   }
 }
@@ -323,7 +322,7 @@ legend {
 
   & > li.disabled > a,
   & > li.disabled > a:hover {
-    background-color: hsla(0, 100%, 100%, 0);
+    background-color: transparent;
     @include btn-shadow($btn-default-bg);
   }
 }

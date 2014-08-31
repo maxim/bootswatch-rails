@@ -29,6 +29,7 @@
   .dropdown-menu {
     text-shadow: none;
   }
+
 }
 
 .navbar-inverse {
@@ -52,6 +53,7 @@
 .navbar-brand:hover {
   @include transition(color ease-in-out .2s);
 }
+
 
 // Buttons ====================================================================
 
@@ -112,6 +114,7 @@
     @include btn-shadow(darken($btn-danger-bg, 4%));
   }
 }
+
 
 
 // Typography =================================================================

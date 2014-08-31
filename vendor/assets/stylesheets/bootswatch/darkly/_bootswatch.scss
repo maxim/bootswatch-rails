@@ -9,7 +9,6 @@
 .navbar {
   border-width: 0;
 }
-
 .navbar-default {
 
   .badge {
@@ -82,7 +81,7 @@
 table,
 .table {
 
-  a {
+  a:not(.btn) {
     text-decoration: underline;
   }
 
@@ -105,6 +104,7 @@ table,
   > tfoot > tr > td {
     border: none;
   }
+
 }
 
 .table-bordered > thead > tr > th,
@@ -238,16 +238,21 @@ textarea {
 
 // Indicators =================================================================
 
-.alert {
+.close {
+  text-decoration: none;
+  text-shadow: none;
+  opacity: 0.4;
 
-  a,
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+}
+
+.alert {
   .alert-link {
     color: #fff;
     text-decoration: underline;
-  }
-
-  .close {
-    text-decoration: none;
   }
 }
 
@@ -268,8 +273,7 @@ textarea {
   @include box-shadow(none);
 }
 
-.popover,
-.modal {
+.popover {
   color: $text-color;
 }
 

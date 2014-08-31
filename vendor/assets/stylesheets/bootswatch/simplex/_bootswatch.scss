@@ -2,6 +2,8 @@
 // Bootswatch
 // -----------------------------------------------------
 
+@import url("//fonts.googleapis.com/css?family=Open+Sans:400,700");
+
 @mixin btn-shadow($color) {
   @include gradient-vertical-three-colors(lighten($color, 3%), $color, 6%, darken($color, 3%));
   filter: none;
@@ -70,6 +72,10 @@ th {
 
 legend {
   color: $headings-color;
+}
+
+label {
+  font-weight: normal;
 }
 
 .has-warning {

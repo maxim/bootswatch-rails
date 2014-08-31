@@ -10,10 +10,16 @@
   font-family: $headings-font-family;
 }
 
+.navbar-nav,
+.navbar-form {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 .navbar-nav > li > a {
   padding: $padding-base-vertical $padding-base-horizontal;
   margin: 12px 6px;
-  border: 1px solid hsla(0, 100%, 100%, 0);
+  border: 1px solid transparent;
   border-radius: $border-radius-base;
 
   &:hover {
@@ -35,11 +41,15 @@
 }
 
 .navbar-brand {
-  margin-top: 6px;
+  padding-top: 20px;
 }
 
-.navbar-form {
-  margin-top: 12px;
+@media (max-width: $grid-float-breakpoint) {
+  .navbar {
+    .navbar-nav > li > a {
+      margin: 0;
+    }
+  }
 }
 
 // Buttons ====================================================================
@@ -73,6 +83,7 @@ legend {
 }
 
 .pagination {
+
   font-family: $headings-font-family;
 }
 
@@ -90,7 +101,7 @@ legend {
   }
 
   a:hover {
-    border-color: hsla(0, 100%, 100%, 0);
+    border-color: transparent;
     color: #fff;
   }
 
@@ -101,28 +112,23 @@ legend {
 
 // Indicators =================================================================
 
-.alert {
-  a,
-  .alert-link {
-    color: $alert-success-text;
-    text-decoration: underline;
-  }
-
-  .close {
-    text-decoration: none;
-  }
-}
-
-
 .close {
   color: #fff;
   text-decoration: none;
+  text-shadow: none;
   opacity: 0.4;
 
   &:hover,
   &:focus {
     color: #fff;
     opacity: 1;
+  }
+}
+
+.alert {
+  .alert-link {
+    color: $alert-success-text;
+    text-decoration: underline;
   }
 }
 
@@ -151,11 +157,10 @@ legend {
   @include box-shadow(none);
 }
 
-.panel-default .panel-heading,
-.panel-default .panel-footer {
-  background-color: #fff;
-  font-family: $headings-font-family;
-  font-weight: bold;
+.panel-default {
+  .close {
+    color: $text-color;
+  }
 }
 
 .panel-primary,
@@ -171,5 +176,11 @@ legend {
     border: 1px solid #ddd;
     border-top-width: 0;
     border-radius: 0 0 $border-radius-base $border-radius-base;
+  }
+}
+
+.modal {
+  .close {
+    color: $text-color;
   }
 }
