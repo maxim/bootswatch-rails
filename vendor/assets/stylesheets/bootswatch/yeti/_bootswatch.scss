@@ -37,6 +37,16 @@
 
 }
 
+.navbar-form {
+  margin-top: 7px;
+  margin-bottom: 5px;
+
+  .form-control {
+    height: auto;
+    padding: $padding-xs-vertical $padding-xs-horizontal;
+  }
+}
+
 .navbar-collapse {
   border-top-color: $dropdown-divider-bg;
   @include box-shadow(none);
@@ -81,19 +91,19 @@
 // Buttons ====================================================================
 
 .btn {
-  padding: 14px 28px;
+  padding: $padding-base-vertical $padding-base-horizontal;
 }
 
 .btn-lg {
-  padding: 16px 32px;
+  padding: $padding-large-vertical $padding-large-horizontal;
 }
 
 .btn-sm {
-  padding: 8px 16px;
+  padding: $padding-small-vertical $padding-small-horizontal;
 }
 
 .btn-xs {
-  padding: 4px 8px;
+  padding: $padding-xs-vertical $padding-xs-horizontal;
 }
 
 .btn-group {
@@ -227,10 +237,6 @@ table {
 
 // Forms ======================================================================
 
-input {
-  padding: 7px;
-}
-
 label,
 .control-label,
 .help-block,
@@ -238,12 +244,6 @@ label,
 .radio {
   font-size: $font-size-small;
   font-weight: normal;
-}
-
-.input-group-addon,
-.input-group-btn .btn {
-  padding: 8px 14px;
-  font-size: $font-size-small;
 }
 
 // Navs =======================================================================
