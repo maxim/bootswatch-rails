@@ -1,3 +1,7 @@
+## 3.2.3 (2014-08-31)
+
+* Fix syntax error in Darkly and Flatly.
+
 ## 3.2.2 (2014-08-30)
 
 * Add Paper theme
