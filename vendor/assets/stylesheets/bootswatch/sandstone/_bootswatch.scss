@@ -13,15 +13,22 @@
   text-transform: uppercase;
 }
 
+@mixin sandstone() {
+  font-size: 11px;
+  line-height: 22px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
 .navbar {
   .nav > li > a {
     @include sandstone();
   }
+}
 
-  .navbar-form input,
-  .navbar-form .form-control {
-    border: none;
-  }
+.navbar-form input,
+.navbar-form .form-control {
+  border: none;
 }
 
 // Buttons ====================================================================
@@ -33,15 +40,15 @@
   &:hover {
     border-color: transparent;
   }
+}
 
-  .btn-lg {
-    line-height: 26px;
-  }
+.btn-lg {
+  line-height: 26px;
+}
 
-  .btn-default {
-    &:hover {
-      background-color: $navbar-default-link-active-bg;
-    }
+.btn-default {
+  &:hover {
+    background-color: $navbar-default-link-active-bg;
   }
 }
 
@@ -157,18 +164,16 @@ input,
   border-radius: 10px;
   background-color: $gray-light;
   @include box-shadow(none);
+}
 
-  .progress-bar {
-    @include box-shadow(none);
-  }
+.progress-bar {
+  @include box-shadow(none);
 }
 
 // Containers =================================================================
 
-.list-group {
-  .list-group-item {
-    padding: 16px 24px;
-  }
+.list-group-item {
+  padding: 16px 24px;
 }
 
 .well {
@@ -177,19 +182,19 @@ input,
 
 .panel {
   @include box-shadow(none);
+}
 
+.panel-heading,
+.panel-title,
+.panel-footer {
+  @include sandstone();
+  color: #fff;
+}
+
+.panel-default {
   .panel-heading,
   .panel-title,
   .panel-footer {
-    @include sandstone();
-    color: #fff;
-  }
-
-  .panel-default {
-    .panel-heading,
-    .panel-title,
-    .panel-footer {
-      color: $gray;
-    }
+    color: $gray;
   }
 }
