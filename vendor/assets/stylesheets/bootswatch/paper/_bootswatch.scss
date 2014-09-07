@@ -138,7 +138,8 @@ p {
   margin: 0 0 1em;
 }
 
-input {
+input,
+button {
   -webkit-font-smoothing: antialiased;
   letter-spacing: .1px;
   text-rendering: optimizeLegibility;
@@ -234,11 +235,22 @@ select.form-control {
 
     &:hover {
       border: none;
+      color: $brand-primary;
     }
   }
 
   & > li.disabled > a {
     @include box-shadow(inset 0 -1px 0 #ddd);
+  }
+
+  &.nav-justified {
+
+    & > li > a,
+    & > li > a:hover,
+    & > .active > a,
+    & > .active > a:hover {
+      border: none;
+    }
   }
 
   .dropdown-menu {
@@ -257,7 +269,7 @@ select.form-control {
   border: none;
   color: #fff;
 
-  a,
+  a:not(.close),
   .alert-link {
     color: #fff;
     font-weight: bold;
@@ -340,6 +352,7 @@ select.form-control {
 .close {
   font-size: 34px;
   font-weight: 300;
+  line-height: 24px;
   opacity: 0.6;
 
   &:hover {
