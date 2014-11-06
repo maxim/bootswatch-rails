@@ -63,7 +63,6 @@ Since version 3.1 it's possible to override variables.
 
 Included bootswatches
 
-* [Amelia](http://bootswatch.com/amelia/)
 * [Cerulean](http://bootswatch.com/cerulean/)
 * [Cosmo](http://bootswatch.com/cosmo/)
 * [Cyborg](http://bootswatch.com/cyborg/)
