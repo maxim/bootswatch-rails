@@ -30,35 +30,36 @@ Here's approximately how your `application.css.scss` file should look like,
 considering that you're using
 [bootstrap-sass](https://github.com/thomas-mcdonald/bootstrap-sass).
 
-    // Example using 'Cerulean' bootswatch
-    //
-    // First import cerulean variables
-    @import "bootswatch/cerulean/variables";
+````sass
+// Example using 'Cerulean' bootswatch
+//
+// First import cerulean variables
+@import "bootswatch/cerulean/variables";
 
-    // Then bootstrap itself
-    @import "bootstrap";
+// Then bootstrap itself
+@import "bootstrap";
 
-    // Bootstrap body padding for fixed navbar
-    body { padding-top: 60px; }
+// Bootstrap body padding for fixed navbar
+body { padding-top: 60px; }
 
-    // And finally bootswatch style itself
-    @import "bootswatch/cerulean/bootswatch";
+// And finally bootswatch style itself
+@import "bootswatch/cerulean/bootswatch";
 
-    // Whatever application styles you have go last
-    @import "base";
-
+// Whatever application styles you have go last
+@import "base";
+````
 ### Overriding bootswatch variables
 
 Since version 3.1 it's possible to override variables.
+````sass
+// First set or import your overrides
+$textColor: #000;
 
-    // First set or import your overrides
-    $textColor: #000;
+// Then load variables
+@import "bootswatch/journal/variables";
 
-    // Then load variables
-    @import "bootswatch/journal/variables";
-
-    // Then the rest as shown above...
-
+// Then the rest as shown above...
+````
 ## Bootswatches
 
 Included bootswatches
