@@ -32,8 +32,11 @@ considering that you're using
 
 ````sass
 // Example using 'Cerulean' bootswatch
-//
-// First import cerulean variables
+
+//Import bootstrap-sprockets
+@import "bootstrap-sprockets";
+
+// Import cerulean variables
 @import "bootswatch/cerulean/variables";
 
 // Then bootstrap itself
