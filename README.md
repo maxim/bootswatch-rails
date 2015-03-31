@@ -1,4 +1,4 @@
-# bootswatch-rails
+# bootswatch-sass
 
 [![Gem Version](https://badge.fury.io/rb/bootswatch-rails.svg)](http://badge.fury.io/rb/bootswatch-rails)
 
@@ -12,7 +12,7 @@ bootstrap itself.
 
 Add this line to your application's Gemfile, in assets group:
 
-    gem 'bootswatch-rails'
+    gem 'bootswatch-sass'
 
 And then execute:
 
