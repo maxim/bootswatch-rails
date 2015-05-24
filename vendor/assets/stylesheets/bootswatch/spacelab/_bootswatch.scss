@@ -1,4 +1,4 @@
-// Spacelab 3.2.0
+// Spacelab 3.3.4
 // Bootswatch
 // -----------------------------------------------------
 
@@ -44,8 +44,8 @@
 
 .navbar-nav > li > a,
 .navbar-nav > li > a:hover {
-  padding-top: $navbar-padding-vertical + 2px;
-  padding-bottom: $navbar-padding-vertical - 2px;
+  padding-top: ($navbar-padding-vertical + 2px);
+  padding-bottom: ($navbar-padding-vertical - 2px);
   @include transition(color ease-in-out .2s);
 }
 
