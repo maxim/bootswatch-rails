@@ -1,4 +1,4 @@
-// Cerulean 3.2.0
+// Cerulean 3.3.4
 // Bootswatch
 // -----------------------------------------------------
 
@@ -14,11 +14,11 @@
   @include btn-shadow($navbar-default-bg);
   filter: none;
   @include box-shadow(0 1px 10px rgba(0, 0, 0, 0.1));
+}
 
-  .navbar-nav > li > a,
-  .navbar-brand {
-    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
-  }
+.navbar .navbar-nav > li > a,
+.navbar-brand {
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
 }
 
 .navbar-default {
@@ -46,6 +46,12 @@
 
     .dropdown-header {
       color: #fff;
+    }
+
+    .dropdown-menu {
+      a {
+        color: #fff;
+      }
     }
   }
 }
