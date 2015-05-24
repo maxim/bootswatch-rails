@@ -1,4 +1,4 @@
-// Sandstone 3.2.0
+// Sandstone 3.3.4
 // Bootswatch
 // -----------------------------------------------------
 
@@ -66,10 +66,6 @@ input,
     border-color: $input-border;
     @include box-shadow(none);
   }
-}
-
-.input-sm {
-  padding: 15px 10px;
 }
 
 // Navs =======================================================================
@@ -182,13 +178,16 @@ input,
 
 .panel {
   @include box-shadow(none);
-}
 
-.panel-heading,
-.panel-title,
-.panel-footer {
-  @include sandstone();
-  color: #fff;
+  .panel-heading,
+  .panel-title {
+    @include sandstone();
+    color: #fff;
+  }
+
+  .panel-footer {
+    @include sandstone();
+  }
 }
 
 .panel-default {
