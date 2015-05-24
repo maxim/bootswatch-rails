@@ -1,4 +1,4 @@
-// Yeti 3.2.0
+// Yeti 3.3.4
 // Bootswatch
 // -----------------------------------------------------
 
@@ -244,6 +244,11 @@ label,
 .radio {
   font-size: $font-size-small;
   font-weight: normal;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-top: 1px;
 }
 
 // Navs =======================================================================
