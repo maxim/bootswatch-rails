@@ -1,4 +1,4 @@
-// Cosmo 3.2.0
+// Cosmo 3.3.4
 // Bootswatch
 // -----------------------------------------------------
 
@@ -55,6 +55,10 @@ table,
 
   a:not(.btn) {
     text-decoration: underline;
+  }
+
+  .dropdown-menu a {
+    text-decoration: none;
   }
 
   .success,
@@ -179,6 +183,39 @@ table,
 .panel-default {
   .close {
     color: $text-color;
+  }
+}
+
+a.list-group-item-success {
+  &.active {
+    background-color: $state-success-bg;
+  }
+
+  &.active:hover,
+  &.active:focus {
+    background-color: darken($state-success-bg, 5%);
+  }
+}
+
+a.list-group-item-warning {
+  &.active {
+    background-color: $state-warning-bg;
+  }
+
+  &.active:hover,
+  &.active:focus {
+    background-color: darken($state-warning-bg, 5%);
+  }
+}
+
+a.list-group-item-danger {
+  &.active {
+    background-color: $state-danger-bg;
+  }
+
+  &.active:hover,
+  &.active:focus {
+    background-color: darken($state-danger-bg, 5%);
   }
 }
 
