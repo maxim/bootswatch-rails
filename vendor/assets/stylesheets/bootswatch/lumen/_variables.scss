@@ -1,4 +1,4 @@
-// Lumen 3.2.0
+// Lumen 3.3.4
 // Variables
 // --------------------------------------------------
 
@@ -7,11 +7,12 @@
 //
 //## Gray and brand colors for use across Bootstrap.
 
-$gray:                   lighten(#000, 33.5%) !default; // #555
-$gray-darker:            lighten(#000, 13.5%) !default; // #222
-$gray-dark:              lighten(#000, 20%) !default;   // #333
-$gray-light:             lighten(#000, 60%) !default;   // #999
-$gray-lighter:           lighten(#000, 93.5%) !default; // #eee
+$gray-base:              #000 !default;
+$gray-darker:            lighten($gray-base, 13.5%) !default; // #222
+$gray-dark:              lighten($gray-base, 20%) !default;   // #333
+$gray:                   lighten($gray-base, 33.5%) !default; // #555
+$gray-light:             lighten($gray-base, 60%) !default;   // #999
+$gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
 
 $brand-primary:         #158CBA !default;
 $brand-success:         #28B62C !default;
@@ -33,6 +34,8 @@ $text-color:            $gray !default;
 $link-color:            $brand-primary !default;
 //** Link hover color set via `darken()` function.
 $link-hover-color:      $link-color !default;
+//** Link hover decoration.
+$link-hover-decoration: underline !default;
 
 
 //== Typography
@@ -95,7 +98,7 @@ $padding-small-horizontal:  10px !default;
 $padding-xs-vertical:       1px !default;
 $padding-xs-horizontal:     5px !default;
 
-$line-height-large:         1.33 !default;
+$line-height-large:         1.3333333 !default; // extra decimals for Win 8.1 Chrome
 $line-height-small:         1.5 !default;
 
 $border-radius-base:        4px !default;
@@ -166,6 +169,109 @@ $btn-danger-border:              darken($btn-danger-bg, 5%) !default;
 
 $btn-link-disabled-color:        $gray-light !default;
 
+
+//== Forms
+//
+//##
+
+//** `<input>` background color
+$input-bg:                       #fff !default;
+//** `<input disabled>` background color
+$input-bg-disabled:              $gray-lighter !default;
+
+//** Text color for `<input>`s
+$input-color:                    $gray !default;
+//** `<input>` border color
+$input-border:                   darken(#f8f8f8, 6.5%) !default;
+
+// TODO: Rename `@input-border-radius` to `@input-border-radius-base` in v4
+//** Default `.form-control` border radius
+// This has no effect on `<select>`s in some browsers, due to the limited stylability of `<select>`s in CSS.
+$input-border-radius:            $border-radius-base !default;
+//** Large `.form-control` border radius
+$input-border-radius-large:      $border-radius-large !default;
+//** Small `.form-control` border radius
+$input-border-radius-small:      $border-radius-small !default;
+
+//** Border color for inputs on focus
+$input-border-focus:             #66afe9 !default;
+
+//** Placeholder text color
+$input-color-placeholder:        $gray-light !default;
+
+//** Default `.form-control` height
+$input-height-base:              ($line-height-computed + ($padding-base-vertical * 2) + 4) !default;
+//** Large `.form-control` height
+$input-height-large:             (ceil($font-size-large * $line-height-large) + ($padding-large-vertical * 2) + 2) !default;
+//** Small `.form-control` height
+$input-height-small:             (floor($font-size-small * $line-height-small) + ($padding-small-vertical * 2) + 2) !default;
+
+//** `.form-group` margin
+$form-group-margin-bottom:       15px !default;
+
+$legend-color:                   $gray-dark !default;
+$legend-border-color:            #e5e5e5 !default;
+
+//** Background color for textual input addons
+$input-group-addon-bg:           $gray-lighter !default;
+//** Border color for textual input addons
+$input-group-addon-border-color: $input-border !default;
+
+//** Disabled cursor for form controls and buttons.
+$cursor-disabled:                not-allowed !default;
+
+
+//== Dropdowns
+//
+//## Dropdown menu container and contents.
+
+//** Background for the dropdown menu.
+$dropdown-bg:                    #fff !default;
+//** Dropdown menu `border-color`.
+$dropdown-border:                $input-border !default;
+//** Dropdown menu `border-color` **for IE8**.
+$dropdown-fallback-border:       #ccc !default;
+//** Divider color for between dropdown items.
+$dropdown-divider-bg:            $gray-lighter !default;
+
+//** Dropdown link text color.
+$dropdown-link-color:            $gray-light !default;
+//** Hover color for dropdown links.
+$dropdown-link-hover-color:      $gray-dark !default;
+//** Hover background for dropdown links.
+$dropdown-link-hover-bg:         transparent !default;
+
+//** Active dropdown menu item text color.
+$dropdown-link-active-color:     $component-active-color !default;
+//** Active dropdown menu item background color.
+$dropdown-link-active-bg:        $component-active-bg !default;
+
+//** Disabled dropdown menu item background color.
+$dropdown-link-disabled-color:   $gray-lighter !default;
+
+//** Text color for headers within dropdown menus.
+$dropdown-header-color:          $gray-light !default;
+
+//** Deprecated `@dropdown-caret-color` as of v3.1.0
+$dropdown-caret-color:           #000 !default;
+
+
+//-- Z-index master list
+//
+// Warning: Avoid customizing these values. They're used for a bird's eye view
+// of components dependent on the z-axis and are designed to all work together.
+//
+// Note: These variables are not generated into the Customizer.
+
+$zindex-navbar:            1000 !default;
+$zindex-dropdown:          1000 !default;
+$zindex-popover:           1060 !default;
+$zindex-tooltip:           1070 !default;
+$zindex-navbar-fixed:      1030 !default;
+$zindex-modal-background:  1040 !default;
+$zindex-modal:             1050 !default;
+
+
 //== Media queries breakpoints
 //
 //## Define the breakpoints at which your layout will change, adapting to different screen sizes.
@@ -220,6 +326,26 @@ $grid-float-breakpoint:     $screen-sm-min !default;
 $grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
 
 
+//== Container sizes
+//
+//## Define the maximum width of `.container` for different screen sizes.
+
+// Small screen / tablet
+$container-tablet:             (720px + $grid-gutter-width) !default;
+//** For `@screen-sm-min` and up.
+$container-sm:                 $container-tablet !default;
+
+// Medium screen / desktop
+$container-desktop:            (940px + $grid-gutter-width) !default;
+//** For `@screen-md-min` and up.
+$container-md:                 $container-desktop !default;
+
+// Large screen / wide desktop
+$container-large-desktop:      (1140px + $grid-gutter-width) !default;
+//** For `@screen-lg-min` and up.
+$container-lg:                 $container-large-desktop !default;
+
+
 //== Navbar
 //
 //##
@@ -234,7 +360,7 @@ $navbar-collapse-max-height:       340px !default;
 
 $navbar-default-color:             $text-color !default;
 $navbar-default-bg:                #f8f8f8 !default;
-$navbar-default-border:            darken($navbar-default-bg, 6.5%) !default;
+$navbar-default-border:            $input-border !default;
 
 // Navbar links
 $navbar-default-link-color:                $gray-light !default;
@@ -281,113 +407,6 @@ $navbar-inverse-toggle-hover-bg:            $gray-lighter !default;
 $navbar-inverse-toggle-icon-bar-bg:         $gray-light !default;
 $navbar-inverse-toggle-border-color:        $gray-lighter !default;
 
-//== Forms
-//
-//##
-
-//** `<input>` background color
-$input-bg:                       #fff !default;
-//** `<input disabled>` background color
-$input-bg-disabled:              $gray-lighter !default;
-
-//** Text color for `<input>`s
-$input-color:                    $gray !default;
-//** `<input>` border color
-$input-border:                   $navbar-default-border !default;
-//** `<input>` border radius
-$input-border-radius:            $border-radius-base !default;
-//** Border color for inputs on focus
-$input-border-focus:             #66afe9 !default;
-
-//** Placeholder text color
-$input-color-placeholder:        $gray-light !default;
-
-//** Default `.form-control` height
-$input-height-base:              ($line-height-computed + ($padding-base-vertical * 2) + 4) !default;
-//** Large `.form-control` height
-$input-height-large:             (ceil($font-size-large * $line-height-large) + ($padding-large-vertical * 2) + 2) !default;
-//** Small `.form-control` height
-$input-height-small:             (floor($font-size-small * $line-height-small) + ($padding-small-vertical * 2) + 2) !default;
-
-$legend-color:                   $gray-dark !default;
-$legend-border-color:            #e5e5e5 !default;
-
-//** Background color for textual input addons
-$input-group-addon-bg:           $gray-lighter !default;
-//** Border color for textual input addons
-$input-group-addon-border-color: $input-border !default;
-
-
-//== Dropdowns
-//
-//## Dropdown menu container and contents.
-
-//** Background for the dropdown menu.
-$dropdown-bg:                    #fff !default;
-//** Dropdown menu `border-color`.
-$dropdown-border:                $navbar-default-border !default;
-//** Dropdown menu `border-color` **for IE8**.
-$dropdown-fallback-border:       #ccc !default;
-//** Divider color for between dropdown items.
-$dropdown-divider-bg:            $gray-lighter !default;
-
-//** Dropdown link text color.
-$dropdown-link-color:            $gray-light !default;
-//** Hover color for dropdown links.
-$dropdown-link-hover-color:      $gray-dark !default;
-//** Hover background for dropdown links.
-$dropdown-link-hover-bg:         transparent !default;
-
-//** Active dropdown menu item text color.
-$dropdown-link-active-color:     $component-active-color !default;
-//** Active dropdown menu item background color.
-$dropdown-link-active-bg:        $component-active-bg !default;
-
-//** Disabled dropdown menu item background color.
-$dropdown-link-disabled-color:   $gray-lighter !default;
-
-//** Text color for headers within dropdown menus.
-$dropdown-header-color:          $gray-light !default;
-
-//** Deprecated `@dropdown-caret-color` as of v3.1.0
-$dropdown-caret-color:           #000 !default;
-
-
-//-- Z-index master list
-//
-// Warning: Avoid customizing these values. They're used for a bird's eye view
-// of components dependent on the z-axis and are designed to all work together.
-//
-// Note: These variables are not generated into the Customizer.
-
-$zindex-navbar:            1000 !default;
-$zindex-dropdown:          1000 !default;
-$zindex-popover:           1060 !default;
-$zindex-tooltip:           1070 !default;
-$zindex-navbar-fixed:      1030 !default;
-$zindex-modal-background:  1040 !default;
-$zindex-modal:             1050 !default;
-
-
-//== Container sizes
-//
-//## Define the maximum width of `.container` for different screen sizes.
-
-// Small screen / tablet
-$container-tablet:             ((720px + $grid-gutter-width)) !default;
-//** For `@screen-sm-min` and up.
-$container-sm:                 $container-tablet !default;
-
-// Medium screen / desktop
-$container-desktop:            ((940px + $grid-gutter-width)) !default;
-//** For `@screen-md-min` and up.
-$container-md:                 $container-desktop !default;
-
-// Large screen / wide desktop
-$container-large-desktop:      ((1140px + $grid-gutter-width)) !default;
-//** For `@screen-lg-min` and up.
-$container-lg:                 $container-large-desktop !default;
-
 
 //== Navs
 //
@@ -399,8 +418,6 @@ $nav-link-hover-bg:                         #fff !default;
 
 $nav-disabled-link-color:                   $gray-light !default;
 $nav-disabled-link-hover-color:             $gray-light !default;
-
-$nav-open-link-hover-color:                 #fff !default;
 
 //== Tabs
 $nav-tabs-border-color:                     $navbar-default-border !default;
@@ -456,12 +473,6 @@ $pager-active-color:                   $pagination-active-color !default;
 
 $pager-disabled-color:                 $pagination-disabled-color !default;
 
-//== Wells
-//
-//##
-
-$well-bg:                     #fafafa !default;
-$well-border:                 darken($well-bg, 7%) !default;
 
 //== Jumbotron
 //
@@ -469,7 +480,7 @@ $well-border:                 darken($well-bg, 7%) !default;
 
 $jumbotron-padding:              30px !default;
 $jumbotron-color:                inherit !default;
-$jumbotron-bg:                   $well-bg !default;
+$jumbotron-bg:                   #fafafa !default;
 $jumbotron-heading-color:        inherit !default;
 $jumbotron-font-size:            ceil(($font-size-base * 1.5)) !default;
 
@@ -532,7 +543,7 @@ $popover-title-bg:                    darken($popover-bg, 3%) !default;
 //** Popover arrow width
 $popover-arrow-width:                 10px !default;
 //** Popover arrow color
-$popover-arrow-color:                 #fff !default;
+$popover-arrow-color:                 $popover-bg !default;
 
 //** Popover outer arrow width
 $popover-arrow-outer-width:           ($popover-arrow-width + 1) !default;
@@ -628,9 +639,11 @@ $alert-danger-border:         $state-danger-border !default;
 //##
 
 //** Background color of the whole progress component
-$progress-bg:                 #fafafa !default;
+$progress-bg:                 $jumbotron-bg !default;
 //** Progress bar text color
 $progress-bar-color:          #fff !default;
+//** Variable for setting rounded corners on progress bar.
+$progress-border-radius:      $border-radius-base !default;
 
 //** Default progress bar color
 $progress-bar-bg:             $brand-primary !default;
@@ -736,6 +749,14 @@ $thumbnail-caption-color:     $text-color !default;
 $thumbnail-caption-padding:   9px !default;
 
 
+//== Wells
+//
+//##
+
+$well-bg:                     $jumbotron-bg !default;
+$well-border:                 darken($well-bg, 7%) !default;
+
+
 //== Badges
 //
 //##
@@ -837,5 +858,3 @@ $page-header-border-color:    $gray-lighter !default;
 $dl-horizontal-offset:        $component-offset-horizontal !default;
 //** Horizontal line color.
 $hr-border:                   $gray-lighter !default;
-
-
