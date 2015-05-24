@@ -1,4 +1,4 @@
-// Flatly 3.2.0
+// Flatly 3.3.4
 // Bootswatch
 // -----------------------------------------------------
 
@@ -9,6 +9,7 @@
 .navbar {
   border-width: 0;
 }
+
 .navbar-default {
 
   .badge {
@@ -26,9 +27,14 @@
 }
 
 .navbar-brand {
-  padding: 18.5px 15px 20.5px;
+  line-height: 1;
 }
+
 // Buttons ====================================================================
+
+.btn {
+  border-width: 2px;
+}
 
 .btn:active {
   @include box-shadow(none);
@@ -74,13 +80,19 @@ table,
     text-decoration: underline;
   }
 
+  .dropdown-menu a {
+    text-decoration: none;
+  }
+
   .success,
   .warning,
   .danger,
   .info {
     color: #fff;
 
-    a {
+    > th > a,
+    > td > a,
+    > a {
       color: #fff;
     }
   }
@@ -243,6 +255,48 @@ input, {
 
 .well {
   @include box-shadow(none);
+}
+
+a.list-group-item {
+
+  &.active,
+  &.active:hover,
+  &.active:focus {
+    border-color: $list-group-border;
+  }
+}
+
+a.list-group-item-success {
+  &.active {
+    background-color: $state-success-bg;
+  }
+
+  &.active:hover,
+  &.active:focus {
+    background-color: darken($state-success-bg, 5%);
+  }
+}
+
+a.list-group-item-warning {
+  &.active {
+    background-color: $state-warning-bg;
+  }
+
+  &.active:hover,
+  &.active:focus {
+    background-color: darken($state-warning-bg, 5%);
+  }
+}
+
+a.list-group-item-danger {
+  &.active {
+    background-color: $state-danger-bg;
+  }
+
+  &.active:hover,
+  &.active:focus {
+    background-color: darken($state-danger-bg, 5%);
+  }
 }
 
 .panel-default {
