@@ -1,4 +1,4 @@
-// Darkly 3.2.0
+// Darkly 3.3.4
 // Variables
 // --------------------------------------------------
 
@@ -7,9 +7,10 @@
 //
 //## Gray and brand colors for use across Bootstrap.
 
-$gray:                   #464545 !default;
-$gray-darker:            lighten(#000, 13.5%) !default; // #222
+$gray-base:              #000 !default;
+$gray-darker:            lighten($gray-base, 13.5%) !default; // #222
 $gray-dark:              #303030 !default;   // #333
+$gray:                   #464545 !default;
 $gray-light:             #999 !default;   // #999
 $gray-lighter:           #EBEBEB !default; // #eee
 
@@ -33,6 +34,8 @@ $text-color:            #fff !default;
 $link-color:            desaturate(lighten($brand-success, 10%),10%) !default;
 //** Link hover color set via `darken()` function.
 $link-hover-color:      $link-color !default;
+//** Link hover decoration.
+$link-hover-decoration: underline !default;
 
 
 //== Typography
@@ -95,7 +98,7 @@ $padding-small-horizontal:  9px !default;
 $padding-xs-vertical:       1px !default;
 $padding-xs-horizontal:     5px !default;
 
-$line-height-large:         1.33 !default;
+$line-height-large:         1.3333333 !default; // extra decimals for Win 8.1 Chrome
 $line-height-small:         1.5 !default;
 
 $border-radius-base:        4px !default;
@@ -105,7 +108,7 @@ $border-radius-small:       3px !default;
 //** Global color for active items (e.g., navs or dropdowns).
 $component-active-color:    #fff !default;
 //** Global background color for active items (e.g., navs or dropdowns).
-$component-active-bg:       $brand-success !default;
+$component-active-bg:       $brand-primary !default;
 
 //** Width of the `border` for generating carets that indicator dropdowns.
 $caret-width-base:          4px !default;
@@ -125,7 +128,7 @@ $table-condensed-cell-padding:  5px !default;
 //** Default background color used for all tables.
 $table-bg:                      transparent !default;
 //** Background color used for `.table-striped`.
-$table-bg-accent:               $gray-dark !default;
+$table-bg-accent:               lighten($gray-dark, 5%) !default;
 //** Background color used for `.table-hover`.
 $table-bg-hover:                $gray !default;
 $table-bg-active:               $table-bg-hover !default;
@@ -180,8 +183,16 @@ $input-bg-disabled:              $gray-lighter !default;
 $input-color:                    $gray !default;
 //** `<input>` border color
 $input-border:                   #f1f1f1 !default;
-//** `<input>` border radius
+
+// TODO: Rename `@input-border-radius` to `@input-border-radius-base` in v4
+//** Default `.form-control` border radius
+// This has no effect on `<select>`s in some browsers, due to the limited stylability of `<select>`s in CSS.
 $input-border-radius:            $border-radius-base !default;
+//** Large `.form-control` border radius
+$input-border-radius-large:      $border-radius-large !default;
+//** Small `.form-control` border radius
+$input-border-radius-small:      $border-radius-small !default;
+
 //** Border color for inputs on focus
 $input-border-focus:             #fff !default;
 
@@ -189,75 +200,57 @@ $input-border-focus:             #fff !default;
 $input-color-placeholder:        $gray-light !default;
 
 //** Default `.form-control` height
-$input-height-base:              ($line-height-computed + ($padding-base-vertical * 2) + 2) !default;
+$input-height-base:              ($line-height-computed + ($padding-base-vertical * 2) + 4) !default;
 //** Large `.form-control` height
-$input-height-large:             (ceil($font-size-large * $line-height-large) + ($padding-large-vertical * 2) + 2) !default;
+$input-height-large:             (ceil($font-size-large * $line-height-large) + ($padding-large-vertical * 2) + 4) !default;
 //** Small `.form-control` height
-$input-height-small:             (floor($font-size-small * $line-height-small) + ($padding-small-vertical * 2) + 2) !default;
+$input-height-small:             (floor($font-size-small * $line-height-small) + ($padding-small-vertical * 2) + 4) !default;
+
+//** `.form-group` margin
+$form-group-margin-bottom:       15px !default;
 
 $legend-color:                   $text-color !default;
 $legend-border-color:            transparent !default;
 
 //** Background color for textual input addons
-$input-group-addon-bg:           $gray-dark !default;
+$input-group-addon-bg:           $gray !default;
 //** Border color for textual input addons
 $input-group-addon-border-color: transparent !default;
 
-//== Type
-//
-//##
+//** Disabled cursor for form controls and buttons.
+$cursor-disabled:                not-allowed !default;
 
-//** Horizontal offset for forms and lists.
-$component-offset-horizontal: 180px !default;
-//** Text muted color
-$text-muted:                  $gray-light !default;
-//** Abbreviations and acronyms border color
-$abbr-border-color:           $gray-light !default;
-//** Headings small color
-$headings-small-color:        $gray-light !default;
-//** Blockquote small color
-$blockquote-small-color:      $gray-light !default;
-//** Blockquote font size
-$blockquote-font-size:        ($font-size-base * 1.25) !default;
-//** Blockquote border color
-$blockquote-border-color:     $gray !default;
-//** Page header border color
-$page-header-border-color:    transparent !default;
-//** Width of horizontal description list titles
-$dl-horizontal-offset:        $component-offset-horizontal !default;
-//** Horizontal line color.
-$hr-border:                   $gray !default;
 
 //== Dropdowns
 //
 //## Dropdown menu container and contents.
 
 //** Background for the dropdown menu.
-$dropdown-bg:                    #fff !default;
+$dropdown-bg:                    $gray-dark !default;
 //** Dropdown menu `border-color`.
 $dropdown-border:                rgba(0,0,0,.15) !default;
 //** Dropdown menu `border-color` **for IE8**.
 $dropdown-fallback-border:       #ccc !default;
 //** Divider color for between dropdown items.
-$dropdown-divider-bg:            #e5e5e5 !default;
+$dropdown-divider-bg:            $gray !default;
 
-//** Active dropdown menu item background color.
-$dropdown-link-active-bg:        $component-active-bg !default;
 //** Dropdown link text color.
-$dropdown-link-color:            $brand-primary !default;
+$dropdown-link-color:            $gray-lighter !default;
 //** Hover color for dropdown links.
 $dropdown-link-hover-color:      #fff !default;
 //** Hover background for dropdown links.
-$dropdown-link-hover-bg:         $dropdown-link-active-bg !default;
+$dropdown-link-hover-bg:         $component-active-bg !default;
 
 //** Active dropdown menu item text color.
 $dropdown-link-active-color:     #fff !default;
+//** Active dropdown menu item background color.
+$dropdown-link-active-bg:        $component-active-bg !default;
 
 //** Disabled dropdown menu item background color.
-$dropdown-link-disabled-color:   $text-muted !default;
+$dropdown-link-disabled-color:   $gray-light !default;
 
 //** Text color for headers within dropdown menus.
-$dropdown-header-color:          $text-muted !default;
+$dropdown-header-color:          $gray-light !default;
 
 //** Deprecated `@dropdown-caret-color` as of v3.1.0
 $dropdown-caret-color:           #000 !default;
@@ -338,17 +331,17 @@ $grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
 //## Define the maximum width of `.container` for different screen sizes.
 
 // Small screen / tablet
-$container-tablet:             ((720px + $grid-gutter-width)) !default;
+$container-tablet:             (720px + $grid-gutter-width) !default;
 //** For `@screen-sm-min` and up.
 $container-sm:                 $container-tablet !default;
 
 // Medium screen / desktop
-$container-desktop:            ((940px + $grid-gutter-width)) !default;
+$container-desktop:            (940px + $grid-gutter-width) !default;
 //** For `@screen-md-min` and up.
 $container-md:                 $container-desktop !default;
 
 // Large screen / wide desktop
-$container-large-desktop:      ((1140px + $grid-gutter-width)) !default;
+$container-large-desktop:      (1140px + $grid-gutter-width) !default;
 //** For `@screen-lg-min` and up.
 $container-lg:                 $container-large-desktop !default;
 
@@ -425,8 +418,6 @@ $nav-link-hover-bg:                         $gray-dark !default;
 
 $nav-disabled-link-color:                   lighten($gray, 10%) !default;
 $nav-disabled-link-hover-color:             lighten($gray, 10%) !default;
-
-$nav-open-link-hover-color:                 #fff !default;
 
 //== Tabs
 $nav-tabs-border-color:                     $gray !default;
@@ -524,7 +515,7 @@ $tooltip-max-width:           200px !default;
 //** Tooltip text color
 $tooltip-color:               #fff !default;
 //** Tooltip background color
-$tooltip-bg:                  rgba(0,0,0,.9) !default;
+$tooltip-bg:                  #000 !default;
 $tooltip-opacity:             .9 !default;
 
 //** Tooltip arrow width
@@ -651,6 +642,8 @@ $alert-danger-border:         $state-danger-border !default;
 $progress-bg:                 $gray-lighter !default;
 //** Progress bar text color
 $progress-bar-color:          #fff !default;
+//** Variable for setting rounded corners on progress bar.
+$progress-border-radius:      $border-radius-base !default;
 
 //** Default progress bar color
 $progress-bar-bg:             $brand-primary !default;
@@ -841,3 +834,27 @@ $pre-border-color:            #ccc !default;
 $pre-scrollable-max-height:   340px !default;
 
 
+//== Type
+//
+//##
+
+//** Horizontal offset for forms and lists.
+$component-offset-horizontal: 180px !default;
+//** Text muted color
+$text-muted:                  $gray-light !default;
+//** Abbreviations and acronyms border color
+$abbr-border-color:           $gray-light !default;
+//** Headings small color
+$headings-small-color:        $gray-light !default;
+//** Blockquote small color
+$blockquote-small-color:      $gray-light !default;
+//** Blockquote font size
+$blockquote-font-size:        ($font-size-base * 1.25) !default;
+//** Blockquote border color
+$blockquote-border-color:     $gray !default;
+//** Page header border color
+$page-header-border-color:    transparent !default;
+//** Width of horizontal description list titles
+$dl-horizontal-offset:        $component-offset-horizontal !default;
+//** Horizontal line color.
+$hr-border:                   $gray !default;
