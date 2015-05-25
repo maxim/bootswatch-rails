@@ -67,7 +67,7 @@ $textColor: #000;
 
 Included bootswatches
 
-* [Amelia](http://bootswatch.com/amelia/)
+* Amelia
 * [Cerulean](http://bootswatch.com/cerulean/)
 * [Cosmo](http://bootswatch.com/cosmo/)
 * [Cyborg](http://bootswatch.com/cyborg/)
