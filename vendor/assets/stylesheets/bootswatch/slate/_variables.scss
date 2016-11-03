@@ -1,4 +1,4 @@
-// Slate 3.3.5
+// Slate 3.3.7
 // Variables
 // --------------------------------------------------
 
@@ -110,7 +110,7 @@ $component-active-color:    #fff !default;
 //** Global background color for active items (e.g., navs or dropdowns).
 $component-active-bg:       transparent !default;
 
-//** Width of the `border` for generating carets that indicator dropdowns.
+//** Width of the `border` for generating carets that indicate dropdowns.
 $caret-width-base:          4px !default;
 //** Carets increase slightly in size for larger components.
 $caret-width-large:         5px !default;
@@ -187,7 +187,7 @@ $input-bg-disabled:              $gray-lighter !default;
 //** Text color for `<input>`s
 $input-color:                    $gray-darker !default;
 //** `<input>` border color
-$input-border:                   #ccc !default;
+$input-border:                   #000 !default;
 
 // TODO: Rename `@input-border-radius` to `@input-border-radius-base` in v4
 //** Default `.form-control` border radius
@@ -218,9 +218,9 @@ $legend-color:                   $text-color !default;
 $legend-border-color:            darken($gray-darker, 5%) !default;
 
 //** Background color for textual input addons
-$input-group-addon-bg:           $gray-lighter !default;
+$input-group-addon-bg:           $gray-dark !default;
 //** Border color for textual input addons
-$input-group-addon-border-color: $input-border !default;
+$input-group-addon-border-color: rgba(0, 0, 0, 0.6) !default;
 
 //** Disabled cursor for form controls and buttons.
 $cursor-disabled:                not-allowed !default;
@@ -862,5 +862,7 @@ $blockquote-border-color:     $gray-light !default;
 $page-header-border-color:    darken($gray-darker, 5%) !default;
 //** Width of horizontal description list titles
 $dl-horizontal-offset:        $component-offset-horizontal !default;
+//** Point at which .dl-horizontal becomes horizontal
+$dl-horizontal-breakpoint:    $grid-float-breakpoint !default;
 //** Horizontal line color.
 $hr-border:                   darken($gray-darker, 5%) !default;

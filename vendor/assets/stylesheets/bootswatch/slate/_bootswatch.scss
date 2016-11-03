@@ -1,4 +1,4 @@
-// Slate 3.3.5
+// Slate 3.3.7
 // Bootswatch
 // -----------------------------------------------------
 
@@ -8,17 +8,52 @@
 }
 
 @mixin btn-shadow-inverse($color) {
-  @include gradient-vertical-three-colors(darken($color, 24%), darken($color, 18%), 40%, darken($color, 14%));
+  @include gradient-vertical-three-colors(darken($color, 24%), darken($color, 18%), 40%, darken($color, 16%));
   filter: none;
 }
 
 // Navbar =====================================================================
 
 .navbar {
+  .navbar-default,
+  .navbar-inverse {
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 
-  @include btn-shadow($navbar-default-bg);
-  border: 1px solid rgba(0, 0, 0, 0.6);
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    @media (min-width: $grid-float-breakpoint) {
+      .navbar-nav > li > a {
+        border-right: 1px solid rgba(0, 0, 0, 0.2);
+        border-left: 1px solid rgba(255, 255, 255, 0.1);
+
+        &:hover {
+          border-left-color: transparent;
+        }
+      }
+
+      .nav .open > a {
+        border-color: transparent;
+      }
+
+      .navbar-nav > li.active > a {
+        border-left-color: transparent;
+      }
+
+      .navbar-form {
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .navbar-default {
+    @include btn-shadow($navbar-default-bg);
+
+    .navbar-nav > li > a {
+      &:hover {
+        @include btn-shadow-inverse($navbar-default-bg);
+      }
+    }
+  }
 
   .navbar-inverse {
     @include btn-shadow($navbar-inverse-bg);
@@ -26,29 +61,13 @@
     .badge {
       background-color: $navbar-inverse-link-active-bg;
     }
-  }
 
-  .navbar-nav > li > a {
-    border-right: 1px solid rgba(0, 0, 0, 0.2);
-    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    .navbar-nav > li > a {
 
-    &:hover {
-      @include btn-shadow-inverse($navbar-default-bg);
-      border-left-color: transparent;
+      &:hover {
+        @include btn-shadow-inverse($navbar-inverse-bg);
+      }
     }
-  }
-
-  .nav .open > a {
-    border-color: transparent;
-  }
-
-  .navbar-nav > li.active > a {
-    border-left-color: transparent;
-  }
-
-  .navbar-form {
-    margin-left: 5px;
-    margin-right: 5px;
   }
 }
 
@@ -201,8 +220,7 @@ textarea {
   }
 
   .input-group-addon {
-    background-color: $body-bg;
-    border: none;
+    border-color: $input-group-addon-border-color;
   }
 }
 
@@ -227,8 +245,7 @@ textarea {
   }
 
   .input-group-addon {
-    background-color: $body-bg;
-    border: none;
+    border-color: $input-group-addon-border-color;
   }
 }
 
@@ -253,8 +270,7 @@ textarea {
   }
 
   .input-group-addon {
-    background-color: $body-bg;
-    border: none;
+    border-color: $input-group-addon-border-color;
   }
 }
 
@@ -263,9 +279,8 @@ legend {
 }
 
 .input-group-addon {
-  border-color: rgba(0, 0, 0, 0.6);
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
   @include btn-shadow($btn-default-bg);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
   color: $btn-default-color;
 }
 

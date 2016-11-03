@@ -1,4 +1,4 @@
-// United 3.3.5
+// United 3.3.7
 // Variables
 // --------------------------------------------------
 
@@ -14,7 +14,7 @@ $gray:                   #777 !default; // #555
 $gray-light:             #AEA79F !default;   // #999
 $gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
 
-$brand-primary:         #DD4814 !default;
+$brand-primary:         #E95420 !default;
 $brand-success:         #38B44A !default;
 $brand-info:            #772953 !default;
 $brand-warning:         #EFB73E !default;
@@ -110,7 +110,7 @@ $component-active-color:    #fff !default;
 //** Global background color for active items (e.g., navs or dropdowns).
 $component-active-bg:       $brand-primary !default;
 
-//** Width of the `border` for generating carets that indicator dropdowns.
+//** Width of the `border` for generating carets that indicate dropdowns.
 $caret-width-base:          4px !default;
 //** Carets increase slightly in size for larger components.
 $caret-width-large:         5px !default;
@@ -862,5 +862,7 @@ $blockquote-border-color:     $gray-lighter !default;
 $page-header-border-color:    $gray-lighter !default;
 //** Width of horizontal description list titles
 $dl-horizontal-offset:        $component-offset-horizontal !default;
+//** Point at which .dl-horizontal becomes horizontal
+$dl-horizontal-breakpoint:    $grid-float-breakpoint !default;
 //** Horizontal line color.
 $hr-border:                   $gray-lighter !default;

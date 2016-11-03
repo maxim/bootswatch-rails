@@ -1,15 +1,20 @@
-// Superhero 3.3.5
+// Superhero 3.3.7
 // Bootswatch
 // -----------------------------------------------------
 
-@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700");
+$web-font-path: "https://fonts.googleapis.com/css?family=Lato:300,400,700";
+
+@mixin web-font($path) {
+  @import url("@{path}");
+}
+@mixin web-font($web-font-path);
 
 // Navbar =====================================================================
 
 .navbar {
   @include box-shadow(none);
   border: none;
-  font-size: 12px;
+  font-size: $font-size-small;
 
   .navbar-default {
 
@@ -32,8 +37,6 @@
 
 .btn {
 
-  font-weight: 300;
-
   .btn-default {
     &:hover {
       background-color: darken($btn-default-bg, 3%);
@@ -42,15 +45,11 @@
 
   .btn-sm,
   .btn-xs {
-    font-size: 12px;
+    font-size: $font-size-small;
   }
 }
 
 // Typography =================================================================
-
-body {
-  font-weight: 300;
-}
 
 .text-primary,
 .text-primary:hover {
@@ -88,8 +87,7 @@ body {
   @include box-shadow(none);
 
   > li > a {
-    font-size: 12px;
-    font-weight: 300;
+    font-size: $font-size-small;
   }
 }
 
@@ -98,14 +96,14 @@ body {
 }
 
 .dropdown-header {
-  font-size: 12px;
+  font-size: $font-size-small;
 }
 
 // Tables =====================================================================
 
 table,
 .table {
-  font-size: 12px;
+  font-size: $font-size-small;
 
   a:not(.btn) {
     color: #fff;
@@ -141,8 +139,7 @@ label,
 .radio label,
 .checkbox label,
 .help-block {
-  font-size: 12px;
-  font-weight: 300;
+  font-size: $font-size-small;
 }
 
 .input-addon,
@@ -165,6 +162,11 @@ label,
     color: $brand-warning;
   }
 
+  .form-control,
+  .form-control:focus {
+    border: 4px solid $brand-warning;
+  }
+
   .input-group-addon {
     border: none;
   }
@@ -185,6 +187,11 @@ label,
     color: $brand-danger;
   }
 
+  .form-control,
+  .form-control:focus {
+    border: 4px solid $brand-danger;
+  }
+
   .input-group-addon {
     border: none;
   }
@@ -203,6 +210,11 @@ label,
   &.checkbox-inline label,
   .form-control-feedback {
     color: $brand-success;
+  }
+
+  .form-control,
+  .form-control:focus {
+    border: 4px solid $brand-success;
   }
 
   .input-group-addon {
@@ -251,10 +263,6 @@ label,
 }
 
 // Indicators =================================================================
-
-.label {
-  font-weight: 300;
-}
 
 .alert {
   color: #fff;

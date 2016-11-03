@@ -1,8 +1,13 @@
-// Darkly 3.3.5
+// Darkly 3.3.7
 // Bootswatch
 // -----------------------------------------------------
 
-@import url("https://fonts.googleapis.com/css?family=Lato:400,700,400italic");
+$web-font-path: "https://fonts.googleapis.com/css?family=Lato:400,700,400italic";
+
+@mixin web-font($path) {
+  @import url("@{path}");
+}
+@mixin web-font($web-font-path);
 
 // Navbar =====================================================================
 
@@ -142,6 +147,10 @@ textarea {
   &:focus {
     @include box-shadow(none);
   }
+}
+
+.form-control-feedback {
+  color: $input-color;
 }
 
 .has-warning {

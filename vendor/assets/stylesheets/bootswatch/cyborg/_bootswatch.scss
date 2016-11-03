@@ -1,8 +1,13 @@
-// Cyborg 3.3.5
+// Cyborg 3.3.7
 // Bootswatch
 // -----------------------------------------------------
 
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
+$web-font-path: "https://fonts.googleapis.com/css?family=Roboto:400,700";
+
+@mixin web-font($path) {
+  @import url("@{path}");
+}
+@mixin web-font($web-font-path);
 
 // Navbar =====================================================================
 
@@ -33,6 +38,13 @@
 .text-info,
 .text-info:hover {
   color: $brand-info;
+}
+
+.bg-success,
+.bg-info,
+.bg-warning,
+.bg-danger {
+  color: #fff;
 }
 
 // Tables =====================================================================
@@ -129,10 +141,6 @@ table,
 
 legend {
   color: #fff;
-}
-
-.input-group-addon {
-  background-color: $btn-default-bg;
 }
 
 // Navs =======================================================================

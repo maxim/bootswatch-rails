@@ -1,4 +1,4 @@
-// Cyborg 3.3.5
+// Cyborg 3.3.7
 // Variables
 // --------------------------------------------------
 
@@ -110,7 +110,7 @@ $component-active-color:    #fff !default;
 //** Global background color for active items (e.g., navs or dropdowns).
 $component-active-bg:       $brand-primary !default;
 
-//** Width of the `border` for generating carets that indicator dropdowns.
+//** Width of the `border` for generating carets that indicate dropdowns.
 $caret-width-base:          4px !default;
 //** Carets increase slightly in size for larger components.
 $caret-width-large:         5px !default;
@@ -218,7 +218,7 @@ $legend-color:                   $text-color !default;
 $legend-border-color:            $gray-dark !default;
 
 //** Background color for textual input addons
-$input-group-addon-bg:           $gray-lighter !default;
+$input-group-addon-bg:           $btn-default-bg !default;
 //** Border color for textual input addons
 $input-group-addon-border-color: $input-border !default;
 
@@ -521,7 +521,7 @@ $tooltip-max-width:           200px !default;
 //** Tooltip text color
 $tooltip-color:               #fff !default;
 //** Tooltip background color
-$tooltip-bg:                  #000 !default;
+$tooltip-bg:                  lighten($body-bg, 15%) !default;
 $tooltip-opacity:             .9 !default;
 
 //** Tooltip arrow width
@@ -535,13 +535,13 @@ $tooltip-arrow-color:         $tooltip-bg !default;
 //##
 
 //** Popover body background color
-$popover-bg:                          lighten($body-bg, 10%) !default;
+$popover-bg:                          $tooltip-bg !default;
 //** Popover maximum width
 $popover-max-width:                   276px !default;
 //** Popover border color
 $popover-border-color:                rgba(0,0,0,.2) !default;
 //** Popover fallback border color
-$popover-fallback-border-color:       #999 !default;
+$popover-fallback-border-color:       $popover-bg !default;
 
 //** Popover title background color
 $popover-title-bg:                    darken($popover-bg, 3%) !default;
@@ -554,9 +554,9 @@ $popover-arrow-color:                 $popover-bg !default;
 //** Popover outer arrow width
 $popover-arrow-outer-width:           ($popover-arrow-width + 1) !default;
 //** Popover outer arrow color
-$popover-arrow-outer-color:           fadein($popover-border-color, 5%) !default;
+$popover-arrow-outer-color:           $popover-border-color !default;
 //** Popover outer arrow fallback color
-$popover-arrow-outer-fallback-color:  darken($popover-fallback-border-color, 20%) !default;
+$popover-arrow-outer-fallback-color:  $popover-fallback-border-color !default;
 
 
 //== Labels
@@ -862,5 +862,7 @@ $blockquote-border-color:     $gray-dark !default;
 $page-header-border-color:    $gray-dark !default;
 //** Width of horizontal description list titles
 $dl-horizontal-offset:        $component-offset-horizontal !default;
+//** Point at which .dl-horizontal becomes horizontal
+$dl-horizontal-breakpoint:    $grid-float-breakpoint !default;
 //** Horizontal line color.
 $hr-border:                   $gray-dark !default;
