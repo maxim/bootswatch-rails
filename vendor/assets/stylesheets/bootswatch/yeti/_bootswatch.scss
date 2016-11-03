@@ -2,7 +2,7 @@
 // Bootswatch
 // -----------------------------------------------------
 
-@import url("//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
 
 // Navbar =====================================================================
 
@@ -15,75 +15,78 @@
     background-color: #b3b3b3;
   }
 
+  .navbar-collapse {
+    border-top-color: $dropdown-divider-bg;
+    @include box-shadow(none);
+  }
+
   .btn {
     padding-top: 6px;
     padding-bottom: 6px;
   }
 
-  .dropdown-menu {
-    border: none;
+  .navbar-form {
+    margin-top: 7px;
+    margin-bottom: 5px;
 
-    > li > a,
-    > li > a:focus {
-      background-color: transparent;
-      font-size: 13px;
-      font-weight: 300;
+    .form-control {
+      height: auto;
+      padding: $padding-xs-vertical $padding-xs-horizontal;
     }
   }
 
-  .dropdown-header {
-    color: rgba(255, 255, 255, 0.5);
-  }
+  .dropdown {
 
-}
+    .dropdown-menu {
+      border: none;
 
-.navbar-form {
-  margin-top: 7px;
-  margin-bottom: 5px;
-
-  .form-control {
-    height: auto;
-    padding: $padding-xs-vertical $padding-xs-horizontal;
-  }
-}
-
-.navbar-collapse {
-  border-top-color: $dropdown-divider-bg;
-  @include box-shadow(none);
-}
-
-.navbar-default {
-
-  .dropdown-menu {
-    background-color: $navbar-default-bg;
-
-    > li > a,
-    > li > a:focus {
-      color: $navbar-default-color;
+      > li > a,
+      > li > a:focus {
+        background-color: transparent;
+        font-size: 13px;
+        font-weight: 300;
+      }
     }
 
-    > li > a:hover,
-    > .active > a,
-    > .active > a:hover {
-      background-color: $navbar-default-link-hover-bg;
+    .dropdown-header {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+  }
+
+  .navbar-default {
+
+    .dropdown-menu {
+      background-color: $navbar-default-bg;
+
+      > li > a,
+      > li > a:focus {
+        color: $navbar-default-color;
+      }
+
+      > li > a:hover,
+      > .active > a,
+      > .active > a:hover {
+        background-color: $navbar-default-link-hover-bg;
+      }
     }
   }
-}
 
-.navbar-inverse {
+  .navbar-inverse {
 
-  .dropdown-menu {
-    background-color: $navbar-inverse-bg;
+    .dropdown-menu {
+      background-color: $navbar-inverse-bg;
 
-    > li > a,
-    > li > a:focus {
-      color: $navbar-inverse-color;
-    }
+      > li > a,
+      > li > a:focus {
+        color: $navbar-inverse-color;
+      }
 
-    > li > a:hover,
-    > .active > a,
-    > .active > a:hover {
-      background-color: $navbar-inverse-link-hover-bg;
+      > li > a:hover,
+      > .active > a,
+      > .active > a:hover {
+        background-color: $navbar-inverse-link-hover-bg;
+      }
     }
   }
 }
@@ -92,18 +95,18 @@
 
 .btn {
   padding: $padding-base-vertical $padding-base-horizontal;
-}
 
-.btn-lg {
-  padding: $padding-large-vertical $padding-large-horizontal;
-}
+  .btn-lg {
+    padding: $padding-large-vertical $padding-large-horizontal;
+  }
 
-.btn-sm {
-  padding: $padding-small-vertical $padding-small-horizontal;
-}
+  .btn-sm {
+    padding: $padding-small-vertical $padding-small-horizontal;
+  }
 
-.btn-xs {
-  padding: $padding-xs-vertical $padding-xs-horizontal;
+  .btn-xs {
+    padding: $padding-xs-vertical $padding-xs-horizontal;
+  }
 }
 
 .btn-group {
@@ -313,15 +316,15 @@ input[type="checkbox"] {
       border-radius: 3px;
     }
   }
-}
 
-.pagination-lg > li > a {
-  padding-left: 22px;
-  padding-right: 22px;
-}
+  .pagination-lg > li > a {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
 
-.pagination-sm > li > a {
-  padding: 0 5px;
+  .pagination-sm > li > a {
+    padding: 0 5px;
+  }
 }
 
 .pager {
@@ -364,11 +367,11 @@ input[type="checkbox"] {
   padding-right: 1em;
   border-radius: 0;
   font-weight: 300;
-}
 
-.label-default {
-  background-color: $btn-default-bg;
-  color: $btn-default-color;
+  .label-default {
+    background-color: $btn-default-bg;
+    color: $btn-default-color;
+  }
 }
 
 .badge {
@@ -387,21 +390,24 @@ input[type="checkbox"] {
 
 // Containers =================================================================
 
-.dropdown-menu {
-  padding: 0;
-  margin-top: 0;
-  font-size: $font-size-small;
+.dropdown {
 
-  > li > a {
-    padding: 12px 15px;
+  .dropdown-menu {
+    padding: 0;
+    margin-top: 0;
+    font-size: $font-size-small;
+
+    > li > a {
+      padding: 12px 15px;
+    }
   }
-}
 
-.dropdown-header {
-  padding-left: 15px;
-  padding-right: 15px;
-  font-size: 9px;
-  text-transform: uppercase;
+  .dropdown-header {
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 9px;
+    text-transform: uppercase;
+  }
 }
 
 .popover {
@@ -410,15 +416,17 @@ input[type="checkbox"] {
   font-weight: 300;
 }
 
-.panel-heading,
-.panel-footer {
-  border-top-right-radius: 0;
-  border-top-left-radius: 0;
-}
+.panel {
+  .panel-heading,
+  .panel-footer {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
 
-.panel-default {
-  .close {
-    color: $text-color;
+  .panel-default {
+    .close {
+      color: $text-color;
+    }
   }
 }
 

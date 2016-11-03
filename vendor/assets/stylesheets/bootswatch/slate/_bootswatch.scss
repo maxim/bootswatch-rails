@@ -20,36 +20,36 @@
   border: 1px solid rgba(0, 0, 0, 0.6);
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 
+  .navbar-inverse {
+    @include btn-shadow($navbar-inverse-bg);
+
+    .badge {
+      background-color: $navbar-inverse-link-active-bg;
+    }
+  }
+
+  .navbar-nav > li > a {
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+
+    &:hover {
+      @include btn-shadow-inverse($navbar-default-bg);
+      border-left-color: transparent;
+    }
+  }
+
   .nav .open > a {
     border-color: transparent;
   }
-}
 
-.navbar-inverse {
-  @include btn-shadow($navbar-inverse-bg);
-
-  .badge {
-    background-color: $navbar-inverse-link-active-bg;
-  }
-}
-
-.navbar-nav > li > a {
-  border-right: 1px solid rgba(0, 0, 0, 0.2);
-  border-left: 1px solid rgba(255, 255, 255, 0.1);
-
-  &:hover {
-    @include btn-shadow-inverse($navbar-default-bg);
+  .navbar-nav > li.active > a {
     border-left-color: transparent;
   }
-}
 
-.navbar-nav > li.active > a {
-  border-left-color: transparent;
-}
-
-.navbar-form {
-  margin-left: 5px;
-  margin-right: 5px;
+  .navbar-form {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
 }
 
 // Buttons ====================================================================
@@ -154,17 +154,17 @@ h1, h2, h3, h4, h5, h6 {
   .info {
     color: #fff;
   }
-}
 
-.table-bordered tbody {
+  .table-bordered tbody {
 
-  tr.success,
-  tr.warning,
-  tr.danger {
+    tr.success,
+    tr.warning,
+    tr.danger {
 
-    td,
-    &:hover td {
-      border-color: $table-border-color;
+      td,
+      &:hover td {
+        border-color: $table-border-color;
+      }
     }
   }
 }
@@ -390,38 +390,38 @@ a.list-group-item {
   &.active:focus {
     border-color: $list-group-border;
   }
-}
 
-a.list-group-item-success {
-  &.active {
-    background-color: $state-success-bg;
+  a.list-group-item-success {
+    &.active {
+      background-color: $state-success-bg;
+    }
+
+    &.active:hover,
+    &.active:focus {
+      background-color: darken($state-success-bg, 5%);
+    }
   }
 
-  &.active:hover,
-  &.active:focus {
-    background-color: darken($state-success-bg, 5%);
-  }
-}
-
-a.list-group-item-warning {
-  &.active {
-    background-color: $state-warning-bg;
-  }
-
-  &.active:hover,
-  &.active:focus {
-    background-color: darken($state-warning-bg, 5%);
-  }
-}
-
-a.list-group-item-danger {
-  &.active {
-    background-color: $state-danger-bg;
+  a.list-group-item-warning {
+    &.active {
+      background-color: $state-warning-bg;
+    }
+    
+    &.active:hover,
+    &.active:focus {
+      background-color: darken($state-warning-bg, 5%);
+    }
   }
 
-  &.active:hover,
-  &.active:focus {
-    background-color: darken($state-danger-bg, 5%);
+  a.list-group-item-danger {
+    &.active {
+      background-color: $state-danger-bg;
+    }
+    
+    &.active:hover,
+    &.active:focus {
+      background-color: darken($state-danger-bg, 5%);
+    }
   }
 }
 

@@ -145,27 +145,27 @@ $btn-font-weight:                normal !default;
 
 $btn-default-color:              #fff !default;
 $btn-default-bg:                 $gray-darker !default;
-$btn-default-border:             hsla(0, 100%, 100%, 0) !default;
+$btn-default-border:             transparent !default;
 
 $btn-primary-color:              #fff !default;
 $btn-primary-bg:                 $brand-primary !default;
-$btn-primary-border:             hsla(0, 100%, 100%, 0) !default;
+$btn-primary-border:             transparent !default;
 
 $btn-success-color:              #fff !default;
 $btn-success-bg:                 $brand-success !default;
-$btn-success-border:             hsla(0, 100%, 100%, 0) !default;
+$btn-success-border:             transparent !default;
 
 $btn-info-color:                 #fff !default;
 $btn-info-bg:                    $brand-info !default;
-$btn-info-border:                hsla(0, 100%, 100%, 0) !default;
+$btn-info-border:                transparent !default;
 
 $btn-warning-color:              #fff !default;
 $btn-warning-bg:                 $brand-warning !default;
-$btn-warning-border:             hsla(0, 100%, 100%, 0) !default;
+$btn-warning-border:             transparent !default;
 
 $btn-danger-color:               #fff !default;
 $btn-danger-bg:                  $brand-danger !default;
-$btn-danger-border:              hsla(0, 100%, 100%, 0) !default;
+$btn-danger-border:              transparent !default;
 
 $btn-link-disabled-color:        $gray-light !default;
 
@@ -199,7 +199,7 @@ $input-border-radius-large:      $border-radius-large !default;
 $input-border-radius-small:      $border-radius-small !default;
 
 //** Border color for inputs on focus
-$input-border-focus:             hsla(0, 100%, 100%, 0) !default;
+$input-border-focus:             transparent !default;
 
 //** Placeholder text color
 $input-color-placeholder:        $gray-light !default;
@@ -370,21 +370,21 @@ $navbar-default-border:            $gray-darker !default;
 // Navbar links
 $navbar-default-link-color:                $gray !default;
 $navbar-default-link-hover-color:          #fff !default;
-$navbar-default-link-hover-bg:             hsla(0, 100%, 100%, 0) !default;
+$navbar-default-link-hover-bg:             transparent !default;
 $navbar-default-link-active-color:         #fff !default;
 $navbar-default-link-active-bg:            darken($navbar-default-bg, 2%) !default;
 $navbar-default-link-disabled-color:       #ccc !default;
-$navbar-default-link-disabled-bg:          hsla(0, 100%, 100%, 0) !default;
+$navbar-default-link-disabled-bg:          transparent !default;
 
 // Navbar brand label
 $navbar-default-brand-color:               #fff !default;
 $navbar-default-brand-hover-color:         #fff !default;
-$navbar-default-brand-hover-bg:            hsla(0, 100%, 100%, 0) !default;
+$navbar-default-brand-hover-bg:            transparent !default;
 
 // Navbar toggle
 $navbar-default-toggle-hover-bg:           $navbar-default-link-active-bg !default;
 $navbar-default-toggle-icon-bar-bg:        $navbar-default-link-color !default;
-$navbar-default-toggle-border-color:       hsla(0, 100%, 100%, 0) !default;
+$navbar-default-toggle-border-color:       transparent !default;
 
 
 //=== Inverted navbar
@@ -396,21 +396,21 @@ $navbar-inverse-border:                     $brand-success !default;
 // Inverted navbar links
 $navbar-inverse-link-color:                 darken($brand-success, 15%) !default;
 $navbar-inverse-link-hover-color:           #fff !default;
-$navbar-inverse-link-hover-bg:              hsla(0, 100%, 100%, 0) !default;
+$navbar-inverse-link-hover-bg:              transparent !default;
 $navbar-inverse-link-active-color:          $navbar-inverse-link-hover-color !default;
 $navbar-inverse-link-active-bg:             darken($navbar-inverse-bg, 4%) !default;
 $navbar-inverse-link-disabled-color:        #444 !default;
-$navbar-inverse-link-disabled-bg:           hsla(0, 100%, 100%, 0) !default;
+$navbar-inverse-link-disabled-bg:           transparent !default;
 
 // Inverted navbar brand label
 $navbar-inverse-brand-color:                #fff !default;
 $navbar-inverse-brand-hover-color:          #fff !default;
-$navbar-inverse-brand-hover-bg:             hsla(0, 100%, 100%, 0) !default;
+$navbar-inverse-brand-hover-bg:             transparent !default;
 
 // Inverted navbar toggle
 $navbar-inverse-toggle-hover-bg:            $navbar-inverse-link-active-bg !default;
 $navbar-inverse-toggle-icon-bar-bg:         $navbar-inverse-link-color !default;
-$navbar-inverse-toggle-border-color:        hsla(0, 100%, 100%, 0) !default;
+$navbar-inverse-toggle-border-color:        transparent !default;
 
 
 //== Navs
@@ -625,19 +625,19 @@ $alert-link-font-weight:      bold !default;
 
 $alert-success-bg:            $brand-success !default;
 $alert-success-text:          #fff !default;
-$alert-success-border:        hsla(0, 100%, 100%, 0) !default;
+$alert-success-border:        transparent !default;
 
 $alert-info-bg:               $brand-info !default;
 $alert-info-text:             #fff !default;
-$alert-info-border:           hsla(0, 100%, 100%, 0) !default;
+$alert-info-border:           transparent !default;
 
 $alert-warning-bg:            $brand-warning !default;
 $alert-warning-text:          #fff !default;
-$alert-warning-border:        hsla(0, 100%, 100%, 0) !default;
+$alert-warning-border:        transparent !default;
 
 $alert-danger-bg:             $brand-danger !default;
 $alert-danger-text:           #fff !default;
-$alert-danger-border:         hsla(0, 100%, 100%, 0) !default;
+$alert-danger-border:         transparent !default;
 
 
 //== Progress bars

@@ -126,7 +126,7 @@ $table-cell-padding:            8px !default;
 $table-condensed-cell-padding:  5px !default;
 
 //** Default background color used for all tables.
-$table-bg:                      hsla(0, 100%, 100%, 0) !default;
+$table-bg:                      transparent !default;
 //** Background color used for `.table-striped`.
 $table-bg-accent:               #f9f9f9 !default;
 //** Background color used for `.table-hover`.
@@ -149,23 +149,23 @@ $btn-default-border:             #eee !default;
 
 $btn-primary-color:              #fff !default;
 $btn-primary-bg:                 $brand-primary !default;
-$btn-primary-border:             hsla(0, 100%, 100%, 0) !default;
+$btn-primary-border:             transparent !default;
 
 $btn-success-color:              #fff !default;
 $btn-success-bg:                 $brand-success !default;
-$btn-success-border:             hsla(0, 100%, 100%, 0) !default;
+$btn-success-border:             transparent !default;
 
 $btn-info-color:                 #fff !default;
 $btn-info-bg:                    $brand-info !default;
-$btn-info-border:                hsla(0, 100%, 100%, 0) !default;
+$btn-info-border:                transparent !default;
 
 $btn-warning-color:              #fff !default;
 $btn-warning-bg:                 $brand-warning !default;
-$btn-warning-border:             hsla(0, 100%, 100%, 0) !default;
+$btn-warning-border:             transparent !default;
 
 $btn-danger-color:               #fff !default;
 $btn-danger-bg:                  $brand-danger !default;
-$btn-danger-border:              hsla(0, 100%, 100%, 0) !default;
+$btn-danger-border:              transparent !default;
 
 $btn-link-disabled-color:        $gray-light !default;
 
@@ -180,14 +180,14 @@ $btn-border-radius-small:        $border-radius-small !default;
 //##
 
 //** `<input>` background color
-$input-bg:                       hsla(0, 100%, 100%, 0) !default;
+$input-bg:                       transparent !default;
 //** `<input disabled>` background color
-$input-bg-disabled:              hsla(0, 100%, 100%, 0) !default;
+$input-bg-disabled:              transparent !default;
 
 //** Text color for `<input>`s
 $input-color:                    $gray !default;
 //** `<input>` border color
-$input-border:                   hsla(0, 100%, 100%, 0) !default;
+$input-border:                   transparent !default;
 
 // TODO: Rename `@input-border-radius` to `@input-border-radius-base` in v4
 //** Default `.form-control` border radius
@@ -218,7 +218,7 @@ $legend-color:                   $gray-dark !default;
 $legend-border-color:            #e5e5e5 !default;
 
 //** Background color for textual input addons
-$input-group-addon-bg:           hsla(0, 100%, 100%, 0) !default;
+$input-group-addon-bg:           transparent !default;
 //** Border color for textual input addons
 $input-group-addon-border-color: $input-border !default;
 
@@ -365,52 +365,52 @@ $navbar-collapse-max-height:       340px !default;
 
 $navbar-default-color:             $gray-light !default;
 $navbar-default-bg:                #fff !default;
-$navbar-default-border:            hsla(0, 100%, 100%, 0) !default;
+$navbar-default-border:            transparent !default;
 
 // Navbar links
 $navbar-default-link-color:                $gray !default;
 $navbar-default-link-hover-color:          $gray-dark !default;
-$navbar-default-link-hover-bg:             hsla(0, 100%, 100%, 0) !default;
+$navbar-default-link-hover-bg:             transparent !default;
 $navbar-default-link-active-color:         $gray-dark !default;
 $navbar-default-link-active-bg:            darken($navbar-default-bg, 6.5%) !default;
 $navbar-default-link-disabled-color:       #ccc !default;
-$navbar-default-link-disabled-bg:          hsla(0, 100%, 100%, 0) !default;
+$navbar-default-link-disabled-bg:          transparent !default;
 
 // Navbar brand label
 $navbar-default-brand-color:               $navbar-default-link-color !default;
 $navbar-default-brand-hover-color:         $navbar-default-link-hover-color !default;
-$navbar-default-brand-hover-bg:            hsla(0, 100%, 100%, 0) !default;
+$navbar-default-brand-hover-bg:            transparent !default;
 
 // Navbar toggle
-$navbar-default-toggle-hover-bg:           hsla(0, 100%, 100%, 0) !default;
+$navbar-default-toggle-hover-bg:           transparent !default;
 $navbar-default-toggle-icon-bar-bg:        rgba(0,0,0,0.5) !default;
-$navbar-default-toggle-border-color:       hsla(0, 100%, 100%, 0) !default;
+$navbar-default-toggle-border-color:       transparent !default;
 
 
 //=== Inverted navbar
 // Reset inverted navbar basics
 $navbar-inverse-color:                      $gray-light !default;
 $navbar-inverse-bg:                         $brand-primary !default;
-$navbar-inverse-border:                     hsla(0, 100%, 100%, 0) !default;
+$navbar-inverse-border:                     transparent !default;
 
 // Inverted navbar links
 $navbar-inverse-link-color:                 lighten($brand-primary, 30%) !default;
 $navbar-inverse-link-hover-color:           #fff !default;
-$navbar-inverse-link-hover-bg:              hsla(0, 100%, 100%, 0) !default;
+$navbar-inverse-link-hover-bg:              transparent !default;
 $navbar-inverse-link-active-color:          $navbar-inverse-link-hover-color !default;
 $navbar-inverse-link-active-bg:             darken($navbar-inverse-bg, 10%) !default;
 $navbar-inverse-link-disabled-color:        #444 !default;
-$navbar-inverse-link-disabled-bg:           hsla(0, 100%, 100%, 0) !default;
+$navbar-inverse-link-disabled-bg:           transparent !default;
 
 // Inverted navbar brand label
 $navbar-inverse-brand-color:                $navbar-inverse-link-color !default;
 $navbar-inverse-brand-hover-color:          #fff !default;
-$navbar-inverse-brand-hover-bg:             hsla(0, 100%, 100%, 0) !default;
+$navbar-inverse-brand-hover-bg:             transparent !default;
 
 // Inverted navbar toggle\
-$navbar-inverse-toggle-hover-bg:            hsla(0, 100%, 100%, 0) !default;
+$navbar-inverse-toggle-hover-bg:            transparent !default;
 $navbar-inverse-toggle-icon-bar-bg:         rgba(0,0,0,0.5) !default;
-$navbar-inverse-toggle-border-color:        hsla(0, 100%, 100%, 0) !default;
+$navbar-inverse-toggle-border-color:        transparent !default;
 
 
 //== Navs
@@ -425,13 +425,13 @@ $nav-disabled-link-color:                   $gray-light !default;
 $nav-disabled-link-hover-color:             $gray-light !default;
 
 //== Tabs
-$nav-tabs-border-color:                     hsla(0, 100%, 100%, 0) !default;
+$nav-tabs-border-color:                     transparent !default;
 
 $nav-tabs-link-hover-border-color:          $gray-lighter !default;
 
-$nav-tabs-active-link-hover-bg:             hsla(0, 100%, 100%, 0) !default;
+$nav-tabs-active-link-hover-bg:             transparent !default;
 $nav-tabs-active-link-hover-color:          $gray !default;
-$nav-tabs-active-link-hover-border-color:   hsla(0, 100%, 100%, 0) !default;
+$nav-tabs-active-link-hover-border-color:   transparent !default;
 
 $nav-tabs-justified-link-border-color:            $nav-tabs-border-color !default;
 $nav-tabs-justified-active-link-border-color:     $body-bg !default;
@@ -539,9 +539,9 @@ $popover-bg:                          #fff !default;
 //** Popover maximum width
 $popover-max-width:                   276px !default;
 //** Popover border color
-$popover-border-color:                hsla(0, 100%, 100%, 0) !default;
+$popover-border-color:                transparent !default;
 //** Popover fallback border color
-$popover-fallback-border-color:       hsla(0, 100%, 100%, 0) !default;
+$popover-fallback-border-color:       transparent !default;
 
 //** Popover title background color
 $popover-title-bg:                    darken($popover-bg, 3%) !default;
@@ -597,7 +597,7 @@ $modal-title-line-height:     $line-height-base !default;
 //** Background color of modal content area
 $modal-content-bg:                             #fff !default;
 //** Modal content border color
-$modal-content-border-color:                   hsla(0, 100%, 100%, 0) !default;
+$modal-content-border-color:                   transparent !default;
 //** Modal content border color **for IE8**
 $modal-content-fallback-border-color:          #999 !default;
 
@@ -606,7 +606,7 @@ $modal-backdrop-bg:           #000 !default;
 //** Modal backdrop opacity
 $modal-backdrop-opacity:      .5 !default;
 //** Modal header border color
-$modal-header-border-color:   hsla(0, 100%, 100%, 0) !default;
+$modal-header-border-color:   transparent !default;
 //** Modal footer border color
 $modal-footer-border-color:   $modal-header-border-color !default;
 
@@ -760,7 +760,7 @@ $thumbnail-caption-padding:   9px !default;
 //##
 
 $well-bg:                     #f9f9f9 !default;
-$well-border:                 hsla(0, 100%, 100%, 0) !default;
+$well-border:                 transparent !default;
 
 
 //== Badges

@@ -2,30 +2,30 @@
 // Bootswatch
 // -----------------------------------------------------
 
-@import url("//fonts.googleapis.com/css?family=Roboto:300,400,500,700");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
 
 // Navbar =====================================================================
 
 .navbar {
   border: none;
   @include box-shadow(0 1px 2px rgba(0,0,0,.3));
-}
 
-.navbar-brand {
-  font-size: 24px;
-}
+  .navbar-brand {
+    font-size: 24px;
+  }
 
-.navbar-inverse {
-  .form-control {
-    color: #fff;
-    @include placeholder($navbar-inverse-link-color);
+  .navbar-inverse {
+    .form-control {
+      color: #fff;
+      @include placeholder($navbar-inverse-link-color);
 
-    &[type=text],
-    &[type=password] {
-      @include box-shadow(inset 0 -1px 0 $navbar-inverse-link-color);
+      &[type=text],
+      &[type=password] {
+        @include box-shadow(inset 0 -1px 0 $navbar-inverse-link-color);
 
-      &:focus {
-        @include box-shadow(inset 0 -2px 0 #fff);
+        &:focus {
+          @include box-shadow(inset 0 -2px 0 #fff);
+        }
       }
     }
   }
@@ -33,113 +33,32 @@
 
 // Buttons ====================================================================
 
-.btn-default {
-  background-size: 200%;
-  background-position: 50%;
+#btn($class,$bg) {
+  .btn-@{class} {
+    background-size: 200%;
+    background-position: 50%;
 
-  &:hover,
-  &:active:hover,
-  &:focus {
-    background-color: darken($btn-default-bg, 6%);
-  }
+    &:hover,
+    &:active:hover,
+    &:focus {
+      background-color: darken($bg, 6%);
+    }
 
-  &:active {
-    background-color: darken($btn-default-bg, 6%);
-    @include gradient-radial(darken($btn-default-bg, 6%) 10%, $btn-default-bg 11%);
-    background-size: 1000%;
-    @include box-shadow(2px 2px 2px rgba(0,0,0,.3));
-  }
-}
-
-.btn-primary {
-  background-size: 200%;
-  background-position: 50%;
-
-  &:hover,
-  &:active:hover,
-  &:focus {
-    background-color: darken($btn-primary-bg, 6%);
-  }
-
-  &:active {
-    background-color: darken($btn-primary-bg, 6%);
-    @include gradient-radial(darken($btn-primary-bg, 6%) 10%, $btn-primary-bg 11%);
-    background-size: 1000%;
-    @include box-shadow(2px 2px 2px rgba(0,0,0,.3));
+    &:active {
+      background-color: darken($bg, 6%);
+      @include gradient-radial(darken($bg, 6%) 10%, $bg 11%);
+      background-size: 1000%;
+      @include box-shadow(2px 2px 2px rgba(0,0,0,.3));
+    }
   }
 }
 
-.btn-success {
-  background-size: 200%;
-  background-position: 50%;
-
-  &:hover,
-  &:active:hover,
-  &:focus {
-    background-color: darken($btn-success-bg, 6%);
-  }
-
-  &:active {
-    background-color: darken($btn-success-bg, 6%);
-    @include gradient-radial(darken($btn-success-bg, 6%) 10%, $btn-success-bg 11%);
-    background-size: 1000%;
-    @include box-shadow(2px 2px 2px rgba(0,0,0,.3));
-  }
-}
-
-.btn-info {
-  background-size: 200%;
-  background-position: 50%;
-
-  &:hover,
-  &:active:hover,
-  &:focus {
-    background-color: darken($btn-info-bg, 6%);
-  }
-
-  &:active {
-    background-color: darken($btn-info-bg, 6%);
-    @include gradient-radial(darken($btn-info-bg, 6%) 10%, $btn-info-bg 11%);
-    background-size: 1000%;
-    @include box-shadow(2px 2px 2px rgba(0,0,0,.3));
-  }
-}
-
-.btn-warning {
-  background-size: 200%;
-  background-position: 50%;
-
-  &:hover,
-  &:active:hover,
-  &:focus {
-    background-color: darken($btn-warning-bg, 6%);
-  }
-
-  &:active {
-    background-color: darken($btn-warning-bg, 6%);
-    @include gradient-radial(darken($btn-warning-bg, 6%) 10%, $btn-warning-bg 11%);
-    background-size: 1000%;
-    @include box-shadow(2px 2px 2px rgba(0,0,0,.3));
-  }
-}
-
-.btn-danger {
-  background-size: 200%;
-  background-position: 50%;
-
-  &:hover,
-  &:active:hover,
-  &:focus {
-    background-color: darken($btn-danger-bg, 6%);
-  }
-
-  &:active {
-    background-color: darken($btn-danger-bg, 6%);
-    @include gradient-radial(darken($btn-danger-bg, 6%) 10%, $btn-danger-bg 11%);
-    background-size: 1000%;
-    @include box-shadow(2px 2px 2px rgba(0,0,0,.3));
-  }
-}
+#btn(default,$btn-default-bg);
+#btn(primary,$btn-primary-bg);
+#btn(success,$btn-success-bg);
+#btn(info,$btn-info-bg);
+#btn(warning,$btn-warning-bg);
+#btn(danger,$btn-danger-bg);
 
 .btn {
   text-transform: uppercase;
@@ -147,20 +66,20 @@
   border-bottom: none;
   @include box-shadow(1px 1px 2px rgba(0,0,0,.3));
   @include transition(all 0.2s);
-}
 
-.btn-link {
-  @include box-shadow(none);
+  .btn-link {
+    @include box-shadow(none);
 
-  &:hover,
-  &:focus {
-    color: $brand-primary;
-    text-decoration: none;
+    &:hover,
+    &:focus {
+      color: $brand-primary;
+      text-decoration: none;
+    }
   }
-}
 
-.btn-default.disabled {
-  border: 1px solid $btn-default-border;
+  .btn-default.disabled {
+    border: 1px solid $btn-default-border;
+  }
 }
 
 .btn-group {
@@ -170,14 +89,14 @@
   .btn-group + .btn-group {
     margin-left: 0;
   }
-}
 
-.btn-group-vertical {
-  > .btn + .btn,
-  > .btn + .btn-group,
-  > .btn-group + .btn,
-  > .btn-group + .btn-group {
-    margin-top: 0;
+  .btn-group-vertical {
+    > .btn + .btn,
+    > .btn + .btn-group,
+    > .btn-group + .btn,
+    > .btn-group + .btn-group {
+      margin-top: 0;
+    }
   }
 }
 
@@ -249,12 +168,14 @@ input[type=number],
     border-bottom: 1px dotted #ddd;
   }
 
-  &.input-sm {
-    font-size: $font-size-small;
-  }
+  &.input {
+    &.input-sm {
+      font-size: $font-size-small;
+    }
 
-  &.input-lg {
-    font-size: $font-size-large;
+    &.input-lg {
+      font-size: $font-size-large;
+    }
   }
 }
 
@@ -279,12 +200,14 @@ select.form-control {
     display: none;
   }
 
-  &.input-sm {
-    font-size: $font-size-small;
-  }
+  &.input {
+    &.input-sm {
+      font-size: $font-size-small;
+    }
 
-  &.input-lg {
-    font-size: $font-size-large;
+    &.input-lg {
+      font-size: $font-size-large;
+    }
   }
 
   &:focus {
@@ -344,11 +267,7 @@ input[type="radio"],
     left: 0;
     top: 0;
     background-color: $brand-primary;
-
-    -webkit-transform: scale(0);
-        -ms-transform: scale(0); // IE9 only
-         -o-transform: scale(0);
-            transform: scale(0);
+    @include scale(0);
   }
 
   &:after {
@@ -356,10 +275,7 @@ input[type="radio"],
   }
 
   &:checked:before {
-    -webkit-transform: scale(0.5);
-        -ms-transform: scale(0.5); // IE9 only
-         -o-transform: scale(0.5);
-            transform: scale(0.5);
+    @include scale(0.5);
   }
 
   &:disabled:checked:before {
@@ -522,6 +438,22 @@ input[type="checkbox"],
   border: none;
   color: #fff;
 
+  .alert-success {
+    background-color: $brand-success;
+  }
+
+  .alert-info {
+    background-color: $brand-info;
+  }
+
+  .alert-warning {
+    background-color: $brand-warning;
+  }
+
+  .alert-danger {
+    background-color: $brand-danger;
+  }
+
   a:not(.close),
   .alert-link {
     color: #fff;
@@ -531,22 +463,6 @@ input[type="checkbox"],
   .close {
     color: #fff;
   }
-}
-
-.alert-success {
-  background-color: $brand-success;
-}
-
-.alert-info {
-  background-color: $brand-info;
-}
-
-.alert-warning {
-  background-color: $brand-warning;
-}
-
-.alert-danger {
-  background-color: $brand-danger;
 }
 
 .badge {
@@ -560,44 +476,43 @@ input[type="checkbox"],
   border-radius: 0;
 
   @include box-shadow(none);
-}
 
-.progress-bar {
-  @include box-shadow(none);
+  .progress-bar {
+    @include box-shadow(none);
 
-  &:last-child {
-    border-radius: 0 3px 3px 0;
-  }
+    &:last-child {
+      border-radius: 0 3px 3px 0;
+    }
 
-  &:last-child {
-    &:before {
-      display: block;
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      left: 0;
-      right: 0;
-      z-index: -1;
-      background-color: lighten($progress-bar-bg, 35%);
+    &:last-child {
+      &:before {
+        display: block;
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        background-color: lighten($progress-bar-bg, 35%);
+      }
+    }
+
+    &-bar-success:last-child.progress-bar:before {
+      background-color: lighten($brand-success, 35%);
+    }
+
+    &-bar-info:last-child.progress-bar:before {
+      background-color: lighten($brand-info, 45%);
+    }
+    &-bar-warning:last-child.progress-bar:before {
+      background-color: lighten($brand-warning, 35%);
+    }
+
+    &-bar-danger:last-child.progress-bar:before {
+      background-color: lighten($brand-danger, 25%);
     }
   }
-}
-
-.progress-bar-success:last-child.progress-bar:before {
-  background-color: lighten($brand-success, 35%);
-}
-
-.progress-bar-info:last-child.progress-bar:before {
-  background-color: lighten($brand-info, 45%);
-}
-
-.progress-bar-warning:last-child.progress-bar:before {
-  background-color: lighten($brand-warning, 35%);
-}
-
-.progress-bar-danger:last-child.progress-bar:before {
-  background-color: lighten($brand-danger, 25%);
 }
 
 // Progress bars ==============================================================
@@ -616,12 +531,15 @@ input[type="checkbox"],
   }
 }
 
-.list-group-item {
-  padding: 15px;
-}
+.list-group {
 
-.list-group-item-text {
-  color: $gray-light;
+  .list-group-item {
+    padding: 15px;
+  }
+
+  .list-group-item-text {
+    color: $gray-light;
+  }
 }
 
 .well {
@@ -633,14 +551,14 @@ input[type="checkbox"],
   border: none;
   border-radius: 2px;
   @include box-shadow(0 1px 4px rgba(0,0,0,.3));
-}
 
-.panel-heading {
-  border-bottom: none;
-}
+  .panel-heading {
+    border-bottom: none;
+  }
 
-.panel-footer {
-  border-top: none;
+  .panel-footer {
+    border-top: none;
+  }
 }
 
 .popover {
@@ -648,9 +566,11 @@ input[type="checkbox"],
   @include box-shadow(0 1px 4px rgba(0,0,0,.3));
 }
 
-.carousel-caption {
-  h1, h2, h3, h4, h5, h6 {
-    color: inherit;
+.carousel {
+  .carousel-caption {
+    h1, h2, h3, h4, h5, h6 {
+      color: inherit;
+    }
   }
 }
 

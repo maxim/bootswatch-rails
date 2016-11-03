@@ -2,49 +2,49 @@
 // Bootswatch
 // -----------------------------------------------------
 
-@import url("//fonts.googleapis.com/css?family=Raleway:400,700");
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,700");
 
 // Navbar =====================================================================
 
 .navbar {
   font-family: $headings-font-family;
-}
 
-.navbar-nav,
-.navbar-form {
-  margin-left: 0;
-  margin-right: 0;
-}
+  .navbar-nav,
+  .navbar-form {
+    margin-left: 0;
+    margin-right: 0;
+  }
 
-.navbar-nav > li > a {
-  $margin-vertical: (($navbar-height - 2*$padding-base-vertical - $line-height-computed - 2px) / 2);
-  margin: $margin-vertical 6px;
-  padding: $padding-base-vertical $padding-base-horizontal;
-  border: 1px solid transparent;
-  border-radius: $border-radius-base;
+  .navbar-nav > li > a {
+    $margin-vertical: (($navbar-height - 2*$padding-base-vertical - $line-height-computed - 2px) / 2);
+    margin: $margin-vertical 6px;
+    padding: $padding-base-vertical $padding-base-horizontal;
+    border: 1px solid transparent;
+    border-radius: $border-radius-base;
 
-  &:hover {
+    &:hover {
+      border: 1px solid #ddd;
+    }
+  }
+
+  .navbar-nav > .active > a,
+  .navbar-nav > .active > a:hover {
     border: 1px solid #ddd;
   }
-}
 
-.navbar-nav > .active > a,
-.navbar-nav > .active > a:hover {
-  border: 1px solid #ddd;
-}
+  .navbar-default .navbar-nav > .active > a:hover {
+    color: $navbar-default-link-hover-color;
+  }
 
-.navbar-default .navbar-nav > .active > a:hover {
-  color: $navbar-default-link-hover-color;
-}
+  .navbar-inverse .navbar-nav > .active > a:hover {
+    color: $navbar-inverse-link-hover-color;
+  }
 
-.navbar-inverse .navbar-nav > .active > a:hover {
-  color: $navbar-inverse-link-hover-color;
-}
-
-.navbar-brand {
-  padding-top: (($navbar-height - 2*$font-size-large) / 2);
-  padding-bottom: (($navbar-height - 2*$font-size-large) / 2);
-  line-height: 1.9;
+  .navbar-brand {
+    padding-top: (($navbar-height - 2*$font-size-large) / 2);
+    padding-bottom: (($navbar-height - 2*$font-size-large) / 2);
+    line-height: 1.9;
+  }
 }
 
 @media (min-width: $grid-float-breakpoint) {
@@ -96,11 +96,11 @@ legend {
 .pagination {
 
   font-family: $headings-font-family;
-}
 
-.pagination-lg > li > a,
-.pagination-lg > li > span {
-  padding: 14px 24px;
+  .pagination-lg > li > a,
+  .pagination-lg > li > span {
+    padding: 14px 24px;
+  }
 }
 
 .pager {
@@ -146,11 +146,12 @@ legend {
 .label {
   font-family: $headings-font-family;
   font-weight: normal;
-}
 
-.label-default {
-  border: 1px solid #ddd;
-  color: $text-color;
+  .label-default {
+    border: 1px solid #ddd;
+    color: $text-color;
+  }
+
 }
 
 .badge {
@@ -166,11 +167,11 @@ legend {
 
 .panel {
   @include box-shadow(none);
-}
 
-.panel-default {
-  .close {
-    color: $text-color;
+  .panel-default {
+    .close {
+      color: $text-color;
+    }
   }
 }
 

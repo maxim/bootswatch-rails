@@ -2,7 +2,7 @@
 // Bootswatch
 // -----------------------------------------------------
 
-@import url("//fonts.googleapis.com/css?family=Roboto:400,500");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500");
 
 // Navbar =====================================================================
 
@@ -13,42 +13,35 @@
   text-transform: uppercase;
 }
 
-@mixin sandstone() {
-  font-size: 11px;
-  line-height: 22px;
-  font-weight: 500;
-  text-transform: uppercase;
-}
-
 .navbar {
   .nav > li > a {
-    @include sandstone();
+    .sandstone;
   }
-}
 
-.navbar-form input,
-.navbar-form .form-control {
-  border: none;
+  .navbar-form input,
+  .navbar-form .form-control {
+    border: none;
+  }
 }
 
 // Buttons ====================================================================
 
 .btn {
   border: none;
-  @include sandstone();
+  .sandstone;
 
   &:hover {
     border-color: transparent;
   }
-}
 
-.btn-lg {
-  line-height: 26px;
-}
+  .btn-lg {
+    line-height: 26px;
+  }
 
-.btn-default {
-  &:hover {
-    background-color: $navbar-default-link-active-bg;
+  .btn-default {
+    &:hover {
+      background-color: $navbar-default-link-active-bg;
+    }
   }
 }
 
@@ -71,7 +64,7 @@ input,
 // Navs =======================================================================
 
 .nav {
-  @include sandstone();
+  .sandstone;
 
   .open > a,
   .open > a:hover,
@@ -113,7 +106,7 @@ input,
 }
 
 .breadcrumb {
-  @include sandstone();
+  .sandstone;
 
   border: 1px solid $gray-light;
 
@@ -123,11 +116,11 @@ input,
 }
 
 .pagination {
-  @include sandstone();
+  .sandstone;
 }
 
 .pager {
-  @include sandstone();
+  .sandstone;
 
   li > a {
     color: $gray;
@@ -136,7 +129,7 @@ input,
 
 .dropdown-menu {
   & > li > a {
-    @include sandstone();
+    .sandstone;
   }
 }
 
@@ -151,7 +144,7 @@ input,
 }
 
 .tooltip {
-  @include sandstone();
+  .sandstone;
 }
 
 // Progress bars ==============================================================
@@ -160,16 +153,18 @@ input,
   border-radius: 10px;
   background-color: $gray-light;
   @include box-shadow(none);
-}
 
-.progress-bar {
-  @include box-shadow(none);
+  .progress-bar {
+    @include box-shadow(none);
+  }
 }
 
 // Containers =================================================================
 
-.list-group-item {
-  padding: 16px 24px;
+.list-group {
+  .list-group-item {
+    padding: 16px 24px;
+  }
 }
 
 .well {
@@ -181,19 +176,19 @@ input,
 
   .panel-heading,
   .panel-title {
-    @include sandstone();
+    .sandstone;
     color: #fff;
   }
 
   .panel-footer {
-    @include sandstone();
+    .sandstone;
   }
-}
 
-.panel-default {
-  .panel-heading,
-  .panel-title,
-  .panel-footer {
-    color: $gray;
+  .panel-default {
+    .panel-heading,
+    .panel-title,
+    .panel-footer {
+      color: $gray;
+    }
   }
 }

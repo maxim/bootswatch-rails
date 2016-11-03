@@ -2,7 +2,7 @@
 // Bootswatch
 // -----------------------------------------------------
 
-@import url("//fonts.googleapis.com/css?family=Lato:300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700");
 
 // Navbar =====================================================================
 
@@ -10,21 +10,21 @@
   @include box-shadow(none);
   border: none;
   font-size: 12px;
-}
 
-.navbar-default {
+  .navbar-default {
 
-  .badge {
-    background-color: #fff;
-    color: $navbar-default-bg;
+    .badge {
+      background-color: #fff;
+      color: $navbar-default-bg;
+    }
   }
-}
 
-.navbar-inverse {
+  .navbar-inverse {
 
-  .badge {
-    background-color: #fff;
-    color: $navbar-inverse-bg;
+    .badge {
+      background-color: #fff;
+      color: $navbar-inverse-bg;
+    }
   }
 }
 
@@ -33,17 +33,17 @@
 .btn {
 
   font-weight: 300;
-}
 
-.btn-default {
-  &:hover {
-    background-color: darken($btn-default-bg, 3%);
+  .btn-default {
+    &:hover {
+      background-color: darken($btn-default-bg, 3%);
+    }
   }
-}
 
-.btn-sm,
-.btn-xs {
-  font-size: 12px;
+  .btn-sm,
+  .btn-xs {
+    font-size: 12px;
+  }
 }
 
 // Typography =================================================================
@@ -289,48 +289,48 @@ a.list-group-item {
   &.active:focus {
     border: none;
   }
-}
 
-a.list-group-item-success {
-  &.active {
-    background-color: $state-success-bg;
+  a.list-group-item-success {
+    &.active {
+      background-color: $state-success-bg;
+    }
+
+    &.active:hover,
+    &.active:focus {
+      background-color: darken($state-success-bg, 5%);
+    }
   }
 
-  &.active:hover,
-  &.active:focus {
-    background-color: darken($state-success-bg, 5%);
-  }
-}
-
-a.list-group-item-warning {
-  &.active {
-    background-color: $state-warning-bg;
-  }
-
-  &.active:hover,
-  &.active:focus {
-    background-color: darken($state-warning-bg, 5%);
-  }
-}
-
-a.list-group-item-danger {
-  &.active {
-    background-color: $state-danger-bg;
+  a.list-group-item-warning {
+    &.active {
+      background-color: $state-warning-bg;
+    }
+    
+    &.active:hover,
+    &.active:focus {
+      background-color: darken($state-warning-bg, 5%);
+    }
   }
 
-  &.active:hover,
-  &.active:focus {
-    background-color: darken($state-danger-bg, 5%);
+  a.list-group-item-danger {
+    &.active {
+      background-color: $state-danger-bg;
+    }
+    
+    &.active:hover,
+    &.active:focus {
+      background-color: darken($state-danger-bg, 5%);
+    }
   }
 }
 
 .panel {
   border: none;
-}
 
-.panel-default > .panel-heading {
-  background-color: $table-bg-hover;
-  color: $text-color;
+  .panel-default > .panel-heading {
+    background-color: $table-bg-hover;
+    color: $text-color;
+  }
 }
 
 .thumbnail {
@@ -340,15 +340,17 @@ a.list-group-item-danger {
 
 .modal {
   padding: 0;
+
+  .modal-header,
+  .modal-footer {
+    background-color: $table-bg-hover;
+    border: none;
+    border-radius: 0;
+  }
 }
 
-.modal-header,
-.modal-footer {
-  background-color: $table-bg-hover;
-  border: none;
-  border-radius: 0;
-}
-
-.popover-title {
-  border: none;
+.popover {
+  .popover-title {
+    border: none;
+  }
 }

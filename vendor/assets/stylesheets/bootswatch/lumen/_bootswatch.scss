@@ -2,9 +2,9 @@
 // Bootswatch
 // -----------------------------------------------------
 
-@import url("//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic");
 
-@mixin shadow($width: 4px) {
+.shadow ($width: 4px) {
   border-width: 0 1px $width 1px;
 }
 
@@ -33,68 +33,68 @@
     border-bottom-width: 2px;
     @include box-shadow(none);
   }
-}
 
-.btn-lg,
-.btn-group-lg > .btn {
-  padding: ($padding-large-vertical + 2) $padding-large-horizontal $padding-large-vertical;
-  line-height: 15px;
-}
+  .btn-lg,
+  .btn-group-lg > .btn {
+    padding: ($padding-large-vertical + 2) $padding-large-horizontal $padding-large-vertical;
+    line-height: 15px;
+  }
 
-.btn-sm,
-.btn-group-sm > .btn {
-  padding: ($padding-small-vertical + 2) $padding-small-horizontal $padding-small-vertical;
-}
+  .btn-sm,
+  .btn-group-sm > .btn {
+    padding: ($padding-small-vertical + 2) $padding-small-horizontal $padding-small-vertical;
+  }
 
-.btn-xs,
-.btn-group-xs > .btn {
-  padding: ($padding-xs-vertical + 2) $padding-xs-horizontal $padding-xs-vertical;
-}
+  .btn-xs,
+  .btn-group-xs > .btn {
+    padding: ($padding-xs-vertical + 2) $padding-xs-horizontal $padding-xs-vertical;
+  }
 
-.btn-default:hover,
-.btn-default:focus,
-.btn-group.open .dropdown-toggle.btn-default {
-  background-color: $btn-default-bg;
-  border-color: $btn-default-border;
-}
+  .btn-default:hover,
+  .btn-default:focus,
+  .btn-group.open .dropdown-toggle.btn-default {
+    background-color: $btn-default-bg;
+    border-color: $btn-default-border;
+  }
 
-.btn-primary:hover,
-.btn-primary:focus,
-.btn-group.open .dropdown-toggle.btn-primary {
-  background-color: $btn-primary-bg;
-  border-color: $btn-primary-border;
-}
+  .btn-primary:hover,
+  .btn-primary:focus,
+  .btn-group.open .dropdown-toggle.btn-primary {
+    background-color: $btn-primary-bg;
+    border-color: $btn-primary-border;
+  }
 
-.btn-success:hover,
-.btn-success:focus,
-.btn-group.open .dropdown-toggle.btn-success {
-  background-color: $btn-success-bg;
-  border-color: $btn-success-border;
-}
+  .btn-success:hover,
+  .btn-success:focus,
+  .btn-group.open .dropdown-toggle.btn-success {
+    background-color: $btn-success-bg;
+    border-color: $btn-success-border;
+  }
 
-.btn-info:hover,
-.btn-info:focus,
-.btn-group.open .dropdown-toggle.btn-info {
-  background-color: $btn-info-bg;
-  border-color: $btn-info-border;
-}
+  .btn-info:hover,
+  .btn-info:focus,
+  .btn-group.open .dropdown-toggle.btn-info {
+    background-color: $btn-info-bg;
+    border-color: $btn-info-border;
+  }
 
-.btn-warning:hover,
-.btn-warning:focus,
-.btn-group.open .dropdown-toggle.btn-warning {
-  background-color: $btn-warning-bg;
-  border-color: $btn-warning-border;
-}
+  .btn-warning:hover,
+  .btn-warning:focus,
+  .btn-group.open .dropdown-toggle.btn-warning {
+    background-color: $btn-warning-bg;
+    border-color: $btn-warning-border;
+  }
 
-.btn-danger:hover,
-.btn-danger:focus,
-.btn-group.open .dropdown-toggle.btn-danger {
-  background-color: $btn-danger-bg;
-  border-color: $btn-danger-border;
-}
+  .btn-danger:hover,
+  .btn-danger:focus,
+  .btn-group.open .dropdown-toggle.btn-danger {
+    background-color: $btn-danger-bg;
+    border-color: $btn-danger-border;
+  }
 
-.btn-group.open .dropdown-toggle {
-  @include box-shadow(none);
+  .btn-group.open .dropdown-toggle {
+    @include box-shadow(none);
+  }
 }
 
 .navbar-btn {
@@ -438,10 +438,10 @@ label {
 .progress {
   border: 1px solid $navbar-default-border;
   @include box-shadow(inset 0 2px 0 rgba(0, 0, 0, 0.1));
-}
 
-.progress-bar {
-  @include box-shadow(inset 0 -4px 0 rgba(0, 0, 0, 0.15));
+  .progress-bar {
+    @include box-shadow(inset 0 -4px 0 rgba(0, 0, 0, 0.15));
+  }
 }
 
 // Containers =================================================================
@@ -458,38 +458,38 @@ a.list-group-item {
   &.active:focus {
     border-color: $list-group-border;
   }
-}
 
-a.list-group-item-success {
-  &.active {
-    background-color: $state-success-bg;
+  a.list-group-item-success {
+    &.active {
+      background-color: $state-success-bg;
+    }
+
+    &.active:hover,
+    &.active:focus {
+      background-color: darken($state-success-bg, 5%);
+    }
   }
 
-  &.active:hover,
-  &.active:focus {
-    background-color: darken($state-success-bg, 5%);
-  }
-}
-
-a.list-group-item-warning {
-  &.active {
-    background-color: $state-warning-bg;
-  }
-
-  &.active:hover,
-  &.active:focus {
-    background-color: darken($state-warning-bg, 5%);
-  }
-}
-
-a.list-group-item-danger {
-  &.active {
-    background-color: $state-danger-bg;
+  a.list-group-item-warning {
+    &.active {
+      background-color: $state-warning-bg;
+    }
+    
+    &.active:hover,
+    &.active:focus {
+      background-color: darken($state-warning-bg, 5%);
+    }
   }
 
-  &.active:hover,
-  &.active:focus {
-    background-color: darken($state-danger-bg, 5%);
+  a.list-group-item-danger {
+    &.active {
+      background-color: $state-danger-bg;
+    }
+    
+    &.active:hover,
+    &.active:focus {
+      background-color: darken($state-danger-bg, 5%);
+    }
   }
 }
 
@@ -501,11 +501,11 @@ a.list-group-item-danger {
 .panel {
   border: 1px solid $navbar-default-border;
   @include shadow();
-}
 
-.panel-default {
-  .close {
-    color: $text-color;
+  .panel-default {
+    .close {
+      color: $text-color;
+    }
   }
 }
 
