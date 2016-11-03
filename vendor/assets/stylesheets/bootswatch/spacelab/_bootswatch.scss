@@ -2,14 +2,10 @@
 // Bootswatch
 // -----------------------------------------------------
 
-$web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700";
+$web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700" !default;
+@import url($web-font-path);
 
-@mixin web-font($path) {
-  @import url("@{path}");
-}
-@mixin web-font($web-font-path);
-
-@mixin btn-shadow($color) {
+@mixin btn-shadow($color){
   @include gradient-vertical-three-colors(lighten($color, 15%), $color, 50%, darken($color, 4%));
   filter: none;
   border: 1px solid darken($color, 10%);
@@ -22,7 +18,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:400italic,700
   @include btn-shadow($navbar-default-bg);
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
 
-  .navbar-inverse {
+  &-inverse {
     @include btn-shadow($navbar-inverse-bg);
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
 
@@ -36,15 +32,15 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:400italic,700
     text-shadow: none;
   }
 
-  .navbar-nav > li > a,
-  .navbar-nav > li > a:hover {
+  &-nav > li > a,
+  &-nav > li > a:hover {
     padding-top: ($navbar-padding-vertical + 2px);
     padding-bottom: ($navbar-padding-vertical - 2px);
     @include transition(color ease-in-out .2s);
   }
   
-  .navbar-brand,
-  .navbar-brand:hover {
+  &-brand,
+  &-brand:hover {
     @include transition(color ease-in-out .2s);
   }
 
@@ -63,7 +59,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:400italic,700
 .btn {
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
 
-  .btn-default {
+  &-default {
     @include btn-shadow($btn-default-bg);
 
     &:hover {
@@ -71,7 +67,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:400italic,700
     }
   }
 
-  .btn-primary {
+  &-primary {
     @include btn-shadow($btn-primary-bg);
 
     &:hover {
@@ -79,7 +75,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:400italic,700
     }
   }
 
-  .btn-success {
+  &-success {
     @include btn-shadow($btn-success-bg);
 
     &:hover {
@@ -87,7 +83,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:400italic,700
     }
   }
 
-  .btn-info {
+  &-info {
     @include btn-shadow($btn-info-bg);
 
     &:hover {
@@ -95,7 +91,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:400italic,700
     }
   }
 
-  .btn-warning {
+  &-warning {
     @include btn-shadow($btn-warning-bg);
 
     &:hover {
@@ -103,7 +99,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:400italic,700
     }
   }
 
-  .btn-danger {
+  &-danger {
     @include btn-shadow($btn-danger-bg);
 
     &:hover {
@@ -111,7 +107,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:400italic,700
     }
   }
 
-  .btn-link {
+  &-link {
     text-shadow: none;
   }
 
@@ -138,7 +134,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:400italic,700
 
 .panel {
 
-  .panel-primary {
+  &-primary {
     .panel-title {
       color: #fff;
     }

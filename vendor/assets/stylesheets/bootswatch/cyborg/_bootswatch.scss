@@ -2,12 +2,8 @@
 // Bootswatch
 // -----------------------------------------------------
 
-$web-font-path: "https://fonts.googleapis.com/css?family=Roboto:400,700";
-
-@mixin web-font($path) {
-  @import url("@{path}");
-}
-@mixin web-font($web-font-path);
+$web-font-path: "https://fonts.googleapis.com/css?family=Roboto:400,700" !default;
+@import url($web-font-path);
 
 // Navbar =====================================================================
 
@@ -200,7 +196,7 @@ a.list-group-item {
     border-color: $list-group-border;
   }
 
-  a.list-group-item-success {
+  &-success {
     &.active {
       background-color: $state-success-bg;
     }
@@ -211,7 +207,7 @@ a.list-group-item {
     }
   }
 
-  a.list-group-item-warning {
+  &-warning {
     &.active {
       background-color: $state-warning-bg;
     }
@@ -222,7 +218,7 @@ a.list-group-item {
     }
   }
 
-  a.list-group-item-danger {
+  &-danger {
     &.active {
       background-color: $state-danger-bg;
     }

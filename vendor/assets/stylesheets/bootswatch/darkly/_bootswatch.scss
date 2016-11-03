@@ -2,19 +2,15 @@
 // Bootswatch
 // -----------------------------------------------------
 
-$web-font-path: "https://fonts.googleapis.com/css?family=Lato:400,700,400italic";
-
-@mixin web-font($path) {
-  @import url("@{path}");
-}
-@mixin web-font($web-font-path);
+$web-font-path: "https://fonts.googleapis.com/css?family=Lato:400,700,400italic" !default;
+@import url($web-font-path);
 
 // Navbar =====================================================================
 
 .navbar {
   border-width: 0;
 
-  .navbar-default {
+  &-default {
 
     .badge {
       background-color: #fff;
@@ -22,7 +18,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Lato:400,700,400italic"
     }
   }
 
-  .navbar-inverse {
+  &-inverse {
 
     .badge {
       background-color: #fff;
@@ -30,11 +26,11 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Lato:400,700,400italic"
     }
   }
 
-  .navbar-brand {
+  &-brand {
     line-height: 1;
   }
 
-  .navbar-form {
+  &-form {
     .form-control {
       background-color: white;
 
@@ -121,12 +117,12 @@ table,
     border: none;
   }
 
-  .table-bordered > thead > tr > th,
-  .table-bordered > tbody > tr > th,
-  .table-bordered > tfoot > tr > th,
-  .table-bordered > thead > tr > td,
-  .table-bordered > tbody > tr > td,
-  .table-bordered > tfoot > tr > td {
+  &-bordered > thead > tr > th,
+  &-bordered > tbody > tr > th,
+  &-bordered > tfoot > tr > th,
+  &-bordered > thead > tr > td,
+  &-bordered > tbody > tr > td,
+  &-bordered > tfoot > tr > td {
     border: 1px solid $table-border-color;
   }
 }
@@ -312,7 +308,7 @@ a.list-group-item {
     border-color: $list-group-border;
   }
 
-  a.list-group-item-success {
+  &-success {
     &.active {
       background-color: $state-success-bg;
     }
@@ -323,7 +319,7 @@ a.list-group-item {
     }
   }
 
-  a.list-group-item-warning {
+  &-warning {
     &.active {
       background-color: $state-warning-bg;
     }
@@ -334,7 +330,7 @@ a.list-group-item {
     }
   }
 
-  a.list-group-item-danger {
+  &-danger {
     &.active {
       background-color: $state-danger-bg;
     }

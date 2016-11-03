@@ -2,12 +2,8 @@
 // Bootswatch
 // -----------------------------------------------------
 
-$web-font-path: "https://fonts.googleapis.com/css?family=Roboto:400,500,700";
-
-@mixin web-font($path) {
-  @import url("@{path}");
-}
-@mixin web-font($web-font-path);
+$web-font-path: "https://fonts.googleapis.com/css?family=Roboto:400,500,700" !default;
+@import url($web-font-path);
 
 // Navbar =====================================================================
 
@@ -20,11 +16,11 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:400,500,700";
 
 .navbar {
   .nav > li > a {
-    .sandstone;
+    @extend .sandstone;
   }
 
-  .navbar-form input,
-  .navbar-form .form-control {
+  &-form input,
+  &-form .form-control {
     border: none;
   }
 }
@@ -33,17 +29,17 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:400,500,700";
 
 .btn {
   border: none;
-  .sandstone;
+  @extend .sandstone;
 
   &:hover {
     border-color: transparent;
   }
 
-  .btn-lg {
+  &-lg {
     line-height: 26px;
   }
 
-  .btn-default {
+  &-default {
     &:hover {
       background-color: $navbar-default-link-active-bg;
     }
@@ -69,7 +65,7 @@ input,
 // Navs =======================================================================
 
 .nav {
-  .sandstone;
+  @extend .sandstone;
 
   .open > a,
   .open > a:hover,
@@ -111,7 +107,7 @@ input,
 }
 
 .breadcrumb {
-  .sandstone;
+  @extend .sandstone;
 
   border: 1px solid $gray-light;
 
@@ -121,11 +117,11 @@ input,
 }
 
 .pagination {
-  .sandstone;
+  @extend .sandstone;
 }
 
 .pager {
-  .sandstone;
+  @extend .sandstone;
 
   li > a {
     color: $gray;
@@ -134,7 +130,7 @@ input,
 
 .dropdown-menu {
   & > li > a {
-    .sandstone;
+    @extend .sandstone;
   }
 }
 
@@ -149,7 +145,7 @@ input,
 }
 
 .tooltip {
-  .sandstone;
+  @extend .sandstone;
 }
 
 // Progress bars ==============================================================
@@ -159,7 +155,7 @@ input,
   background-color: $gray-light;
   @include box-shadow(none);
 
-  .progress-bar {
+  &-bar {
     @include box-shadow(none);
   }
 }
@@ -167,7 +163,7 @@ input,
 // Containers =================================================================
 
 .list-group {
-  .list-group-item {
+  &-item {
     padding: 16px 24px;
   }
 }
@@ -181,15 +177,15 @@ input,
 
   .panel-heading,
   .panel-title {
-    .sandstone;
+    @extend .sandstone;
     color: #fff;
   }
 
   .panel-footer {
-    .sandstone;
+    @extend .sandstone;
   }
 
-  .panel-default {
+  &-default {
     .panel-heading,
     .panel-title,
     .panel-footer {

@@ -2,12 +2,12 @@
 // Bootswatch
 // -----------------------------------------------------
 
-@mixin btn-shadow($color) {
+@mixin btn-shadow($color){
   @include gradient-vertical-three-colors(lighten($color, 6%), $color, 60%, darken($color, 4%));
   filter: none;
 }
 
-@mixin btn-shadow-inverse($color) {
+@mixin btn-shadow-inverse($color){
   @include gradient-vertical-three-colors(darken($color, 24%), darken($color, 18%), 40%, darken($color, 16%));
   filter: none;
 }
@@ -15,8 +15,8 @@
 // Navbar =====================================================================
 
 .navbar {
-  .navbar-default,
-  .navbar-inverse {
+  &-default,
+  &-inverse {
     border: 1px solid rgba(0, 0, 0, 0.6);
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 
@@ -45,7 +45,7 @@
     }
   }
 
-  .navbar-default {
+  &-default {
     @include btn-shadow($navbar-default-bg);
 
     .navbar-nav > li > a {
@@ -55,7 +55,7 @@
     }
   }
 
-  .navbar-inverse {
+  &-inverse {
     @include btn-shadow($navbar-inverse-bg);
 
     .badge {
@@ -174,7 +174,7 @@ h1, h2, h3, h4, h5, h6 {
     color: #fff;
   }
 
-  .table-bordered tbody {
+  &-bordered tbody {
 
     tr.success,
     tr.warning,
@@ -406,7 +406,7 @@ a.list-group-item {
     border-color: $list-group-border;
   }
 
-  a.list-group-item-success {
+  &-success {
     &.active {
       background-color: $state-success-bg;
     }
@@ -417,7 +417,7 @@ a.list-group-item {
     }
   }
 
-  a.list-group-item-warning {
+  &-warning {
     &.active {
       background-color: $state-warning-bg;
     }
@@ -428,7 +428,7 @@ a.list-group-item {
     }
   }
 
-  a.list-group-item-danger {
+  &-danger {
     &.active {
       background-color: $state-danger-bg;
     }

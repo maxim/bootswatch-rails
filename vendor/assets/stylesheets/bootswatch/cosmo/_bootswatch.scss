@@ -2,18 +2,14 @@
 // Bootswatch
 // -----------------------------------------------------
 
-$web-font-path: "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700";
-
-@mixin web-font($path) {
-  @import url("@{path}");
-}
-@mixin web-font($web-font-path);
+$web-font-path: "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" !default;
+@import url($web-font-path);
 
 // Navbar =====================================================================
 
 .navbar {
 
-  .navbar-inverse {
+  &-inverse {
 
     .badge {
       background-color: #fff;
@@ -206,13 +202,13 @@ table,
 // Containers =================================================================
 
 .panel {
-  .panel-heading,
-  .panel-footer {
+  &-heading,
+  &-footer {
     border-top-right-radius: 0;
     border-top-left-radius: 0;
   }
 
-  .panel-default {
+  &-default {
     .close {
       color: $text-color;
     }
@@ -221,7 +217,7 @@ table,
 
 a.list-group-item {
 
-  a.list-group-item-success {
+  &-success {
     &.active {
       background-color: $state-success-bg;
     }
@@ -232,7 +228,7 @@ a.list-group-item {
     }
   }
 
-  a.list-group-item-warning {
+  &-warning {
     &.active {
       background-color: $state-warning-bg;
     }
@@ -243,7 +239,7 @@ a.list-group-item {
     }
   }
 
-  a.list-group-item-danger {
+  &-danger {
     &.active {
       background-color: $state-danger-bg;
     }

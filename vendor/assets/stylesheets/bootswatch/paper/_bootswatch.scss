@@ -2,16 +2,12 @@
 // Bootswatch
 // -----------------------------------------------------
 
-$web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700";
-
-@mixin web-font($path) {
-  @import url("@{path}");
-}
-@mixin web-font($web-font-path);
+$web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" !default;
+@import url($web-font-path);
 
 // Effects =================================================================
 
-@mixin ripple() {
+@mixin ripple(){
   position: relative;
 
   &:after {
@@ -43,11 +39,11 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
   border: none;
   @include box-shadow(0 1px 2px rgba(0,0,0,.3));
 
-  .navbar-brand {
+  &-brand {
     font-size: 24px;
   }
 
-  .navbar-inverse {
+  &-inverse {
     .navbar-form {
 
       input[type=text],
@@ -66,8 +62,8 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
 
 // Buttons ====================================================================
 
-#btn($class,$bg) {
-  .btn-@{class} {
+@mixin btn($class,$bg){
+  .btn-#{$class} {
     &:focus {
       background-color: $bg;
     }
@@ -83,13 +79,13 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
   }
 }
 
-#btn(default,$btn-default-bg);
-#btn(primary,$btn-primary-bg);
-#btn(success,$btn-success-bg);
-#btn(info,$btn-info-bg);
-#btn(warning,$btn-warning-bg);
-#btn(danger,$btn-danger-bg);
-#btn(link,#fff);
+@include btn(default,$btn-default-bg);
+@include btn(primary,$btn-primary-bg);
+@include btn(success,$btn-success-bg);
+@include btn(info,$btn-info-bg);
+@include btn(warning,$btn-warning-bg);
+@include btn(danger,$btn-danger-bg);
+@include btn(link,#fff);
 
 .btn {
   text-transform: uppercase;
@@ -98,7 +94,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
   @include transition(all 0.4s);
   @include ripple();
 
-  .btn-link {
+  &-link {
     border-radius: $btn-border-radius-base;
     @include box-shadow(none);
     color: $btn-default-color;
@@ -111,7 +107,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
     }
   }
 
-  .btn-default {
+  &-default {
 
     &.disabled {
       background-color: rgba(0, 0, 0, 0.1);
@@ -129,7 +125,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
     margin-left: 0;
   }
 
-  .btn-group-vertical {
+  &-vertical {
     > .btn + .btn,
     > .btn + .btn-group,
     > .btn-group + .btn,
@@ -206,11 +202,11 @@ input[type=number],
   }
 
   &.input {
-    &.input-sm {
+    &-sm {
       font-size: $font-size-small;
     }
 
-    &.input-lg {
+    &-lg {
       font-size: $font-size-large;
     }
   }
@@ -238,11 +234,11 @@ select.form-control {
   }
 
   &.input {
-    &.input-sm {
+    &-sm {
       font-size: $font-size-small;
     }
 
-    &.input-lg {
+    &-lg {
       font-size: $font-size-large;
     }
   }
@@ -508,19 +504,19 @@ input[type="checkbox"],
   border: none;
   color: #fff;
 
-  .alert-success {
+  &-success {
     background-color: $brand-success;
   }
 
-  .alert-info {
+  &-info {
     background-color: $brand-info;
   }
 
-  .alert-warning {
+  &-warning {
     background-color: $brand-warning;
   }
 
-  .alert-danger {
+  &-danger {
     background-color: $brand-danger;
   }
 
@@ -547,7 +543,7 @@ input[type="checkbox"],
 
   @include box-shadow(none);
 
-  .progress-bar {
+  &-bar {
     @include box-shadow(none);
 
     &:last-child {
@@ -568,18 +564,18 @@ input[type="checkbox"],
       }
     }
 
-    &-bar-success:last-child.progress-bar:before {
+    &-success:last-child.progress-bar:before {
       background-color: lighten($brand-success, 35%);
     }
 
-    &-bar-info:last-child.progress-bar:before {
+    &-info:last-child.progress-bar:before {
       background-color: lighten($brand-info, 45%);
     }
-    &-bar-warning:last-child.progress-bar:before {
+    &-warning:last-child.progress-bar:before {
       background-color: lighten($brand-warning, 35%);
     }
 
-    &-bar-danger:last-child.progress-bar:before {
+    &-danger:last-child.progress-bar:before {
       background-color: lighten($brand-danger, 25%);
     }
   }
@@ -603,11 +599,11 @@ input[type="checkbox"],
 
 .list-group {
 
-  .list-group-item {
+  &-item {
     padding: 15px;
   }
 
-  .list-group-item-text {
+  &-item-text {
     color: $gray-light;
   }
 }
@@ -622,11 +618,11 @@ input[type="checkbox"],
   border-radius: 2px;
   @include box-shadow(0 1px 4px rgba(0,0,0,.3));
 
-  .panel-heading {
+  &-heading {
     border-bottom: none;
   }
 
-  .panel-footer {
+  &-footer {
     border-top: none;
   }
 }
@@ -637,7 +633,7 @@ input[type="checkbox"],
 }
 
 .carousel {
-  .carousel-caption {
+  &-caption {
     h1, h2, h3, h4, h5, h6 {
       color: inherit;
     }

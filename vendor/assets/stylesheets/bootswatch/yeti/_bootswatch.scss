@@ -2,12 +2,8 @@
 // Bootswatch
 // -----------------------------------------------------
 
-$web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700";
-
-@mixin web-font($path) {
-  @import url("@{path}");
-}
-@mixin web-font($web-font-path);
+$web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700" !default;
+@import url($web-font-path);
 
 // Navbar =====================================================================
 
@@ -20,7 +16,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:300italic,400
     background-color: #b3b3b3;
   }
 
-  .navbar-collapse {
+  &-collapse {
     border-top-color: $dropdown-divider-bg;
     @include box-shadow(none);
   }
@@ -30,7 +26,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:300italic,400
     padding-bottom: 6px;
   }
 
-  .navbar-form {
+  &-form {
     margin-top: 7px;
     margin-bottom: 5px;
 
@@ -40,14 +36,14 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:300italic,400
     }
   }
 
-  .navbar-text {
+  &-text {
     margin: 12px 15px;
     line-height: 21px;
   }
 
   .dropdown {
 
-    .dropdown-menu {
+    &-menu {
       border: none;
 
       > li > a,
@@ -58,13 +54,13 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:300italic,400
       }
     }
 
-    .dropdown-header {
+    &-header {
       color: rgba(255, 255, 255, 0.5);
     }
 
   }
 
-  .navbar-default {
+  &-default {
 
     .dropdown-menu {
       background-color: $navbar-default-bg;
@@ -82,7 +78,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:300italic,400
     }
   }
 
-  .navbar-inverse {
+  &-inverse {
 
     .dropdown-menu {
       background-color: $navbar-inverse-bg;
@@ -106,15 +102,15 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:300italic,400
 .btn {
   padding: $padding-base-vertical $padding-base-horizontal;
 
-  .btn-lg {
+  &-lg {
     padding: $padding-large-vertical $padding-large-horizontal;
   }
 
-  .btn-sm {
+  &-sm {
     padding: $padding-small-vertical $padding-small-horizontal;
   }
 
-  .btn-xs {
+  &-xs {
     padding: $padding-xs-vertical $padding-xs-horizontal;
   }
 }
@@ -327,14 +323,14 @@ input[type="checkbox"] {
     }
   }
 
-  .pagination-lg > li > a,
-  .pagination-lg > li > span {
+  &-lg > li > a,
+  &-lg > li > span {
     padding-left: 22px;
     padding-right: 22px;
   }
 
-  .pagination-sm > li > a,
-  .pagination-sm > li > span {
+  &-sm > li > a,
+  &-sm > li > span {
     padding: 0 5px;
   }
 }
@@ -380,7 +376,7 @@ input[type="checkbox"] {
   border-radius: 0;
   font-weight: 300;
 
-  .label-default {
+  &-default {
     background-color: $btn-default-bg;
     color: $btn-default-color;
   }
@@ -404,7 +400,7 @@ input[type="checkbox"] {
 
 .dropdown {
 
-  .dropdown-menu {
+  &-menu {
     padding: 0;
     margin-top: 0;
     font-size: $font-size-small;
@@ -414,7 +410,7 @@ input[type="checkbox"] {
     }
   }
 
-  .dropdown-header {
+  &-header {
     padding-left: 15px;
     padding-right: 15px;
     font-size: 9px;
@@ -429,13 +425,13 @@ input[type="checkbox"] {
 }
 
 .panel {
-  .panel-heading,
-  .panel-footer {
+  &-heading,
+  &-footer {
     border-top-right-radius: 0;
     border-top-left-radius: 0;
   }
 
-  .panel-default {
+  &-default {
     .close {
       color: $text-color;
     }

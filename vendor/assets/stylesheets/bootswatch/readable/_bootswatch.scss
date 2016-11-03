@@ -2,25 +2,21 @@
 // Bootswatch
 // -----------------------------------------------------
 
-$web-font-path: "https://fonts.googleapis.com/css?family=Raleway:400,700";
-
-@mixin web-font($path) {
-  @import url("@{path}");
-}
-@mixin web-font($web-font-path);
+$web-font-path: "https://fonts.googleapis.com/css?family=Raleway:400,700" !default;
+@import url($web-font-path);
 
 // Navbar =====================================================================
 
 .navbar {
   font-family: $headings-font-family;
 
-  .navbar-nav,
-  .navbar-form {
+  &-nav,
+  &-form {
     margin-left: 0;
     margin-right: 0;
   }
 
-  .navbar-nav > li > a {
+  &-nav > li > a {
     $margin-vertical: (($navbar-height - 2*$padding-base-vertical - $line-height-computed - 2px) / 2);
     margin: $margin-vertical 6px;
     padding: $padding-base-vertical $padding-base-horizontal;
@@ -32,20 +28,20 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Raleway:400,700";
     }
   }
 
-  .navbar-nav > .active > a,
-  .navbar-nav > .active > a:hover {
+  &-nav > .active > a,
+  &-nav > .active > a:hover {
     border: 1px solid #ddd;
   }
 
-  .navbar-default .navbar-nav > .active > a:hover {
+  &-default .navbar-nav > .active > a:hover {
     color: $navbar-default-link-hover-color;
   }
 
-  .navbar-inverse .navbar-nav > .active > a:hover {
+  &-inverse .navbar-nav > .active > a:hover {
     color: $navbar-inverse-link-hover-color;
   }
 
-  .navbar-brand {
+  &-brand {
     padding-top: (($navbar-height - 2*$font-size-large) / 2);
     padding-bottom: (($navbar-height - 2*$font-size-large) / 2);
     line-height: 1.9;
@@ -102,8 +98,8 @@ legend {
 
   font-family: $headings-font-family;
 
-  .pagination-lg > li > a,
-  .pagination-lg > li > span {
+  &-lg > li > a,
+  &-lg > li > span {
     padding: 14px 24px;
   }
 }
@@ -152,7 +148,7 @@ legend {
   font-family: $headings-font-family;
   font-weight: normal;
 
-  .label-default {
+  &-default {
     border: 1px solid #ddd;
     color: $text-color;
   }
@@ -173,7 +169,7 @@ legend {
 .panel {
   @include box-shadow(none);
 
-  .panel-default {
+  &-default {
     .close {
       color: $text-color;
     }

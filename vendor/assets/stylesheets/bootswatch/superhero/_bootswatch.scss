@@ -2,12 +2,8 @@
 // Bootswatch
 // -----------------------------------------------------
 
-$web-font-path: "https://fonts.googleapis.com/css?family=Lato:300,400,700";
-
-@mixin web-font($path) {
-  @import url("@{path}");
-}
-@mixin web-font($web-font-path);
+$web-font-path: "https://fonts.googleapis.com/css?family=Lato:300,400,700" !default;
+@import url($web-font-path);
 
 // Navbar =====================================================================
 
@@ -16,7 +12,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Lato:300,400,700";
   border: none;
   font-size: $font-size-small;
 
-  .navbar-default {
+  &-default {
 
     .badge {
       background-color: #fff;
@@ -24,7 +20,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Lato:300,400,700";
     }
   }
 
-  .navbar-inverse {
+  &-inverse {
 
     .badge {
       background-color: #fff;
@@ -37,14 +33,14 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Lato:300,400,700";
 
 .btn {
 
-  .btn-default {
+  &-default {
     &:hover {
       background-color: darken($btn-default-bg, 3%);
     }
   }
 
-  .btn-sm,
-  .btn-xs {
+  &-sm,
+  &-xs {
     font-size: $font-size-small;
   }
 }
@@ -298,7 +294,7 @@ a.list-group-item {
     border: none;
   }
 
-  a.list-group-item-success {
+  &-success {
     &.active {
       background-color: $state-success-bg;
     }
@@ -309,7 +305,7 @@ a.list-group-item {
     }
   }
 
-  a.list-group-item-warning {
+  &-warning {
     &.active {
       background-color: $state-warning-bg;
     }
@@ -320,7 +316,7 @@ a.list-group-item {
     }
   }
 
-  a.list-group-item-danger {
+  &-danger {
     &.active {
       background-color: $state-danger-bg;
     }
@@ -335,7 +331,7 @@ a.list-group-item {
 .panel {
   border: none;
 
-  .panel-default > .panel-heading {
+  &-default > .panel-heading {
     background-color: $table-bg-hover;
     color: $text-color;
   }
@@ -349,8 +345,8 @@ a.list-group-item {
 .modal {
   padding: 0;
 
-  .modal-header,
-  .modal-footer {
+  &-header,
+  &-footer {
     background-color: $table-bg-hover;
     border: none;
     border-radius: 0;
@@ -358,7 +354,7 @@ a.list-group-item {
 }
 
 .popover {
-  .popover-title {
+  &-title {
     border: none;
   }
 }

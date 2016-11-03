@@ -1,3 +1,4 @@
+$bootstrap-sass-asset-helper: false !default;
 // Yeti 3.3.7
 // Variables
 // --------------------------------------------------
@@ -76,6 +77,7 @@ $headings-color:          inherit !default;
 //## Specify custom location and filename of the included Glyphicons icon font. Useful for those including Bootstrap via Bower.
 
 //** Load fonts from this directory.
+$icon-font-path: if($bootstrap-sass-asset-helper, "bootstrap/", "../fonts/bootstrap/") !default;
 //** File name for all font files.
 $icon-font-name:          "glyphicons-halflings-regular" !default;
 //** Element ID within SVG icon file.
@@ -189,7 +191,7 @@ $input-color:                    $gray !default;
 //** `<input>` border color
 $input-border:                   #ccc !default;
 
-// TODO: Rename `@input-border-radius` to `@input-border-radius-base` in v4
+// TODO: Rename `$input-border-radius` to `$input-border-radius-base` in v4
 //** Default `.form-control` border radius
 // This has no effect on `<select>`s in some browsers, due to the limited stylability of `<select>`s in CSS.
 $input-border-radius:            $border-radius-base !default;
@@ -257,7 +259,7 @@ $dropdown-link-disabled-color:   $gray-light !default;
 //** Text color for headers within dropdown menus.
 $dropdown-header-color:          $gray-light !default;
 
-//** Deprecated `@dropdown-caret-color` as of v3.1.0
+//** Deprecated `$dropdown-caret-color` as of v3.1.0
 $dropdown-caret-color:           #000 !default;
 
 
@@ -282,32 +284,32 @@ $zindex-modal:             1050 !default;
 //## Define the breakpoints at which your layout will change, adapting to different screen sizes.
 
 // Extra small screen / phone
-//** Deprecated `@screen-xs` as of v3.0.1
+//** Deprecated `$screen-xs` as of v3.0.1
 $screen-xs:                  480px !default;
-//** Deprecated `@screen-xs-min` as of v3.2.0
+//** Deprecated `$screen-xs-min` as of v3.2.0
 $screen-xs-min:              $screen-xs !default;
-//** Deprecated `@screen-phone` as of v3.0.1
+//** Deprecated `$screen-phone` as of v3.0.1
 $screen-phone:               $screen-xs-min !default;
 
 // Small screen / tablet
-//** Deprecated `@screen-sm` as of v3.0.1
+//** Deprecated `$screen-sm` as of v3.0.1
 $screen-sm:                  768px !default;
 $screen-sm-min:              $screen-sm !default;
-//** Deprecated `@screen-tablet` as of v3.0.1
+//** Deprecated `$screen-tablet` as of v3.0.1
 $screen-tablet:              $screen-sm-min !default;
 
 // Medium screen / desktop
-//** Deprecated `@screen-md` as of v3.0.1
+//** Deprecated `$screen-md` as of v3.0.1
 $screen-md:                  992px !default;
 $screen-md-min:              $screen-md !default;
-//** Deprecated `@screen-desktop` as of v3.0.1
+//** Deprecated `$screen-desktop` as of v3.0.1
 $screen-desktop:             $screen-md-min !default;
 
 // Large screen / wide desktop
-//** Deprecated `@screen-lg` as of v3.0.1
+//** Deprecated `$screen-lg` as of v3.0.1
 $screen-lg:                  1200px !default;
 $screen-lg-min:              $screen-lg !default;
-//** Deprecated `@screen-lg-desktop` as of v3.0.1
+//** Deprecated `$screen-lg-desktop` as of v3.0.1
 $screen-lg-desktop:          $screen-lg-min !default;
 
 // So media queries don't overlap when required, provide a maximum
@@ -337,17 +339,17 @@ $grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
 
 // Small screen / tablet
 $container-tablet:             (720px + $grid-gutter-width) !default;
-//** For `@screen-sm-min` and up.
+//** For `$screen-sm-min` and up.
 $container-sm:                 $container-tablet !default;
 
 // Medium screen / desktop
 $container-desktop:            (940px + $grid-gutter-width) !default;
-//** For `@screen-md-min` and up.
+//** For `$screen-md-min` and up.
 $container-md:                 $container-desktop !default;
 
 // Large screen / wide desktop
 $container-large-desktop:      (1140px + $grid-gutter-width) !default;
-//** For `@screen-lg-min` and up.
+//** For `$screen-lg-min` and up.
 $container-lg:                 $container-large-desktop !default;
 
 

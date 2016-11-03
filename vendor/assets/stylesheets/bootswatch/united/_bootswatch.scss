@@ -2,18 +2,14 @@
 // Bootswatch
 // -----------------------------------------------------
 
-$web-font-path: "https://fonts.googleapis.com/css?family=Ubuntu:400,700";
-
-@mixin web-font($path) {
-  @import url("@{path}");
-}
-@mixin web-font($web-font-path);
+$web-font-path: "https://fonts.googleapis.com/css?family=Ubuntu:400,700" !default;
+@import url($web-font-path);
 
 // Navbar =====================================================================
 
 .navbar {
 
-  .navbar-default {
+  &-default {
 
     .badge {
       background-color: #fff;
@@ -21,7 +17,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Ubuntu:400,700";
     }
   }
 
-  .navbar-inverse {
+  &-inverse {
 
     .badge {
       background-color: #fff;
