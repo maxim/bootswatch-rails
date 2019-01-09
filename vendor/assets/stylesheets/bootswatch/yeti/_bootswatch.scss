@@ -1,8 +1,9 @@
-// Yeti 3.3.5
+// Yeti 3.3.7
 // Bootswatch
 // -----------------------------------------------------
 
-@import url("//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
+$web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700" !default;
+@import url($web-font-path);
 
 // Navbar =====================================================================
 
@@ -15,75 +16,83 @@
     background-color: #b3b3b3;
   }
 
+  &-collapse {
+    border-top-color: $dropdown-divider-bg;
+    @include box-shadow(none);
+  }
+
   .btn {
     padding-top: 6px;
     padding-bottom: 6px;
   }
 
-  .dropdown-menu {
-    border: none;
+  &-form {
+    margin-top: 7px;
+    margin-bottom: 5px;
 
-    > li > a,
-    > li > a:focus {
-      background-color: transparent;
-      font-size: 13px;
-      font-weight: 300;
+    .form-control {
+      height: auto;
+      padding: $padding-xs-vertical $padding-xs-horizontal;
     }
   }
 
-  .dropdown-header {
-    color: rgba(255, 255, 255, 0.5);
+  &-text {
+    margin: 12px 15px;
+    line-height: 21px;
   }
 
-}
+  .dropdown {
 
-.navbar-form {
-  margin-top: 7px;
-  margin-bottom: 5px;
+    &-menu {
+      border: none;
 
-  .form-control {
-    height: auto;
-    padding: $padding-xs-vertical $padding-xs-horizontal;
+      > li > a,
+      > li > a:focus {
+        background-color: transparent;
+        font-size: 13px;
+        font-weight: 300;
+      }
+    }
+
+    &-header {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
   }
-}
 
-.navbar-collapse {
-  border-top-color: $dropdown-divider-bg;
-  @include box-shadow(none);
-}
+  &-default {
 
-.navbar-default {
+    .dropdown-menu {
+      background-color: $navbar-default-bg;
 
-  .dropdown-menu {
-    background-color: $navbar-default-bg;
+      > li > a,
+      > li > a:focus {
+        color: $navbar-default-color;
+      }
 
-    > li > a,
-    > li > a:focus {
-      color: $navbar-default-color;
-    }
-
-    > li > a:hover,
-    > .active > a,
-    > .active > a:hover {
-      background-color: $navbar-default-link-hover-bg;
+      > li > a:hover,
+      > .active > a,
+      > .active > a:hover {
+        background-color: $navbar-default-link-hover-bg;
+      }
     }
   }
-}
 
-.navbar-inverse {
+  &-inverse {
 
-  .dropdown-menu {
-    background-color: $navbar-inverse-bg;
+    .dropdown-menu {
+      background-color: $navbar-inverse-bg;
 
-    > li > a,
-    > li > a:focus {
-      color: $navbar-inverse-color;
-    }
+      > li > a,
+      > li > a:focus {
+        color: $navbar-inverse-color;
+      }
 
-    > li > a:hover,
-    > .active > a,
-    > .active > a:hover {
-      background-color: $navbar-inverse-link-hover-bg;
+      > li > a:hover,
+      > .active > a,
+      > .active > a:hover {
+        background-color: $navbar-inverse-link-hover-bg;
+      }
     }
   }
 }
@@ -92,18 +101,18 @@
 
 .btn {
   padding: $padding-base-vertical $padding-base-horizontal;
-}
 
-.btn-lg {
-  padding: $padding-large-vertical $padding-large-horizontal;
-}
+  &-lg {
+    padding: $padding-large-vertical $padding-large-horizontal;
+  }
 
-.btn-sm {
-  padding: $padding-small-vertical $padding-small-horizontal;
-}
+  &-sm {
+    padding: $padding-small-vertical $padding-small-horizontal;
+  }
 
-.btn-xs {
-  padding: $padding-xs-vertical $padding-xs-horizontal;
+  &-xs {
+    padding: $padding-xs-vertical $padding-xs-horizontal;
+  }
 }
 
 .btn-group {
@@ -313,15 +322,17 @@ input[type="checkbox"] {
       border-radius: 3px;
     }
   }
-}
 
-.pagination-lg > li > a {
-  padding-left: 22px;
-  padding-right: 22px;
-}
+  &-lg > li > a,
+  &-lg > li > span {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
 
-.pagination-sm > li > a {
-  padding: 0 5px;
+  &-sm > li > a,
+  &-sm > li > span {
+    padding: 0 5px;
+  }
 }
 
 .pager {
@@ -364,11 +375,11 @@ input[type="checkbox"] {
   padding-right: 1em;
   border-radius: 0;
   font-weight: 300;
-}
 
-.label-default {
-  background-color: $btn-default-bg;
-  color: $btn-default-color;
+  &-default {
+    background-color: $btn-default-bg;
+    color: $btn-default-color;
+  }
 }
 
 .badge {
@@ -387,21 +398,24 @@ input[type="checkbox"] {
 
 // Containers =================================================================
 
-.dropdown-menu {
-  padding: 0;
-  margin-top: 0;
-  font-size: $font-size-small;
+.dropdown {
 
-  > li > a {
-    padding: 12px 15px;
+  &-menu {
+    padding: 0;
+    margin-top: 0;
+    font-size: $font-size-small;
+
+    > li > a {
+      padding: 12px 15px;
+    }
   }
-}
 
-.dropdown-header {
-  padding-left: 15px;
-  padding-right: 15px;
-  font-size: 9px;
-  text-transform: uppercase;
+  &-header {
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 9px;
+    text-transform: uppercase;
+  }
 }
 
 .popover {
@@ -410,15 +424,17 @@ input[type="checkbox"] {
   font-weight: 300;
 }
 
-.panel-heading,
-.panel-footer {
-  border-top-right-radius: 0;
-  border-top-left-radius: 0;
-}
+.panel {
+  &-heading,
+  &-footer {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
 
-.panel-default {
-  .close {
-    color: $text-color;
+  &-default {
+    .close {
+      color: $text-color;
+    }
   }
 }
 

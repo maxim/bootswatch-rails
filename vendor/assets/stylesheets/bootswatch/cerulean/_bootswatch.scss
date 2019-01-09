@@ -1,8 +1,8 @@
-// Cerulean 3.3.5
+// Cerulean 3.3.7
 // Bootswatch
 // -----------------------------------------------------
 
-@mixin btn-shadow($color) {
+@mixin btn-shadow($color){
   @include gradient-vertical-three-colors(lighten($color, 8%), $color, 60%, darken($color, 4%));
   filter: none;
   border-bottom: 1px solid darken($color, 10%);
@@ -11,32 +11,31 @@
 // Navbar =====================================================================
 
 .navbar {
-  @include btn-shadow($navbar-default-bg);
-  filter: none;
-  @include box-shadow(0 1px 10px rgba(0, 0, 0, 0.1));
-}
+  &-default {
+    @include btn-shadow($navbar-default-bg);
+    filter: none;
+    @include box-shadow(0 1px 10px rgba(0, 0, 0, 0.1));
 
-.navbar .navbar-nav > li > a,
-.navbar-brand {
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
-}
-
-.navbar-default {
-
-  .badge {
-    background-color: #fff;
-    color: $navbar-default-bg;
+    .badge {
+      background-color: #fff;
+      color: $navbar-default-bg;
+    }
   }
-}
 
-.navbar-inverse {
-  @include gradient-vertical-three-colors(lighten($navbar-inverse-bg, 8%), lighten($navbar-inverse-bg, 4%), 60%, darken($navbar-inverse-bg, 2%));
-  filter: none;
-  border-bottom: 1px solid darken($navbar-inverse-bg, 10%);
+  &-inverse {
+    @include gradient-vertical-three-colors(lighten($navbar-inverse-bg, 8%), lighten($navbar-inverse-bg, 4%), 60%, darken($navbar-inverse-bg, 2%));
+    filter: none;
+    border-bottom: 1px solid darken($navbar-inverse-bg, 10%);
 
-  .badge {
-    background-color: #fff;
-    color: $navbar-inverse-bg;
+    .badge {
+      background-color: #fff;
+      color: $navbar-inverse-bg;
+    }
+  }
+
+  .navbar-nav > li > a,
+  &-brand {
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
   }
 }
 
@@ -68,7 +67,7 @@
 }
 
 .btn-default {
-
+  
   @include btn-shadow($btn-default-bg);
 
   &:hover {

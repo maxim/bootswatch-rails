@@ -1,10 +1,11 @@
-// Simplex 3.3.5
+// Simplex 3.3.7
 // Bootswatch
 // -----------------------------------------------------
 
-@import url("//fonts.googleapis.com/css?family=Open+Sans:400,700");
+$web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:400,700" !default;
+@import url($web-font-path);
 
-@mixin btn-shadow($color) {
+@mixin btn-shadow($color){
   @include gradient-vertical-three-colors(lighten($color, 3%), $color, 6%, darken($color, 3%));
   filter: none;
   border: 1px solid darken($color, 10%);
@@ -12,11 +13,14 @@
 
 // Navbar =====================================================================
 
-.navbar-inverse {
+.navbar {
 
-  .badge {
-    background-color: #fff;
-    color: $brand-primary;
+  &-inverse {
+
+    .badge {
+      background-color: #fff;
+      color: $brand-primary;
+    }
   }
 }
 

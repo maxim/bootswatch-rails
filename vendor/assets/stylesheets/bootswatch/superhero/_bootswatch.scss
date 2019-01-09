@@ -1,30 +1,31 @@
-// Superhero 3.3.5
+// Superhero 3.3.7
 // Bootswatch
 // -----------------------------------------------------
 
-@import url("//fonts.googleapis.com/css?family=Lato:300,400,700");
+$web-font-path: "https://fonts.googleapis.com/css?family=Lato:300,400,700" !default;
+@import url($web-font-path);
 
 // Navbar =====================================================================
 
 .navbar {
   @include box-shadow(none);
   border: none;
-  font-size: 12px;
-}
+  font-size: $font-size-small;
 
-.navbar-default {
+  &-default {
 
-  .badge {
-    background-color: #fff;
-    color: $navbar-default-bg;
+    .badge {
+      background-color: #fff;
+      color: $navbar-default-bg;
+    }
   }
-}
 
-.navbar-inverse {
+  &-inverse {
 
-  .badge {
-    background-color: #fff;
-    color: $navbar-inverse-bg;
+    .badge {
+      background-color: #fff;
+      color: $navbar-inverse-bg;
+    }
   }
 }
 
@@ -32,25 +33,19 @@
 
 .btn {
 
-  font-weight: 300;
-}
+  &-default {
+    &:hover {
+      background-color: darken($btn-default-bg, 3%);
+    }
+  }
 
-.btn-default {
-  &:hover {
-    background-color: darken($btn-default-bg, 3%);
+  &-sm,
+  &-xs {
+    font-size: $font-size-small;
   }
 }
 
-.btn-sm,
-.btn-xs {
-  font-size: 12px;
-}
-
 // Typography =================================================================
-
-body {
-  font-weight: 300;
-}
 
 .text-primary,
 .text-primary:hover {
@@ -88,8 +83,7 @@ body {
   @include box-shadow(none);
 
   > li > a {
-    font-size: 12px;
-    font-weight: 300;
+    font-size: $font-size-small;
   }
 }
 
@@ -98,14 +92,14 @@ body {
 }
 
 .dropdown-header {
-  font-size: 12px;
+  font-size: $font-size-small;
 }
 
 // Tables =====================================================================
 
 table,
 .table {
-  font-size: 12px;
+  font-size: $font-size-small;
 
   a:not(.btn) {
     color: #fff;
@@ -141,8 +135,7 @@ label,
 .radio label,
 .checkbox label,
 .help-block {
-  font-size: 12px;
-  font-weight: 300;
+  font-size: $font-size-small;
 }
 
 .input-addon,
@@ -165,6 +158,11 @@ label,
     color: $brand-warning;
   }
 
+  .form-control,
+  .form-control:focus {
+    border: 4px solid $brand-warning;
+  }
+
   .input-group-addon {
     border: none;
   }
@@ -185,6 +183,11 @@ label,
     color: $brand-danger;
   }
 
+  .form-control,
+  .form-control:focus {
+    border: 4px solid $brand-danger;
+  }
+
   .input-group-addon {
     border: none;
   }
@@ -203,6 +206,11 @@ label,
   &.checkbox-inline label,
   .form-control-feedback {
     color: $brand-success;
+  }
+
+  .form-control,
+  .form-control:focus {
+    border: 4px solid $brand-success;
   }
 
   .input-group-addon {
@@ -252,10 +260,6 @@ label,
 
 // Indicators =================================================================
 
-.label {
-  font-weight: 300;
-}
-
 .alert {
   color: #fff;
 
@@ -289,48 +293,48 @@ a.list-group-item {
   &.active:focus {
     border: none;
   }
-}
 
-a.list-group-item-success {
-  &.active {
-    background-color: $state-success-bg;
+  &-success {
+    &.active {
+      background-color: $state-success-bg;
+    }
+
+    &.active:hover,
+    &.active:focus {
+      background-color: darken($state-success-bg, 5%);
+    }
   }
 
-  &.active:hover,
-  &.active:focus {
-    background-color: darken($state-success-bg, 5%);
-  }
-}
-
-a.list-group-item-warning {
-  &.active {
-    background-color: $state-warning-bg;
-  }
-
-  &.active:hover,
-  &.active:focus {
-    background-color: darken($state-warning-bg, 5%);
-  }
-}
-
-a.list-group-item-danger {
-  &.active {
-    background-color: $state-danger-bg;
+  &-warning {
+    &.active {
+      background-color: $state-warning-bg;
+    }
+    
+    &.active:hover,
+    &.active:focus {
+      background-color: darken($state-warning-bg, 5%);
+    }
   }
 
-  &.active:hover,
-  &.active:focus {
-    background-color: darken($state-danger-bg, 5%);
+  &-danger {
+    &.active {
+      background-color: $state-danger-bg;
+    }
+    
+    &.active:hover,
+    &.active:focus {
+      background-color: darken($state-danger-bg, 5%);
+    }
   }
 }
 
 .panel {
   border: none;
-}
 
-.panel-default > .panel-heading {
-  background-color: $table-bg-hover;
-  color: $text-color;
+  &-default > .panel-heading {
+    background-color: $table-bg-hover;
+    color: $text-color;
+  }
 }
 
 .thumbnail {
@@ -340,15 +344,17 @@ a.list-group-item-danger {
 
 .modal {
   padding: 0;
+
+  &-header,
+  &-footer {
+    background-color: $table-bg-hover;
+    border: none;
+    border-radius: 0;
+  }
 }
 
-.modal-header,
-.modal-footer {
-  background-color: $table-bg-hover;
-  border: none;
-  border-radius: 0;
-}
-
-.popover-title {
-  border: none;
+.popover {
+  &-title {
+    border: none;
+  }
 }

@@ -1,55 +1,74 @@
-// Slate 3.3.5
+// Slate 3.3.7
 // Bootswatch
 // -----------------------------------------------------
 
-@mixin btn-shadow($color) {
+@mixin btn-shadow($color){
   @include gradient-vertical-three-colors(lighten($color, 6%), $color, 60%, darken($color, 4%));
   filter: none;
 }
 
-@mixin btn-shadow-inverse($color) {
-  @include gradient-vertical-three-colors(darken($color, 24%), darken($color, 18%), 40%, darken($color, 14%));
+@mixin btn-shadow-inverse($color){
+  @include gradient-vertical-three-colors(darken($color, 24%), darken($color, 18%), 40%, darken($color, 16%));
   filter: none;
 }
 
 // Navbar =====================================================================
 
 .navbar {
+  &-default,
+  &-inverse {
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 
-  @include btn-shadow($navbar-default-bg);
-  border: 1px solid rgba(0, 0, 0, 0.6);
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    @media (min-width: $grid-float-breakpoint) {
+      .navbar-nav > li > a {
+        border-right: 1px solid rgba(0, 0, 0, 0.2);
+        border-left: 1px solid rgba(255, 255, 255, 0.1);
 
-  .nav .open > a {
-    border-color: transparent;
+        &:hover {
+          border-left-color: transparent;
+        }
+      }
+
+      .nav .open > a {
+        border-color: transparent;
+      }
+
+      .navbar-nav > li.active > a {
+        border-left-color: transparent;
+      }
+
+      .navbar-form {
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+    }
   }
-}
 
-.navbar-inverse {
-  @include btn-shadow($navbar-inverse-bg);
+  &-default {
+    @include btn-shadow($navbar-default-bg);
 
-  .badge {
-    background-color: $navbar-inverse-link-active-bg;
+    .navbar-nav > li > a {
+      &:hover {
+        @include btn-shadow-inverse($navbar-default-bg);
+      }
+    }
   }
-}
 
-.navbar-nav > li > a {
-  border-right: 1px solid rgba(0, 0, 0, 0.2);
-  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  &-inverse {
+    @include btn-shadow($navbar-inverse-bg);
 
-  &:hover {
-    @include btn-shadow-inverse($navbar-default-bg);
-    border-left-color: transparent;
+    .badge {
+      background-color: $navbar-inverse-link-active-bg;
+    }
+
+    .navbar-nav > li > a {
+
+      &:hover {
+        @include btn-shadow-inverse($navbar-inverse-bg);
+      }
+    }
   }
-}
-
-.navbar-nav > li.active > a {
-  border-left-color: transparent;
-}
-
-.navbar-form {
-  margin-left: 5px;
-  margin-right: 5px;
 }
 
 // Buttons ====================================================================
@@ -154,17 +173,17 @@ h1, h2, h3, h4, h5, h6 {
   .info {
     color: #fff;
   }
-}
 
-.table-bordered tbody {
+  &-bordered tbody {
 
-  tr.success,
-  tr.warning,
-  tr.danger {
+    tr.success,
+    tr.warning,
+    tr.danger {
 
-    td,
-    &:hover td {
-      border-color: $table-border-color;
+      td,
+      &:hover td {
+        border-color: $table-border-color;
+      }
     }
   }
 }
@@ -201,8 +220,7 @@ textarea {
   }
 
   .input-group-addon {
-    background-color: $body-bg;
-    border: none;
+    border-color: $input-group-addon-border-color;
   }
 }
 
@@ -227,8 +245,7 @@ textarea {
   }
 
   .input-group-addon {
-    background-color: $body-bg;
-    border: none;
+    border-color: $input-group-addon-border-color;
   }
 }
 
@@ -253,8 +270,7 @@ textarea {
   }
 
   .input-group-addon {
-    background-color: $body-bg;
-    border: none;
+    border-color: $input-group-addon-border-color;
   }
 }
 
@@ -263,9 +279,8 @@ legend {
 }
 
 .input-group-addon {
-  border-color: rgba(0, 0, 0, 0.6);
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
   @include btn-shadow($btn-default-bg);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
   color: $btn-default-color;
 }
 
@@ -390,38 +405,38 @@ a.list-group-item {
   &.active:focus {
     border-color: $list-group-border;
   }
-}
 
-a.list-group-item-success {
-  &.active {
-    background-color: $state-success-bg;
+  &-success {
+    &.active {
+      background-color: $state-success-bg;
+    }
+
+    &.active:hover,
+    &.active:focus {
+      background-color: darken($state-success-bg, 5%);
+    }
   }
 
-  &.active:hover,
-  &.active:focus {
-    background-color: darken($state-success-bg, 5%);
-  }
-}
-
-a.list-group-item-warning {
-  &.active {
-    background-color: $state-warning-bg;
-  }
-
-  &.active:hover,
-  &.active:focus {
-    background-color: darken($state-warning-bg, 5%);
-  }
-}
-
-a.list-group-item-danger {
-  &.active {
-    background-color: $state-danger-bg;
+  &-warning {
+    &.active {
+      background-color: $state-warning-bg;
+    }
+    
+    &.active:hover,
+    &.active:focus {
+      background-color: darken($state-warning-bg, 5%);
+    }
   }
 
-  &.active:hover,
-  &.active:focus {
-    background-color: darken($state-danger-bg, 5%);
+  &-danger {
+    &.active {
+      background-color: $state-danger-bg;
+    }
+    
+    &.active:hover,
+    &.active:focus {
+      background-color: darken($state-danger-bg, 5%);
+    }
   }
 }
 

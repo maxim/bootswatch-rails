@@ -1,8 +1,9 @@
-// Journal 3.3.5
+// Journal 3.3.7
 // Bootswatch
 // -----------------------------------------------------
 
-@import url("//fonts.googleapis.com/css?family=News+Cycle:400,700");
+$web-font-path: "https://fonts.googleapis.com/css?family=News+Cycle:400,700" !default;
+@import url($web-font-path);
 
 // Navbar =====================================================================
 
@@ -10,21 +11,21 @@
   font-size: 18px;
   font-family: $font-family-sans-serif;
   font-weight: $headings-font-weight;
-}
 
-.navbar-default {
+  &-default {
 
-  .badge {
-    background-color: #000;
-    color: #fff;
+    .badge {
+      background-color: #000;
+      color: #fff;
+    }
   }
-}
 
-.navbar-inverse {
+  &-inverse {
 
-  .badge {
-    background-color: #fff;
-    color: $navbar-inverse-bg;
+    .badge {
+      background-color: #fff;
+      color: $navbar-inverse-bg;
+    }
   }
 }
 
@@ -128,12 +129,17 @@
   }
 }
 
-.panel-primary,
-.panel-success,
-.panel-warning,
-.panel-danger,
-.panel-info {
-  .panel-title {
-    color: #fff;
+.panel {
+
+  &-primary,
+  &-success,
+  &-warning,
+  &-danger,
+  &-info {
+    .panel-title {
+      color: #fff;
+    }
   }
+
+
 }

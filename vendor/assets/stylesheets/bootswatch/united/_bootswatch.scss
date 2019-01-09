@@ -1,27 +1,30 @@
-// United 3.3.5
+// United 3.3.7
 // Bootswatch
 // -----------------------------------------------------
 
-@import url("//fonts.googleapis.com/css?family=Ubuntu:400,700");
+$web-font-path: "https://fonts.googleapis.com/css?family=Ubuntu:400,700" !default;
+@import url($web-font-path);
 
 // Navbar =====================================================================
 
-.navbar-default {
+.navbar {
 
-  .badge {
-    background-color: #fff;
-    color: $navbar-default-bg;
+  &-default {
+
+    .badge {
+      background-color: #fff;
+      color: $navbar-default-bg;
+    }
+  }
+
+  &-inverse {
+
+    .badge {
+      background-color: #fff;
+      color: $navbar-inverse-bg;
+    }
   }
 }
-
-.navbar-inverse {
-
-  .badge {
-    background-color: #fff;
-    color: $navbar-inverse-bg;
-  }
-}
-
 
 @media (max-width: $grid-float-breakpoint-max) {
 

@@ -22,17 +22,13 @@ THEMES = %w(
 ).freeze
 
 
-LESS_FILES = FileList["bootswatch/{#{THEMES.join(',')}}/*.less"]
+LESS_FILES = FileList["bootswatch/{#{THEMES.join(',')}}/_*.scss"]
 SCSS_FILES = LESS_FILES.pathmap(
-  'vendor/assets/stylesheets/bootswatch/%-1d/_%n.scss'
+  'vendor/assets/stylesheets/bootswatch/%-1d/%n.scss'
 )
 
 SCSS_FILES.zip(LESS_FILES).each do |target, source|
-  directory File.dirname(target)
-
-  file target => [File.dirname(target), source] do
-    sh "./converter #{source} #{target}"
-  end
+  sh "yes | cp #{source} #{target}"
 end
 
 desc 'Imprecisely convert LESS files to SCSS files'
