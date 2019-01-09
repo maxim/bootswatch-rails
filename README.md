@@ -1,3 +1,7 @@
+# Looking for contributors
+
+If you'd like to try your hand at maintaining this project, I'm happy to give you commit access.
+
 # bootswatch-rails
 
 [![Gem Version](https://badge.fury.io/rb/bootswatch-rails.svg)](http://badge.fury.io/rb/bootswatch-rails)
